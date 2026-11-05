@@ -1,0 +1,102 @@
+{
+  "style": "Photographic, soft natural light, calm and premium wellness-brand look. Colour palette of deep forest green, warm cream and ivory, bark brown and sand, with tiny touches of muted gold. Minimal, uncluttered composition with generous empty space. Shallow depth of field, gentle film-like grain. Authentic Kerala, India setting.",
+  "avoid": "No text, no letters, no logos, no watermarks, no captions. No recognisable faces: show people only from behind, in silhouette, or as hands. No deity statues, idols or heavy religious imagery. No neon colours, no cartoon or illustration style, no clutter.",
+  "images": [
+    {
+      "name": "hero-bg",
+      "orientation": "landscape",
+      "usage": "Hero background (leave left third calm for headline text)",
+      "prompt": "A misty grove of Bilva (bael) trees at dawn in Kerala, soft golden light filtering through the leaves, quiet morning haze, deep green tones, open calm space on the left side of the frame."
+    },
+    {
+      "name": "bilva-leaves",
+      "orientation": "square",
+      "usage": "Bilva story section",
+      "prompt": "Close-up of fresh three-part Bilva leaves arranged symmetrically on a warm cream linen cloth, soft window light, gentle shadows, minimal and serene."
+    },
+    {
+      "name": "practice-yoga",
+      "orientation": "square",
+      "usage": "Practices card: Yoga",
+      "prompt": "A person seen from behind in a calm yoga pose on a mat on a wooden veranda overlooking green palms, early morning light, peaceful and unhurried."
+    },
+    {
+      "name": "practice-pranayama",
+      "orientation": "square",
+      "usage": "Practices card: Pranayama",
+      "prompt": "Silhouette of a person seated cross-legged practising breathwork beside a window with soft morning light and green foliage outside, serene mood."
+    },
+    {
+      "name": "practice-meditation",
+      "orientation": "square",
+      "usage": "Practices card: Meditation",
+      "prompt": "A person seated in meditation on a cushion in a quiet room with an open door to a green garden, seen from behind, soft diffused light, still and peaceful."
+    },
+    {
+      "name": "practice-yoga-nidra",
+      "orientation": "square",
+      "usage": "Practices card: Yoga Nidra",
+      "prompt": "A calm evening scene of a lying-down relaxation setup with a mat, soft blanket and bolster in a dimly lit room with warm lamp light, no faces, restful and cosy."
+    },
+    {
+      "name": "practice-reflection",
+      "orientation": "square",
+      "usage": "Practices card: Guided Reflection",
+      "prompt": "Hands holding a pen over an open blank journal on a wooden table beside a cup of herbal tea and a sprig of green leaves, soft morning light, no text visible on the pages."
+    },
+    {
+      "name": "practice-nature-culture",
+      "orientation": "square",
+      "usage": "Practices card: Nature & Culture",
+      "prompt": "A quiet footpath through lush Kerala greenery with coconut palms and banana plants, dappled sunlight, a person walking far away seen from behind, peaceful."
+    },
+    {
+      "name": "highlight-temple",
+      "orientation": "landscape",
+      "usage": "Highlights: Temple Visit",
+      "prompt": "Exterior of a traditional Kerala temple with a sloped tiled roof and wooden details in early morning light, a brass traditional lamp glowing near the entrance, calm courtyard, no deity images, no crowds."
+    },
+    {
+      "name": "highlight-nila-river",
+      "orientation": "landscape",
+      "usage": "Highlights: Nila River Boat Safari",
+      "prompt": "A calm river lined with palm trees and green banks at golden hour, a traditional wooden boat drifting gently on still water, soft reflections, peaceful and expansive."
+    },
+    {
+      "name": "safe-care",
+      "orientation": "landscape",
+      "usage": "Gentle & Safe Care section",
+      "prompt": "A quiet, welcoming room with neatly arranged yoga mats, cushions and blankets, a potted plant and warm lamp light, soft natural tones, feels safe, gentle and uncrowded, no people."
+    },
+    {
+      "name": "included-stay",
+      "orientation": "landscape",
+      "usage": "What's Included: accommodation",
+      "prompt": "A simple, tasteful Kerala-style retreat courtyard with plants, wooden pillars, a tiled roof and a quiet seating area, morning light, calm and unpretentious."
+    },
+    {
+      "name": "included-meals",
+      "orientation": "square",
+      "usage": "What's Included: meals",
+      "prompt": "A nourishing vegetarian Kerala meal served on a green banana leaf with small portions of vegetable curries, rice and greens, top-down view, natural light, wooden table."
+    },
+    {
+      "name": "natural-living",
+      "orientation": "square",
+      "usage": "Koovalam World: Natural Living card",
+      "prompt": "Amber glass essential oil bottles with plain unlabelled caps, a hand-poured candle and fresh Bilva leaves on a wooden tray, soft natural light, earthy and premium."
+    },
+    {
+      "name": "final-cta-bg",
+      "orientation": "landscape",
+      "usage": "Final call-to-action background",
+      "prompt": "Sunrise light streaming through the leaves of tall trees in a green Kerala forest, warm glow, gentle mist, deep greens with a soft golden highlight, calm open space in the centre."
+    },
+    {
+      "name": "og-share",
+      "orientation": "landscape",
+      "usage": "Social share image (crop to 1200x630 afterwards)",
+      "prompt": "A minimal cream-coloured background with soft shadows of green leaves falling across it, lots of empty space in the centre for a title overlay, calm and elegant."
+    }
+  ]
+}

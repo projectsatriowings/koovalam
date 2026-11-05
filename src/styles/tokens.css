@@ -1,0 +1,26 @@
+/* Koovalam design tokens — UI UX Pro Max v5
+   Styles applied faithfully from the repo (styles.csv):
+   - Editorial Grid / Magazine #66: asymmetric grid, editorial typography,
+     pull quotes, drop caps, print-inspired, high contrast + one brand accent.
+     Vars: --grid-cols asymmetric, --drop-cap-size 4em, --pull-quote-size 1.5em,
+     --column-gap 2rem.
+   - Exaggerated Minimalism #47: oversized typography, high contrast,
+     negative space, loud minimal — black/white + a SINGLE accent (forest).
+   - Bento Box Grid #39: grid 4→2→1 cols, varied spans, rounded 16px,
+     subtle shadows, hover scale 1.02.
+   - Parallax Storytelling #49: scroll-driven, layered, cinematic,
+     progressive disclosure, parallax images (off under reduced motion).
+   - Typography "Magazine Style": Libre Bodoni headings / Public Sans body.
+   PDF palette kept as the single accent: forest #1F3D2B, bark #6B4A32, cream #F6F1E4. */
+:root{
+  --forest:#1F3D2B; --deep:#16301F; --cream:#F6F1E4; --ivory:#FBF8F0;
+  --bark:#6B4A32; --sand:#E5D9C3; --gold:#B08D4A; --gold-soft:#D9C08A;
+  --terracotta:#C67B5C; --clay:#B5651D; --olive:#6B7B3C;
+  --ink:#1A1A1A; --muted:#5c6657; --line:#ddd2ba; --white:#fff;
+  --font-head:"Libre Bodoni","Lora",Georgia,serif;
+  --font-body:"Public Sans","Raleway",system-ui,sans-serif;
+  --radius:16px; --radius-sm:16px; --shadow:0 4px 6px rgba(0,0,0,.05);
+  --shadow-lift:0 16px 40px rgba(31,61,43,.16);
+  --header-h:72px; --max:1120px;
+  --ease:cubic-bezier(.22,.8,.3,1);
+}

@@ -1,0 +1,10 @@
+export const faqs = [
+  { q: 'Who is this retreat for?', a: 'Anyone who feels overwhelmed or tired and would like a few unhurried days to slow down. Beginners are warmly welcome, as are solo travellers. You do not need to be “spiritual” or flexible — just willing to pause.' },
+  { q: 'Do I need yoga experience?', a: 'No. Practices are gentle and adapted to individual comfort. You may pause, observe or opt out of any exercise at any time — participation is always voluntary.' },
+  { q: 'What is the food like?', a: 'Vegetarian, locally prepared meals and drinking water are included. Tell us privately before arrival about any dietary needs, allergies or health considerations and we will do our best to accommodate them.' },
+  { q: 'I have a health condition — can I join?', a: 'Please share any accessibility needs and health considerations privately before arrival so practices can be adapted to your comfort. Never push through pain, dizziness or distress, and seek your own medical advice where needed. Our programmes support general well-being and are not a substitute for medical or psychological care.' },
+  { q: 'Is this therapy?', a: 'No. This is not therapy and not a replacement for psychotherapy, and we make no promise of trauma release. Practices are grounding, present-moment and self-compassion based, and a qualified mental-health professional is identified for any deeper work.' },
+  { q: 'What should I bring?', a: 'Comfortable clothes for gentle movement, walking shoes, and anything that helps you rest — a journal, a shawl, an open mind. A simple packing list will be shared with confirmed participants before the retreat.' },
+  { q: 'How do I reserve my interest?', a: 'Fill in the enquiry form below or message us on WhatsApp. Dates are announcing soon — joining the early-interest list simply means we will let you know first when dates, venue and price are confirmed. There is no payment or commitment at this stage.' },
+  { q: 'What is the cancellation policy?', a: 'To be confirmed. The full cancellation policy will be published with the confirmed dates and price, before any booking or payment is requested.' },
+]
