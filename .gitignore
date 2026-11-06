@@ -19,3 +19,22 @@ lerna-debug.log*
 .DS_Store
 Thumbs.db
 
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+
+# Python environment and tooling
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Upstream agent skill test suites and fixtures (scoped to .agents/skills only)
+.agents/skills/**/tests/
+.agents/skills/**/coverage-*.json
