@@ -1,48 +1,108 @@
 import { useEffect, useRef } from 'react'
 import { track } from '../lib/analytics.js'
-import { LeafMark } from './Logo.jsx'
 
-// V6 — v5 Editorial hero + UI UX Pro Max Glassmorphism #3, Aurora #10,
-// Kinetic Typography #48, Parallax Storytelling #49, 3D #5.
-// Full-bleed photo with slow parallax, aurora blobs drifting behind the
-// type, headline words rising in one by one, a floating Bilva leaf, and a
-// gently glowing CTA. All motion stops under prefers-reduced-motion.
 export default function Hero() {
   const bgRef = useRef(null)
+
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (reduce) return
+
+    let ticking = false
     const onScroll = () => {
-      const el = bgRef.current
-      if (el) el.style.transform = `translateY(${window.scrollY * 0.22}px) scale(1.08)`
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const el = bgRef.current
+          if (el) {
+            const scrolled = window.scrollY
+            el.style.transform = `translate3d(0, ${scrolled * 0.18}px, 0) scale(1.05)`
+          }
+          ticking = false
+        })
+        ticking = true
+      }
     }
-    onScroll()
+
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
   return (
-    <section className="hero-ed" id="top">
-      <div className="hero-ed-bg" ref={bgRef} aria-hidden="true">
+    <section className="hero-luxury" id="top" aria-label="Koovalam Retreat Introduction">
+      {/* Background with restrained parallax */}
+      <div className="hero-luxury-bg" ref={bgRef} aria-hidden="true">
         <picture>
           <source srcSet="images/hero-bg.webp" type="image/webp" />
-          <img src="images/hero-bg.jpg" alt="" width="1600" height="1066" decoding="async" fetchpriority="high" />
+          <img
+            src="images/hero-bg.jpg"
+            alt="Misty morning light through palm groves in Kerala"
+            width="1600"
+            height="1066"
+            fetchPriority="high"
+            decoding="async"
+          />
         </picture>
+        <div className="hero-luxury-overlay" />
       </div>
-      <div className="aurora aurora-a" aria-hidden="true" />
-      <div className="aurora aurora-b" aria-hidden="true" />
-      <div className="hero-leaf-float" aria-hidden="true"><LeafMark color="#F6F1E4" size={44} /></div>
-      <div className="wrap hero-ed-wrap">
-        <p className="hero-kicker">Koovalam · Kerala, India · 4 Days / 3 Nights</p>
-        <h1 className="kinetic"><span>Pause.</span><span>Breathe.</span><span><em>Reconnect.</em></span></h1>
-        <p className="hero-ed-lede">Four unhurried days of yoga, breath, quiet and green — a gentle journey toward balance, self-awareness and inner connection.</p>
-        <div className="hero-ctas">
-          <a className="btn btn-gold" href="#enquiry" onClick={() => track('cta_reserve_interest')}>Reserve Your Interest</a>
-          <a className="btn btn-ed-outline" href="#journey" onClick={() => track('cta_see_journey')}>See the journey ↓</a>
-        </div>
-        <div className="hero-ed-route" aria-label="Four days, four stops on the route">
-          <span><b>01</b> Arrival</span><span><b>02</b> Breath</span><span><b>03</b> Temple &amp; River</span><span><b>04</b> Return</span>
+
+      <div className="wrap hero-luxury-wrap">
+        <div className="hero-luxury-content">
+          <div className="hero-badge">
+            <span className="hero-badge-dot" aria-hidden="true" />
+            <span className="hero-badge-text">Kerala, India · 4-Day Spiritual Wellness &amp; Mindfulness Retreat</span>
+          </div>
+
+          <h1 className="hero-luxury-title">
+            <span className="title-row">Pause.</span>
+            <span className="title-row">Breathe.</span>
+            <span className="title-row title-italic">Reconnect.</span>
+          </h1>
+
+          <p className="hero-luxury-lede">
+            Step away from noise and routine into the lush sanctuary of Kerala. Four unhurried days of gentle yoga, restorative pranayama, meditation, temple quiet, and still waters.
+          </p>
+
+          <div className="hero-luxury-actions">
+            <a
+              className="btn btn-gold hero-cta-primary"
+              href="#enquiry"
+              onClick={() => track('cta_reserve_interest_hero')}
+            >
+              Reserve Your Interest
+            </a>
+            <a
+              className="btn btn-outline hero-cta-secondary"
+              href="#journey"
+              onClick={() => track('cta_see_journey_hero')}
+            >
+              Explore The Journey
+            </a>
+          </div>
+
+          <div className="hero-luxury-meta">
+            <div className="meta-pillar">
+              <span className="meta-label">BODY</span>
+              <span className="meta-val">Vitality &amp; Movement</span>
+            </div>
+            <div className="meta-divider" aria-hidden="true" />
+            <div className="meta-pillar">
+              <span className="meta-label">MIND</span>
+              <span className="meta-val">Peace &amp; Mindfulness</span>
+            </div>
+            <div className="meta-divider" aria-hidden="true" />
+            <div className="meta-pillar">
+              <span className="meta-label">SOUL</span>
+              <span className="meta-val">Spiritual Connection</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Editorial scroll indicator */}
+      <a href="#summary" className="hero-scroll-indicator" aria-label="Scroll down to retreat overview">
+        <span className="scroll-text">Scroll to discover</span>
+        <span className="scroll-line" aria-hidden="true" />
+      </a>
     </section>
   )
 }

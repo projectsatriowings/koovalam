@@ -7,61 +7,136 @@ import Reveal from './Reveal.jsx'
 export function DatesCard() {
   const r = site.retreat
   return (
-    <section aria-label="Retreat dates and enquiry">
-      <div className="wrap"><Reveal><div className="dates-card glass">
-        <div>
-          <p className="eyebrow">Dates &amp; enquiry</p>
-          <h2>{r.name}</h2>
-          <dl>
-            <dt>Duration</dt><dd>{r.duration}</dd>
-            <dt>Dates</dt><dd>{r.dates}</dd>
-            <dt>Location</dt><dd>{r.venue}</dd>
-            <dt>Price</dt><dd>{r.price}</dd>
-            <dt>Check-in</dt><dd>{r.checkIn}</dd>
-            <dt>Check-out</dt><dd>{r.checkOut}</dd>
-          </dl>
-        </div>
-        <div>
-          <p style={{ color: '#5c6657' }}>Join the early-interest list and be first to know when dates, venue and price are confirmed.</p>
-          <a className="btn btn-gold" href="#enquiry" onClick={() => track('cta_dates_card')}>Reserve Your Interest</a>
-        </div>
-      </div></Reveal></div>
+    <section className="sec-dates" aria-label="Retreat dates and enquiry details">
+      <div className="wrap">
+        <Reveal>
+          <div className="dates-editorial-box">
+            <div className="dates-main-info">
+              <span className="eyebrow">Sanctuary Dates &amp; Access</span>
+              <h2 className="dates-title">{r.name}</h2>
+              <p className="dates-desc">
+                Reservations are limited to ensure an intimate, unhurried group environment. Register on our priority guest list to receive confirmed dates and accommodation options prior to public opening.
+              </p>
+
+              <div className="dates-specs-grid">
+                <div className="spec-item">
+                  <span className="spec-label">Duration</span>
+                  <span className="spec-value">{r.duration}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Location</span>
+                  <span className="spec-value">{r.venue}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Dates</span>
+                  <span className="spec-value spec-highlight">{r.dates}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Investment</span>
+                  <span className="spec-value">{r.price}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Check-In</span>
+                  <span className="spec-value">{r.checkIn}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Check-Out</span>
+                  <span className="spec-value">{r.checkOut}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="dates-cta-side">
+              <div className="cta-side-inner">
+                <span className="priority-badge">Early Interest Priority</span>
+                <p className="cta-side-text">
+                  Joining our early-interest list is non-binding and incurs no fee. It simply guarantees you receive the invitation before public release.
+                </p>
+                <a
+                  className="btn btn-gold btn-dates-cta"
+                  href="#enquiry"
+                  onClick={() => track('cta_dates_card')}
+                >
+                  Reserve Your Interest
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
     </section>
   )
 }
 
 export function Faq() {
   const [open, setOpen] = useState(0)
+
   return (
-    <section id="faq" className="sec-ivory">
-      <div className="wrap"><Reveal>
-        <p className="eyebrow">Questions, answered gently</p>
-        <h2>Frequently asked questions</h2>
-      </Reveal>
-      <div className="faq">
-        {faqs.map((f, i) => (
-          <div className="faq-item" key={f.q}>
-            <button className="faq-q" aria-expanded={open === i} aria-controls={`faq-${i}`} onClick={() => setOpen(open === i ? -1 : i)}>
-              {f.q}<span aria-hidden="true">{open === i ? '−' : '+'}</span>
-            </button>
-            {open === i && <p className="faq-a" id={`faq-${i}`}>{f.a}</p>}
+    <section id="faq" className="sec-ivory sec-faq">
+      <div className="wrap">
+        <Reveal>
+          <div className="section-head-editorial text-center">
+            <p className="eyebrow">Clear &amp; Gentle Guidance</p>
+            <h2>Frequently Asked Questions</h2>
+            <p className="lede" style={{ margin: '0 auto' }}>
+              Everything you need to know about preparing for your time with us in Kerala.
+            </p>
           </div>
-        ))}
-      </div></div>
+        </Reveal>
+
+        <div className="faq-container">
+          {faqs.map((f, i) => {
+            const isOpen = open === i
+            const panelId = `faq-answer-${i}`
+            const buttonId = `faq-button-${i}`
+
+            return (
+              <div className={`faq-row ${isOpen ? 'active' : ''}`} key={f.q}>
+                <button
+                  id={buttonId}
+                  className="faq-question-btn"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                >
+                  <span className="faq-q-text">{f.q}</span>
+                  <span className="faq-toggle-icon" aria-hidden="true">
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </button>
+                {isOpen && (
+                  <div id={panelId} role="region" aria-labelledby={buttonId} className="faq-answer-panel">
+                    <p className="faq-a-text">{f.a}</p>
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </section>
   )
 }
 
-// Renders NOTHING when testimonials is empty — no fake testimonials, ever.
-// Add real, permissioned testimonials to site.testimonials to switch it on.
+// Renders nothing when testimonials array is empty — preserves genuine integrity.
 export function Testimonials() {
-  if (!site.testimonials.length) return null
+  if (!site.testimonials || !site.testimonials.length) return null
+
   return (
-    <section aria-label="What participants say">
-      <div className="wrap"><h2>Voices</h2>
-        {site.testimonials.map((t) => (
-          <blockquote key={t.name}><p>{t.quote}</p><cite>— {t.name}</cite></blockquote>
-        ))}
+    <section className="sec-testimonials" aria-label="What participants say">
+      <div className="wrap">
+        <div className="section-head-editorial">
+          <p className="eyebrow">Participant Reflections</p>
+          <h2>Voices from the Retreat</h2>
+        </div>
+        <div className="testimonials-grid">
+          {site.testimonials.map((t) => (
+            <blockquote key={t.name} className="testimonial-card">
+              <p className="testimonial-quote">“{t.quote}”</p>
+              <cite className="testimonial-author">— {t.name}</cite>
+            </blockquote>
+          ))}
+        </div>
       </div>
     </section>
   )

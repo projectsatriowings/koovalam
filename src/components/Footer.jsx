@@ -2,22 +2,74 @@ import Logo from './Logo.jsx'
 import { site, whatsappLink } from '../config/site.js'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer>
+    <footer className="editorial-footer" role="contentinfo">
       <div className="wrap">
-        <div className="foot-grid">
-          <div><Logo light /><p style={{ marginTop: 16, maxWidth: 320 }}>{site.tagline}</p></div>
-          <div>
-            <p><strong>Contact</strong></p>
-            <p><a href={`mailto:${site.email}`}>{site.email}</a><br /><a href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp</a></p>
+        <div className="footer-top-grid">
+          <div className="footer-brand-col">
+            <Logo light size={50} />
+            <p className="footer-tagline">{site.tagline}</p>
+            <p className="footer-retreat-tag">Pause. Breathe. Reconnect.</p>
+            <div className="footer-pillars-strip">
+              <span>BODY</span>
+              <span className="dot" aria-hidden="true">·</span>
+              <span>MIND</span>
+              <span className="dot" aria-hidden="true">·</span>
+              <span>SOUL</span>
+            </div>
           </div>
-          <div>
-            <p><strong>Follow</strong></p>
-            <p>{site.socials.map((s) => <span key={s.label}><a href={s.href}>{s.label}</a><br /></span>)}</p>
+
+          <div className="footer-nav-col">
+            <h4 className="footer-col-title">Navigation</h4>
+            <ul className="footer-links">
+              <li><a href="#pause">The Sanctuary</a></li>
+              <li><a href="#koovalam">Sacred Origin</a></li>
+              <li><a href="#retreat">Mindful Practices</a></li>
+              <li><a href="#journey">4-Day Journey</a></li>
+              <li><a href="#included">Inclusions</a></li>
+              <li><a href="#faq">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-contact-col">
+            <h4 className="footer-col-title">Direct Inquiries</h4>
+            <p className="footer-contact-item">
+              <span className="contact-label">Email:</span>
+              <a href={`mailto:${site.email}`} className="contact-link">{site.email}</a>
+            </p>
+            <p className="footer-contact-item">
+              <span className="contact-label">WhatsApp:</span>
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-link">
+                Direct WhatsApp Channel
+              </a>
+            </p>
+            <div className="footer-socials">
+              {site.socials.map((s) => (
+                <a key={s.label} href={s.href} className="footer-social-link">
+                  {s.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-        <p className="disclaimer">Our programs support general well-being and are not a substitute for medical or psychological care.</p>
-        <p style={{ fontSize: '.9rem', color: '#8fa086' }}>© {new Date().getFullYear()} {site.wordmark}. All rights reserved. Schedule shown is a sample and may adapt to venue, season, temple timings and river conditions.</p>
+
+        <div className="footer-divider" aria-hidden="true" />
+
+        <div className="footer-bottom">
+          <p className="footer-disclaimer">
+            Our programs and retreat experiences support holistic well-being, mindfulness, and personal growth. They are not intended as a substitute for professional clinical medical or psychological treatment.
+          </p>
+          <div className="footer-legal">
+            <p className="copyright">
+              © {currentYear} {site.wordmark}. All rights reserved. Kerala, India.
+            </p>
+            <p className="footnote">
+              Sample itinerary shown; activities honor local customs, seasonal conditions, and safety protocols.
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   )

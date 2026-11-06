@@ -11,7 +11,7 @@ export default function ImageSlot({ name, eager = false, className = '' }) {
   if (failed) {
     return (
       <div className={`slot ${className}`} style={{ aspectRatio: meta.aspect }} role="img" aria-label={meta.alt || name}>
-        <div className="slot-fallback"><LeafMark color="#F6F1E4" size={52} /></div>
+        <div className="slot-fallback"><LeafMark color="var(--antique-gold)" size={48} /></div>
       </div>
     )
   }

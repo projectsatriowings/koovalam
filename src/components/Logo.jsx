@@ -2,7 +2,7 @@
 // Extracted from the official identity brandmark.
 
 export function LeafMark({ color = 'currentColor', stemColor, size = 34, className = '' }) {
-  const actualStemColor = stemColor || (color === '#F6F1E4' || color === '#fff' ? '#D4AF37' : '#A8892E')
+  const actualStemColor = stemColor || (color === '#F5F0E5' || color === '#FAF8F1' || color === '#fff' || color === 'var(--warm-cream)' ? '#B69A61' : '#806B50')
   return (
     <svg
       width={size}
