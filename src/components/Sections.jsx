@@ -217,21 +217,21 @@ export function BilvaStory() {
       meaning: 'Threefold Form',
       dimension: 'BODY',
       title: 'Physical Grounding & Somatic Balance',
-      desc: 'Just as the Bilva roots reach deep into Kerala’s fertile soil, true wellbeing begins in the body. Classical gentle asanas, restorative rest, and pure vegetarian nutrition awaken natural vitality without strain.',
+      desc: 'In Koovalam’s retreat philosophy, this leaflet represents the physical foundation. Just as the Bilva roots firmly into the earth, physical wellbeing begins with classical gentle asanas, restorative rest, and nourishing vegetarian meals rooted in Kerala tradition.',
     },
     {
       sanskrit: 'TRINETRA',
       meaning: 'Inner Vision',
       dimension: 'MIND',
       title: 'Mental Stillness & Sensory Peace',
-      desc: 'Traditionally likened to the three eyes of Shiva — perceiving past, present, and timeless truth — the trifoliate leaf reminds us to quiet mental restlessness through guided breathwork, quiet contemplation, and Yoga Nidra.',
+      desc: 'Drawing inspiration from traditional poetic associations with clear perception, Koovalam interprets this leaflet as mental quietude — stepping back from daily rush through gentle breathwork, guided mindfulness, and Yoga Nidra.',
     },
     {
       sanskrit: 'TRISHOOLA',
       meaning: 'Sacred Harmony',
       dimension: 'SOUL',
       title: 'Spiritual Reverence & Inner Wholeness',
-      desc: 'Symbolizing the alignment of intention, breath, and action, the leaf invites an unforced return to your essential nature. Nurtured by temple quiet, evening lamps, and unhurried stillness.',
+      desc: 'Interpreted within our retreat as the alignment of inner intention and peaceful awareness. An unforced return to your essential nature, nurtured by temple quiet, evening lamps, and unhurried natural surroundings.',
     },
   ]
 
@@ -279,12 +279,12 @@ export function BilvaStory() {
                       <span className="specimen-taxon">BOTANICAL SPECIMEN · RUTACEAE</span>
                       <span className="specimen-malayalam" aria-label="Koovalam in Malayalam script">കൂവളം</span>
                     </div>
-                    <h3 className="specimen-name">Aegle marmelos (Bilva)</h3>
+                    <h3 className="specimen-name">Aegle marmelos (Bilva / Bael)</h3>
                     <p className="specimen-meta">
-                      Sacred trifoliate leaves gathered and arranged on handwoven cream linen. In Indian cultural heritage and Ayurveda, each tri-lobed cluster signifies the harmony of body, mind, and spirit.
+                      Sacred trifoliate leaves resting on handwoven cream linen. The distinct three-leaflet arrangement serves as the visual and philosophical emblem of the Koovalam retreat.
                     </p>
                     <span className="specimen-disclaimer">
-                      (Botanical lifestyle study; natural emblem of the retreat).
+                      (Curated botanical lifestyle photography; representative of Kerala’s sacred Bilva flora).
                     </span>
                   </div>
                 </div>
@@ -303,10 +303,10 @@ export function BilvaStory() {
                 <div className="lore-divider" aria-hidden="true" />
 
                 <div className="lore-article">
-                  <span className="lore-overline">BOTANICAL WISDOM</span>
-                  <h3 className="lore-title">Cooling Rest for the Nervous System</h3>
+                  <span className="lore-overline">BOTANICAL TRADITION</span>
+                  <h3 className="lore-title">Cooling Shade &amp; Natural Balance</h3>
                   <p className="lore-text">
-                    In classical Ayurvedic traditions, the Bilva is classified as a soothing, balancing botanical. Its aromatic presence, gentle cooling nature, and bitter-sweet essence have long been celebrated for grounding anxious energy, aiding digestive balance, and bringing physical quietude to an overstimulated body.
+                    In classical Ayurvedic literature, the Bilva is documented for its cooling nature (<em>Sheeta virya</em>) and aromatic foliage. Within Kerala’s traditional dwellings, resting beneath its canopy has long been cherished for offering a peaceful sensory refuge. At Koovalam, we embrace this botanical presence as a natural sanctuary for restful contemplation, free from clinical claims.
                   </p>
                 </div>
 
@@ -316,7 +316,7 @@ export function BilvaStory() {
                   <span className="lore-overline">THE KOOVALAM PROMISE</span>
                   <h3 className="lore-title">Reverence Without Religious Dogma</h3>
                   <p className="lore-text">
-                    While rooted in Kerala's living heritage, Koovalam welcomes seekers of every background. We celebrate the Bilva not as an object of rigid dogma, but as a living teacher from the forest: a reminder to live lightly, breathe deeply, and honour the sacred in all of nature.
+                    While rooted in Kerala's sacred heritage, Koovalam is not a religious ceremony. We celebrate the Bilva tree as a living symbol of harmony between humanity and nature. Guests of every background and worldview are warmly welcomed, with all contemplative practices remaining completely voluntary.
                   </p>
                 </div>
               </div>
@@ -336,10 +336,10 @@ export function BilvaStory() {
             {/* Tridala: The Threefold Wisdom (Archival Triptych) */}
             <div className="tridala-section" aria-label="The Threefold Wisdom of Bilva">
               <div className="tridala-intro">
-                <span className="tridala-overline">THE TRIFOLIATE PHILOSOPHY</span>
+                <span className="tridala-overline">KOOVALAM’S SYMBOLIC INTERPRETATION</span>
                 <h3 className="tridala-title">The Three Leaflets of Inner Balance</h3>
                 <p className="tridala-lead">
-                  One stalk, three united leaves. This ancient botanical geometry forms the foundation of every mindful practice at Koovalam.
+                  Inspired by traditional verses celebrating the Bilva leaf’s threefold geometry (Tridala, Trinetra, and Trishoola), Koovalam draws upon this botanical symbol as our guiding retreat metaphor for harmony across Body, Mind, and Soul.
                 </p>
               </div>
 
@@ -400,37 +400,210 @@ export function BilvaStory() {
 }
 
 /**
- * The Practices · Mindful Modalities
- * Replaces generic SaaS bento tilt cards with refined editorial gallery cards.
+ * Chapter 03: Mindful Modalities & Daily Practices
+ * An editorial introduction to the 6 core modalities offered at Koovalam:
+ * Classical Yoga, Restorative Pranayama, Guided Meditation, Yoga Nidra,
+ * Guided Reflection, and Nature & Cultural Immersion.
  */
 export function Practices() {
+  const practiceItems = [
+    {
+      index: '02',
+      image: 'practice-pranayama',
+      pillar: 'BODY & BREATH',
+      title: 'Restorative Pranayama',
+      subtitle: 'Foundational Morning & Sunset Breath',
+      desc: 'Simple, conscious breath practices — including natural diaphragmatic breathing and alternate-nostril breathing (Nadi Shodhana) — that gently invite the nervous system into resting equilibrium. Always unforced and adapted to individual capacity.',
+      setting: 'Quiet veranda or shaded pavilion',
+    },
+    {
+      index: '03',
+      image: 'practice-meditation',
+      pillar: 'MIND & STILLNESS',
+      title: 'Present-Moment Guided Meditation',
+      subtitle: 'Spacious Sitting in Morning Light',
+      desc: 'Spacious silent sitting and gently guided mindfulness. Cultivating present-moment awareness, emotional self-compassion, and quiet observation of thoughts without urgency, pressure, or expectation.',
+      setting: 'Morning light facing lush greenery',
+    },
+    {
+      index: '04',
+      image: 'practice-yoga-nidra',
+      pillar: 'MIND & DEEP REST',
+      title: 'Yoga Nidra (Conscious Rest)',
+      subtitle: 'Nightly Guided Lying-Down Relaxation',
+      desc: 'A deeply restorative practice of guided sensory withdrawal (pratyahara), experienced comfortably lying down with mats, bolsters, and blankets. Systematically softens mental fatigue to close each day in still, restorative rest.',
+      setting: 'Evening quiet with soft lamplight',
+    },
+    {
+      index: '05',
+      image: 'practice-reflection',
+      pillar: 'SOUL & INTEGRATION',
+      title: 'Journaling & Reflection Circles',
+      subtitle: 'Midday Inquiry & Integration Workshop',
+      desc: 'Reflective writing prompts, values inquiry, and optional sharing circles. Designed to help you notice helpful habits, clarify supportive beliefs, and shape a simple, realistic wellness routine to carry home.',
+      setting: 'Comfortable indoor lounge & herbal tea',
+    },
+  ]
+
   return (
-    <section id="retreat" className="sec-practices">
+    <section id="retreat" className="sec-practices" aria-label="Chapter 03: Mindful Modalities & Daily Practices">
       <div className="wrap">
         <Reveal>
-          <div className="section-head-editorial">
-            <p className="eyebrow">Mindful Modalities</p>
-            <h2>Gentle practices, practised slowly</h2>
-            <p className="lede">
-              Nothing here is a performance or a rigid test. Every session is an invitation offered with care — you are free to participate, soften, or rest whenever you feel called.
-            </p>
+          <div className="editorial-chapter">
+            {/* Chapter 03 Intro Bar */}
+            <div className="chapter-intro-bar">
+              <div className="chapter-eyebrow-wrap">
+                <span className="chapter-badge">03</span>
+                <span className="chapter-eyebrow">CHAPTER 03 · MINDFUL MODALITIES</span>
+              </div>
+              <span className="chapter-tagline">Gentle Practices, Practised Slowly</span>
+            </div>
+
+            {/* Chapter Lead Block */}
+            <div className="chapter-lead-block">
+              <h2 className="chapter-heading">
+                Six Pathways to Rest, Awareness &amp; <em>Renewal</em>.
+              </h2>
+              <p className="chapter-sublead">
+                Nothing at Koovalam is a performance, a rigid test, or a contest of flexibility. Every session is an unhurried invitation offered with care — you are always free to participate, soften, or rest whenever you feel called.
+              </p>
+            </div>
+
+            {/* 1. Featured Spotlight: Classical Yoga & Movement */}
+            <div className="practice-spotlight-card">
+              <div className="spotlight-media-wrap">
+                <ImageSlot name="practice-yoga" />
+                <div className="spotlight-badge" aria-hidden="true">
+                  <LeafMark color="var(--primary-forest)" size={22} />
+                  <span>FOUNDATIONAL MODALITY</span>
+                </div>
+              </div>
+              <div className="spotlight-content">
+                <div className="spotlight-header">
+                  <span className="spotlight-pillar-tag">PILLAR 01 · BODY &amp; SOMATIC EASE</span>
+                  <span className="spotlight-index">01 OF 06</span>
+                </div>
+                <h3 className="spotlight-title">Classical Yoga &amp; Mindful Movement</h3>
+                <p className="spotlight-desc">
+                  Gentle morning sessions designed to release deep somatic tension, restore natural joint mobility, and awaken physical vitality. Paced deliberately slow with foundational classical postures and mindful body-awareness, every movement is adapted to your natural comfort — completely accessible to beginners, with no forcing or contortion.
+                </p>
+                <div className="spotlight-meta-grid">
+                  <div className="spotlight-meta-item">
+                    <span className="spotlight-meta-label">SETTING</span>
+                    <span className="spotlight-meta-val">Open-air veranda, gentle morning breeze &amp; garden quiet</span>
+                  </div>
+                  <div className="spotlight-meta-item">
+                    <span className="spotlight-meta-label">PACE</span>
+                    <span className="spotlight-meta-val">Deliberate, grounded &amp; unhurried movement</span>
+                  </div>
+                  <div className="spotlight-meta-item">
+                    <span className="spotlight-meta-label">INTENTION</span>
+                    <span className="spotlight-meta-val">Somatic ease, postural alignment &amp; steady breath</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 2. Editorial Gallery: Pairs for Breath, Mind & Reflection */}
+            <div className="practices-editorial-layout">
+              <div className="practices-duo-grid">
+                {practiceItems.map((p) => (
+                  <div key={p.title} className="practice-editorial-card">
+                    <div className="practice-card-media">
+                      <ImageSlot name={p.image} />
+                      <div className="practice-card-topbar">
+                        <span className="practice-pillar-badge">{p.pillar}</span>
+                        <span className="practice-card-index">{p.index}</span>
+                      </div>
+                    </div>
+                    <div className="practice-card-body">
+                      <span className="practice-card-subtitle">{p.subtitle}</span>
+                      <h4 className="practice-card-title">{p.title}</h4>
+                      <p className="practice-card-desc">{p.desc}</p>
+                      <div className="practice-card-setting">
+                        <span className="setting-label">Atmosphere:</span>
+                        <span className="setting-val">{p.setting}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* 3. Wide Full-Width Feature: Nature Immersion & Cultural Connection */}
+              <div className="practice-wide-feature">
+                <div className="wide-feature-media">
+                  <ImageSlot name="practice-nature-culture" />
+                  <div className="wide-feature-badge">
+                    <span className="practice-pillar-badge">PILLAR 03 · SOUL &amp; SACRED NATURE</span>
+                    <span className="practice-card-index">06</span>
+                  </div>
+                </div>
+                <div className="wide-feature-content">
+                  <span className="practice-card-subtitle">Cultural Heritage &amp; Mindful Excursions</span>
+                  <h3 className="wide-feature-title">Temple Stillness &amp; Nila River Safari</h3>
+                  <p className="wide-feature-desc">
+                    Spiritual wellness at Koovalam is deeply connected to the living landscapes of Kerala. Enjoy unhurried morning visits to quiet heritage temple courtyards, walk barefoot on cool granite, and drift peacefully along the historic Nila River on a mindful boat safari — letting the rhythm of flowing water restore inner stillness.
+                  </p>
+                  <div className="wide-feature-meta">
+                    <div className="meta-pill">
+                      <span className="pill-dot" aria-hidden="true" />
+                      <span>Quiet heritage temple visit (cultural observance)</span>
+                    </div>
+                    <div className="meta-pill">
+                      <span className="pill-dot" aria-hidden="true" />
+                      <span>Nila River boat safari (weather &amp; permissions permitting)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Voluntary Ethos & Practice Reassurance Banner */}
+            <div className="practices-ethos-banner">
+              <div className="ethos-mark-wrap" aria-hidden="true">
+                <LeafMark color="var(--primary-forest)" size={32} />
+              </div>
+              <div className="ethos-content">
+                <h4 className="ethos-title">Our Practice Ethos: Gentle, Voluntary &amp; Non-Dogmatic</h4>
+                <p className="ethos-desc">
+                  Every session is an open invitation, never a demand. You are always welcome to pause, observe, or opt out of any exercise. Our retreat is designed to support general wellbeing, unhurried rest, and nervous system ease. It is not psychotherapy, makes no clinical guarantees, and requires zero prior yoga experience.
+                </p>
+              </div>
+            </div>
+
+            {/* 5. Narrative Transition to Chapter 04 */}
+            <div className="chapter-next-bridge">
+              <div className="bridge-line" aria-hidden="true" />
+              <div className="bridge-content">
+                <span className="bridge-tag">NEXT CHAPTER</span>
+                <p className="bridge-text">
+                  Trace the unhurried arc of our 4-day retreat itinerary, from your welcome drink to the closing circle.
+                </p>
+                <a
+                  href="#journey"
+                  className="bridge-link"
+                  onClick={() => track('nav_chapter_04_bridge')}
+                >
+                  <span className="bridge-link-text">Chapter 04 · The 4-Day Journey</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </Reveal>
-
-        <div className="practices-editorial-grid">
-          {practices.map((p, i) => (
-            <Reveal key={p.title} className="practice-card">
-              <div className="practice-image-wrap">
-                <ImageSlot name={p.image} />
-                <span className="practice-index" aria-hidden="true">0{i + 1}</span>
-              </div>
-              <div className="practice-content">
-                <h3 className="practice-title">{p.title}</h3>
-                <p className="practice-text">{p.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   )
@@ -475,7 +648,7 @@ export function Highlights() {
               <span className="highlight-badge">Afternoon Nature Immersion</span>
               <h3>Nila River Boat Safari</h3>
               <p>
-                A mindful drift along the calm waters of Bharathappuzha (the historic Nila River) at golden hour. Watch palm silhouettes reflect on the river and listen to the water. Operated exclusively with licensed safety standards, individual life jackets, and weather-dependent safety protocols.
+                A mindful drift along the calm waters of the Nila River at golden hour. Watch palm silhouettes reflect on the river and listen to the water. This mindful nature experience is an off-site excursion, subject to seasonal weather and safe operating conditions, and is not guaranteed.
               </p>
             </div>
           </Reveal>
