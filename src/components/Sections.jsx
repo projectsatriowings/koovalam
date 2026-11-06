@@ -13,10 +13,10 @@ import { LeafMark } from './Logo.jsx'
  */
 export function TicketStrip() {
   const facets = [
-    { title: '4 Days', subtitle: '3 Nights Sanctuary' },
-    { title: 'Kerala', subtitle: 'God’s Own Country, India' },
-    { title: 'Dates', subtitle: 'Announcing Soon' },
-    { title: 'Experience', subtitle: 'Gentle & Restorative' },
+    { label: 'DURATION', title: '4 Days', subtitle: '3 Nights Sanctuary' },
+    { label: 'LANDSCAPE', title: 'Kerala', subtitle: 'God’s Own Country, India' },
+    { label: 'ATMOSPHERE', title: 'Intimate', subtitle: 'Sacred, Quiet & Restorative' },
+    { label: 'RESERVATION', title: 'Private', subtitle: 'Announcing Soon' },
   ]
 
   return (
@@ -24,7 +24,8 @@ export function TicketStrip() {
       <div className="wrap">
         <div className="overview-strip">
           {facets.map((f, i) => (
-            <div key={f.title + i} className="overview-cell">
+            <div key={f.label + i} className="overview-cell">
+              <span className="overview-tag">{f.label}</span>
               <span className="overview-num">{f.title}</span>
               <span className="overview-sub">{f.subtitle}</span>
             </div>
@@ -40,20 +41,20 @@ export function TicketStrip() {
  */
 export function TrustStrip() {
   const items = [
-    'Traditional Yoga & Pranayama',
-    'Meditation & Yoga Nidra',
-    'Sacred Temple & River Experiences',
-    'Gentle, Trauma-Informed Care',
+    'Classical Yoga & Mindful Movement',
+    'Restorative Pranayama & Yoga Nidra',
+    'Sacred Kerala Temples & River Stillness',
+    'Gentle, Grounded Care (Always Voluntary)',
   ]
 
   return (
-    <section className="trust-strip-section" aria-label="Retreat Inclusions at a Glance">
+    <section className="trust-strip-section" aria-label="Retreat Foundations at a Glance">
       <div className="wrap">
         <div className="trust-row">
           {items.map((label) => (
             <div key={label} className="trust-item">
               <span className="trust-icon" aria-hidden="true">
-                <LeafMark color="var(--antique-gold)" stemColor="var(--earth-brown)" size={18} />
+                <LeafMark color="var(--antique-gold)" stemColor="var(--earth-brown)" size={16} />
               </span>
               <span className="trust-text">{label}</span>
             </div>
@@ -65,33 +66,136 @@ export function TrustStrip() {
 }
 
 /**
- * Chapter 01 · The Pause
- * Editorial pull-quote and meditative introduction to the retreat.
+ * Chapter 01 · The Sanctuary
+ * Editorial storytelling, natural living imagery, and Body-Mind-Soul connection.
  */
 export function Pause() {
+  const pillars = [
+    {
+      num: '01',
+      pillar: 'BODY',
+      title: 'Physical Vitality & Somatic Rest',
+      desc: 'Releasing stored physical tension through unhurried classical yoga, grounding postural alignment, and nourishing vegetarian meals rooted in Kerala tradition.',
+    },
+    {
+      num: '02',
+      pillar: 'MIND',
+      title: 'Mental Stillness & Sensory Peace',
+      desc: 'Stepping off the wheel of digital urgency into the quiet rhythm of dawn meditation, restorative breathwork, and deep Yoga Nidra beneath swaying palms.',
+    },
+    {
+      num: '03',
+      pillar: 'SOUL',
+      title: 'Spiritual Reverence & Inner Stillness',
+      desc: 'A gentle homecoming to your center through quiet temple visits, the mindful Nila River boat safari, and spacious guided reflection.',
+    },
+  ]
+
   return (
-    <section id="pause" className="sec-pause">
+    <section id="pause" className="sec-pause" aria-label="Chapter 01: The Sanctuary">
       <div className="wrap">
         <Reveal>
           <div className="editorial-chapter">
-            <span className="chapter-eyebrow">Chapter 01 · The Sacred Pause</span>
-            <div className="chapter-grid">
-              <div className="chapter-lead">
-                <h2 className="chapter-heading">
-                  When did you last give yourself permission to simply <em>be</em>?
-                </h2>
-                <div className="chapter-accent-line" aria-hidden="true" />
+            {/* Chapter 01 Intro Bar */}
+            <div className="chapter-intro-bar">
+              <div className="chapter-eyebrow-wrap">
+                <span className="chapter-badge">01</span>
+                <span className="chapter-eyebrow">CHAPTER 01 · THE SANCTUARY</span>
               </div>
-              <div className="chapter-body">
-                <p className="chapter-quote">
-                  Life has been loud lately. Notifications, deadlines, noise — even rest has started to feel like another obligation.
+              <span className="chapter-tagline">Pause. Breathe. Reconnect.</span>
+            </div>
+
+            {/* Chapter Lead Block */}
+            <div className="chapter-lead-block">
+              <h2 className="chapter-heading">
+                When did you last give yourself permission to simply <em>be</em>?
+              </h2>
+              <p className="chapter-sublead">
+                Life has been loud. Deadlines, notifications, endless expectations — even rest has started to feel like another obligation to manage. Koovalam begins with a single, profound choice: the decision to step away from daily urgency, breathe without hurry, and listen to yourself once more.
+              </p>
+            </div>
+
+            {/* Sanctuary Storytelling: Balanced Image & Philosophy Composition */}
+            <div className="sanctuary-story-grid">
+              <div className="sanctuary-visual-col">
+                <div className="sanctuary-image-frame">
+                  <ImageSlot name="natural-living" />
+                  <div className="sanctuary-image-caption">
+                    <span className="caption-tag">BOTANICAL STILLNESS · KERALA</span>
+                    <span className="caption-note">Atmospheric botanical oils, handcrafted candle, and sacred Bilva leaves. (Lifestyle presentation; confirmed retreat venue details shared upon enquiry).</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="sanctuary-narrative-col">
+                <blockquote className="sanctuary-pullquote">
+                  “We do not come to the sanctuary to fix or force ourselves. We come to create spacious silence — and allow our natural clarity to return.”
+                </blockquote>
+
+                <div className="sanctuary-values">
+                  <div className="sanctuary-value-item">
+                    <h3 className="value-title">Unhurried Space</h3>
+                    <p className="value-desc">
+                      Four full days with no alarms, no rushed transitions, and no crowded timetables. Each day unfolds at the gentle rhythm of nature.
+                    </p>
+                  </div>
+
+                  <div className="sanctuary-value-item">
+                    <h3 className="value-title">Atmospheric Kerala Setting</h3>
+                    <p className="value-desc">
+                      Nestled within lush greenery in Kerala's cultural heartland, where temple bells and river breezes restore the nervous system.
+                    </p>
+                  </div>
+
+                  <div className="sanctuary-value-item">
+                    <h3 className="value-title">Gentle, Grounded Practices</h3>
+                    <p className="value-desc">
+                      Every session is an open invitation. Practices are adapted to individual comfort, with no performance pressure and no forcing. Our retreat supports general wellbeing and is not a substitute for therapy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* BODY · MIND · SOUL Connection */}
+            <div className="sanctuary-pillars-block" aria-label="The Three Pillars in Practice">
+              <div className="pillars-intro">
+                <span className="pillars-overline">THE LIVING TRIAD</span>
+                <h3 className="pillars-main-title">How the Sanctuary Nurtures You</h3>
+                <p className="pillars-lead">
+                  Inspired by the three sacred leaflets of the Bilva tree, every practice and quiet hour at Koovalam touches all three dimensions of your being.
                 </p>
-                <p className="chapter-text">
-                  Koovalam is an invitation to step out of the rush for four unhurried days: to wake with the dawn light, breathe without hurry, walk among deep green, and listen to yourself once more.
+              </div>
+
+              <div className="sanctuary-pillars-triad">
+                {pillars.map((item) => (
+                  <div key={item.pillar} className="sanctuary-pillar-card">
+                    <div className="pillar-header">
+                      <span className="pillar-badge-num">{item.num}</span>
+                      <span className="pillar-badge-name">{item.pillar}</span>
+                    </div>
+                    <h4 className="pillar-card-title">{item.title}</h4>
+                    <p className="pillar-card-desc">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Narrative Transition to Next Section (Chapter 02: Sacred Origin) */}
+            <div className="chapter-next-bridge">
+              <div className="bridge-line" aria-hidden="true" />
+              <div className="bridge-content">
+                <span className="bridge-tag">NEXT CHAPTER</span>
+                <p className="bridge-text">
+                  Discover the ancient tree and sacred lore from which Koovalam takes its name.
                 </p>
-                <p className="chapter-text-dim">
-                  No fixing, no forcing. Just open space — and the quiet clarity that returns within it.
-                </p>
+                <a href="#koovalam" className="bridge-link">
+                  <span>Chapter 02 · Sacred Origin &amp; The Bilva Tree</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -102,82 +206,194 @@ export function Pause() {
 }
 
 /**
- * Sacred Origin · The Bilva Story
- * Rooted in the sacred Bilva tree, associated with Lord Shiva, devotion, purity, and the 3 pillars.
+ * Chapter 02: Sacred Origin & The Bilva Tree
+ * Rooted in the sacred Bilva tree (Aegle marmelos), cultural heritage of Kerala,
+ * botanical wisdom, and the trifoliate harmony of Body, Mind, and Soul.
  */
 export function BilvaStory() {
-  const ref = useRef(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('in')
-          io.disconnect()
-        }
-      },
-      { threshold: 0.3 }
-    )
-    io.observe(el)
-    return () => io.disconnect()
-  }, [])
+  const tridalaFacets = [
+    {
+      sanskrit: 'TRIDALA',
+      meaning: 'Threefold Form',
+      dimension: 'BODY',
+      title: 'Physical Grounding & Somatic Balance',
+      desc: 'Just as the Bilva roots reach deep into Kerala’s fertile soil, true wellbeing begins in the body. Classical gentle asanas, restorative rest, and pure vegetarian nutrition awaken natural vitality without strain.',
+    },
+    {
+      sanskrit: 'TRINETRA',
+      meaning: 'Inner Vision',
+      dimension: 'MIND',
+      title: 'Mental Stillness & Sensory Peace',
+      desc: 'Traditionally likened to the three eyes of Shiva — perceiving past, present, and timeless truth — the trifoliate leaf reminds us to quiet mental restlessness through guided breathwork, quiet contemplation, and Yoga Nidra.',
+    },
+    {
+      sanskrit: 'TRISHOOLA',
+      meaning: 'Sacred Harmony',
+      dimension: 'SOUL',
+      title: 'Spiritual Reverence & Inner Wholeness',
+      desc: 'Symbolizing the alignment of intention, breath, and action, the leaf invites an unforced return to your essential nature. Nurtured by temple quiet, evening lamps, and unhurried stillness.',
+    },
+  ]
 
   return (
-    <section id="koovalam" className="sec-ivory sec-bilva">
+    <section id="origin" className="sec-bilva" aria-label="Chapter 02: Sacred Origin and the Bilva Tree">
+      {/* Anchor alias to preserve backward compatibility for legacy #koovalam bookmarks */}
+      <span id="koovalam" className="section-anchor-alias" aria-hidden="true" />
+
       <div className="wrap">
-        <div className="bilva-editorial-grid">
-          <Reveal className="bilva-media-col">
-            <div className="bilva-photo-frame">
-              <ImageSlot name="bilva-leaves" />
-              <div className="photo-caption">
-                <span className="caption-botanical">Aegle marmelos</span>
-                <span className="caption-desc">Sacred trifoliate Bilva leaves, symbol of devotion and purity</span>
+        <Reveal>
+          <div className="editorial-chapter">
+            {/* Chapter 02 Intro Bar */}
+            <div className="chapter-intro-bar">
+              <div className="chapter-eyebrow-wrap">
+                <span className="chapter-badge">02</span>
+                <span className="chapter-eyebrow">CHAPTER 02 · SACRED ORIGIN</span>
               </div>
+              <span className="chapter-tagline">The Bilva Tree &amp; Heritage</span>
             </div>
-          </Reveal>
 
-          <Reveal className="bilva-content-col">
-            <p className="eyebrow">Sacred Origin &amp; Meaning</p>
-            <h2 className="bilva-title">One Sacred Leaf. Three Leaflets.</h2>
-            <div className="bilva-desc">
-              <p>
-                <strong>Koovalam</strong> takes its name from the revered Bilva tree (<em>Aegle marmelos</em>), whose distinctive trifoliate leaf is traditionally offered in reverence to Lord Shiva — a timeless symbol of devotion, spiritual purity, and the profound harmony between nature and human consciousness.
-              </p>
-              <p>
-                Rooted in Kerala’s cultural heritage and natural landscapes, Koovalam was born to bridge sacred botanical wisdom with practical, grounded wellness for modern life.
+            {/* Chapter Lead Block */}
+            <div className="chapter-lead-block">
+              <h2 className="chapter-heading">
+                One Sacred Leaf. Three Leaflets. A Living Symbol of <em>Wholeness</em>.
+              </h2>
+              <p className="chapter-sublead">
+                In Malayalam botanical tradition, this revered tree is known as <strong>Koovalam</strong>. For centuries across Kerala and the Indian subcontinent, the Bilva (<em>Aegle marmelos</em>) has stood as an enduring emblem of spiritual stillness, natural medicine, and quiet reverence.
               </p>
             </div>
 
-            {/* Three Brand Pillars */}
-            <div className="pillars-container">
-              <div className="pillar-item">
-                <div className="pillar-num">I</div>
-                <div className="pillar-info">
-                  <h3 className="pillar-name">BODY</h3>
-                  <p className="pillar-desc">Physical vitality, gentle mobility, and mindful movement.</p>
+            {/* Asymmetrical Editorial Composition: Botanical Specimen + Lore */}
+            <div className="bilva-lore-grid">
+              {/* Botanical Specimen Visual Column */}
+              <div className="bilva-specimen-col">
+                <div className="bilva-specimen-frame">
+                  <div className="specimen-image-wrap">
+                    <ImageSlot name="bilva-leaves" />
+                    <div className="specimen-corner-badge" aria-hidden="true">
+                      <LeafMark color="var(--primary-forest)" size={28} />
+                    </div>
+                  </div>
+
+                  <div className="specimen-plaque">
+                    <div className="specimen-header">
+                      <span className="specimen-taxon">BOTANICAL SPECIMEN · RUTACEAE</span>
+                      <span className="specimen-malayalam" aria-label="Koovalam in Malayalam script">കൂവളം</span>
+                    </div>
+                    <h3 className="specimen-name">Aegle marmelos (Bilva)</h3>
+                    <p className="specimen-meta">
+                      Sacred trifoliate leaves gathered and arranged on handwoven cream linen. In Indian cultural heritage and Ayurveda, each tri-lobed cluster signifies the harmony of body, mind, and spirit.
+                    </p>
+                    <span className="specimen-disclaimer">
+                      (Botanical lifestyle study; natural emblem of the retreat).
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              <div className="pillar-item">
-                <div className="pillar-num">II</div>
-                <div className="pillar-info">
-                  <h3 className="pillar-name">MIND</h3>
-                  <p className="pillar-desc">Mental stillness, sensory grounding, and peaceful awareness.</p>
+              {/* Cultural & Spiritual Significance Column */}
+              <div className="bilva-narrative-col">
+                <div className="lore-article">
+                  <span className="lore-overline">CULTURAL HERITAGE</span>
+                  <h3 className="lore-title">A Tree Revered Across Centuries</h3>
+                  <p className="lore-text">
+                    Throughout Kerala’s historic groves and temple precincts, the Bilva tree holds an irreplaceable sanctuary status. Traditionally offered in Shaivite worship as a gesture of purity and surrender, its leaves represent the surrender of inner conflict and the quiet return to natural clarity.
+                  </p>
                 </div>
-              </div>
 
-              <div className="pillar-item">
-                <div className="pillar-num">III</div>
-                <div className="pillar-info">
-                  <h3 className="pillar-name">SOUL</h3>
-                  <p className="pillar-desc">Spiritual connection, reverence, and inner wholeness.</p>
+                <div className="lore-divider" aria-hidden="true" />
+
+                <div className="lore-article">
+                  <span className="lore-overline">BOTANICAL WISDOM</span>
+                  <h3 className="lore-title">Cooling Rest for the Nervous System</h3>
+                  <p className="lore-text">
+                    In classical Ayurvedic traditions, the Bilva is classified as a soothing, balancing botanical. Its aromatic presence, gentle cooling nature, and bitter-sweet essence have long been celebrated for grounding anxious energy, aiding digestive balance, and bringing physical quietude to an overstimulated body.
+                  </p>
+                </div>
+
+                <div className="lore-divider" aria-hidden="true" />
+
+                <div className="lore-article">
+                  <span className="lore-overline">THE KOOVALAM PROMISE</span>
+                  <h3 className="lore-title">Reverence Without Religious Dogma</h3>
+                  <p className="lore-text">
+                    While rooted in Kerala's living heritage, Koovalam welcomes seekers of every background. We celebrate the Bilva not as an object of rigid dogma, but as a living teacher from the forest: a reminder to live lightly, breathe deeply, and honour the sacred in all of nature.
+                  </p>
                 </div>
               </div>
             </div>
-          </Reveal>
-        </div>
+
+            {/* Grand Editorial Pullquote */}
+            <div className="bilva-quote-banner">
+              <div className="quote-mark-wrap" aria-hidden="true">
+                <LeafMark color="var(--antique-gold)" size={42} />
+              </div>
+              <blockquote className="bilva-pullquote">
+                “Koovalam takes its name from this sacred tree because its wisdom mirrors our core purpose: to help you pause the clamor of modern urgency, step upon peaceful earth, and allow your natural wholeness to return.”
+              </blockquote>
+              <cite className="bilva-quote-author">The Philosophy of Koovalam Retreat</cite>
+            </div>
+
+            {/* Tridala: The Threefold Wisdom (Archival Triptych) */}
+            <div className="tridala-section" aria-label="The Threefold Wisdom of Bilva">
+              <div className="tridala-intro">
+                <span className="tridala-overline">THE TRIFOLIATE PHILOSOPHY</span>
+                <h3 className="tridala-title">The Three Leaflets of Inner Balance</h3>
+                <p className="tridala-lead">
+                  One stalk, three united leaves. This ancient botanical geometry forms the foundation of every mindful practice at Koovalam.
+                </p>
+              </div>
+
+              <div className="tridala-triptych">
+                {tridalaFacets.map((item) => (
+                  <div key={item.dimension} className="tridala-card">
+                    <div className="tridala-card-header">
+                      <div className="tridala-sanskrit-tag">
+                        <span className="sanskrit-name">{item.sanskrit}</span>
+                        <span className="sanskrit-sub">({item.meaning})</span>
+                      </div>
+                      <span className="tridala-dim-badge">{item.dimension}</span>
+                    </div>
+                    <h4 className="tridala-card-title">{item.title}</h4>
+                    <p className="tridala-card-desc">{item.desc}</p>
+                    <div className="tridala-card-accent" aria-hidden="true" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Narrative Transition to Chapter 03 */}
+            <div className="chapter-next-bridge">
+              <div className="bridge-line" aria-hidden="true" />
+              <div className="bridge-content">
+                <span className="bridge-tag">NEXT CHAPTER</span>
+                <p className="bridge-text">
+                  Explore the five mindful modalities that shape your daily retreat experience.
+                </p>
+                <a
+                  href="#retreat"
+                  className="bridge-link"
+                  onClick={() => track('nav_chapter_03_bridge')}
+                >
+                  <span className="bridge-link-text">Chapter 03 · Mindful Modalities &amp; Practices</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

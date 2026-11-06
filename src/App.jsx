@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Journey from './components/Journey.jsx'
@@ -24,6 +25,18 @@ import Footer from './components/Footer.jsx'
  * Rooted in Nature. Connected to Soul.
  */
 export default function App() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash)
+      if (target) {
+        // Small delay to ensure layout paint before scroll
+        requestAnimationFrame(() => {
+          target.scrollIntoView()
+        })
+      }
+    }
+  }, [])
+
   return (
     <>
       <a className="skip-link" href="#main">
