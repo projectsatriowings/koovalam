@@ -148,29 +148,6 @@ export default function EnquirySection() {
 
         {/* Main Content Area */}
         <div className="enquiry-card-container">
-          {/* Prominent Surgery & Health Notice */}
-          <div className="enquiry-health-notice" role="alert">
-            <div className="notice-icon-col" aria-hidden="true">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--muted-terracotta)"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="12" />
-                <line x1="12" y1="16" x2="12.01" y2="16" />
-              </svg>
-            </div>
-            <div className="notice-text-col">
-              <strong>Important Health Notice:</strong> Participants who have recently undergone surgery should contact the organiser before considering registration. Please discuss any mobility or health-related concerns privately with the organiser upon direct contact. Sensitive personal medical details should not be submitted through public web forms.
-            </div>
-          </div>
-
           {submitted ? (
             /* Verified Success State — Only shown after server/provider confirms acceptance */
             <div className="enquiry-success-panel" role="status">

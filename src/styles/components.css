@@ -1353,6 +1353,7 @@
   grid-template-columns: 1.35fr 1fr;
   gap: 16px;
   margin-bottom: 16px;
+  align-items: stretch;
 }
 
 .gallery-item-featured,
@@ -1368,7 +1369,9 @@
 }
 
 .gallery-item-featured {
-  aspect-ratio: 16 / 10;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
 }
 
 .gallery-item-sub {
@@ -1498,6 +1501,11 @@
 @media (max-width: 900px) {
   .gallery-asymmetric-grid {
     grid-template-columns: 1fr;
+  }
+  .gallery-item-featured {
+    aspect-ratio: 16 / 10;
+    height: auto;
+    min-height: auto;
   }
   .gallery-supporting-col {
     grid-template-columns: 1fr 1fr;
