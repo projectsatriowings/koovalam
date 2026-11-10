@@ -610,49 +610,251 @@ export function Practices() {
 }
 
 /**
- * Kerala Highlights · Temple & Nila River
+ * Chapter 05: Kerala Experiences
+ * Heritage, Nature & Contemplation
  */
 export function Highlights() {
   return (
-    <section className="sec-ivory sec-highlights">
+    <section
+      id="experiences"
+      className="sec-ivory sec-highlights"
+      aria-labelledby="experiences-heading"
+    >
+      {/* Anchor alias for backward compatibility */}
+      <span id="highlights" className="section-anchor-alias" aria-hidden="true" />
+
       <div className="wrap">
+        {/* Chapter 05 Header Bar */}
         <Reveal>
-          <div className="section-head-editorial">
-            <p className="eyebrow">Kerala Heritage</p>
-            <h2>Sacred waters and morning quiet</h2>
-            <p className="lede">
-              Day 3 steps beyond the meditation mat to connect with the living spirit of Kerala — ancient temple serenity and the gentle flow of the Nila River.
+          <div className="chapter-intro-bar">
+            <div className="chapter-eyebrow-wrap">
+              <span className="chapter-badge">05</span>
+              <span className="chapter-eyebrow">CHAPTER 05 · KERALA EXPERIENCES</span>
+            </div>
+            <span className="chapter-tagline">Heritage, Nature &amp; Contemplation</span>
+          </div>
+
+          <div className="chapter-lead-block">
+            <h2 id="experiences-heading" className="chapter-heading">
+              Sacred Waters, Temple Quiet &amp; <em>Living Canopy</em>.
+            </h2>
+            <p className="chapter-sublead">
+              The retreat does not exist in isolation from its land. Kerala is a landscape of ancient stone courtyards, living waters, and verdant silence. Chapter 05 introduces the gentle cultural and natural encounters outlined in our retreat schedule — grounding your stay in the authentic sensory atmosphere of Kerala.
             </p>
           </div>
         </Reveal>
 
-        <div className="highlights-editorial-grid">
-          <Reveal className="highlight-feature">
-            <div className="highlight-media">
+        {/* 1. Asymmetrical Diptych: Temple Heritage (60%) & Canopy Walk (40%) */}
+        <div className="experiences-asymmetric-diptych">
+          {/* Primary 60% Feature: Temple Contemplation */}
+          <Reveal className="experience-card experience-card-primary">
+            <div className="experience-media-wrap media-landscape">
               <ImageSlot name="highlight-temple" />
+              <div className="experience-overlay-badge" aria-hidden="true">
+                <span>CULTURAL EXPERIENCE</span>
+              </div>
             </div>
-            <div className="highlight-body">
-              <span className="highlight-badge">Morning Cultural Experience</span>
-              <h3>Kerala Temple Serenity</h3>
-              <p>
-                A quiet cultural and contemplative visit in the soft morning light, held in deep respect for local customs, architectural heritage, and temple timings. No rushed tours, no crowded spectacle — simply the stillness of oil lamps, stone courtyards, and centuries of devotion.
+            <div className="experience-body">
+              <div className="experience-meta-strip">
+                <span className="experience-badge">DAY 03 MORNING · CULTURAL VISIT</span>
+                <span className="experience-timing">9:30 AM – 12:00 PM</span>
+              </div>
+              <h3 className="experience-title">Temple Serenity &amp; Contemplative Quiet</h3>
+              <p className="experience-desc">
+                A quiet cultural and spiritual visit scheduled for Day 03 morning. Held in deep respect of local customs, architectural heritage, and temple timings, guests are invited to experience the stillness of traditional courtyards and oil lamps. There are no rushed tourist agendas — simply an invitation to quiet presence. Participation is completely voluntary and optional, with specific guidance on local customs shared prior to the visit.
               </p>
+              <div className="experience-disclosure-tag">
+                <span className="disclosure-label">Programme Status:</span>
+                <span className="disclosure-text">
+                  Included in retreat schedule · Subject to local customs, temple timings, permissions, and availability. Completely voluntary.
+                </span>
+              </div>
             </div>
           </Reveal>
 
-          <Reveal className="highlight-feature">
-            <div className="highlight-media">
-              <ImageSlot name="highlight-nila-river" />
+          {/* Secondary 40% Feature: Sensory Nature Walk */}
+          <Reveal className="experience-card experience-card-secondary">
+            <div className="experience-media-wrap media-portrait">
+              <ImageSlot name="practice-nature-culture" />
+              <div className="experience-overlay-badge" aria-hidden="true">
+                <span>NATURE &amp; MINDFULNESS</span>
+              </div>
             </div>
-            <div className="highlight-body">
-              <span className="highlight-badge">Afternoon Nature Immersion</span>
-              <h3>Nila River Boat Safari</h3>
-              <p>
-                A mindful drift along the calm waters of the Nila River at golden hour. Watch palm silhouettes reflect on the river and listen to the water. This mindful nature experience is an off-site excursion, subject to seasonal weather and safe operating conditions, and is not guaranteed.
+            <div className="experience-body">
+              <div className="experience-meta-strip">
+                <span className="experience-badge">DAY 02 AFTERNOON · RETREAT PRACTICE</span>
+                <span className="experience-timing">4:00 – 5:00 PM</span>
+              </div>
+              <h3 className="experience-title">Nature Walk &amp; Sensory Grounding</h3>
+              <p className="experience-desc">
+                Under the canopy of lush Kerala greenery, dedicated afternoon walks invite you to slow your stride to the rhythm of nature. Structured around mindful observation and sensory grounding, this gentle session invites you to listen to birdcall, notice native flora, and experience peaceful physical grounding.
               </p>
+              <div className="experience-disclosure-tag">
+                <span className="disclosure-label">Session Details:</span>
+                <span className="disclosure-text">
+                  Scheduled retreat practice · Paced unhurriedly on gentle footpaths, adapted to personal comfort. Participation is voluntary.
+                </span>
+              </div>
             </div>
           </Reveal>
         </div>
+
+        {/* 2. Wide Riparian Feature: Nila River Boat Safari (Off-Site, Conditional) */}
+        <Reveal>
+          <div className="experience-panorama-card">
+            <div className="panorama-grid">
+              <div className="panorama-body">
+                <div className="experience-meta-strip">
+                  <span className="experience-badge river-badge">DAY 03 AFTERNOON · NATURE EXCURSION</span>
+                  <span className="experience-timing">3:00 – 5:00 PM</span>
+                </div>
+                <h3 className="panorama-title">Mindful Nila River Boat Safari</h3>
+                <p className="panorama-desc">
+                  In the afternoon, participants embark on a mindful boat safari along the calm waters of the Nila River. Drifting peacefully as palm silhouettes reflect on the water, this nature excursion offers an expansive pause — letting the quiet movement of water bring natural mental rest.
+                </p>
+
+                {/* Prominent Conditionality & Inclusion Callout Box */}
+                <div className="excursion-conditionality-box">
+                  <div className="conditionality-header">
+                    <span className="conditionality-status-dot" aria-hidden="true" />
+                    <span className="conditionality-kicker">INCLUSION STATUS: CONDITIONAL &amp; WEATHER-DEPENDENT</span>
+                  </div>
+                  <p className="conditionality-text">
+                    The Nila River boat safari is listed in retreat inclusions as an off-site nature excursion. However, inclusion does not guarantee operation: the safari is strictly conditional upon seasonal weather, river conditions, permissions, and safe operating protocols. The retreat location is Kerala, India (exact venue to be confirmed).
+                  </p>
+                </div>
+              </div>
+
+              <div className="panorama-media-wrap">
+                <ImageSlot name="highlight-nila-river" />
+                <div className="panorama-media-caption">
+                  <span className="media-caption-tag">REPRESENTATIVE RIVER STUDY</span>
+                  <p className="media-caption-text">
+                    The Nila River in afternoon light. Off-site excursion subject to weather, permissions, and safe operating conditions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 3. Cultural Nourishment Vignette: Vegetarian Dining */}
+        <Reveal>
+          <div className="experience-culinary-vignette">
+            <div className="culinary-media-wrap">
+              <ImageSlot name="included-meals" />
+              <div className="culinary-overlay-tag" aria-hidden="true">
+                <span>NOURISHMENT &amp; CARE</span>
+              </div>
+            </div>
+            <div className="culinary-content">
+              <div className="experience-meta-strip">
+                <span className="experience-badge">DAILY RETREAT NOURISHMENT</span>
+                <span className="experience-timing">BREAKFAST · LUNCH · DINNER</span>
+              </div>
+              <h3 className="culinary-title">Vegetarian, Locally Prepared Meals &amp; Drinking Water</h3>
+              <p className="culinary-desc">
+                Wholesome, locally prepared vegetarian meals and drinking water are included throughout the retreat. Prepared fresh with regional culinary care, meals are crafted to be nourishing, comforting, and supportive of unhurried retreat days.
+              </p>
+              <div className="culinary-meta-note">
+                <span className="meta-note-bullet" aria-hidden="true">✦</span>
+                <p>
+                  <strong>Dietary notice:</strong> Please share any dietary needs, allergies, or health considerations privately before arrival so we can do our best to confirm what can be accommodated within retreat arrangements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 4. Experience Distinction Matrix: Core vs Cultural vs Riparian */}
+        <Reveal>
+          <div className="experience-distinction-matrix">
+            <div className="matrix-head">
+              <h4 className="matrix-title">Clear Distinction of Retreat Experiences</h4>
+              <p className="matrix-subtitle">
+                Clear distinction between daily retreat sessions, optional cultural visits, and conditional outdoor excursions.
+              </p>
+            </div>
+            <div className="matrix-grid">
+              <div className="matrix-col matrix-col-core">
+                <div className="matrix-col-header">
+                  <span className="matrix-step-badge">RETREAT SESSIONS</span>
+                  <h5 className="matrix-col-title">Daily Sanctuary Practices</h5>
+                </div>
+                <p className="matrix-col-desc">
+                  Yoga, pranayama, guided meditation, Yoga Nidra, journaling reflection circles, and sensory nature walks.
+                </p>
+                <div className="matrix-col-footer">
+                  <span className="matrix-status-tag tag-included">Included in Fee · 100% Voluntary</span>
+                </div>
+              </div>
+
+              <div className="matrix-col matrix-col-cultural">
+                <div className="matrix-col-header">
+                  <span className="matrix-step-badge">CULTURAL VISIT</span>
+                  <h5 className="matrix-col-title">Heritage Temple Contemplation</h5>
+                </div>
+                <p className="matrix-col-desc">
+                  A quiet morning cultural visit, held in respect of local customs, architectural heritage, and temple timings.
+                </p>
+                <div className="matrix-col-footer">
+                  <span className="matrix-status-tag tag-optional">Included in Fee · Optional (Timing &amp; Customs Dependent)</span>
+                </div>
+              </div>
+
+              <div className="matrix-col matrix-col-conditional">
+                <div className="matrix-col-header">
+                  <span className="matrix-step-badge">RIVER EXCURSION</span>
+                  <h5 className="matrix-col-title">Nila River Boat Safari</h5>
+                </div>
+                <p className="matrix-col-desc">
+                  A mindful afternoon boat drift along the Nila River, listed in retreat inclusions but strictly weather-dependent.
+                </p>
+                <div className="matrix-col-footer">
+                  <span className="matrix-status-tag tag-conditional">Included in Fee · Conditional (Not Guaranteed)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 5. Narrative Transition Bridge to Chapter 06 */}
+        <Reveal>
+          <div className="next-chapter-bridge">
+            <div className="bridge-inner">
+              <div className="bridge-icon">
+                <LeafMark color="var(--antique-gold)" size={28} />
+              </div>
+              <div className="bridge-content">
+                <span className="bridge-tag">NEXT CHAPTER</span>
+                <p className="bridge-text">
+                  Explore everything provided throughout your four-day stay — accommodations, nourishing vegetarian dining, and mindful facilitation.
+                </p>
+                <a
+                  href="#included"
+                  className="bridge-link"
+                  onClick={() => track('nav_chapter_06_bridge')}
+                >
+                  <span className="bridge-link-text">Chapter 06 · What Is Included</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
@@ -705,45 +907,434 @@ export function WhoFor() {
 }
 
 /**
- * Inclusions & Sanctuary Living
+ * Chapter 06: What Is Included?
+ * Comprehensive, Transparent Provision & Operational Conditions
  */
 export function Included() {
+  const practiceItems = [
+    {
+      title: 'Gentle Classical Yoga',
+      desc: 'Mindful body-awareness practice to loosen physical stiffness, steady breath, and cultivate mobility.',
+      timing: 'Daily Morning & Evening',
+    },
+    {
+      title: 'Foundational Pranayama',
+      desc: 'Simple breath practices including natural breathing and alternate-nostril breathwork, never forced.',
+      timing: 'Daily Sessions',
+    },
+    {
+      title: 'Dawn & Dusk Meditation',
+      desc: 'Quiet silent sitting and guided present-moment awareness, cultivating inner calm and self-compassion.',
+      timing: 'Daily Morning & Evening',
+    },
+    {
+      title: 'Evening Yoga Nidra',
+      desc: 'Deep, lying-down conscious relaxation closing each retreat evening in stillness and restorative comfort.',
+      timing: 'Daily Evening',
+    },
+    {
+      title: 'Mindfulness & Journaling',
+      desc: 'Facilitated reflection circles exploring personal strengths, values, and supportive life routines.',
+      timing: 'Days 02 & 03',
+    },
+    {
+      title: 'Take-Home Wellness Guide',
+      desc: 'A simple take-home wellness routine and reflection sheet to sustain mindful habits after returning home.',
+      timing: 'Day 04 Closing',
+    },
+  ]
+
+  const confirmedInclusions = [
+    {
+      title: '3 Nights’ Retreat Accommodation',
+      detail: 'Four days and three nights in Kerala, India (venue to be confirmed). Quiet rooms arranged for rest.',
+    },
+    {
+      title: 'Vegetarian Meals & Drinking Water',
+      detail: 'Wholesome, locally prepared vegetarian meals (breakfast, lunch, dinner) and drinking water throughout.',
+    },
+    {
+      title: 'Complete Guided Practices',
+      detail: 'All yoga, pranayama, meditation, and Yoga Nidra sessions led with unhurried attentiveness.',
+    },
+    {
+      title: 'Facilitated Reflection Circles',
+      detail: 'Guided journaling sessions, values reflection circles, and intention-setting workshops.',
+    },
+    {
+      title: 'Take-Home Practice Framework',
+      detail: 'A simple personal routine guide and reflection sheet to integrate helpful practices into daily life.',
+    },
+    {
+      title: 'Scheduled Excursion Fee Coverage',
+      detail: 'Temple cultural visit and Nila River boat safari included in fee (operational conditions apply).',
+    },
+  ]
+
+  const conditionalFactors = [
+    {
+      title: 'Nila River Boat Safari',
+      detail: 'Included in fee, but strictly conditional upon seasonal weather, river conditions, and permissions. Not guaranteed.',
+    },
+    {
+      title: 'Heritage Temple Visit',
+      detail: 'Scheduled cultural visit subject to temple opening timings, seasonal rituals, and local modesty customs. 100% voluntary.',
+    },
+    {
+      title: 'Dietary Accommodations',
+      detail: 'Special dietary needs, allergies, and health considerations require advance private notice and confirmation.',
+    },
+    {
+      title: 'Sample Schedule Pacing',
+      detail: 'Retreat schedule is a structured framework that adapts gracefully to weather, season, and group comfort.',
+    },
+  ]
+
+  const guestExclusions = [
+    {
+      title: 'Travel & Venue Transit',
+      detail: 'Travel and transport to/from the Kerala retreat location are arranged independently by guests.',
+    },
+    {
+      title: 'Travel & Health Insurance',
+      detail: 'Personal travel, medical, cancellation, or baggage insurance is not provided.',
+    },
+    {
+      title: 'Personal Incidentals',
+      detail: 'Telephone calls, individual laundry, souvenirs, and personal purchases outside retreat provision.',
+    },
+    {
+      title: 'Clinical or Psychiatric Care',
+      detail: 'Non-clinical wellness retreat. Individual psychotherapy, medical care, and trauma therapy are outside scope.',
+    },
+  ]
+
   return (
-    <section id="included" className="sec-ivory sec-included">
+    <section
+      id="included"
+      className="sec-ivory sec-included"
+      aria-labelledby="included-heading"
+    >
+      {/* Anchor alias for backwards compatibility */}
+      <span id="inclusions" className="section-anchor-alias" aria-hidden="true" />
+
       <div className="wrap">
+        {/* Chapter 06 Header Bar */}
         <Reveal>
-          <div className="section-head-editorial">
-            <p className="eyebrow">Transparent Inclusions</p>
-            <h2>Everything to nourish, nothing to distract</h2>
-            <p className="lede">
-              All essential elements of your 4-day stay are thoughtfully curated so your attention remains unburdened.
+          <div className="chapter-intro-bar">
+            <div className="chapter-eyebrow-wrap">
+              <span className="chapter-badge">06</span>
+              <span className="chapter-eyebrow">CHAPTER 06 · WHAT IS INCLUDED</span>
+            </div>
+            <span className="chapter-tagline">Transparent Provision · Complete Clarity</span>
+          </div>
+
+          <div className="chapter-lead-block">
+            <h2 id="included-heading" className="chapter-heading">
+              Everything to Nourish Your Stay. <em>Nothing to Distract</em>.
+            </h2>
+            <p className="chapter-sublead">
+              The Koovalam retreat is designed as an unhurried, all-inclusive sanctuary where every essential element of your four-day stay is thoughtfully provided. True rest begins with clarity — every confirmed inclusion, operational condition, and guest responsibility is set out below with uncompromised honesty.
             </p>
           </div>
         </Reveal>
 
-        <div className="included-editorial-grid">
-          <div className="included-items-col">
-            <ul className="included-list">
-              {included.map((item, index) => (
-                <li key={item} className="included-item">
-                  <span className="included-index">0{index + 1}</span>
-                  <span className="included-text">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="included-gallery-col">
-            <div className="gallery-card">
+        {/* 1. Curated Inclusions Folio: 4 Distinct Pillars */}
+        <div className="inclusions-folio-grid">
+          {/* Folio 01: Restful Stay */}
+          <Reveal className="folio-card folio-card-stay">
+            <div className="folio-media-wrap">
               <ImageSlot name="included-stay" />
-              <div className="gallery-caption">Restful Kerala retreat accommodation</div>
+              <div className="folio-media-caption">
+                <span className="caption-tag">REPRESENTATIVE SETTING</span>
+                <p className="caption-text">
+                  Kerala retreat accommodation. Exact venue and room details will be confirmed prior to booking.
+                </p>
+              </div>
             </div>
-            <div className="gallery-card">
+            <div className="folio-body">
+              <div className="folio-meta-strip">
+                <span className="folio-badge">SANCTUARY RESIDENCE</span>
+                <span className="folio-timing">4 DAYS · 3 NIGHTS</span>
+              </div>
+              <h3 className="folio-title">Restful Retreat Accommodation</h3>
+              <p className="folio-desc">
+                Three nights of quiet retreat accommodation in the calm natural landscape of Kerala, India. Spaces arranged for quiet rest, deep restorative sleep, and contemplative pause away from everyday obligations. Check-in commences from 2:00 PM on Day 01, and check-out is around 12:00 PM on Day 04.
+              </p>
+              <div className="folio-disclosure-box">
+                <span className="disclosure-label">Setting &amp; Venue Status:</span>
+                <p className="disclosure-text">
+                  Location is Kerala, India. The exact venue, property facilities, and room configurations will be confirmed and shared transparently before any booking is requested.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Folio 02: Vegetarian Nourishment */}
+          <Reveal className="folio-card folio-card-nourish">
+            <div className="folio-media-wrap media-square">
               <ImageSlot name="included-meals" />
-              <div className="gallery-caption">Fresh, wholesome vegetarian Kerala cuisine</div>
+              <div className="folio-media-caption">
+                <span className="caption-tag">REPRESENTATIVE MEAL</span>
+                <p className="caption-text">
+                  Wholesome vegetarian Kerala meal. Prepared fresh daily with regional care.
+                </p>
+              </div>
+            </div>
+            <div className="folio-body">
+              <div className="folio-meta-strip">
+                <span className="folio-badge">DAILY NOURISHMENT</span>
+                <span className="folio-timing">BREAKFAST · LUNCH · DINNER</span>
+              </div>
+              <h3 className="folio-title">Vegetarian Meals &amp; Drinking Water</h3>
+              <p className="folio-desc">
+                Wholesome, locally prepared vegetarian meals and drinking water are included across all four days of the retreat — starting with welcome refreshments and dinner on Day 01, through lunch on departure Day 04. Prepared fresh to nourish your body gently during meditation, breathwork, and quiet movement.
+              </p>
+              <div className="folio-disclosure-box">
+                <span className="disclosure-label">Dietary Notice &amp; Care:</span>
+                <p className="disclosure-text">
+                  Please share any dietary needs, allergies, or health considerations privately before arrival so we can do our best to confirm what can be accommodated within retreat arrangements.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Folio 03: Guided Practice Curriculum */}
+        <Reveal>
+          <div className="folio-curriculum-block">
+            <div className="curriculum-head">
+              <div className="folio-meta-strip">
+                <span className="folio-badge">GUIDED MODALITIES</span>
+                <span className="folio-timing">100% VOLUNTARY PARTICIPATION</span>
+              </div>
+              <h3 className="curriculum-title">All Daily Yoga, Breath &amp; Reflection Sessions</h3>
+              <p className="curriculum-sublead">
+                A structured four-day schedule of daily grounding practices led with unhurried attentiveness and adapted to individual comfort levels.
+              </p>
+            </div>
+
+            <div className="curriculum-practice-grid">
+              {practiceItems.map((item, idx) => (
+                <div key={item.title} className="practice-item-card">
+                  <div className="practice-item-top">
+                    <span className="practice-num">0{idx + 1}</span>
+                    <span className="practice-timing-tag">{item.timing}</span>
+                  </div>
+                  <h4 className="practice-item-title">{item.title}</h4>
+                  <p className="practice-item-desc">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="curriculum-disclosure-note">
+              <div className="disclosure-header">
+                <LeafMark color="var(--antique-gold)" size={18} />
+                <span className="disclosure-header-title">Voluntary Participation &amp; Care Boundary</span>
+              </div>
+              <p className="disclosure-text">
+                Every session is completely optional — you are always welcome to rest, observe, or pause whenever you need. Our programmes support general well-being and are not a substitute for medical or psychological care.
+              </p>
             </div>
           </div>
-        </div>
+        </Reveal>
+
+        {/* Folio 04: Scheduled Cultural & Nature Excursions */}
+        <Reveal>
+          <div className="folio-excursions-block">
+            <div className="excursions-head">
+              <div className="folio-meta-strip">
+                <span className="folio-badge">DAY 03 PROGRAMME</span>
+                <span className="folio-timing">HERITAGE &amp; RIPARIAN EXPLORATION</span>
+              </div>
+              <h3 className="excursions-title">Scheduled Temple Visit &amp; Nila River Safari</h3>
+              <p className="excursions-sublead">
+                Two distinct Kerala experiences scheduled for Day 03, combining quiet cultural reverence and peaceful outdoor contemplation.
+              </p>
+            </div>
+
+            <div className="excursions-duo-grid">
+              {/* Excursion 1: Temple */}
+              <div className="excursion-card">
+                <div className="excursion-card-top">
+                  <span className="excursion-tag-pill tag-cultural">DAY 03 MORNING · 9:30 AM – 12:00 PM</span>
+                  <span className="excursion-fee-tag">Included in Fee</span>
+                </div>
+                <h4 className="excursion-card-title">Heritage Temple Contemplation</h4>
+                <p className="excursion-card-desc">
+                  A quiet cultural and spiritual visit held in deep respect of local customs, architectural heritage, and temple timings. Modest dress guidance is provided prior to the visit.
+                </p>
+                <div className="excursion-status-line">
+                  <span className="status-bullet" aria-hidden="true">✦</span>
+                  <span><strong>Status:</strong> Voluntary participation · Subject to local customs and temple timings.</span>
+                </div>
+              </div>
+
+              {/* Excursion 2: Nila River Safari */}
+              <div className="excursion-card excursion-conditional">
+                <div className="excursion-card-top">
+                  <span className="excursion-tag-pill tag-river">DAY 03 AFTERNOON · 3:00 – 5:00 PM</span>
+                  <span className="excursion-fee-tag tag-conditional-fee">Included · Conditional</span>
+                </div>
+                <h4 className="excursion-card-title">Mindful Nila River Boat Safari</h4>
+                <p className="excursion-card-desc">
+                  An afternoon mindful boat drift along the calm waters of the Nila River. Listed as an included retreat excursion, but operation is strictly dependent on conditions.
+                </p>
+                <div className="excursion-status-line conditional-alert">
+                  <span className="status-bullet" aria-hidden="true">⚠️</span>
+                  <span><strong>Conditionality:</strong> Strictly conditional upon seasonal weather, river flow, permissions, and safe operating protocols. Not guaranteed.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="excursions-location-note">
+              <p>
+                <strong>Geographical Setting:</strong> Both excursions are conducted off-site. The retreat accommodation is not located beside the river; exact venue surroundings will be confirmed before booking.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 2. The Booking Transparency Ledger (3-Column Architectural Grid) */}
+        <Reveal>
+          <div className="transparency-ledger-block">
+            <div className="ledger-head">
+              <h3 className="ledger-title">Complete Retreat Transparency Ledger</h3>
+              <p className="ledger-sublead">
+                An honest, side-by-side distinction between confirmed inclusions, operational conditions, and guest travel responsibilities.
+              </p>
+            </div>
+
+            <div className="ledger-grid">
+              {/* Column 1: Confirmed Inclusions */}
+              <div className="ledger-col ledger-col-included">
+                <div className="ledger-col-header">
+                  <span className="ledger-status-badge badge-included">CONFIRMED INCLUSION</span>
+                  <h4 className="ledger-col-title">Covered by Retreat Fee</h4>
+                </div>
+                <ul className="ledger-list">
+                  {confirmedInclusions.map((item) => (
+                    <li key={item.title} className="ledger-item">
+                      <span className="ledger-icon icon-check" aria-hidden="true">✓</span>
+                      <div className="ledger-item-content">
+                        <strong className="ledger-item-heading">{item.title}</strong>
+                        <p className="ledger-item-detail">{item.detail}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 2: Operational Conditions */}
+              <div className="ledger-col ledger-col-conditions">
+                <div className="ledger-col-header">
+                  <span className="ledger-status-badge badge-conditional">OPERATIONAL CONDITIONS</span>
+                  <h4 className="ledger-col-title">Subject to Timing &amp; Safety</h4>
+                </div>
+                <ul className="ledger-list">
+                  {conditionalFactors.map((item) => (
+                    <li key={item.title} className="ledger-item">
+                      <span className="ledger-icon icon-condition" aria-hidden="true">✦</span>
+                      <div className="ledger-item-content">
+                        <strong className="ledger-item-heading">{item.title}</strong>
+                        <p className="ledger-item-detail">{item.detail}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 3: Guest Exclusions & Responsibilities */}
+              <div className="ledger-col ledger-col-exclusions">
+                <div className="ledger-col-header">
+                  <span className="ledger-status-badge badge-excluded">GUEST RESPONSIBILITY</span>
+                  <h4 className="ledger-col-title">Not Included in Fee</h4>
+                </div>
+                <ul className="ledger-list">
+                  {guestExclusions.map((item) => (
+                    <li key={item.title} className="ledger-item">
+                      <span className="ledger-icon icon-dash" aria-hidden="true">—</span>
+                      <div className="ledger-item-content">
+                        <strong className="ledger-item-heading">{item.title}</strong>
+                        <p className="ledger-item-detail">{item.detail}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 3. Honest Booking & Reservation Notice Banner */}
+        <Reveal>
+          <div className="booking-notice-banner">
+            <div className="banner-inner">
+              <div className="banner-kicker">
+                <span className="banner-bullet" aria-hidden="true">✦</span>
+                <span className="banner-tag">BOOKING &amp; RESERVATION TRANSPARENCY</span>
+              </div>
+              <h3 className="banner-title">Dates, Venue &amp; Pricing Confirmation</h3>
+              <p className="banner-text">
+                Dates for the upcoming Koovalam retreat are announcing soon. Pricing will be shared transparently upon enquiry before any booking or payment is accepted. Joining the early-interest list carries no financial commitment or obligation. Full venue details, accommodation specifications, packing guidelines, and cancellation policies will be provided in writing before reservation.
+              </p>
+              <div className="banner-actions">
+                <a
+                  href="#dates"
+                  className="btn btn-secondary banner-btn"
+                  onClick={() => track('cta_view_dates_notice')}
+                >
+                  View Dates Status
+                </a>
+                <a
+                  href="#enquiry"
+                  className="btn btn-primary banner-btn"
+                  onClick={() => track('cta_early_interest_inclusions')}
+                >
+                  Register Early Interest
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 4. Narrative Transition Bridge to Chapter 07: FAQ */}
+        <Reveal>
+          <div className="next-chapter-bridge">
+            <div className="bridge-inner">
+              <div className="bridge-icon">
+                <LeafMark color="var(--antique-gold)" size={28} />
+              </div>
+              <div className="bridge-content">
+                <span className="bridge-tag">NEXT CHAPTER</span>
+                <p className="bridge-text">
+                  Have questions regarding daily pacing, beginner suitability, packing essentials, or how we handle health considerations? Read our complete, honest questions and answers.
+                </p>
+                <a
+                  href="#faq"
+                  className="bridge-link"
+                  onClick={() => track('nav_chapter_07_bridge')}
+                >
+                  <span className="bridge-link-text">Chapter 07 · Frequently Asked Questions</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

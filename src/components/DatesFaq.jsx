@@ -73,6 +73,8 @@ export function Faq() {
 
   return (
     <section id="faq" className="sec-ivory sec-faq">
+      {/* Anchor alias for #faqs compatibility */}
+      <span id="faqs" className="section-anchor-alias" aria-hidden="true" />
       <div className="wrap">
         <Reveal>
           <div className="section-head-editorial text-center">

@@ -11,7 +11,7 @@ export const images = {
   'practice-reflection': { alt: 'Hands holding a pen over an open journal beside herbal tea', aspect: '1 / 1', w: 1024, h: 1024 },
   'practice-nature-culture': { alt: 'A quiet footpath through lush Kerala greenery', aspect: '1 / 1', w: 1024, h: 1024 },
   'highlight-temple': { alt: 'A traditional Kerala temple courtyard in early morning light', aspect: '3 / 2', w: 1536, h: 1024 },
-  'highlight-nila-river': { alt: 'A calm river lined with palms at golden hour, a wooden boat drifting', aspect: '3 / 2', w: 1536, h: 1024 },
+  'highlight-nila-river': { alt: 'A calm river lined with palms in the afternoon, a wooden boat drifting', aspect: '3 / 2', w: 1536, h: 1024 },
   'safe-care': { alt: 'A quiet, welcoming room with neatly arranged yoga mats and cushions', aspect: '3 / 2', w: 1536, h: 1024 },
   'included-stay': { alt: 'A simple Kerala-style retreat courtyard with plants and a quiet seating area', aspect: '3 / 2', w: 1536, h: 1024 },
   'included-meals': { alt: 'A nourishing vegetarian Kerala meal served on a banana leaf', aspect: '1 / 1', w: 1024, h: 1024 },

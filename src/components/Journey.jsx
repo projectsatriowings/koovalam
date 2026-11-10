@@ -38,11 +38,11 @@ const DAY_METADATA = {
     milestoneTag: 'MILESTONE 03 · THE RIVER',
     pillar: 'CULTURE, SACRED WATERS & GRATITUDE',
     narrative:
-      'Day 03 expands the retreat from the inner sanctuary outward into the cultural landscape of Kerala. Following gentle morning yoga and pranayama, participants visit a historic temple to experience early-morning serenity, stone courtyards, and centuries of contemplative quiet. In the afternoon, a mindful Nila River boat safari invites quiet drifting at golden hour, concluding with an evening reflection circle on gratitude and personal insight.',
-    quote: 'Stepping gently into centuries of stone stillness in the morning, drifting along golden river waters in the afternoon.',
+      'Day 03 expands the retreat from the inner sanctuary outward into the cultural landscape of Kerala. Following gentle morning yoga and pranayama, participants visit a historic temple to experience early-morning serenity, stone courtyards, and centuries of contemplative quiet. In the afternoon, a mindful Nila River boat safari invites quiet drifting, concluding with an evening reflection circle on gratitude and personal insight.',
+    quote: 'Stepping gently into centuries of stone stillness in the morning, drifting along calm river waters in the afternoon.',
     captionPill: 'HERITAGE & RIVER IMMERSION STUDY',
     captionText:
-      'Representative imagery. The confirmed retreat location is Kerala, India (exact venue to be confirmed) and is not located beside the river. The morning temple visit and afternoon Nila River boat safari are off-site experiences subject to local customs, temple timings, weather, and safe operating conditions, and are not guaranteed.',
+      'Representative imagery. The retreat location is Kerala, India (exact venue to be confirmed). The morning temple visit and afternoon Nila River boat safari are off-site experiences subject to local customs, temple timings, weather, and safe operating conditions, and are not guaranteed.',
   },
   4: {
     milestoneTag: 'MILESTONE 04 · THE RETURN',
@@ -328,14 +328,14 @@ export default function Journey() {
               <div className="bridge-content">
                 <span className="bridge-tag">NEXT CHAPTER</span>
                 <p className="bridge-text">
-                  Explore everything provided throughout your four-day stay — accommodations, nourishing vegetarian dining, and mindful facilitation.
+                  Explore the cultural, natural and heritage experiences of Kerala woven into your four-day retreat stay.
                 </p>
                 <a
-                  href="#included"
+                  href="#experiences"
                   className="bridge-link"
                   onClick={() => track('nav_chapter_05_bridge')}
                 >
-                  <span className="bridge-link-text">Chapter 05 · What Is Included</span>
+                  <span className="bridge-link-text">Chapter 05 · Kerala Experiences</span>
                   <svg
                     width="16"
                     height="16"
