@@ -950,8 +950,8 @@ export function Included() {
       detail: 'Four days and three nights in Kerala, India (venue to be confirmed). Quiet rooms arranged for rest.',
     },
     {
-      title: 'Vegetarian Meals & Drinking Water',
-      detail: 'Wholesome, locally prepared vegetarian meals (breakfast, lunch, dinner) and drinking water throughout.',
+      title: 'Scheduled Vegetarian Meals & Drinking Water',
+      detail: 'Wholesome, locally prepared vegetarian meals as scheduled: welcome drink and dinner on Day 01; breakfast, lunch and dinner on Days 02 and 03; breakfast and lunch on Day 04; plus drinking water throughout.',
     },
     {
       title: 'Complete Guided Practices',
@@ -962,8 +962,8 @@ export function Included() {
       detail: 'Guided journaling sessions, values reflection circles, and intention-setting workshops.',
     },
     {
-      title: 'Take-Home Practice Framework',
-      detail: 'A simple personal routine guide and reflection sheet to integrate helpful practices into daily life.',
+      title: 'Take-Home Routine & Reflection Sheet',
+      detail: 'A simple take-home wellness routine and reflection sheet to help sustain mindful habits after returning home.',
     },
     {
       title: 'Scheduled Excursion Fee Coverage',
@@ -978,7 +978,7 @@ export function Included() {
     },
     {
       title: 'Heritage Temple Visit',
-      detail: 'Scheduled cultural visit subject to temple opening timings, seasonal rituals, and local modesty customs. 100% voluntary.',
+      detail: 'Scheduled cultural visit subject to temple timings. Guests are requested to respect local customs and any applicable temple dress requirements. Participation is 100% voluntary.',
     },
     {
       title: 'Dietary Accommodations',
@@ -996,16 +996,16 @@ export function Included() {
       detail: 'Travel and transport to/from the Kerala retreat location are arranged independently by guests.',
     },
     {
-      title: 'Travel & Health Insurance',
-      detail: 'Personal travel, medical, cancellation, or baggage insurance is not provided.',
+      title: 'Travel & Medical Insurance',
+      detail: 'Personal travel, medical, or trip cancellation insurance is not provided.',
     },
     {
       title: 'Personal Incidentals',
-      detail: 'Telephone calls, individual laundry, souvenirs, and personal purchases outside retreat provision.',
+      detail: 'Personal purchases, telephone calls, laundry, or individual expenses outside the retreat provision.',
     },
     {
-      title: 'Clinical or Psychiatric Care',
-      detail: 'Non-clinical wellness retreat. Individual psychotherapy, medical care, and trauma therapy are outside scope.',
+      title: 'Clinical or Psychiatric Therapy',
+      detail: 'The retreat is not therapy, not a replacement for psychotherapy, and makes no promise of trauma release or guaranteed outcomes.',
     },
   ]
 
@@ -1077,18 +1077,18 @@ export function Included() {
               <div className="folio-media-caption">
                 <span className="caption-tag">REPRESENTATIVE MEAL</span>
                 <p className="caption-text">
-                  Wholesome vegetarian Kerala meal. Prepared fresh daily with regional care.
+                  Wholesome vegetarian Kerala meal. Prepared fresh according to retreat schedule.
                 </p>
               </div>
             </div>
             <div className="folio-body">
               <div className="folio-meta-strip">
                 <span className="folio-badge">DAILY NOURISHMENT</span>
-                <span className="folio-timing">BREAKFAST · LUNCH · DINNER</span>
+                <span className="folio-timing">SCHEDULED RETREAT MEALS &amp; DRINKING WATER</span>
               </div>
               <h3 className="folio-title">Vegetarian Meals &amp; Drinking Water</h3>
               <p className="folio-desc">
-                Wholesome, locally prepared vegetarian meals and drinking water are included across all four days of the retreat — starting with welcome refreshments and dinner on Day 01, through lunch on departure Day 04. Prepared fresh to nourish your body gently during meditation, breathwork, and quiet movement.
+                Wholesome, locally prepared vegetarian meals and drinking water are included according to the retreat itinerary: welcome drink and dinner on arrival Day 01 (from 2:00 PM); full-day meals (breakfast, lunch, and dinner) on Days 02 and 03; and breakfast and farewell lunch prior to departure on Day 04 (~12:00 PM). Meals are prepared fresh to nourish your body gently during meditation, breathwork, and quiet movement.
               </p>
               <div className="folio-disclosure-box">
                 <span className="disclosure-label">Dietary Notice &amp; Care:</span>
@@ -1162,11 +1162,11 @@ export function Included() {
                 </div>
                 <h4 className="excursion-card-title">Heritage Temple Contemplation</h4>
                 <p className="excursion-card-desc">
-                  A quiet cultural and spiritual visit held in deep respect of local customs, architectural heritage, and temple timings. Modest dress guidance is provided prior to the visit.
+                  A quiet cultural and spiritual visit scheduled for Day 03 morning. Guests are requested to respect local customs and any applicable temple dress requirements. Participation is voluntary.
                 </p>
                 <div className="excursion-status-line">
                   <span className="status-bullet" aria-hidden="true">✦</span>
-                  <span><strong>Status:</strong> Voluntary participation · Subject to local customs and temple timings.</span>
+                  <span><strong>Guidance:</strong> Guests are requested to respect local customs and any applicable temple dress requirements. Subject to temple timings; 100% voluntary.</span>
                 </div>
               </div>
 
@@ -1189,7 +1189,7 @@ export function Included() {
 
             <div className="excursions-location-note">
               <p>
-                <strong>Geographical Setting:</strong> Both excursions are conducted off-site. The retreat accommodation is not located beside the river; exact venue surroundings will be confirmed before booking.
+                <strong>Excursion Setting:</strong> Both the temple visit and Nila River boat safari are conducted off-site as part of the scheduled Day 03 programme. The exact retreat venue location is Kerala, India (to be confirmed).
               </p>
             </div>
           </div>
