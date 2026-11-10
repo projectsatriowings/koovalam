@@ -239,7 +239,7 @@ export default function Header() {
             </a>
             <div className="mobile-nav-brand-footer">
               <p className="mobile-nav-note">Rooted in Nature. Connected to Soul.</p>
-              <span className="mobile-nav-location">Kerala, India · Nila River Valley</span>
+              <span className="mobile-nav-location">Kerala, India</span>
             </div>
           </div>
         </nav>

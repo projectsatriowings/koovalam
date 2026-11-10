@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { whatsappLink } from '../config/site.js'
+import { isWhatsAppConfigured, whatsappLink } from '../config/site.js'
 import { track } from '../lib/analytics.js'
 
 export default function StickyCta() {
@@ -7,13 +7,14 @@ export default function StickyCta() {
 
   useEffect(() => {
     const hero = document.getElementById('top')
+    const dates = document.getElementById('dates')
     const enquiry = document.getElementById('enquiry')
     const footer = document.querySelector('footer')
 
     let heroOut = false
-    let blocking = false
+    const blockingElements = new Set()
 
-    const update = () => setShow(heroOut && !blocking)
+    const update = () => setShow(heroOut && blockingElements.size === 0)
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -21,7 +22,11 @@ export default function StickyCta() {
           if (e.target === hero) {
             heroOut = !e.isIntersecting
           } else {
-            blocking = e.isIntersecting
+            if (e.isIntersecting) {
+              blockingElements.add(e.target)
+            } else {
+              blockingElements.delete(e.target)
+            }
           }
         }
         update()
@@ -29,7 +34,7 @@ export default function StickyCta() {
       { threshold: 0.05 }
     )
 
-    ;[hero, enquiry, footer].forEach((el) => el && io.observe(el))
+    ;[hero, dates, enquiry, footer].forEach((el) => el && io.observe(el))
     return () => io.disconnect()
   }, [])
 
@@ -41,23 +46,25 @@ export default function StickyCta() {
     >
       <a
         className="btn btn-gold sticky-btn-enquire"
-        href="#enquiry"
+        href="#dates"
         tabIndex={show ? 0 : -1}
         onClick={() => track('cta_sticky_reserve')}
       >
-        Reserve Interest
+        View Dates &amp; Status
       </a>
-      <a
-        className="sticky-wa-link"
-        href={whatsappLink}
-        target="_blank"
-        rel="noreferrer"
-        tabIndex={show ? 0 : -1}
-        aria-label="Direct WhatsApp message"
-        onClick={() => track('whatsapp_click_sticky')}
-      >
-        <span>WA</span>
-      </a>
+      {isWhatsAppConfigured && whatsappLink && (
+        <a
+          className="sticky-wa-link"
+          href={whatsappLink}
+          target="_blank"
+          rel="noreferrer"
+          tabIndex={show ? 0 : -1}
+          aria-label="Direct WhatsApp message"
+          onClick={() => track('whatsapp_click_sticky')}
+        >
+          <span>WA</span>
+        </a>
+      )}
     </aside>
   )
 }

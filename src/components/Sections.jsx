@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { practices, divisions } from '../data/practices.js'
 import { included, whoFor, whatNot } from '../data/retreat.js'
-import { whatsappLink } from '../config/site.js'
+import { whatsappLink, isWhatsAppConfigured } from '../config/site.js'
 import { track } from '../lib/analytics.js'
 import ImageSlot from './ImageSlot.jsx'
 import Reveal from './Reveal.jsx'
@@ -1445,35 +1445,42 @@ export function FinalCtaAside() {
       <span className="eyebrow">A Quiet Beginning</span>
       <h2 className="final-heading">Your pause is waiting.</h2>
       <p className="final-desc">
-        Retreat dates will be announced shortly. Join our early-interest guest list to receive private early access before public announcements.
+        Retreat dates, verified sanctuary venue, and confirmed pricing will be announced prior to reservations opening. Early-interest registration will be non-binding, with zero fee or financial commitment.
       </p>
       <div className="final-reassurances">
         <div className="reassurance-item">
           <span className="check-gold" aria-hidden="true">✓</span>
-          <span>Zero commitment or payment required to register interest</span>
+          <span>Zero financial commitment or payment required to register interest</span>
         </div>
         <div className="reassurance-item">
           <span className="check-gold" aria-hidden="true">✓</span>
-          <span>Priority choice of accommodations upon confirmation</span>
+          <span>First notification when dates, venue, and pricing are confirmed</span>
         </div>
         <div className="reassurance-item">
           <span className="check-gold" aria-hidden="true">✓</span>
-          <span>Direct personal communication from the Koovalam team</span>
+          <span>Non-binding register (does not guarantee a place or constitute a reservation)</span>
         </div>
       </div>
 
-      <div className="final-wa-box">
-        <p className="wa-prompt">Prefer a personal conversation?</p>
-        <a
-          className="btn btn-outline-dark btn-wa-direct"
-          href={whatsappLink}
-          target="_blank"
-          rel="noreferrer"
-          onClick={() => track('whatsapp_click_final')}
-        >
-          Message Us on WhatsApp
-        </a>
-      </div>
+      {isWhatsAppConfigured && whatsappLink ? (
+        <div className="final-wa-box">
+          <p className="wa-prompt">Have questions about accessibility, diet, or travel?</p>
+          <a
+            className="btn btn-outline-dark btn-wa-direct"
+            href={whatsappLink}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => track('whatsapp_click_final')}
+          >
+            Message Us on WhatsApp
+          </a>
+        </div>
+      ) : (
+        <div className="final-wa-box final-contact-prep">
+          <p className="wa-prompt">Direct enquiries will open alongside our official registration launch.</p>
+          <span className="contact-prep-note">Official contact channels are currently being prepared.</span>
+        </div>
+      )}
     </div>
   )
 }

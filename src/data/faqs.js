@@ -105,7 +105,7 @@ export const faqCategories = [
       },
       {
         q: 'How can visitors enquire about pricing?',
-        a: 'Pricing will be shared upon enquiry before any booking or payment is accepted. You can register your interest via the enquiry form below or message us directly on WhatsApp.',
+        a: 'Confirmed pricing and a clear breakdown of inclusions will be shared before reservations open. No payment is being accepted at this stage.',
       },
       {
         q: 'How does the reservation process work?',

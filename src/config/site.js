@@ -24,7 +24,7 @@ export const site = {
     location: 'Kerala, India',
     venue: 'Kerala, India (to be confirmed)',
     dates: 'Announcing soon',
-    price: 'Shared on enquiry',
+    price: 'Announced before reservations open',
     groupSize: 'To be confirmed',
     facilitators: 'To be confirmed',
     checkIn: 'from 2:00 PM',
@@ -42,4 +42,30 @@ export const site = {
   testimonials: [],
   canonical: 'https://koovalam.example/',
 }
-export const whatsappLink = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`
+
+/**
+ * Validation helpers for contact channel readiness.
+ * Guard against displaying or linking dead placeholders (e.g. 91XXXXXXXXXX, .example).
+ */
+export const isWhatsAppConfigured = Boolean(
+  site.whatsappNumber &&
+    !site.whatsappNumber.includes('X') &&
+    site.whatsappNumber.trim() !== ''
+)
+
+export const isEmailConfigured = Boolean(
+  site.email &&
+    !site.email.endsWith('.example') &&
+    site.email.trim() !== ''
+)
+
+export const isFormConfigured = Boolean(
+  site.formEndpoint && site.formEndpoint.trim() !== ''
+)
+
+export const isContactConfigured =
+  isWhatsAppConfigured || isEmailConfigured || isFormConfigured
+
+export const whatsappLink = isWhatsAppConfigured
+  ? `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`
+  : null

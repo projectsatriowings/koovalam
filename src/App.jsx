@@ -13,10 +13,8 @@ import {
   Included,
   SafeCare,
   KoovalamWorld,
-  FinalCtaAside,
 } from './components/Sections.jsx'
 import { DatesCard, Faq, Testimonials } from './components/DatesFaq.jsx'
-import EnquiryForm from './components/EnquiryForm.jsx'
 import StickyCta from './components/StickyCta.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -57,35 +55,8 @@ export default function App() {
         <SafeCare />
         <KoovalamWorld />
         <Testimonials />
-        <DatesCard />
         <Faq />
-
-        <section id="enquiry" className="sec-enquiry" aria-label="Retreat reservation and enquiry">
-          <div className="wrap">
-            <div className="enquiry-editorial-banner">
-              <picture>
-                <source srcSet="images/final-cta-bg.webp" type="image/webp" />
-                <img
-                  src="images/final-cta-bg.jpg"
-                  alt="Sunrise light filtering through tall Kerala canopy trees"
-                  width="1600"
-                  height="1066"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              <div className="banner-overlay-text">
-                <span className="banner-kicker">Rooted in Nature. Connected to Soul.</span>
-                <p className="banner-quote">“In the stillness of Kerala, find your rhythm again.”</p>
-              </div>
-            </div>
-
-            <div className="enquiry-grid-layout">
-              <FinalCtaAside />
-              <EnquiryForm />
-            </div>
-          </div>
-        </section>
+        <DatesCard />
       </main>
       <Footer />
       <StickyCta />

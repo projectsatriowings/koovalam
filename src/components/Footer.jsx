@@ -1,5 +1,10 @@
 import Logo from './Logo.jsx'
-import { site, whatsappLink } from '../config/site.js'
+import {
+  site,
+  whatsappLink,
+  isEmailConfigured,
+  isWhatsAppConfigured,
+} from '../config/site.js'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -30,6 +35,7 @@ export default function Footer() {
               <li><a href="#journey">4-Day Journey</a></li>
               <li><a href="#included">Inclusions</a></li>
               <li><a href="#faq">Frequently Asked Questions</a></li>
+              <li><a href="#dates">Dates &amp; Reservations</a></li>
             </ul>
           </div>
 
@@ -37,13 +43,28 @@ export default function Footer() {
             <h4 className="footer-col-title">Direct Inquiries</h4>
             <p className="footer-contact-item">
               <span className="contact-label">Email:</span>
-              <a href={`mailto:${site.email}`} className="contact-link">{site.email}</a>
+              {isEmailConfigured ? (
+                <a href={`mailto:${site.email}`} className="contact-link">
+                  {site.email}
+                </a>
+              ) : (
+                <span className="contact-prep-text">Announcing upon launch</span>
+              )}
             </p>
             <p className="footer-contact-item">
               <span className="contact-label">WhatsApp:</span>
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-link">
-                Direct WhatsApp Channel
-              </a>
+              {isWhatsAppConfigured && whatsappLink ? (
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-link"
+                >
+                  Direct WhatsApp Channel
+                </a>
+              ) : (
+                <span className="contact-prep-text">Announcing upon launch</span>
+              )}
             </p>
             <div className="footer-socials">
               {site.socials.map((s) => (
