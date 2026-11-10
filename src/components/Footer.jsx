@@ -9,6 +9,11 @@ import {
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  // Only display verified social channels with real external URLs
+  const verifiedSocials = (site.socials || []).filter(
+    (s) => s.href && s.href !== '#' && !s.href.startsWith('#')
+  )
+
   return (
     <footer className="editorial-footer" role="contentinfo">
       <div className="wrap">
@@ -16,7 +21,9 @@ export default function Footer() {
           <div className="footer-brand-col">
             <Logo light size={50} />
             <p className="footer-tagline">{site.tagline}</p>
-            <p className="footer-retreat-tag">Pause. Breathe. Reconnect.</p>
+            <p className="footer-retreat-desc">
+              A gentle 4-day spiritual wellness and mindfulness sanctuary in Kerala, India. Rooted in traditional wisdom, restorative movement, and unhurried natural living.
+            </p>
             <div className="footer-pillars-strip">
               <span>BODY</span>
               <span className="dot" aria-hidden="true">·</span>
@@ -33,6 +40,7 @@ export default function Footer() {
               <li><a href="#koovalam">Sacred Origin</a></li>
               <li><a href="#retreat">Mindful Practices</a></li>
               <li><a href="#journey">4-Day Journey</a></li>
+              <li><a href="#highlights">Kerala Experiences</a></li>
               <li><a href="#included">Inclusions</a></li>
               <li><a href="#faq">Frequently Asked Questions</a></li>
               <li><a href="#dates">Dates &amp; Reservations</a></li>
@@ -66,13 +74,19 @@ export default function Footer() {
                 <span className="contact-prep-text">Announcing upon launch</span>
               )}
             </p>
-            <div className="footer-socials">
-              {site.socials.map((s) => (
-                <a key={s.label} href={s.href} className="footer-social-link">
-                  {s.label}
-                </a>
-              ))}
-            </div>
+            {verifiedSocials.length > 0 ? (
+              <div className="footer-socials">
+                {verifiedSocials.map((s) => (
+                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="footer-social-link">
+                    {s.label}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <p className="footer-socials-note">
+                Community channels announcing upon retreat launch.
+              </p>
+            )}
           </div>
         </div>
 

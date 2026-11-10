@@ -122,6 +122,22 @@ section {
   position: relative;
 }
 
+/* Anchor Scroll Margins for Fixed Header Clearance */
+#pause,
+#origin,
+#koovalam,
+#retreat,
+#journey,
+#highlights,
+#included,
+#inclusions,
+#faq,
+#faqs,
+#dates,
+#enquiry {
+  scroll-margin-top: calc(var(--header-h, 72px) + 24px);
+}
+
 /* Editorial Eyebrow & Lede */
 .eyebrow {
   display: inline-flex;
