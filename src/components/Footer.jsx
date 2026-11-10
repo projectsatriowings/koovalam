@@ -39,7 +39,7 @@ export default function Footer() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Kerala, India · Near Kuttipuram</span>
+              <span>Kerala, India</span>
             </div>
           </div>
 
@@ -49,8 +49,8 @@ export default function Footer() {
             <ul className="footer-links-list">
               <li><a href="#top">Home</a></li>
               <li><a href="#experience">The Experience</a></li>
-              <li><a href="#itinerary">Daily Itinerary</a></li>
-              <li><a href="#stay-travel">Stay &amp; Travel</a></li>
+              <li><a href="#itinerary">Proposed Flow</a></li>
+              <li><a href="#stay-travel">Stay &amp; Transport</a></li>
               <li><a href="#price">Retreat Investment</a></li>
               <li><a href="#enquiry">Enquire &amp; Register</a></li>
             </ul>
@@ -58,38 +58,38 @@ export default function Footer() {
 
           {/* Key Facts / Highlights */}
           <div className="footer-facts-col">
-            <h4 className="footer-col-title">At a Glance</h4>
+            <h4 className="footer-col-title">Retreat Information</h4>
             <ul className="footer-facts-list">
               <li>
-                <strong>Provisional Dates:</strong> Dec 17–19
+                <strong>Location:</strong> Kerala, India
               </li>
               <li>
-                <strong>Duration:</strong> 3–4 Days (Under review)
+                <strong>Dates &amp; Duration:</strong> To be confirmed
               </li>
               <li>
-                <strong>Accommodation:</strong> Twin-Sharing
+                <strong>Accommodation:</strong> Twin-Sharing (2 guests/room)
               </li>
               <li>
-                <strong>Dining:</strong> 100% Pure Vegetarian
+                <strong>Dining:</strong> Vegetarian meals planned
               </li>
               <li>
-                <strong>Pickup Hub:</strong> Kuttipuram Railway Station
+                <strong>Requested Pickup:</strong> Kuttipuram Station
               </li>
               <li>
-                <strong>Investment:</strong> From ₹9,999 / person
+                <strong>Provisional Price:</strong> ₹9,999 / person
               </li>
             </ul>
           </div>
 
           {/* Contact / Enquiry Help */}
           <div className="footer-contact-col">
-            <h4 className="footer-col-title">Direct Contact</h4>
+            <h4 className="footer-col-title">Enquiry Support</h4>
             <p className="footer-contact-note">
-              Have questions regarding dates, group bookings or health considerations?
+              Have questions regarding retreat suitability, group enquiries or health considerations?
             </p>
             <div className="footer-contact-actions">
               <a href="#enquiry" className="btn btn-travel-secondary btn-sm">
-                Enquire Online
+                Enquiry Information
               </a>
               {isWhatsAppConfigured && whatsappLink && (
                 <a

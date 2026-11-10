@@ -1,7 +1,6 @@
 /**
  * KOOVALAM — CANONICAL RETREAT DATA
- * Premium Boutique Kerala Retreat Experience
- * Single source of truth for the 6-section redesign.
+ * Single source of truth for retreat content & canonical claims.
  */
 
 // 1. The 7 Client-Specified Activities
@@ -12,8 +11,8 @@ export const activities = [
     tag: 'Movement & Mobility',
     image: 'practice-yoga',
     summary:
-      'Foundational movement, mobility, and mindful body awareness suitable for beginners and seasoned practitioners alike.',
-    highlight: 'Accessible postures · Zero strain or pressure · 100% voluntary',
+      'Foundational movement, mobility, and body awareness designed for all levels. Practiced with gentle guidance and zero strain.',
+    highlight: 'Accessible postures · Zero strain · 100% voluntary',
   },
   {
     id: 'pranayama',
@@ -21,7 +20,7 @@ export const activities = [
     tag: 'Breath & Vitality',
     image: 'practice-pranayama',
     summary:
-      'Conscious breathing practices designed to calm the sympathetic nervous system, steady mental focus, and restore balance.',
+      'Conscious breathing practices designed to steady mental focus, ease tension, and restore natural breath awareness.',
     highlight: 'Natural breath awareness · Ancient balancing rhythms',
   },
   {
@@ -30,8 +29,8 @@ export const activities = [
     tag: 'Deep Conscious Rest',
     image: 'practice-yoga-nidra',
     summary:
-      'Guided yogic sleep practiced comfortably lying down to release accumulated nervous tension and invite deep cellular recovery.',
-    highlight: 'Restorative sleep support · Profound quiet relaxation',
+      'Guided yogic sleep practiced comfortably lying down to support deep conscious relaxation and release daily fatigue.',
+    highlight: 'Restorative relaxation · Guided body scanning',
   },
   {
     id: 'meditation',
@@ -39,8 +38,8 @@ export const activities = [
     tag: 'Stillness & Presence',
     image: 'practice-meditation',
     summary:
-      'Daily morning silent sitting and sensory observation to greet each day with unhurried mental space and grounded presence.',
-    highlight: 'Gentle guidance · No rigid posture requirements',
+      'Quiet morning sitting and sensory awareness to greet the day with mental stillness and calm presence.',
+    highlight: 'Gentle guidance · Unhurried morning presence',
   },
   {
     id: 'cognitive',
@@ -48,8 +47,8 @@ export const activities = [
     tag: 'Clarity & Self-Reflection',
     image: 'practice-reflection',
     summary:
-      'Guided mindfulness exercises and structured journaling for mental clarity, observing habit loops, and personal values.',
-    highlight: 'Mindful mental clarity · Non-clinical personal wellness practice',
+      'Mindfulness exercises and reflective journaling for personal clarity and observing daily thought patterns. Non-clinical wellness practice.',
+    highlight: 'Mindful mental clarity · Non-clinical reflection',
   },
   {
     id: 'village-tour',
@@ -57,8 +56,8 @@ export const activities = [
     tag: 'Cultural Discovery',
     image: 'practice-nature-culture',
     summary:
-      'An unhurried guided walking discovery through serene rural Kerala footpaths, plant groves, and indigenous village greenery.',
-    highlight: 'Sensory grounding · Authentic rural Kerala landscape',
+      'An unhurried guided walking discovery through serene rural Kerala footpaths and green surroundings.',
+    highlight: 'Authentic rural Kerala footpaths · Sensory grounding',
   },
   {
     id: 'temple-visit',
@@ -66,64 +65,63 @@ export const activities = [
     tag: 'Sacred Heritage',
     image: 'highlight-temple',
     summary:
-      'A quiet, respectful morning visit to a historic regional temple honoring centuries of contemplative silence and architecture.',
-    highlight: 'Contemplative stone courtyards · Subject to local customs',
+      'A quiet, respectful visit to a historic regional temple. Guests are requested to respect local customs and temple dress requirements.',
+    highlight: 'Contemplative heritage · Respecting local customs',
   },
 ]
 
-// 2. The Retreat Journey / Itinerary
+// 2. The Retreat Journey / Itinerary (Proposed sequence pending final confirmation)
 export const itineraryData = {
   dateNotice:
-    'Schedule Notice: The organiser has provisionally outlined dates of December 17–19 (3 calendar days), while a 4-day option is under final operational review. Below is the proposed day-by-day retreat sequence.',
+    'Dates and programme duration to be confirmed. The client-supplied details (December 17–19 / four-day trip) are under final operational review. The sequence below illustrates the planned retreat practices and activities pending final confirmation of dates and duration by the organiser.',
   days: [
     {
       day: 1,
       title: 'Arrival & Grounding',
       subtitle: 'Arriving, settling in, and unwinding',
       narrative:
-        'Settle into your retreat accommodation, let go of daily responsibilities, and begin with an unhurried opening circle followed by restorative evening movement and breathwork.',
+        'Settle into your accommodation, unwind from travel, and join the opening orientation circle followed by gentle foundational movement and restorative evening breathwork.',
       highlights: [
-        'Check-in from 2:00 PM & herbal welcome drink',
-        'Opening circle: intentions and retreat orientation',
+        'Afternoon arrival & retreat orientation circle',
         'Gentle foundational yoga and breath awareness',
-        'Nourishing vegetarian dinner',
+        'Vegetarian dinner',
         'Restorative Yoga Nidra for restful sleep',
       ],
-      timingNote: 'Afternoon check-in from 2:00 PM',
+      timingNote: 'Proposed arrival schedule to be confirmed',
     },
     {
       day: 2,
       title: 'Movement, Breath & Village Discovery',
-      subtitle: 'A full day of body awareness, village paths & quiet noticing',
+      subtitle: 'Body awareness, village walking tour & quiet reflection',
       narrative:
-        'Awaken to morning meditation and gentle yoga. After a traditional vegetarian breakfast, engage in reflective cognitive exercises. In the afternoon, discover authentic rural Kerala on a guided village walk.',
+        'Morning meditation and gentle yoga practice followed by vegetarian breakfast and reflective cognitive exercises. The afternoon includes a guided village walking tour.',
       highlights: [
         'Morning meditation & pranayama breathwork',
         'Gentle mobility yoga practice',
-        'Traditional vegetarian breakfast',
-        'Mindful cognitive exercise: clarity and thought-noticing',
-        'Vegetarian lunch and personal quiet rest',
-        'Afternoon guided village walking tour',
-        'Evening reflection circle & dinner',
+        'Vegetarian breakfast',
+        'Cognitive clarity & mindfulness exercise',
+        'Vegetarian lunch & quiet rest',
+        'Guided village walking tour',
+        'Evening reflection & vegetarian dinner',
         'Restorative Yoga Nidra',
       ],
-      timingNote: 'Full retreat day',
+      timingNote: 'Proposed full retreat day',
     },
     {
       day: 3,
-      title: 'Temple Stillness, Reflection & Integration',
-      subtitle: 'Cultural heritage, closing reflection, and departure',
+      title: 'Temple Stillness & Integration',
+      subtitle: 'Cultural heritage, closing reflection, and conclusion',
       narrative:
-        'Experience early-morning stone stillness on a quiet temple visit. Return for breakfast, values reflection, and personal routine integration, concluding with a farewell lunch.',
+        'Morning stillness and a respectful visit to a historic regional temple. Followed by vegetarian breakfast, closing reflection, and concluding vegetarian lunch.',
       highlights: [
         'Morning meditation & gentle breath practice',
-        'Respectful morning cultural temple visit',
-        'Wholesome vegetarian breakfast',
-        'Closing reflection: simple routines to carry home',
-        'Farewell vegetarian lunch around 12:00 PM',
-        'Departure & return travel (or optional nature drift if 4 days confirmed)',
+        'Respectful cultural temple visit',
+        'Vegetarian breakfast',
+        'Closing reflection & personal integration',
+        'Concluding vegetarian lunch',
+        'Departure arrangements to be confirmed',
       ],
-      timingNote: 'Check-out around 12:00 PM after lunch',
+      timingNote: 'Proposed conclusion schedule to be confirmed',
     },
   ],
 }
@@ -134,22 +132,22 @@ export const stayFoodTravel = {
     title: 'Twin-Sharing Accommodation',
     subtitle: 'Two guests sharing per room',
     description:
-      'Guests are accommodated in quiet, comfortable twin-sharing rooms (two people per room) nestled in a serene Kerala sanctuary setting. Specific property arrangements, facilities, and room photographs will be shared directly with guests once the exact venue is finalised.',
+      'Accommodation is arranged on a twin-sharing basis (two guests per room) in Kerala, India. Specific property details, room photographs, and location arrangements will be shared once the venue is confirmed by the organiser.',
     tag: 'Twin-Sharing Standard',
   },
   food: {
-    title: 'Pure Vegetarian Meals',
-    subtitle: 'Nourishing, traditional Kerala dining',
+    title: 'Vegetarian Meals',
+    subtitle: 'Planned retreat dining',
     description:
-      'Pure vegetarian meals are served throughout the retreat — from arrival dinner through farewell lunch. Every meal is freshly prepared using wholesome regional ingredients, complemented by warm drinking water to support digestion and energy.',
-    tag: '100% Vegetarian',
+      'Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
+    tag: 'Vegetarian Experience',
   },
   travel: {
-    title: 'Travel & Pickup Hub',
-    subtitle: 'Kuttipuram Railway Station (Requested Pickup)',
+    title: 'Pickup & Transport',
+    subtitle: 'Requested pickup point: Kuttipuram Railway Station',
     description:
-      'Kuttipuram Railway Station is the designated pickup location requested by the organiser. Detailed pickup timings, meeting points, and coordinated small-group transfer options will be confirmed with registered guests well in advance.',
-    tag: 'Kuttipuram Hub',
+      'Requested pickup point: Kuttipuram Railway Station. Transport coordination details and whether transfer arrangements are included in the retreat package will be confirmed by the organiser.',
+    tag: 'Requested Pickup Hub',
   },
 }
 
@@ -157,47 +155,47 @@ export const stayFoodTravel = {
 export const investment = {
   price: '₹9,999',
   unit: 'per person',
-  statusTag: 'Provisional · Subject to Final Confirmation',
+  statusTag: 'Provisional · Subject to Confirmation',
   clarityNote:
-    'The provisional fee of ₹9,999 per person is provided by the organiser and will be officially confirmed before reservations open. No payment or deposit is required at this stage.',
+    'Provisional price: ₹9,999 per person — subject to organiser confirmation. No payment or deposit is required at this stage.',
   inclusions: [
-    'Twin-sharing accommodation for the duration of the retreat',
-    'Wholesome vegetarian meals and drinking water throughout',
-    'All guided Classical Yoga, Pranayama, and Meditation sessions',
-    'Restorative evening Yoga Nidra relaxation',
-    'Facilitated cognitive clarity & mindfulness reflection exercises',
-    'Guided rural Kerala village walking tour',
-    'Morning cultural temple visit (subject to local customs)',
-    'A simple take-home wellness and mindfulness routine',
+    'Twin-sharing accommodation — two guests per room (planned)',
+    'Vegetarian meals as part of the planned retreat experience (arrangements to be confirmed)',
+    'Guided Classical Yoga sessions',
+    'Guided Pranayama breathwork sessions',
+    'Restorative Yoga Nidra sessions',
+    'Morning Meditation sessions',
+    'Cognitive exercises & mindfulness reflection',
+    'Guided village walking tour',
+    'Cultural temple visit (respecting local customs)',
   ],
+  inclusionNotice:
+    'Note: All package inclusions, meal schedules, and transport arrangements are provisional and subject to final confirmation by the organiser.',
   participation: {
-    ageRange: '18–70 years',
-    welcomeNote:
-      'Couples and solo travellers are warmly welcomed. The programme is designed for beginners as well as experienced practitioners.',
-    familyNote:
-      'No separate family package or children’s rate is currently offered; retreat activities are structured for adult participants.',
+    ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
+    couplesNote: 'Couples may join.',
+    familyNote: 'No family package is offered. Retreat activities are structured for adult participants.',
     surgeryNotice:
-      'Important Health Notice: Participants who have recently undergone surgery should contact the organiser before considering registration. Please discuss any relevant mobility or health-related concerns privately with the organiser.',
+      'Important Health Notice: Participants who have recently undergone surgery should contact the organiser before considering registration. Please discuss any mobility or health-related concerns privately with the organiser.',
   },
 }
 
-// 5. Compact Essential FAQs for Price & Participation Section
+// 5. Compact Essential FAQs
 export const compactFaqs = [
   {
     q: 'Is previous yoga or retreat experience required?',
-    a: 'No previous experience is needed. All yoga and breath practices are foundational, gentle, and 100% voluntary. You are always welcome to rest, observe, or take personal quiet time.',
+    a: 'No previous experience is needed. All yoga and breath sessions are foundational, gentle, and 100% voluntary. You are always welcome to participate at your own comfort level.',
   },
   {
     q: 'When will the exact dates and venue be confirmed?',
-    a: 'The organiser has provisionally outlined December 17–19. Exact dates and the confirmed Kerala venue will be shared directly with registered enquiry guests before bookings open.',
+    a: 'Dates and programme duration are to be confirmed by the organiser. The client-supplied details (December 17–19 / four-day trip) are currently under operational review. Confirmed dates and Kerala venue details will be shared once finalised.',
   },
   {
-    q: 'What are the room and meal arrangements?',
-    a: 'Accommodation is on a twin-sharing basis (two people per room) in a quiet Kerala retreat setting. Pure vegetarian meals and warm drinking water are provided throughout.',
+    q: 'What are the stay and meal arrangements?',
+    a: 'Accommodation is on a twin-sharing basis (two guests per room) in Kerala, India. Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
   },
   {
-    q: 'How does the enquiry and booking process work?',
-    a: 'Submitting an enquiry is 100% non-binding and carries zero upfront payment or financial commitment. It simply connects you with our team to discuss availability and answer your questions.',
+    q: 'What is the requested pickup point and is transport included?',
+    a: 'The requested pickup point is Kuttipuram Railway Station. Transport coordination details and whether transfer arrangements are included in the retreat package will be confirmed by the organiser.',
   },
 ]
-

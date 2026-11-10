@@ -14,78 +14,117 @@ export default function EnquirySection() {
     phone: '',
     participants: '1',
     travellingFrom: '',
-    dates: 'Dec 17–19 (Provisional)',
-    pickupNeeded: 'Yes, please arrange pickup from Kuttipuram',
-    accommodation: 'Twin-sharing standard (₹9,999/person)',
-    message: '',
+    datesNote: 'Dates to be confirmed by organiser',
+    pickupInterest: 'Requested pickup point: Kuttipuram Railway Station',
+    accommodation: 'Twin-sharing (two guests per room)',
+    notes: '',
   })
 
-  const [submitted, setSubmitted] = useState(false)
-  const [copied, setCopied] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [submissionResult, setSubmissionResult] = useState(null)
+  const [errorMessage, setErrorMessage] = useState('')
+  const [validationErrors, setValidationErrors] = useState({})
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    if (validationErrors[name]) {
+      setValidationErrors((prev) => ({ ...prev, [name]: '' }))
+    }
   }
 
-  // Build structured message for WhatsApp or direct submission
-  const buildEnquirySummary = () => {
+  const validate = () => {
+    const errors = {}
+    if (!formData.fullName.trim()) {
+      errors.fullName = 'Please enter your full name.'
+    }
+    if (!formData.phone.trim()) {
+      errors.phone = 'Please enter your contact phone or WhatsApp number.'
+    } else if (formData.phone.replace(/[^0-9]/g, '').length < 8) {
+      errors.phone = 'Please enter a valid phone number with country/area code.'
+    }
+    setValidationErrors(errors)
+    return Object.keys(errors).length === 0
+  }
+
+  const buildWhatsAppMessage = () => {
     return [
       `*Koovalam Retreat Enquiry*`,
-      `• Name: ${formData.fullName || 'Guest'}`,
-      `• Phone/WhatsApp: ${formData.phone || 'Provided'}`,
+      `• Name: ${formData.fullName.trim()}`,
+      `• Phone: ${formData.phone.trim()}`,
       `• Participants: ${formData.participants}`,
-      `• Travelling From: ${formData.travellingFrom || 'Not specified'}`,
-      `• Preferred Dates: ${formData.dates}`,
-      `• Kuttipuram Station Pickup: ${formData.pickupNeeded}`,
+      formData.travellingFrom.trim() ? `• Travelling From: ${formData.travellingFrom.trim()}` : null,
       `• Accommodation: ${formData.accommodation}`,
-      formData.message ? `• Notes/Questions: ${formData.message}` : null,
-      `• Food: Pure Vegetarian Confirmed`,
-      `• Provisional Fee: ₹9,999 / person`,
+      `• Requested Pickup Point: Kuttipuram Railway Station`,
+      `• Dates: Dates to be confirmed by organiser`,
+      `• Pricing: Provisional ₹9,999/person (Subject to confirmation)`,
+      formData.notes.trim() ? `• Notes: ${formData.notes.trim()}` : null,
     ]
       .filter(Boolean)
       .join('\n')
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (submitting || submitted) return
+
+    if (!validate()) return
+
     setSubmitting(true)
-    track('enquiry_form_submitted')
+    setErrorMessage('')
+    track('enquiry_form_submit_attempt')
 
-    if (isFormConfigured) {
-      fetch(site.formEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(formData),
-      })
-        .then(() => {
-          setSubmitting(false)
-          setSubmitted(true)
+    try {
+      if (isFormConfigured) {
+        const response = await fetch(site.formEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(formData),
         })
-        .catch(() => {
-          setSubmitting(false)
-          setSubmitted(true)
+
+        if (!response.ok) {
+          throw new Error('Submission failed. Please check your network and try again.')
+        }
+
+        setSubmissionResult({
+          type: 'api_success',
+          title: 'Enquiry Received',
+          message: `Thank you, ${formData.fullName}. Your enquiry has been received by our retreat team. We will review your details and respond with confirmed dates and retreat guidelines.`,
         })
-    } else if (isWhatsAppConfigured) {
-      const text = encodeURIComponent(buildEnquirySummary())
-      window.open(`https://wa.me/${site.whatsappNumber}?text=${text}`, '_blank', 'noopener,noreferrer')
-      setSubmitting(false)
-      setSubmitted(true)
-    } else {
-      // Staging / Demo preview mode
-      setTimeout(() => {
-        setSubmitting(false)
         setSubmitted(true)
-      }, 400)
-    }
-  }
+        track('enquiry_submission_success_endpoint')
+      } else if (isWhatsAppConfigured) {
+        const text = encodeURIComponent(buildWhatsAppMessage())
+        const waUrl = `https://wa.me/${site.whatsappNumber}?text=${text}`
+        let opened = false
+        try {
+          const win = window.open(waUrl, '_blank', 'noopener,noreferrer')
+          opened = Boolean(win && !win.closed)
+        } catch {
+          opened = false
+        }
 
-  const handleCopyPreview = () => {
-    const summary = buildEnquirySummary()
-    navigator.clipboard?.writeText(summary)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2500)
+        setSubmissionResult({
+          type: opened ? 'whatsapp_opened' : 'whatsapp_blocked',
+          waUrl,
+          title: opened ? 'WhatsApp Ready to Send' : 'Action Required: Open WhatsApp',
+          message: opened
+            ? 'WhatsApp has opened with your enquiry details. Please review the message and press Send to complete your enquiry.'
+            : 'Your browser prevented WhatsApp from opening automatically. Please use the button below to open WhatsApp with your prefilled enquiry and press Send.',
+        })
+        setSubmitted(true)
+        track('enquiry_submission_whatsapp_handoff')
+      }
+    } catch (err) {
+      setErrorMessage(err.message || 'An error occurred while submitting your enquiry. Please try again.')
+      track('enquiry_submission_error')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -98,15 +137,15 @@ export default function EnquirySection() {
             <span>CONNECT WITH US</span>
           </div>
           <h2 className="travel-heading">
-            Your Journey Starts <br className="hide-mobile" />
-            <span className="serif-italic">With an Enquiry</span>
+            Retreat Enquiries <br className="hide-mobile" />
+            <span className="serif-italic">&amp; Registration</span>
           </h2>
           <p className="travel-lede">
-            Check availability, discuss preferred dates, and speak directly with our retreat organisers. There is no deposit or financial commitment required at this stage.
+            Reach out with practical questions, register your interest, or discuss retreat suitability directly with our team.
           </p>
         </div>
 
-        {/* Trust & Reassurance Badges */}
+        {/* Trust & Reassurance Strip */}
         <div className="enquiry-trust-strip">
           <div className="trust-pill">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -114,19 +153,19 @@ export default function EnquirySection() {
           </div>
           <div className="trust-pill">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Zero Advance Payment</span>
+            <span>Zero Upfront Payment</span>
           </div>
           <div className="trust-pill">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Pure Vegetarian Confirmed</span>
+            <span>Vegetarian Meals Planned</span>
           </div>
           <div className="trust-pill">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Direct Organiser Support</span>
+            <span>Twin-Sharing Accommodation</span>
           </div>
         </div>
 
-        {/* Main Enquiry Layout */}
+        {/* Main Content Area */}
         <div className="enquiry-card-container">
           {/* Prominent Surgery & Health Notice */}
           <div className="enquiry-health-notice" role="alert">
@@ -147,56 +186,143 @@ export default function EnquirySection() {
               </svg>
             </div>
             <div className="notice-text-col">
-              <strong>Important Health Notice:</strong> Participants who have recently undergone surgery should contact the organiser before considering registration. Please mention any mobility or health-related considerations in your enquiry so we can guide you privately and thoughtfully.
+              <strong>Important Health Notice:</strong> Participants who have recently undergone surgery should contact the organiser before considering registration. Please discuss any mobility or health-related concerns privately with the organiser upon direct contact. Sensitive personal medical details should not be submitted through public web forms.
             </div>
           </div>
 
-          {submitted ? (
-            /* Submission State */
+          {/* Condition 1: Contact Channels Unconfigured — Disable data collection & display clear notice */}
+          {!isContactConfigured ? (
+            <div
+              className="enquiry-config-notice"
+              role="region"
+              aria-label="Contact Configuration Notice"
+            >
+              <div className="config-notice-header">
+                <span className="config-notice-pill">Enquiry Channels In Preparation</span>
+                <h3 className="config-notice-title">
+                  Online Enquiries Opening Soon
+                </h3>
+              </div>
+
+              <p className="config-notice-lead">
+                Official communication channels, confirmed calendar dates, and retreat venue details are currently being finalised by the organiser for the retreat in Kerala, India.
+              </p>
+
+              <p className="config-notice-text">
+                To protect guest privacy and prevent unrouted messages, personal information is not collected online until verified organiser submission endpoints or direct WhatsApp channels are active.
+              </p>
+
+              <div className="config-checklist-box">
+                <h4 className="config-checklist-title">Currently Under Organiser Review:</h4>
+                <ul className="config-checklist">
+                  <li>
+                    <span className="checklist-bullet">○</span>
+                    <div>
+                      <strong>Confirmed Dates &amp; Duration:</strong> The client-supplied details (December 17–19 / four-day trip) are under final operational confirmation.
+                    </div>
+                  </li>
+                  <li>
+                    <span className="checklist-bullet">○</span>
+                    <div>
+                      <strong>Venue in Kerala:</strong> Exact property and twin-sharing room details will be announced upon finalisation.
+                    </div>
+                  </li>
+                  <li>
+                    <span className="checklist-bullet">○</span>
+                    <div>
+                      <strong>Transport &amp; Package Inclusions:</strong> Provisional fee of ₹9,999/person and pickup logistics from Kuttipuram Railway Station are pending final confirmation.
+                    </div>
+                  </li>
+                  <li>
+                    <span className="checklist-bullet">○</span>
+                    <div>
+                      <strong>Official Communication Channels:</strong> Direct WhatsApp and email contact details will be published upon launch.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="config-footer-status">
+                <span className="status-indicator-dot" aria-hidden="true" />
+                <span>Enquiry desk status: Staging preview mode. Live submissions activate once <code>src/config/site.js</code> contact channels are configured.</span>
+              </div>
+            </div>
+          ) : submitted ? (
+            /* Condition 2: Verified Result State (Differentiating API vs WhatsApp) */
             <div className="enquiry-success-panel" role="status">
               <div className="success-badge-icon" aria-hidden="true">
                 <LeafMark color="var(--antique-brass)" size={36} />
               </div>
-              <h3 className="success-heading">Thank You for Your Enquiry</h3>
+              <h3 className="success-heading">
+                {submissionResult?.title || 'Enquiry Received'}
+              </h3>
               <p className="success-sub">
-                We have received your retreat interest details. A member of our retreat team will review your enquiry and get back to you with confirmed dates and retreat guidelines.
+                {submissionResult?.message ||
+                  'Your enquiry has been received. Our retreat team will review your details and respond with confirmed dates.'}
               </p>
 
-              {/* Staging Summary Box */}
-              <div className="submission-summary-box">
-                <div className="summary-box-head">
-                  <span className="summary-title">Your Enquiry Summary</span>
-                  <button
-                    type="button"
-                    onClick={handleCopyPreview}
-                    className="btn-copy-preview"
+              {submissionResult?.waUrl && (
+                <div className="whatsapp-handoff-action" style={{ marginBottom: '20px' }}>
+                  <a
+                    href={submissionResult.waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-travel-accent"
                   >
-                    {copied ? 'Copied to Clipboard!' : 'Copy Summary'}
-                  </button>
-                </div>
-                <pre className="summary-pre">{buildEnquirySummary()}</pre>
-              </div>
-
-              {!isContactConfigured && (
-                <div className="staging-channel-notice">
-                  <span className="staging-pill">Organiser Note</span>
-                  <p>
-                    Live communication channels are currently in staging configuration. To route live enquiries directly to WhatsApp or your CRM, update <code>src/config/site.js</code>.
-                  </p>
+                    <span>Open WhatsApp Directly</span>
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
                 </div>
               )}
 
               <button
                 type="button"
                 className="btn btn-travel-secondary"
-                onClick={() => setSubmitted(false)}
+                onClick={() => {
+                  setSubmitted(false)
+                  setSubmissionResult(null)
+                  setFormData({
+                    fullName: '',
+                    phone: '',
+                    participants: '1',
+                    travellingFrom: '',
+                    datesNote: 'Dates to be confirmed by organiser',
+                    pickupInterest: 'Requested pickup point: Kuttipuram Railway Station',
+                    accommodation: 'Twin-sharing (two guests per room)',
+                    notes: '',
+                  })
+                }}
               >
-                ← Send Another Enquiry
+                ← Submit Another Enquiry
               </button>
             </div>
           ) : (
-            /* Interactive Enquiry Form */
+            /* Condition 3: Active Live Form (Only when real contact channels are configured) */
             <form className="enquiry-form-travel" onSubmit={handleSubmit} noValidate>
+              {errorMessage && (
+                <div className="form-error-banner" role="alert">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+
               <div className="form-grid-2">
                 {/* Full Name */}
                 <div className="form-group">
@@ -211,8 +337,15 @@ export default function EnquirySection() {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Priya Nair"
-                    className="form-input"
+                    className={`form-input ${validationErrors.fullName ? 'has-error' : ''}`}
+                    aria-invalid={Boolean(validationErrors.fullName)}
+                    aria-describedby={validationErrors.fullName ? 'fullName-error' : undefined}
                   />
+                  {validationErrors.fullName && (
+                    <span id="fullName-error" className="field-error-text">
+                      {validationErrors.fullName}
+                    </span>
+                  )}
                 </div>
 
                 {/* WhatsApp / Phone */}
@@ -228,8 +361,15 @@ export default function EnquirySection() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. +91 98765 43210"
-                    className="form-input"
+                    className={`form-input ${validationErrors.phone ? 'has-error' : ''}`}
+                    aria-invalid={Boolean(validationErrors.phone)}
+                    aria-describedby={validationErrors.phone ? 'phone-error' : undefined}
                   />
+                  {validationErrors.phone && (
+                    <span id="phone-error" className="field-error-text">
+                      {validationErrors.phone}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -237,7 +377,7 @@ export default function EnquirySection() {
                 {/* Number of Participants */}
                 <div className="form-group">
                   <label htmlFor="participants" className="form-label">
-                    Number of Participants
+                    Participants
                   </label>
                   <select
                     id="participants"
@@ -246,17 +386,16 @@ export default function EnquirySection() {
                     onChange={handleChange}
                     className="form-select"
                   >
-                    <option value="1">1 Person (Solo Traveller)</option>
-                    <option value="2">2 People (Couple / Friends)</option>
-                    <option value="3">3 People</option>
-                    <option value="4+">4+ Group</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People (Couples / Friends)</option>
+                    <option value="3+">3+ Small Group</option>
                   </select>
                 </div>
 
                 {/* Travelling From */}
                 <div className="form-group">
                   <label htmlFor="travellingFrom" className="form-label">
-                    Travelling From (City / State)
+                    Travelling From <span className="form-optional">(City / State)</span>
                   </label>
                   <input
                     type="text"
@@ -271,88 +410,73 @@ export default function EnquirySection() {
               </div>
 
               <div className="form-grid-2">
-                {/* Preferred Dates */}
+                {/* Dates Note */}
                 <div className="form-group">
-                  <label htmlFor="dates" className="form-label">
-                    Preferred Dates
+                  <label htmlFor="datesNote" className="form-label">
+                    Programme Dates
                   </label>
-                  <select
-                    id="dates"
-                    name="dates"
-                    value={formData.dates}
-                    onChange={handleChange}
-                    className="form-select"
-                  >
-                    <option value="Dec 17–19 (Provisional)">
-                      December 17–19 (Provisional Batch)
-                    </option>
-                    <option value="Flexible / Next Upcoming Batch">
-                      Flexible / Next Upcoming Batch
-                    </option>
-                    <option value="Interested in 4-Day Option">
-                      Interested in 4-Day Extended Option
-                    </option>
-                  </select>
+                  <input
+                    type="text"
+                    id="datesNote"
+                    name="datesNote"
+                    readOnly
+                    value="Dates to be confirmed by organiser (Flexible interest)"
+                    className="form-input form-input-readonly"
+                  />
                 </div>
 
-                {/* Kuttipuram Railway Station Pickup */}
+                {/* Pickup interest */}
                 <div className="form-group">
-                  <label htmlFor="pickupNeeded" className="form-label">
-                    Pickup from Kuttipuram Railway Station?
+                  <label htmlFor="pickupInterest" className="form-label">
+                    Arrival Pickup Coordination
                   </label>
                   <select
-                    id="pickupNeeded"
-                    name="pickupNeeded"
-                    value={formData.pickupNeeded}
+                    id="pickupInterest"
+                    name="pickupInterest"
+                    value={formData.pickupInterest}
                     onChange={handleChange}
                     className="form-select"
                   >
-                    <option value="Yes, please arrange pickup from Kuttipuram">
-                      Yes, please arrange group pickup
+                    <option value="Requested pickup point: Kuttipuram Railway Station">
+                      Interested in Kuttipuram Railway Station pickup
                     </option>
-                    <option value="No, arranging own transport">
-                      No, I will arrange independent transport
+                    <option value="Will arrange independent travel">
+                      Arranging independent travel to venue
                     </option>
-                    <option value="Undecided / need travel guidance">
-                      Undecided / need travel guidance
+                    <option value="Undecided / need arrival guidance">
+                      Undecided / require arrival guidance
                     </option>
                   </select>
                 </div>
               </div>
 
-              {/* Accommodation Preference */}
+              {/* Accommodation */}
               <div className="form-group">
                 <label htmlFor="accommodation" className="form-label">
-                  Accommodation Preference
+                  Accommodation Standard
                 </label>
-                <select
+                <input
+                  type="text"
                   id="accommodation"
                   name="accommodation"
-                  value={formData.accommodation}
-                  onChange={handleChange}
-                  className="form-select"
-                >
-                  <option value="Twin-sharing standard (₹9,999/person)">
-                    Twin-Sharing Standard (2 guests/room · Included in ₹9,999 provisional fee)
-                  </option>
-                  <option value="Enquire about private single occupancy room">
-                    Enquire about Private Room (Subject to venue availability)
-                  </option>
-                </select>
+                  readOnly
+                  value="Twin-sharing accommodation — two guests per room"
+                  className="form-input form-input-readonly"
+                />
               </div>
 
-              {/* Message / Health Notes */}
+              {/* Questions / Non-sensitive notes */}
               <div className="form-group">
-                <label htmlFor="message" className="form-label">
-                  Questions, Mobility or Health Notes <span className="form-optional">(Optional)</span>
+                <label htmlFor="notes" className="form-label">
+                  General Questions or Enquiries <span className="form-optional">(Optional)</span>
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
+                  id="notes"
+                  name="notes"
                   rows="3"
-                  value={formData.message}
+                  value={formData.notes}
                   onChange={handleChange}
-                  placeholder="Share any questions about the retreat, dietary requirements, recent surgery, or health considerations..."
+                  placeholder="Share general questions about the retreat or schedule. Please discuss any sensitive medical or recent-surgery concerns privately upon direct contact."
                   className="form-textarea"
                 />
               </div>
@@ -364,7 +488,7 @@ export default function EnquirySection() {
                   disabled={submitting}
                   className="btn btn-travel-primary btn-submit-large"
                 >
-                  {submitting ? 'Submitting Enquiry...' : 'Submit Retreat Enquiry'}
+                  {submitting ? 'Transmitting Enquiry...' : 'Submit Retreat Enquiry'}
                   <svg
                     width="16"
                     height="16"
@@ -382,7 +506,7 @@ export default function EnquirySection() {
                 </button>
 
                 <p className="form-legal-note">
-                  Submitting this form is completely non-binding. We respect your privacy and will never share your contact information.
+                  Submitting an enquiry is completely non-binding. We respect your privacy and do not share contact details.
                 </p>
               </div>
             </form>

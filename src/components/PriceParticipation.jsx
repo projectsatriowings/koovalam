@@ -21,16 +21,17 @@ export default function PriceParticipation() {
             <span>TRANSPARENT PARTICIPATION</span>
           </div>
           <h2 className="travel-heading">
-            Your Retreat <span className="serif-italic">Investment</span>
+            Retreat Investment <br className="hide-mobile" />
+            <span className="serif-italic">&amp; Guest Suitability</span>
           </h2>
           <p className="travel-lede">
-            Honest pricing, all-inclusive retreat essentials, and clear guidance on suitability before you enquire.
+            Provisional pricing details, planned package activities, and clear participant guidance before you enquire.
           </p>
         </div>
 
         {/* Top 2-Column Split: Investment Card + Participation & Health Notice Card */}
         <div className="investment-grid">
-          {/* Column 1: Pricing & Inclusions */}
+          {/* Column 1: Pricing & Planned Inclusions */}
           <div className="investment-pricing-card">
             <div className="pricing-card-header">
               <span className="pricing-status-pill">{investment.statusTag}</span>
@@ -43,7 +44,7 @@ export default function PriceParticipation() {
             </div>
 
             <div className="pricing-inclusions-block">
-              <h3 className="inclusions-title">What is Included in Your Retreat:</h3>
+              <h3 className="inclusions-title">Planned Activities &amp; Arrangements:</h3>
               <ul className="inclusions-list">
                 {investment.inclusions.map((inc, i) => (
                   <li key={i} className="inclusion-item">
@@ -64,6 +65,9 @@ export default function PriceParticipation() {
                   </li>
                 ))}
               </ul>
+              <p className="inclusion-disclaimer-note">
+                {investment.inclusionNotice}
+              </p>
             </div>
 
             <div className="pricing-card-action">
@@ -89,14 +93,14 @@ export default function PriceParticipation() {
                 </svg>
               </a>
               <span className="pricing-no-risk">
-                Zero upfront payment required · Non-binding enquiry
+                No payment or deposit required at this stage · Non-binding
               </span>
             </div>
           </div>
 
-          {/* Column 2: Participation Guidelines & Prominent Surgery Notice */}
+          {/* Column 2: Participation Guidelines & Surgery Notice */}
           <div className="participation-details-card">
-            {/* Surgery & Health Notice — Critical Trust & Safety Element */}
+            {/* Surgery & Health Notice */}
             <div className="health-advisory-box" role="alert">
               <div className="advisory-icon" aria-hidden="true">
                 <svg
@@ -121,25 +125,25 @@ export default function PriceParticipation() {
             </div>
 
             <div className="participation-criteria-block">
-              <h3 className="criteria-heading">Who Can Attend</h3>
+              <h3 className="criteria-heading">Participant Information</h3>
               <div className="criteria-specs">
                 <div className="criteria-spec-item">
-                  <div className="spec-label">Eligible Age Range</div>
-                  <strong className="spec-val">{investment.participation.ageRange}</strong>
+                  <div className="spec-label">Stated Intended Age Range</div>
+                  <strong className="spec-val">18–70 years</strong>
                   <p className="spec-sub">
-                    Sessions are foundational and adaptable to normal mobility levels.
+                    Subject to final eligibility confirmation. Practices are gentle and foundational.
                   </p>
                 </div>
 
                 <div className="criteria-spec-item">
-                  <div className="spec-label">Travel Style</div>
-                  <strong className="spec-val">Solo Travellers &amp; Couples</strong>
-                  <p className="spec-sub">{investment.participation.welcomeNote}</p>
+                  <div className="spec-label">Attendance</div>
+                  <strong className="spec-val">Couples May Join</strong>
+                  <p className="spec-sub">{investment.participation.couplesNote}</p>
                 </div>
 
                 <div className="criteria-spec-item">
-                  <div className="spec-label">Adult Retreat Setting</div>
-                  <strong className="spec-val">No Separate Family Rate</strong>
+                  <div className="spec-label">Package Structure</div>
+                  <strong className="spec-val">No Family Package</strong>
                   <p className="spec-sub">{investment.participation.familyNote}</p>
                 </div>
               </div>
@@ -147,17 +151,17 @@ export default function PriceParticipation() {
 
             <div className="reassurance-quote-box">
               <p className="reassurance-quote">
-                “Every practice is offered as an open invitation. You are always at liberty to rest, reflect in quiet nature, or participate at your own tempo.”
+                “All sessions and practices are voluntary. Participants are welcome to engage at their own comfort level or take personal quiet time.”
               </p>
             </div>
           </div>
         </div>
 
-        {/* Compact Essential FAQs (4 items only) */}
+        {/* Compact Essential FAQs */}
         <div className="compact-faq-container">
           <div className="compact-faq-head text-center">
             <h3 className="compact-faq-title">Frequently Asked Questions</h3>
-            <p className="compact-faq-sub">Quick answers to key planning questions</p>
+            <p className="compact-faq-sub">Verified answers to practical planning questions</p>
           </div>
 
           <div className="compact-faq-accordion" role="region" aria-label="Frequently Asked Questions">

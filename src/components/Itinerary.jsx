@@ -17,15 +17,15 @@ export default function Itinerary() {
             <span>DAILY FLOW &amp; RHYTHM</span>
           </div>
           <h2 className="travel-heading">
-            Your Retreat <span className="serif-italic">Journey</span>
+            Proposed Retreat <span className="serif-italic">Flow</span>
           </h2>
           <p className="travel-lede">
-            An unhurried daily arc balancing mindful practice, cultural discovery and restorative quiet space. Designed to let you unwind at your natural tempo.
+            An illustrative daily arc balancing mindful practice, cultural discovery and restorative quiet space. Dates and programme duration will be confirmed by the organiser.
           </p>
         </div>
 
-        {/* Transparent Calendar Disclosure Banner */}
-        <div className="schedule-disclosure-box" role="note" aria-label="Dates Notice">
+        {/* Clear Notice: Dates and Duration To Be Confirmed */}
+        <div className="schedule-disclosure-box" role="note" aria-label="Dates & Duration Notice">
           <div className="disclosure-icon" aria-hidden="true">
             <svg
               width="20"
@@ -44,12 +44,11 @@ export default function Itinerary() {
             </svg>
           </div>
           <div className="disclosure-text">
-            <strong>Retreat Schedule Notice:</strong>{' '}
-            {itineraryData.dateNotice}
+            <strong>Dates &amp; Programme Duration:</strong> {itineraryData.dateNotice}
           </div>
         </div>
 
-        {/* Day Selector Tabs (for quick mobile & desktop navigation) */}
+        {/* Day Selector Tabs */}
         <div className="itinerary-tabs" role="tablist" aria-label="Retreat Days">
           {itineraryData.days.map((item) => (
             <button
@@ -98,7 +97,7 @@ export default function Itinerary() {
 
                   <div className="day-schedule-block">
                     <h4 className="schedule-block-heading">
-                      <span>Daily Flow &amp; Highlights</span>
+                      <span>Planned Flow &amp; Activities</span>
                     </h4>
                     <ul className="day-schedule-list">
                       {dayItem.highlights.map((point, idx) => (
@@ -117,22 +116,23 @@ export default function Itinerary() {
           })}
         </div>
 
-        {/* Visual Breathing Room Image Strip */}
+        {/* Representative Kerala Landscape Banner (Requirement 8) */}
         <div className="itinerary-visual-banner">
           <div className="visual-banner-image">
             <ImageSlot name="highlight-nila-river" className="itinerary-river-slot" />
           </div>
           <div className="visual-banner-caption">
-            <h4 className="caption-title">Still Waters, Ancient Palms &amp; Quiet Footpaths</h4>
+            <div className="caption-tag">REPRESENTATIVE REGIONAL IMAGERY</div>
+            <h4 className="caption-title">Still Waters &amp; Kerala Greenery</h4>
             <p className="caption-text">
-              Every day offers unscheduled windows for personal journaling, quiet contemplation beside Kerala greenery, or resting without hurry.
+              Representative regional imagery of Kerala's serene river landscapes. Excursions and retreat surroundings will be confirmed by the organiser upon venue finalisation.
             </p>
             <a
               className="btn btn-travel-secondary"
               href="#stay-travel"
               onClick={() => track('cta_view_stay_travel')}
             >
-              <span>Explore Stay &amp; Food Details</span>
+              <span>Explore Stay &amp; Transport Details</span>
             </a>
           </div>
         </div>

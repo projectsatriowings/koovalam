@@ -66,7 +66,7 @@ export default function Hero() {
           </h1>
 
           {/* Key Activities Pill Row */}
-          <div className="hero-activities-pills" aria-label="Core Retreat Inclusions">
+          <div className="hero-activities-pills" aria-label="Core Retreat Practices">
             <span className="activity-pill">Yoga</span>
             <span className="pill-dot">·</span>
             <span className="activity-pill">Pranayama</span>
@@ -80,7 +80,7 @@ export default function Hero() {
 
           {/* Supporting Copy / Lede */}
           <p className="hero-travel-lede">
-            Experience Kerala through mindful movement, yoga, cultural discovery and meaningful moments in nature. An unhurried small-group sanctuary designed to rest your senses, deepen your breath, and reconnect with what matters.
+            Experience Kerala through mindful movement, yoga, cultural discovery and meaningful moments in nature. An unhurried experience designed to rest your senses, deepen your breath, and reconnect with what matters.
           </p>
 
           {/* Conversion Actions */}
@@ -118,30 +118,30 @@ export default function Hero() {
         </div>
 
         {/* Integrated Trip Info Bar */}
-        <div className="hero-trip-strip" aria-label="Retreat Key Details">
+        <div className="hero-trip-strip" aria-label="Retreat Overview">
           <div className="trip-strip-grid">
             <div className="trip-strip-item">
-              <span className="trip-strip-label">Destination</span>
+              <span className="trip-strip-label">Location</span>
               <strong className="trip-strip-value">{site.retreat.location}</strong>
-              <span className="trip-strip-sub">Serene Sanctuary</span>
+              <span className="trip-strip-sub">Venue to be confirmed</span>
             </div>
 
             <div className="trip-strip-item">
-              <span className="trip-strip-label">Duration &amp; Dates</span>
-              <strong className="trip-strip-value">3–4 Days</strong>
-              <span className="trip-strip-sub">Dec 17–19 · Provisional</span>
+              <span className="trip-strip-label">Dates &amp; Duration</span>
+              <strong className="trip-strip-value">To be confirmed</strong>
+              <span className="trip-strip-sub">Subject to organiser review</span>
             </div>
 
             <div className="trip-strip-item">
               <span className="trip-strip-label">Style</span>
               <strong className="trip-strip-value">Mindful &amp; Cultural</strong>
-              <span className="trip-strip-sub">Foundational · Small Group</span>
+              <span className="trip-strip-sub">7 Core Activities</span>
             </div>
 
             <div className="trip-strip-item">
               <span className="trip-strip-label">Stay &amp; Food</span>
               <strong className="trip-strip-value">Twin-Sharing</strong>
-              <span className="trip-strip-sub">100% Pure Vegetarian</span>
+              <span className="trip-strip-sub">Vegetarian Meals Planned</span>
             </div>
 
             <div className="trip-strip-item trip-strip-price-item">
@@ -150,7 +150,7 @@ export default function Hero() {
                 <strong className="trip-strip-price">{site.retreat.price}</strong>
                 <span className="trip-strip-unit">/ person</span>
               </div>
-              <span className="trip-strip-sub">To be confirmed</span>
+              <span className="trip-strip-sub">Subject to confirmation</span>
             </div>
           </div>
         </div>

@@ -45,10 +45,10 @@ export default function StickyCta() {
       <div className="travel-sticky-wrap">
         <div className="travel-sticky-info">
           <div className="sticky-price-row">
-            <strong className="sticky-price">From ₹9,999*</strong>
-            <span className="sticky-unit">/ person</span>
+            <strong className="sticky-price">₹9,999*</strong>
+            <span className="sticky-unit">/ person (Provisional)</span>
           </div>
-          <span className="sticky-dates-tag">Dec 17–19 · Kerala</span>
+          <span className="sticky-dates-tag">Kerala, India · Dates to be confirmed</span>
         </div>
 
         <a

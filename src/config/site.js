@@ -1,8 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ONE SOURCE OF TRUTH FOR PLACEHOLDERS — edit only this file to go live.
-// Nothing in the components hard-codes a date, price, venue, contact or
-// testimonial. Until the items below are replaced with real values, the page
-// honestly says "Announcing soon" / "Shared on enquiry" / "to be confirmed".
+// ONE SOURCE OF TRUTH FOR RETREAT CONFIGURATION & CONTACT DESTINATIONS
 // ─────────────────────────────────────────────────────────────────────────────
 export const site = {
   brand: 'Koovalam',
@@ -15,30 +12,26 @@ export const site = {
   whatsappNumber: '91XXXXXXXXXX',
   whatsappMessage:
     "Hi, I would like to enquire about the Koovalam Kerala Retreat.",
-  // PLACEHOLDER — form endpoint. Leave empty to use the WhatsApp fallback
-  // success state; set to a Formspree / Web3Forms endpoint when ready.
+  // PLACEHOLDER — form endpoint. Leave empty until a genuine backend endpoint is set up.
   formEndpoint: '',
   retreat: {
     name: 'Koovalam Kerala Retreat',
     headline: 'A Journey Back to Yourself',
     subheadline: 'Mindful Movement, Yoga, Cultural Discovery & Meaningful Moments in Nature',
     activitiesSummary: 'Yoga · Pranayama · Meditation · Culture · Nature',
-    duration: '3–4 Days (Dec 17–19 Under Review)',
-    dates: 'December 17–19 (Provisional · Pending Confirmation)',
+    duration: 'Dates and programme duration to be confirmed',
+    dates: 'Dates and programme duration to be confirmed',
     location: 'Kerala, India',
-    venue: 'Kerala, India (Exact sanctuary to be confirmed)',
+    venue: 'Kerala, India (Venue to be confirmed by organiser)',
     price: '₹9,999',
-    priceNote: 'per person (Provisional · To be confirmed before bookings open)',
-    accommodation: 'Twin-Sharing (2 people per room)',
-    food: 'Pure Vegetarian Meals',
-    pickup: 'Kuttipuram Railway Station (Requested pickup hub)',
+    priceNote: 'Provisional price: ₹9,999 per person — subject to organiser confirmation',
+    accommodation: 'Twin-sharing accommodation — two guests per room',
+    food: 'Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
+    pickup: 'Requested pickup point: Kuttipuram Railway Station (Transport inclusion pending confirmation)',
     groupSize: 'Small group experience',
-    ageRange: '18–70 years',
-    checkIn: 'from 2:00 PM (Day 01)',
-    checkOut: 'around 12:00 PM (Final Day)',
+    ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
   },
   socials: [
-    // PLACEHOLDERS — replace hrefs with real profiles, or delete entries.
     { label: 'Instagram', href: '#' },
     { label: 'Facebook', href: '#' },
     { label: 'YouTube', href: '#' },
