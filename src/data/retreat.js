@@ -1,79 +1,157 @@
 /**
  * KOOVALAM — CANONICAL RETREAT DATA
- * Single source of truth for retreat content & canonical claims.
+ * Single source of truth for retreat experiences, itinerary, and canonical claims.
  */
 
-// 1. The 7 Client-Specified Activities
-export const activities = [
+// 1. Organised Experience Categories
+export const experienceCategories = [
   {
-    id: 'yoga',
-    title: 'Gentle Classical Yoga',
-    tag: 'Movement & Mobility',
-    image: 'practice-yoga',
-    summary:
-      'Foundational movement, mobility, and body awareness designed for all levels. Practiced with gentle guidance and zero strain.',
-    highlight: 'Accessible postures · Zero strain · 100% voluntary',
+    id: 'practices',
+    categoryName: 'Yoga & Mindful Practices',
+    categoryTag: 'Movement · Breath · Presence',
+    categoryDesc:
+      'Gentle classical practices rooted in traditional Indian wisdom, guided with care and zero physical strain. 100% voluntary.',
+    items: [
+      {
+        id: 'yoga',
+        title: 'Gentle Classical Yoga',
+        tag: 'Movement & Mobility',
+        image: 'practice-yoga',
+        summary:
+          'Foundational movement, mobility, and body awareness designed for all levels. Practiced with gentle guidance and zero strain.',
+        highlight: 'Accessible postures · Zero strain · 100% voluntary',
+      },
+      {
+        id: 'pranayama',
+        title: 'Pranayama Breathwork',
+        tag: 'Breath & Vitality',
+        image: 'practice-pranayama',
+        summary:
+          'Conscious breathing practices designed to steady mental focus, ease tension, and restore natural breath awareness.',
+        highlight: 'Natural breath awareness · Ancient balancing rhythms',
+      },
+      {
+        id: 'yoga-nidra',
+        title: 'Restorative Yoga Nidra',
+        tag: 'Deep Conscious Rest',
+        image: 'practice-yoga-nidra',
+        summary:
+          'Guided yogic sleep practiced comfortably lying down to support deep conscious relaxation and release daily fatigue.',
+        highlight: 'Restorative relaxation · Guided body scanning',
+      },
+      {
+        id: 'meditation',
+        title: 'Morning Meditation',
+        tag: 'Stillness & Presence',
+        image: 'practice-meditation',
+        summary:
+          'Quiet morning sitting and sensory awareness to greet the day with mental stillness and calm presence.',
+        highlight: 'Gentle guidance · Unhurried morning presence',
+      },
+      {
+        id: 'cognitive',
+        title: 'Cognitive Exercises',
+        tag: 'Clarity & Self-Reflection',
+        image: 'practice-reflection',
+        summary:
+          'Mindfulness exercises and reflective journaling for personal clarity and observing daily thought patterns. Non-clinical wellness practice.',
+        highlight: 'Mindful mental clarity · Non-clinical reflection',
+      },
+    ],
   },
   {
-    id: 'pranayama',
-    title: 'Pranayama Breathwork',
-    tag: 'Breath & Vitality',
-    image: 'practice-pranayama',
-    summary:
-      'Conscious breathing practices designed to steady mental focus, ease tension, and restore natural breath awareness.',
-    highlight: 'Natural breath awareness · Ancient balancing rhythms',
+    id: 'temples',
+    categoryName: 'Sacred Temple Visits',
+    categoryTag: 'Spiritual Heritage · Contemplative Quiet',
+    categoryDesc:
+      'Proposed visits to two historic Kerala pilgrimage sites. Experienced respectfully with quiet contemplation. Access to specific shrines, festivals, or rituals is subject to organiser confirmation and temple customs.',
+    items: [
+      {
+        id: 'kottiyoor-temple',
+        title: 'Kottiyoor Temple',
+        tag: 'Kannur District · Shiva Pilgrimage Heritage',
+        image: 'highlight-temple',
+        representativeImage: true,
+        summary:
+          'A significant Shiva pilgrimage destination in Kerala set amidst the serene forests of the Western Ghats. Steeped in centuries of spiritual and cultural heritage. Specific shrine access and visiting schedules are subject to seasonal temple availability and organiser confirmation.',
+        highlight: 'Historic Shiva pilgrimage · Subject to temple calendar & organiser confirmation',
+      },
+      {
+        id: 'tirunelli-temple',
+        title: 'Tirunelli Temple',
+        tag: 'Wayanad · Ancient Vishnu Pilgrimage',
+        image: 'highlight-temple',
+        representativeImage: true,
+        summary:
+          'Also known as Thirunelli Maha Vishnu Temple, an ancient stone sanctuary located in Wayanad, surrounded by the Brahmagiri hills. Revered for centuries for its spiritual significance and ancestral rites performed by devotees. Respectfully introduced as a place of historical contemplation; no spiritual outcomes or benefits are guaranteed.',
+        highlight: 'Brahmagiri valley heritage · Revered ancestral-rite traditions respectfully introduced',
+      },
+    ],
   },
   {
-    id: 'yoga-nidra',
-    title: 'Restorative Yoga Nidra',
-    tag: 'Deep Conscious Rest',
-    image: 'practice-yoga-nidra',
-    summary:
-      'Guided yogic sleep practiced comfortably lying down to support deep conscious relaxation and release daily fatigue.',
-    highlight: 'Restorative relaxation · Guided body scanning',
-  },
-  {
-    id: 'meditation',
-    title: 'Morning Meditation',
-    tag: 'Stillness & Presence',
-    image: 'practice-meditation',
-    summary:
-      'Quiet morning sitting and sensory awareness to greet the day with mental stillness and calm presence.',
-    highlight: 'Gentle guidance · Unhurried morning presence',
-  },
-  {
-    id: 'cognitive',
-    title: 'Cognitive Exercises',
-    tag: 'Clarity & Self-Reflection',
-    image: 'practice-reflection',
-    summary:
-      'Mindfulness exercises and reflective journaling for personal clarity and observing daily thought patterns. Non-clinical wellness practice.',
-    highlight: 'Mindful mental clarity · Non-clinical reflection',
-  },
-  {
-    id: 'village-tour',
-    title: 'Scenic Village Tour',
-    tag: 'Cultural Discovery',
-    image: 'practice-nature-culture',
-    summary:
-      'An unhurried guided walking discovery through serene rural Kerala footpaths and green surroundings.',
-    highlight: 'Authentic rural Kerala footpaths · Sensory grounding',
-  },
-  {
-    id: 'temple-visit',
-    title: 'Historic Temple Visit',
-    tag: 'Sacred Heritage',
-    image: 'highlight-temple',
-    summary:
-      'A quiet, respectful visit to a historic regional temple. Guests are requested to respect local customs and temple dress requirements.',
-    highlight: 'Contemplative heritage · Respecting local customs',
+    id: 'culture',
+    categoryName: 'Kerala Cultural Experiences',
+    categoryTag: 'Living Traditions · Classical Arts',
+    categoryDesc:
+      'Immerse in Kerala’s living culture through serene village nature walks and proposed classical arts performances.',
+    items: [
+      {
+        id: 'village-tour',
+        title: 'Scenic Village Tour',
+        tag: 'Rural Footpaths · Greenery',
+        image: 'practice-nature-culture',
+        summary:
+          'An unhurried guided walking discovery through serene rural Kerala footpaths and green surroundings.',
+        highlight: 'Authentic rural Kerala footpaths · Sensory grounding',
+      },
+      {
+        id: 'cultural-evenings',
+        title: 'Traditional Arts & Cultural Evenings',
+        tag: 'Classical Indian Performing Arts',
+        image: 'natural-living',
+        representativeImage: true,
+        summary:
+          "Experience the richness of India's classical arts through traditional flute music and graceful dance performances, including Bharatanatyam and Mohiniyattam. Proposed cultural evenings are subject to organiser confirmation and performer availability.",
+        highlight: 'Traditional flute, Bharatanatyam & Mohiniyattam · Subject to artist availability',
+      },
+    ],
   },
 ]
+
+// Flat list for easy reference / mapping
+export const allActivities = experienceCategories.flatMap((cat) => cat.items)
 
 // 2. The Retreat Journey / Itinerary (Proposed sequence pending final confirmation)
 export const itineraryData = {
   dateNotice:
     'Dates and programme duration to be confirmed. The client-supplied details (December 17–19 / four-day trip) are under final operational review. The sequence below illustrates the planned retreat practices and activities pending final confirmation of dates and duration by the organiser.',
+  logisticsNotice: {
+    heading: 'Important Logistical Notice: Temple Visits & Cultural Performances',
+    text:
+      'Kottiyoor Temple is located in Kannur district, while Tirunelli Temple is situated in Wayanad. The logistical feasibility of visiting both temples within a single retreat batch, inter-district travel arrangements, Kottiyoor shrine seasonal availability (Akkare vs Ikkare shrine), and scheduling of classical cultural performances (traditional flute, Bharatanatyam, Mohiniyattam) are under operational review by the organiser and will be finalised prior to booking.',
+  },
+  proposedHighlightsUnderReview: [
+    {
+      name: 'Kottiyoor Temple Visit',
+      region: 'Kannur District',
+      status: 'Proposed · Under logistical review regarding travel feasibility & seasonal shrine schedule',
+    },
+    {
+      name: 'Tirunelli Temple Visit',
+      region: 'Wayanad District',
+      status: 'Proposed · Under logistical review regarding inter-district travel & group timing',
+    },
+    {
+      name: 'Traditional Flute Music Performance',
+      genre: 'Classical Music',
+      status: 'Proposed evening event · Subject to artist availability and retreat batch schedule',
+    },
+    {
+      name: 'Bharatanatyam / Mohiniyattam Classical Dance',
+      genre: 'Classical Dance',
+      status: 'Proposed evening event · Subject to artist availability and organiser confirmation',
+    },
+  ],
   days: [
     {
       day: 1,
@@ -109,13 +187,13 @@ export const itineraryData = {
     },
     {
       day: 3,
-      title: 'Temple Stillness & Integration',
-      subtitle: 'Cultural heritage, closing reflection, and conclusion',
+      title: 'Contemplation & Integration',
+      subtitle: 'Spiritual heritage, closing reflection, and conclusion',
       narrative:
-        'Morning stillness and a respectful visit to a historic regional temple. Followed by vegetarian breakfast, closing reflection, and concluding vegetarian lunch.',
+        'Morning stillness, gentle breath practice, and quiet reflection. Followed by vegetarian breakfast, closing circle, and concluding vegetarian lunch.',
       highlights: [
         'Morning meditation & gentle breath practice',
-        'Respectful cultural temple visit',
+        'Contemplative morning reflection',
         'Vegetarian breakfast',
         'Closing reflection & personal integration',
         'Concluding vegetarian lunch',
@@ -167,10 +245,9 @@ export const investment = {
     'Morning Meditation sessions',
     'Cognitive exercises & mindfulness reflection',
     'Guided village walking tour',
-    'Cultural temple visit (respecting local customs)',
   ],
   inclusionNotice:
-    'Note: All package inclusions, meal schedules, and transport arrangements are provisional and subject to final confirmation by the organiser.',
+    'Note: Temple visits (Kottiyoor Temple & Tirunelli Temple), pooja arrangements, traditional arts performances (flute music, Bharatanatyam, Mohiniyattam), artist fees, and transport arrangements are proposed experiences currently under organiser review. They are not confirmed inclusions within the provisional ₹9,999 package fee until formally confirmed by the organiser.',
   participation: {
     ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
     couplesNote: 'Couples may join.',
@@ -195,7 +272,7 @@ export const compactFaqs = [
     a: 'Accommodation is on a twin-sharing basis (two guests per room) in Kerala, India. Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
   },
   {
-    q: 'What is the requested pickup point and is transport included?',
-    a: 'The requested pickup point is Kuttipuram Railway Station. Transport coordination details and whether transfer arrangements are included in the retreat package will be confirmed by the organiser.',
+    q: 'Are the temple visits and cultural performances included?',
+    a: 'Proposed visits to Kottiyoor Temple and Tirunelli Temple, as well as classical flute and dance performances (Bharatanatyam / Mohiniyattam), are currently under operational review regarding travel feasibility and artist availability. Their inclusion status within the retreat package will be confirmed by the organiser prior to booking.',
   },
 ]

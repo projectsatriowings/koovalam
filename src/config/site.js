@@ -5,20 +5,20 @@ export const site = {
   brand: 'Koovalam',
   wordmark: 'KOOVALAM',
   tagline: 'Rooted in Nature. Connected to Soul.',
-  // PLACEHOLDER — replace with the real contact email before launch.
-  email: 'hello@koovalam.example',
+  // Verified organiser contact email
+  email: 'info.koovalam@gmail.com',
   // PLACEHOLDER — replace with the real WhatsApp number (country code, digits
   // only, no "+" or spaces) before launch. The wa.me link uses this value.
   whatsappNumber: '91XXXXXXXXXX',
   whatsappMessage:
     "Hi, I would like to enquire about the Koovalam Kerala Retreat.",
-  // PLACEHOLDER — form endpoint. Leave empty until a genuine backend endpoint is set up.
-  formEndpoint: '',
+  // Functional backend email enquiry endpoint (served by api/enquire.js and dev middleware)
+  formEndpoint: '/api/enquire',
   retreat: {
     name: 'Koovalam Kerala Retreat',
     headline: 'A Journey Back to Yourself',
     subheadline: 'Mindful Movement, Yoga, Cultural Discovery & Meaningful Moments in Nature',
-    activitiesSummary: 'Yoga · Pranayama · Meditation · Culture · Nature',
+    activitiesSummary: 'Yoga · Pranayama · Meditation · Temples · Culture · Nature',
     duration: 'Dates and programme duration to be confirmed',
     dates: 'Dates and programme duration to be confirmed',
     location: 'Kerala, India',
@@ -30,6 +30,8 @@ export const site = {
     pickup: 'Requested pickup point: Kuttipuram Railway Station (Transport inclusion pending confirmation)',
     groupSize: 'Small group experience',
     ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
+    templeVisits: 'Kottiyoor Temple & Tirunelli Temple (Proposed · Logistical feasibility under organiser review)',
+    culturalArts: 'Traditional Flute, Bharatanatyam & Mohiniyattam (Proposed · Subject to artist availability)',
   },
   socials: [
     { label: 'Instagram', href: '#' },

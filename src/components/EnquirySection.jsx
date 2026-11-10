@@ -1,28 +1,23 @@
 import { useState } from 'react'
-import {
-  site,
-  isContactConfigured,
-  isWhatsAppConfigured,
-  isFormConfigured,
-} from '../config/site.js'
+import { site } from '../config/site.js'
 import { LeafMark } from './Logo.jsx'
 import { track } from '../lib/analytics.js'
 
 export default function EnquirySection() {
   const [formData, setFormData] = useState({
     fullName: '',
+    email: '',
     phone: '',
-    participants: '1',
-    travellingFrom: '',
-    datesNote: 'Dates to be confirmed by organiser',
-    pickupInterest: 'Requested pickup point: Kuttipuram Railway Station',
-    accommodation: 'Twin-sharing (two guests per room)',
-    notes: '',
+    participants: '1 Person',
+    origin: '',
+    pickup: 'Kuttipuram Railway Station (Organiser Pickup Hub)',
+    accommodation: 'Twin Sharing (Standard — Two Guests per Room)',
+    message: '',
+    hp_company: '', // Honeypot spam prevention
   })
 
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-  const [submissionResult, setSubmissionResult] = useState(null)
   const [errorMessage, setErrorMessage] = useState('')
   const [validationErrors, setValidationErrors] = useState({})
 
@@ -32,37 +27,42 @@ export default function EnquirySection() {
     if (validationErrors[name]) {
       setValidationErrors((prev) => ({ ...prev, [name]: '' }))
     }
+    if (errorMessage) {
+      setErrorMessage('')
+    }
   }
 
   const validate = () => {
     const errors = {}
-    if (!formData.fullName.trim()) {
+
+    if (!formData.fullName.trim() || formData.fullName.trim().length < 2) {
       errors.fullName = 'Please enter your full name.'
     }
-    if (!formData.phone.trim()) {
-      errors.phone = 'Please enter your contact phone or WhatsApp number.'
-    } else if (formData.phone.replace(/[^0-9]/g, '').length < 8) {
-      errors.phone = 'Please enter a valid phone number with country/area code.'
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+    if (!formData.email.trim() || !emailRegex.test(formData.email.trim())) {
+      errors.email = 'Please enter a valid email address (e.g. name@example.com).'
     }
+
+    const digits = formData.phone.replace(/\D/g, '')
+    if (!formData.phone.trim() || digits.length < 8) {
+      errors.phone = 'Please enter a valid phone or WhatsApp number (at least 8 digits).'
+    }
+
+    if (!formData.participants) {
+      errors.participants = 'Please select the number of participants.'
+    }
+
+    if (!formData.pickup) {
+      errors.pickup = 'Please select your pickup preference.'
+    }
+
+    if (!formData.accommodation) {
+      errors.accommodation = 'Please select your accommodation preference.'
+    }
+
     setValidationErrors(errors)
     return Object.keys(errors).length === 0
-  }
-
-  const buildWhatsAppMessage = () => {
-    return [
-      `*Koovalam Retreat Enquiry*`,
-      `• Name: ${formData.fullName.trim()}`,
-      `• Phone: ${formData.phone.trim()}`,
-      `• Participants: ${formData.participants}`,
-      formData.travellingFrom.trim() ? `• Travelling From: ${formData.travellingFrom.trim()}` : null,
-      `• Accommodation: ${formData.accommodation}`,
-      `• Requested Pickup Point: Kuttipuram Railway Station`,
-      `• Dates: Dates to be confirmed by organiser`,
-      `• Pricing: Provisional ₹9,999/person (Subject to confirmation)`,
-      formData.notes.trim() ? `• Notes: ${formData.notes.trim()}` : null,
-    ]
-      .filter(Boolean)
-      .join('\n')
   }
 
   const handleSubmit = async (e) => {
@@ -76,51 +76,32 @@ export default function EnquirySection() {
     track('enquiry_form_submit_attempt')
 
     try {
-      if (isFormConfigured) {
-        const response = await fetch(site.formEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify(formData),
-        })
+      const endpoint = site.formEndpoint || '/api/enquire'
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-        if (!response.ok) {
-          throw new Error('Submission failed. Please check your network and try again.')
-        }
+      const data = await response.json().catch(() => null)
 
-        setSubmissionResult({
-          type: 'api_success',
-          title: 'Enquiry Received',
-          message: `Thank you, ${formData.fullName}. Your enquiry has been received by our retreat team. We will review your details and respond with confirmed dates and retreat guidelines.`,
-        })
-        setSubmitted(true)
-        track('enquiry_submission_success_endpoint')
-      } else if (isWhatsAppConfigured) {
-        const text = encodeURIComponent(buildWhatsAppMessage())
-        const waUrl = `https://wa.me/${site.whatsappNumber}?text=${text}`
-        let opened = false
-        try {
-          const win = window.open(waUrl, '_blank', 'noopener,noreferrer')
-          opened = Boolean(win && !win.closed)
-        } catch {
-          opened = false
-        }
-
-        setSubmissionResult({
-          type: opened ? 'whatsapp_opened' : 'whatsapp_blocked',
-          waUrl,
-          title: opened ? 'WhatsApp Ready to Send' : 'Action Required: Open WhatsApp',
-          message: opened
-            ? 'WhatsApp has opened with your enquiry details. Please review the message and press Send to complete your enquiry.'
-            : 'Your browser prevented WhatsApp from opening automatically. Please use the button below to open WhatsApp with your prefilled enquiry and press Send.',
-        })
-        setSubmitted(true)
-        track('enquiry_submission_whatsapp_handoff')
+      if (!response.ok || !data?.success) {
+        const errMsg =
+          data?.error ||
+          "We couldn't send your enquiry at the moment. Please try again later or contact our team through the available contact details."
+        throw new Error(errMsg)
       }
+
+      setSubmitted(true)
+      track('enquiry_submission_success')
     } catch (err) {
-      setErrorMessage(err.message || 'An error occurred while submitting your enquiry. Please try again.')
+      setErrorMessage(
+        err.message ||
+          "We couldn't send your enquiry at the moment. Please try again later or contact our team through the available contact details."
+      )
       track('enquiry_submission_error')
     } finally {
       setSubmitting(false)
@@ -137,11 +118,11 @@ export default function EnquirySection() {
             <span>CONNECT WITH US</span>
           </div>
           <h2 className="travel-heading">
-            Retreat Enquiries <br className="hide-mobile" />
+            Retreat Enquiry <br className="hide-mobile" />
             <span className="serif-italic">&amp; Registration</span>
           </h2>
           <p className="travel-lede">
-            Reach out with practical questions, register your interest, or discuss retreat suitability directly with our team.
+            Reach out with practical questions regarding the retreat, proposed temple visits, cultural evenings, or guest suitability. Our team will review your details and respond with confirmed dates and room availability.
           </p>
         </div>
 
@@ -190,119 +171,32 @@ export default function EnquirySection() {
             </div>
           </div>
 
-          {/* Condition 1: Contact Channels Unconfigured — Disable data collection & display clear notice */}
-          {!isContactConfigured ? (
-            <div
-              className="enquiry-config-notice"
-              role="region"
-              aria-label="Contact Configuration Notice"
-            >
-              <div className="config-notice-header">
-                <span className="config-notice-pill">Enquiry Channels In Preparation</span>
-                <h3 className="config-notice-title">
-                  Online Enquiries Opening Soon
-                </h3>
-              </div>
-
-              <p className="config-notice-lead">
-                Official communication channels, confirmed calendar dates, and retreat venue details are currently being finalised by the organiser for the retreat in Kerala, India.
-              </p>
-
-              <p className="config-notice-text">
-                To protect guest privacy and prevent unrouted messages, personal information is not collected online until verified organiser submission endpoints or direct WhatsApp channels are active.
-              </p>
-
-              <div className="config-checklist-box">
-                <h4 className="config-checklist-title">Currently Under Organiser Review:</h4>
-                <ul className="config-checklist">
-                  <li>
-                    <span className="checklist-bullet">○</span>
-                    <div>
-                      <strong>Confirmed Dates &amp; Duration:</strong> The client-supplied details (December 17–19 / four-day trip) are under final operational confirmation.
-                    </div>
-                  </li>
-                  <li>
-                    <span className="checklist-bullet">○</span>
-                    <div>
-                      <strong>Venue in Kerala:</strong> Exact property and twin-sharing room details will be announced upon finalisation.
-                    </div>
-                  </li>
-                  <li>
-                    <span className="checklist-bullet">○</span>
-                    <div>
-                      <strong>Transport &amp; Package Inclusions:</strong> Provisional fee of ₹9,999/person and pickup logistics from Kuttipuram Railway Station are pending final confirmation.
-                    </div>
-                  </li>
-                  <li>
-                    <span className="checklist-bullet">○</span>
-                    <div>
-                      <strong>Official Communication Channels:</strong> Direct WhatsApp and email contact details will be published upon launch.
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="config-footer-status">
-                <span className="status-indicator-dot" aria-hidden="true" />
-                <span>Enquiry desk status: Staging preview mode. Live submissions activate once <code>src/config/site.js</code> contact channels are configured.</span>
-              </div>
-            </div>
-          ) : submitted ? (
-            /* Condition 2: Verified Result State (Differentiating API vs WhatsApp) */
+          {submitted ? (
+            /* Verified Success State — Only shown after server/provider confirms acceptance */
             <div className="enquiry-success-panel" role="status">
               <div className="success-badge-icon" aria-hidden="true">
-                <LeafMark color="var(--antique-brass)" size={36} />
+                <LeafMark color="var(--antique-brass)" size={42} />
               </div>
-              <h3 className="success-heading">
-                {submissionResult?.title || 'Enquiry Received'}
-              </h3>
+              <h3 className="success-heading">Enquiry Received</h3>
               <p className="success-sub">
-                {submissionResult?.message ||
-                  'Your enquiry has been received. Our retreat team will review your details and respond with confirmed dates.'}
+                Thank you for your enquiry! Your details have been sent successfully. Our team will contact you shortly.
               </p>
-
-              {submissionResult?.waUrl && (
-                <div className="whatsapp-handoff-action" style={{ marginBottom: '20px' }}>
-                  <a
-                    href={submissionResult.waUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-travel-accent"
-                  >
-                    <span>Open WhatsApp Directly</span>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </a>
-                </div>
-              )}
-
               <button
                 type="button"
                 className="btn btn-travel-secondary"
                 onClick={() => {
                   setSubmitted(false)
-                  setSubmissionResult(null)
+                  setErrorMessage('')
                   setFormData({
                     fullName: '',
+                    email: '',
                     phone: '',
-                    participants: '1',
-                    travellingFrom: '',
-                    datesNote: 'Dates to be confirmed by organiser',
-                    pickupInterest: 'Requested pickup point: Kuttipuram Railway Station',
-                    accommodation: 'Twin-sharing (two guests per room)',
-                    notes: '',
+                    participants: '1 Person',
+                    origin: '',
+                    pickup: 'Kuttipuram Railway Station (Organiser Pickup Hub)',
+                    accommodation: 'Twin Sharing (Standard — Two Guests per Room)',
+                    message: '',
+                    hp_company: '',
                   })
                 }}
               >
@@ -310,8 +204,9 @@ export default function EnquirySection() {
               </button>
             </div>
           ) : (
-            /* Condition 3: Active Live Form (Only when real contact channels are configured) */
+            /* Active Live Form */
             <form className="enquiry-form-travel" onSubmit={handleSubmit} noValidate>
+              {/* Server Failure State Banner */}
               {errorMessage && (
                 <div className="form-error-banner" role="alert">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -323,8 +218,22 @@ export default function EnquirySection() {
                 </div>
               )}
 
+              {/* Honeypot field (hidden from real users to catch automated bots) */}
+              <div className="hp-field" aria-hidden="true">
+                <label htmlFor="hp_company">Leave this field blank</label>
+                <input
+                  type="text"
+                  id="hp_company"
+                  name="hp_company"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  value={formData.hp_company}
+                  onChange={handleChange}
+                />
+              </div>
+
+              {/* Grid Row 1: Full Name & Email Address */}
               <div className="form-grid-2">
-                {/* Full Name */}
                 <div className="form-group">
                   <label htmlFor="fullName" className="form-label">
                     Full Name <span className="req" aria-hidden="true">*</span>
@@ -334,6 +243,7 @@ export default function EnquirySection() {
                     id="fullName"
                     name="fullName"
                     required
+                    autoComplete="name"
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Priya Nair"
@@ -348,16 +258,43 @@ export default function EnquirySection() {
                   )}
                 </div>
 
-                {/* WhatsApp / Phone */}
+                <div className="form-group">
+                  <label htmlFor="email" className="form-label">
+                    Email Address <span className="req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autoComplete="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="e.g. priya.nair@example.com"
+                    className={`form-input ${validationErrors.email ? 'has-error' : ''}`}
+                    aria-invalid={Boolean(validationErrors.email)}
+                    aria-describedby={validationErrors.email ? 'email-error' : undefined}
+                  />
+                  {validationErrors.email && (
+                    <span id="email-error" className="field-error-text">
+                      {validationErrors.email}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Grid Row 2: WhatsApp / Phone & Number of Participants */}
+              <div className="form-grid-2">
                 <div className="form-group">
                   <label htmlFor="phone" className="form-label">
-                    WhatsApp / Phone Number <span className="req" aria-hidden="true">*</span>
+                    WhatsApp / Mobile Number <span className="req" aria-hidden="true">*</span>
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     required
+                    autoComplete="tel"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. +91 98765 43210"
@@ -371,142 +308,142 @@ export default function EnquirySection() {
                     </span>
                   )}
                 </div>
-              </div>
 
-              <div className="form-grid-2">
-                {/* Number of Participants */}
                 <div className="form-group">
                   <label htmlFor="participants" className="form-label">
-                    Participants
+                    Number of Participants <span className="req" aria-hidden="true">*</span>
                   </label>
                   <select
                     id="participants"
                     name="participants"
+                    required
                     value={formData.participants}
                     onChange={handleChange}
                     className="form-select"
                   >
-                    <option value="1">1 Person</option>
-                    <option value="2">2 People (Couples / Friends)</option>
-                    <option value="3+">3+ Small Group</option>
+                    <option value="1 Person">1 Person</option>
+                    <option value="2 People (Couples / Friends)">2 People (Couples / Friends)</option>
+                    <option value="3 People">3 People</option>
+                    <option value="4+ Small Group">4+ Small Group</option>
                   </select>
                 </div>
+              </div>
 
-                {/* Travelling From */}
+              {/* Grid Row 3: City / Country of Origin & Pickup Preference */}
+              <div className="form-grid-2">
                 <div className="form-group">
-                  <label htmlFor="travellingFrom" className="form-label">
-                    Travelling From <span className="form-optional">(City / State)</span>
+                  <label htmlFor="origin" className="form-label">
+                    City / Country of Origin <span className="form-optional">(Optional)</span>
                   </label>
                   <input
                     type="text"
-                    id="travellingFrom"
-                    name="travellingFrom"
-                    value={formData.travellingFrom}
+                    id="origin"
+                    name="origin"
+                    value={formData.origin}
                     onChange={handleChange}
-                    placeholder="e.g. Bengaluru, Kochi, Mumbai"
+                    placeholder="e.g. Bengaluru, India or London, UK"
                     className="form-input"
                   />
                 </div>
-              </div>
 
-              <div className="form-grid-2">
-                {/* Dates Note */}
                 <div className="form-group">
-                  <label htmlFor="datesNote" className="form-label">
-                    Programme Dates
-                  </label>
-                  <input
-                    type="text"
-                    id="datesNote"
-                    name="datesNote"
-                    readOnly
-                    value="Dates to be confirmed by organiser (Flexible interest)"
-                    className="form-input form-input-readonly"
-                  />
-                </div>
-
-                {/* Pickup interest */}
-                <div className="form-group">
-                  <label htmlFor="pickupInterest" className="form-label">
-                    Arrival Pickup Coordination
+                  <label htmlFor="pickup" className="form-label">
+                    Pickup Preference <span className="req" aria-hidden="true">*</span>
                   </label>
                   <select
-                    id="pickupInterest"
-                    name="pickupInterest"
-                    value={formData.pickupInterest}
+                    id="pickup"
+                    name="pickup"
+                    required
+                    value={formData.pickup}
                     onChange={handleChange}
                     className="form-select"
                   >
-                    <option value="Requested pickup point: Kuttipuram Railway Station">
-                      Interested in Kuttipuram Railway Station pickup
+                    <option value="Kuttipuram Railway Station (Organiser Pickup Hub)">
+                      Kuttipuram Railway Station (Organiser Pickup Hub)
                     </option>
-                    <option value="Will arrange independent travel">
-                      Arranging independent travel to venue
+                    <option value="Other / Independent Travel">
+                      Other / Independent Travel
                     </option>
-                    <option value="Undecided / need arrival guidance">
-                      Undecided / require arrival guidance
+                    <option value="Not Sure / Need Guidance">
+                      Not Sure / Need Guidance
                     </option>
                   </select>
                 </div>
               </div>
 
-              {/* Accommodation */}
+              {/* Accommodation Preference */}
               <div className="form-group">
                 <label htmlFor="accommodation" className="form-label">
-                  Accommodation Standard
+                  Accommodation Preference <span className="req" aria-hidden="true">*</span>
                 </label>
-                <input
-                  type="text"
+                <select
                   id="accommodation"
                   name="accommodation"
-                  readOnly
-                  value="Twin-sharing accommodation — two guests per room"
-                  className="form-input form-input-readonly"
-                />
+                  required
+                  value={formData.accommodation}
+                  onChange={handleChange}
+                  className="form-select"
+                >
+                  <option value="Twin Sharing (Standard — Two Guests per Room)">
+                    Twin Sharing (Standard — Two Guests per Room)
+                  </option>
+                  <option value="Need Clarification / Single Room Query">
+                    Need Clarification / Single Room Query
+                  </option>
+                </select>
               </div>
 
-              {/* Questions / Non-sensitive notes */}
+              {/* Message or Questions */}
               <div className="form-group">
-                <label htmlFor="notes" className="form-label">
-                  General Questions or Enquiries <span className="form-optional">(Optional)</span>
+                <label htmlFor="message" className="form-label">
+                  Message or Questions <span className="form-optional">(Optional)</span>
                 </label>
                 <textarea
-                  id="notes"
-                  name="notes"
+                  id="message"
+                  name="message"
                   rows="3"
-                  value={formData.notes}
+                  value={formData.message}
                   onChange={handleChange}
-                  placeholder="Share general questions about the retreat or schedule. Please discuss any sensitive medical or recent-surgery concerns privately upon direct contact."
+                  placeholder="Share any general questions regarding retreat schedule, proposed temple visits (Kottiyoor / Tirunelli), or cultural performances. Please discuss sensitive health concerns directly with the organiser."
                   className="form-textarea"
                 />
               </div>
 
-              {/* Reassurance Footer & Submit Button */}
+              {/* Form Footer & Submit Action */}
               <div className="form-actions-footer">
                 <button
                   type="submit"
                   disabled={submitting}
                   className="btn btn-travel-primary btn-submit-large"
                 >
-                  {submitting ? 'Transmitting Enquiry...' : 'Submit Retreat Enquiry'}
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
+                  {submitting ? (
+                    <>
+                      <span className="spinner-inline" aria-hidden="true" />
+                      <span>Sending Enquiry...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit Retreat Enquiry</span>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </>
+                  )}
                 </button>
 
                 <p className="form-legal-note">
-                  Submitting an enquiry is completely non-binding. We respect your privacy and do not share contact details.
+                  Submitted details are used solely to coordinate retreat availability and respond to your enquiry. We respect your privacy and never share personal information.
                 </p>
               </div>
             </form>
