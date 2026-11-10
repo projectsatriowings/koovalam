@@ -49,9 +49,9 @@ export function DatesCard() {
 
             <div className="dates-cta-side">
               <div className="cta-side-inner">
-                <span className="priority-badge">Early Interest Priority</span>
+                <span className="priority-badge">Early Interest Notification</span>
                 <p className="cta-side-text">
-                  Joining our early-interest list is non-binding and incurs no fee. It simply guarantees you receive the invitation before public release.
+                  Joining our early-interest list is non-binding and incurs no fee. It simply means we will notify you first when dates, venue, and price are confirmed.
                 </p>
                 <a
                   className="btn btn-gold btn-dates-cta"
@@ -134,20 +134,18 @@ export function Faq() {
           </div>
         </Reveal>
 
-        {/* Category Navigation Pills & Quick Actions */}
+        {/* Category Navigation Filter Pills & Quick Actions */}
         <Reveal>
           <div className="faq-controls-bar">
             <div
               className="faq-filter-pills"
-              role="tablist"
-              aria-label="FAQ Topics Filter"
+              role="group"
+              aria-label="Filter FAQ questions by topic"
             >
               <button
                 type="button"
-                role="tab"
-                id="faq-tab-all"
-                aria-selected={activeCategory === 'all'}
-                aria-controls="faq-panels"
+                id="faq-filter-all"
+                aria-pressed={activeCategory === 'all'}
                 className={`faq-pill ${activeCategory === 'all' ? 'active' : ''}`}
                 onClick={() => {
                   setActiveCategory('all')
@@ -160,10 +158,8 @@ export function Faq() {
                 <button
                   key={cat.id}
                   type="button"
-                  role="tab"
-                  id={`faq-tab-${cat.id}`}
-                  aria-selected={activeCategory === cat.id}
-                  aria-controls="faq-panels"
+                  id={`faq-filter-${cat.id}`}
+                  aria-pressed={activeCategory === cat.id}
                   className={`faq-pill ${activeCategory === cat.id ? 'active' : ''}`}
                   onClick={() => {
                     setActiveCategory(cat.id)

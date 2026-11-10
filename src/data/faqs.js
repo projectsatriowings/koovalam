@@ -1,6 +1,7 @@
 /**
  * Chapter 07: Frequently Asked Questions
  * Canonical retreat data organized into 6 essential categories.
+ * All statements verified against retreat.js, site.js and canonical business arrangements.
  */
 
 export const faqCategories = [
@@ -12,15 +13,15 @@ export const faqCategories = [
     questions: [
       {
         q: 'Where is the retreat located?',
-        a: 'The retreat is held in the calm natural landscape of Kerala, India. The exact venue and serene property setting are currently being confirmed and will be shared transparently before bookings open.',
+        a: 'The retreat takes place in Kerala, India. The exact venue is to be confirmed and will be shared transparently before bookings open.',
       },
       {
         q: 'How long is the retreat?',
-        a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:00 PM on Day 01 and concluding after our closing circle and farewell lunch around 12:00 PM on Day 04.',
+        a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:00 PM on Day 01 and concluding after our closing circle and lunch around 12:00 PM on Day 04.',
       },
       {
         q: 'When will the exact venue be announced?',
-        a: 'The exact venue in Kerala will be announced alongside confirmed retreat dates. Registered early-interest guests will receive the property details, surroundings, and arrival guidance before public release.',
+        a: 'The exact venue in Kerala will be announced alongside confirmed retreat dates. Registered early-interest guests will be notified first when dates, venue, and price are confirmed.',
       },
     ],
   },
@@ -32,19 +33,19 @@ export const faqCategories = [
     questions: [
       {
         q: 'What accommodation is provided?',
-        a: 'Three nights of quiet retreat accommodation in Kerala are included as part of your retreat fee. Because the exact venue is still to be confirmed, specific room configurations and property facilities will be shared transparently before any booking is made.',
+        a: 'Three nights of quiet retreat accommodation in Kerala are included as part of your retreat fee. Because the exact venue is to be confirmed, specific room details and property facilities will be shared before reservations are confirmed.',
       },
       {
         q: 'Are meals vegetarian?',
-        a: 'Yes. All meals provided during the retreat are wholesome vegetarian dishes, prepared fresh locally with regional care, and accompanied by drinking water throughout your stay.',
+        a: 'Yes. Vegetarian, locally prepared meals and drinking water are included throughout the retreat.',
       },
       {
         q: 'Which meals are included?',
-        a: 'Meals are included according to the canonical retreat schedule: a welcome drink and dinner on arrival Day 01 (from 2:00 PM); full-day meals (breakfast, lunch, and dinner) on Days 02 and 03; and breakfast and farewell lunch prior to departure on Day 04 (~12:00 PM). Drinking water is provided throughout all four days.',
+        a: 'Meals are included according to the retreat itinerary: welcome drink and dinner on arrival Day 01 (check-in from 2:00 PM); breakfast, lunch, and dinner on Days 02 and 03; and breakfast and lunch prior to departure on Day 04 (~12:00 PM). Drinking water is provided throughout.',
       },
       {
         q: 'Can dietary requirements and allergies be communicated in advance?',
-        a: 'Yes. Please share any dietary needs, allergies, or health considerations privately with us before arrival so we can do our best to confirm what can be accommodated within the retreat arrangements.',
+        a: 'Yes. Please share any dietary needs, allergies, or health considerations privately with us before arrival so we can do our best to confirm what can be accommodated within retreat arrangements.',
       },
     ],
   },
@@ -56,7 +57,7 @@ export const faqCategories = [
     questions: [
       {
         q: 'Is previous yoga experience required?',
-        a: 'No previous experience is required. All practices are gentle, foundational, and unhurried, designed to loosen physical stiffness and calm the breath regardless of flexibility or prior experience.',
+        a: 'No previous experience is required. Practices are gentle and foundational, focusing on mindful movement and natural breathing. You may pause, observe, or opt out of any exercise at any time — participation is always voluntary.',
       },
       {
         q: 'Are all practices compulsory?',
@@ -64,11 +65,11 @@ export const faqCategories = [
       },
       {
         q: 'Are beginners welcome?',
-        a: 'Warmly welcome. Beginners, solo travellers, and anyone seeking quiet rest are invited. You do not need to be flexible, athletic, or “spiritual” — only willing to take an unhurried pause.',
+        a: 'Beginners and solo travellers are welcome. You do not need previous retreat experience, flexibility, or athletic ability — just an openness to slow down. Please share any health considerations or mobility needs privately before arrival so sessions can be adapted to your comfort.',
       },
       {
         q: 'What activities are included in the retreat?',
-        a: 'The programme includes gentle Classical Yoga, foundational pranayama breathwork, morning silent sitting and guided meditation, evening restorative Yoga Nidra, guided values journaling and reflection circles, a sensory canopy nature walk, a morning temple visit, an afternoon river safari (conditional), and a take-home wellness routine.',
+        a: 'The programme includes gentle Classical Yoga, foundational pranayama breathwork, morning silent sitting and guided meditation, evening restorative Yoga Nidra, guided values journaling and reflection circles, an unhurried nature walk, a morning temple visit, an afternoon river safari (conditional), and a take-home wellness routine.',
       },
     ],
   },
@@ -88,7 +89,7 @@ export const faqCategories = [
       },
       {
         q: 'What happens if weather or river conditions prevent the safari?',
-        a: 'If weather or river conditions prevent the boat safari from operating safely, the schedule adapts gracefully into contemplative sanctuary time, gentle restorative practice, or quiet nature observation. Guest safety and calm are always our primary priority.',
+        a: 'The Nila River boat safari is strictly conditional upon seasonal weather, river conditions, and permissions. If conditions prevent the safari from operating safely, the time will be adapted within the retreat schedule. The excursion is not guaranteed.',
       },
     ],
   },
@@ -104,15 +105,15 @@ export const faqCategories = [
       },
       {
         q: 'How can visitors enquire about pricing?',
-        a: 'Pricing will be shared transparently upon enquiry before any booking or payment is accepted. You can register your interest via the enquiry form below or message us directly on WhatsApp.',
+        a: 'Pricing will be shared upon enquiry before any booking or payment is accepted. You can register your interest via the enquiry form below or message us directly on WhatsApp.',
       },
       {
         q: 'How does the reservation process work?',
-        a: 'Registering your early interest carries no financial commitment or obligation. Once dates, venue, and pricing are confirmed, registered guests will receive complete retreat details and an invitation to reserve their place before public release.',
+        a: 'Joining the early-interest list is non-binding and carries no fee or financial commitment. It simply means we will notify you first when dates, venue, and pricing are confirmed, before reservations open.',
       },
       {
         q: 'What information will be shared before booking?',
-        a: 'Before any booking or payment is requested, guests will receive full written details including confirmed dates, exact venue address and directions, accommodation specifications, confirmed pricing, cancellation policy, and a simple retreat packing list.',
+        a: 'Before any reservation or payment is confirmed, guests will receive confirmed dates, venue details, accommodation information, price, the cancellation policy, and a simple packing list. The cancellation policy will be communicated before reservations are confirmed.',
       },
     ],
   },
