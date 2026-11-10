@@ -14,21 +14,28 @@ export const site = {
   // only, no "+" or spaces) before launch. The wa.me link uses this value.
   whatsappNumber: '91XXXXXXXXXX',
   whatsappMessage:
-    "Hi, I'd like to know more about the Koovalam retreat.",
+    "Hi, I would like to enquire about the Koovalam Kerala Retreat.",
   // PLACEHOLDER — form endpoint. Leave empty to use the WhatsApp fallback
   // success state; set to a Formspree / Web3Forms endpoint when ready.
   formEndpoint: '',
   retreat: {
-    name: '4-Day Spiritual Wellness & Mindfulness Retreat',
-    duration: '4 days · 3 nights',
+    name: 'Koovalam Kerala Retreat',
+    headline: 'A Journey Back to Yourself',
+    subheadline: 'Mindful Movement, Yoga, Cultural Discovery & Meaningful Moments in Nature',
+    activitiesSummary: 'Yoga · Pranayama · Meditation · Culture · Nature',
+    duration: '3–4 Days (Dec 17–19 Under Review)',
+    dates: 'December 17–19 (Provisional · Pending Confirmation)',
     location: 'Kerala, India',
-    venue: 'Kerala, India (to be confirmed)',
-    dates: 'Announcing soon',
-    price: 'Announced before reservations open',
-    groupSize: 'To be confirmed',
-    facilitators: 'To be confirmed',
-    checkIn: 'from 2:00 PM',
-    checkOut: 'around 12:00 PM',
+    venue: 'Kerala, India (Exact sanctuary to be confirmed)',
+    price: '₹9,999',
+    priceNote: 'per person (Provisional · To be confirmed before bookings open)',
+    accommodation: 'Twin-Sharing (2 people per room)',
+    food: 'Pure Vegetarian Meals',
+    pickup: 'Kuttipuram Railway Station (Requested pickup hub)',
+    groupSize: 'Small group experience',
+    ageRange: '18–70 years',
+    checkIn: 'from 2:00 PM (Day 01)',
+    checkOut: 'around 12:00 PM (Final Day)',
   },
   socials: [
     // PLACEHOLDERS — replace hrefs with real profiles, or delete entries.
@@ -36,9 +43,6 @@ export const site = {
     { label: 'Facebook', href: '#' },
     { label: 'YouTube', href: '#' },
   ],
-  // Testimonials: intentionally EMPTY. The Testimonials section renders ONLY
-  // when this array is non-empty. Do not invent testimonials — add real ones,
-  // with the speaker's permission, when you have them.
   testimonials: [],
   canonical: 'https://koovalam.example/',
 }

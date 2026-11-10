@@ -1,86 +1,203 @@
-// Full day schedules, transcribed from the workshop programme outline.
-// The page notes these are a sample schedule and may adapt to venue, season,
-// temple timings and river conditions.
-export const days = [
+/**
+ * KOOVALAM — CANONICAL RETREAT DATA
+ * Premium Boutique Kerala Retreat Experience
+ * Single source of truth for the 6-section redesign.
+ */
+
+// 1. The 7 Client-Specified Activities
+export const activities = [
   {
-    day: 1, title: 'Arrival & Grounding', stop: 'The Arrival',
-    blurb: 'Settle in, breathe out, and begin exactly where you are.',
-    highlights: ['Welcome drink & check-in from 2:00 PM', 'Opening circle & intentions', 'Gentle yoga, breath & Yoga Nidra'],
-    schedule: [
-      ['2:00–3:30 PM', 'Arrival, welcome drink, check-in and settling in'],
-      ['3:30–4:15 PM', 'Opening circle: introductions, intentions and retreat guidelines'],
-      ['4:30–5:30 PM', 'Gentle yoga and body-awareness practice'],
-      ['5:45–6:15 PM', 'Foundational pranayama: natural breathing and alternate-nostril breathing, as appropriate'],
-      ['6:30–7:00 PM', 'Guided meditation: arriving in the present moment'],
-      ['7:30 PM', 'Dinner and quiet personal time'],
-      ['8:30–9:00 PM', 'Yoga Nidra: deep relaxation and rest'],
-    ],
+    id: 'yoga',
+    title: 'Gentle Classical Yoga',
+    tag: 'Movement & Mobility',
+    image: 'practice-yoga',
+    summary:
+      'Foundational movement, mobility, and mindful body awareness suitable for beginners and seasoned practitioners alike.',
+    highlight: 'Accessible postures · Zero strain or pressure · 100% voluntary',
   },
   {
-    day: 2, title: 'Body, Breath & Inner Awareness', stop: 'The Clearing',
-    blurb: 'A full day of movement, breath and quiet noticing.',
-    highlights: ['Morning meditation & grounding yoga', 'Mindfulness & guided journaling', 'Nature walk & self-compassion meditation'],
-    schedule: [
-      ['6:30–7:00 AM', 'Silent sitting and gentle morning meditation'],
-      ['7:00–8:00 AM', 'Yoga practice: mobility, grounding and mindful movement'],
-      ['8:00–8:30 AM', 'Pranayama practice'],
-      ['8:30–9:30 AM', 'Breakfast'],
-      ['10:00–11:15 AM', 'Mindfulness and cognitive practices: noticing thoughts, emotions and habitual responses'],
-      ['11:30 AM–12:15 PM', 'Guided journaling: personal strengths, values and supportive beliefs'],
-      ['12:30 PM', 'Lunch and rest'],
-      ['4:00–5:00 PM', 'Nature walk / mindful observation and sensory grounding'],
-      ['5:15–6:00 PM', 'Meditation: self-compassion and emotional awareness'],
-      ['7:00 PM', 'Dinner'],
-      ['8:15–8:45 PM', 'Yoga Nidra'],
-    ],
+    id: 'pranayama',
+    title: 'Pranayama Breathwork',
+    tag: 'Breath & Vitality',
+    image: 'practice-pranayama',
+    summary:
+      'Conscious breathing practices designed to calm the sympathetic nervous system, steady mental focus, and restore balance.',
+    highlight: 'Natural breath awareness · Ancient balancing rhythms',
   },
   {
-    day: 3, title: 'Culture, Nature & Reflection', stop: 'The River',
-    blurb: 'Temple quiet in the morning, the Nila River in the afternoon.',
-    highlights: ['Quiet temple visit', 'Nila River boat safari', 'Gratitude reflection circle'],
-    gold: true,
-    schedule: [
-      ['6:30–7:00 AM', 'Morning meditation'],
-      ['7:00–8:00 AM', 'Gentle yoga and pranayama'],
-      ['8:00–9:00 AM', 'Breakfast'],
-      ['9:30 AM–12:00 PM', 'Temple visit: a quiet cultural and spiritual experience (subject to local customs and timings)'],
-      ['12:30 PM', 'Lunch and rest'],
-      ['3:00–5:00 PM', 'Nila River boat safari: mindful nature experience, subject to weather and safe operating conditions'],
-      ['5:30–6:15 PM', 'Reflection circle: gratitude, connection and insights from the day'],
-      ['7:00 PM', 'Dinner'],
-      ['8:15–8:45 PM', 'Restorative relaxation / Yoga Nidra'],
-    ],
+    id: 'yoga-nidra',
+    title: 'Restorative Yoga Nidra',
+    tag: 'Deep Conscious Rest',
+    image: 'practice-yoga-nidra',
+    summary:
+      'Guided yogic sleep practiced comfortably lying down to release accumulated nervous tension and invite deep cellular recovery.',
+    highlight: 'Restorative sleep support · Profound quiet relaxation',
   },
   {
-    day: 4, title: 'Integration & Closing', stop: 'The Return',
-    blurb: 'Gather what helped, and carry a simple routine home.',
-    highlights: ['Closing yoga & breath practice', 'Integration workshop & personal routine', 'Closing circle, lunch & check-out ~12:00 PM'],
-    schedule: [
-      ['6:30–7:00 AM', 'Quiet meditation and intention setting'],
-      ['7:00–8:00 AM', 'Closing yoga and breath practice'],
-      ['8:00–9:00 AM', 'Breakfast'],
-      ['9:30–10:45 AM', 'Integration workshop: identifying helpful habits and creating a simple personal wellness routine'],
-      ['10:45–11:30 AM', 'Closing circle, sharing (optional) and feedback'],
-      ['12:00 PM', 'Lunch, check-out and departure'],
-    ],
+    id: 'meditation',
+    title: 'Morning Meditation',
+    tag: 'Stillness & Presence',
+    image: 'practice-meditation',
+    summary:
+      'Daily morning silent sitting and sensory observation to greet each day with unhurried mental space and grounded presence.',
+    highlight: 'Gentle guidance · No rigid posture requirements',
+  },
+  {
+    id: 'cognitive',
+    title: 'Cognitive Exercises',
+    tag: 'Clarity & Self-Reflection',
+    image: 'practice-reflection',
+    summary:
+      'Guided mindfulness exercises and structured journaling for mental clarity, observing habit loops, and personal values.',
+    highlight: 'Mindful mental clarity · Non-clinical personal wellness practice',
+  },
+  {
+    id: 'village-tour',
+    title: 'Scenic Village Tour',
+    tag: 'Cultural Discovery',
+    image: 'practice-nature-culture',
+    summary:
+      'An unhurried guided walking discovery through serene rural Kerala footpaths, plant groves, and indigenous village greenery.',
+    highlight: 'Sensory grounding · Authentic rural Kerala landscape',
+  },
+  {
+    id: 'temple-visit',
+    title: 'Historic Temple Visit',
+    tag: 'Sacred Heritage',
+    image: 'highlight-temple',
+    summary:
+      'A quiet, respectful morning visit to a historic regional temple honoring centuries of contemplative silence and architecture.',
+    highlight: 'Contemplative stone courtyards · Subject to local customs',
   },
 ]
-export const included = [
-  '3 nights’ accommodation (as confirmed)',
-  'Vegetarian, locally prepared meals and drinking water',
-  'All yoga, pranayama, meditation and Yoga Nidra sessions',
-  'Facilitated reflection and mindfulness activities',
-  'Temple visit and Nila River boat safari (subject to permissions, weather, availability)',
-  'A simple take-home wellness routine and reflection sheet',
+
+// 2. The Retreat Journey / Itinerary
+export const itineraryData = {
+  dateNotice:
+    'Schedule Notice: The organiser has provisionally outlined dates of December 17–19 (3 calendar days), while a 4-day option is under final operational review. Below is the proposed day-by-day retreat sequence.',
+  days: [
+    {
+      day: 1,
+      title: 'Arrival & Grounding',
+      subtitle: 'Arriving, settling in, and unwinding',
+      narrative:
+        'Settle into your retreat accommodation, let go of daily responsibilities, and begin with an unhurried opening circle followed by restorative evening movement and breathwork.',
+      highlights: [
+        'Check-in from 2:00 PM & herbal welcome drink',
+        'Opening circle: intentions and retreat orientation',
+        'Gentle foundational yoga and breath awareness',
+        'Nourishing vegetarian dinner',
+        'Restorative Yoga Nidra for restful sleep',
+      ],
+      timingNote: 'Afternoon check-in from 2:00 PM',
+    },
+    {
+      day: 2,
+      title: 'Movement, Breath & Village Discovery',
+      subtitle: 'A full day of body awareness, village paths & quiet noticing',
+      narrative:
+        'Awaken to morning meditation and gentle yoga. After a traditional vegetarian breakfast, engage in reflective cognitive exercises. In the afternoon, discover authentic rural Kerala on a guided village walk.',
+      highlights: [
+        'Morning meditation & pranayama breathwork',
+        'Gentle mobility yoga practice',
+        'Traditional vegetarian breakfast',
+        'Mindful cognitive exercise: clarity and thought-noticing',
+        'Vegetarian lunch and personal quiet rest',
+        'Afternoon guided village walking tour',
+        'Evening reflection circle & dinner',
+        'Restorative Yoga Nidra',
+      ],
+      timingNote: 'Full retreat day',
+    },
+    {
+      day: 3,
+      title: 'Temple Stillness, Reflection & Integration',
+      subtitle: 'Cultural heritage, closing reflection, and departure',
+      narrative:
+        'Experience early-morning stone stillness on a quiet temple visit. Return for breakfast, values reflection, and personal routine integration, concluding with a farewell lunch.',
+      highlights: [
+        'Morning meditation & gentle breath practice',
+        'Respectful morning cultural temple visit',
+        'Wholesome vegetarian breakfast',
+        'Closing reflection: simple routines to carry home',
+        'Farewell vegetarian lunch around 12:00 PM',
+        'Departure & return travel (or optional nature drift if 4 days confirmed)',
+      ],
+      timingNote: 'Check-out around 12:00 PM after lunch',
+    },
+  ],
+}
+
+// 3. Stay, Food & Travel Details
+export const stayFoodTravel = {
+  stay: {
+    title: 'Twin-Sharing Accommodation',
+    subtitle: 'Two guests sharing per room',
+    description:
+      'Guests are accommodated in quiet, comfortable twin-sharing rooms (two people per room) nestled in a serene Kerala sanctuary setting. Specific property arrangements, facilities, and room photographs will be shared directly with guests once the exact venue is finalised.',
+    tag: 'Twin-Sharing Standard',
+  },
+  food: {
+    title: 'Pure Vegetarian Meals',
+    subtitle: 'Nourishing, traditional Kerala dining',
+    description:
+      'Pure vegetarian meals are served throughout the retreat — from arrival dinner through farewell lunch. Every meal is freshly prepared using wholesome regional ingredients, complemented by warm drinking water to support digestion and energy.',
+    tag: '100% Vegetarian',
+  },
+  travel: {
+    title: 'Travel & Pickup Hub',
+    subtitle: 'Kuttipuram Railway Station (Requested Pickup)',
+    description:
+      'Kuttipuram Railway Station is the designated pickup location requested by the organiser. Detailed pickup timings, meeting points, and coordinated small-group transfer options will be confirmed with registered guests well in advance.',
+    tag: 'Kuttipuram Hub',
+  },
+}
+
+// 4. Investment & Participation
+export const investment = {
+  price: '₹9,999',
+  unit: 'per person',
+  statusTag: 'Provisional · Subject to Final Confirmation',
+  clarityNote:
+    'The provisional fee of ₹9,999 per person is provided by the organiser and will be officially confirmed before reservations open. No payment or deposit is required at this stage.',
+  inclusions: [
+    'Twin-sharing accommodation for the duration of the retreat',
+    'Wholesome vegetarian meals and drinking water throughout',
+    'All guided Classical Yoga, Pranayama, and Meditation sessions',
+    'Restorative evening Yoga Nidra relaxation',
+    'Facilitated cognitive clarity & mindfulness reflection exercises',
+    'Guided rural Kerala village walking tour',
+    'Morning cultural temple visit (subject to local customs)',
+    'A simple take-home wellness and mindfulness routine',
+  ],
+  participation: {
+    ageRange: '18–70 years',
+    welcomeNote:
+      'Couples and solo travellers are warmly welcomed. The programme is designed for beginners as well as experienced practitioners.',
+    familyNote:
+      'No separate family package or children’s rate is currently offered; retreat activities are structured for adult participants.',
+    surgeryNotice:
+      'Important Health Notice: Participants who have recently undergone surgery should contact the organiser before considering registration. Please discuss any relevant mobility or health-related concerns privately with the organiser.',
+  },
+}
+
+// 5. Compact Essential FAQs for Price & Participation Section
+export const compactFaqs = [
+  {
+    q: 'Is previous yoga or retreat experience required?',
+    a: 'No previous experience is needed. All yoga and breath practices are foundational, gentle, and 100% voluntary. You are always welcome to rest, observe, or take personal quiet time.',
+  },
+  {
+    q: 'When will the exact dates and venue be confirmed?',
+    a: 'The organiser has provisionally outlined December 17–19. Exact dates and the confirmed Kerala venue will be shared directly with registered enquiry guests before bookings open.',
+  },
+  {
+    q: 'What are the room and meal arrangements?',
+    a: 'Accommodation is on a twin-sharing basis (two people per room) in a quiet Kerala retreat setting. Pure vegetarian meals and warm drinking water are provided throughout.',
+  },
+  {
+    q: 'How does the enquiry and booking process work?',
+    a: 'Submitting an enquiry is 100% non-binding and carries zero upfront payment or financial commitment. It simply connects you with our team to discuss availability and answer your questions.',
+  },
 ]
-export const whoFor = [
-  'You feel overwhelmed, tired or overstimulated',
-  'You are a complete beginner — no yoga experience needed',
-  'You are seeking rest, clarity or a simple daily routine',
-  'You are travelling solo and want a gentle, welcoming group',
-]
-export const whatNot = [
-  'Not therapy, and not a replacement for psychotherapy',
-  'Not a strict, forceful or punishing programme',
-  'No promise of trauma release or guaranteed outcomes',
-]
+

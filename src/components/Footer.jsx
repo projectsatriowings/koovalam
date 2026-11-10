@@ -9,100 +9,110 @@ import {
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
-  // Only display verified social channels with real external URLs
   const verifiedSocials = (site.socials || []).filter(
     (s) => s.href && s.href !== '#' && !s.href.startsWith('#')
   )
 
   return (
-    <footer className="editorial-footer" role="contentinfo">
+    <footer className="travel-footer" role="contentinfo">
       <div className="wrap">
-        <div className="footer-top-grid">
+        <div className="footer-main-grid">
+          {/* Brand Column */}
           <div className="footer-brand-col">
-            <Logo light size={50} />
+            <Logo light size={44} />
             <p className="footer-tagline">{site.tagline}</p>
-            <p className="footer-retreat-desc">
-              A gentle 4-day spiritual wellness and mindfulness sanctuary in Kerala, India. Rooted in traditional wisdom, restorative movement, and unhurried natural living.
+            <p className="footer-brand-desc">
+              A boutique Kerala retreat experience blending mindful movement, classical yoga, quiet village discovery and reflective space in nature.
             </p>
-            <div className="footer-pillars-strip">
-              <span>BODY</span>
-              <span className="dot" aria-hidden="true">·</span>
-              <span>MIND</span>
-              <span className="dot" aria-hidden="true">·</span>
-              <span>SOUL</span>
+            <div className="footer-location-badge">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--antique-brass)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Kerala, India · Near Kuttipuram</span>
             </div>
           </div>
 
+          {/* Navigation Links */}
           <div className="footer-nav-col">
-            <h4 className="footer-col-title">Navigation</h4>
-            <ul className="footer-links">
-              <li><a href="#pause">The Sanctuary</a></li>
-              <li><a href="#koovalam">Sacred Origin</a></li>
-              <li><a href="#retreat">Mindful Practices</a></li>
-              <li><a href="#journey">4-Day Journey</a></li>
-              <li><a href="#highlights">Kerala Experiences</a></li>
-              <li><a href="#included">Inclusions</a></li>
-              <li><a href="#faq">Frequently Asked Questions</a></li>
-              <li><a href="#dates">Dates &amp; Reservations</a></li>
+            <h4 className="footer-col-title">Retreat Navigation</h4>
+            <ul className="footer-links-list">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#experience">The Experience</a></li>
+              <li><a href="#itinerary">Daily Itinerary</a></li>
+              <li><a href="#stay-travel">Stay &amp; Travel</a></li>
+              <li><a href="#price">Retreat Investment</a></li>
+              <li><a href="#enquiry">Enquire &amp; Register</a></li>
             </ul>
           </div>
 
+          {/* Key Facts / Highlights */}
+          <div className="footer-facts-col">
+            <h4 className="footer-col-title">At a Glance</h4>
+            <ul className="footer-facts-list">
+              <li>
+                <strong>Provisional Dates:</strong> Dec 17–19
+              </li>
+              <li>
+                <strong>Duration:</strong> 3–4 Days (Under review)
+              </li>
+              <li>
+                <strong>Accommodation:</strong> Twin-Sharing
+              </li>
+              <li>
+                <strong>Dining:</strong> 100% Pure Vegetarian
+              </li>
+              <li>
+                <strong>Pickup Hub:</strong> Kuttipuram Railway Station
+              </li>
+              <li>
+                <strong>Investment:</strong> From ₹9,999 / person
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact / Enquiry Help */}
           <div className="footer-contact-col">
-            <h4 className="footer-col-title">Direct Inquiries</h4>
-            <p className="footer-contact-item">
-              <span className="contact-label">Email:</span>
-              {isEmailConfigured ? (
-                <a href={`mailto:${site.email}`} className="contact-link">
-                  {site.email}
-                </a>
-              ) : (
-                <span className="contact-prep-text">Announcing upon launch</span>
-              )}
+            <h4 className="footer-col-title">Direct Contact</h4>
+            <p className="footer-contact-note">
+              Have questions regarding dates, group bookings or health considerations?
             </p>
-            <p className="footer-contact-item">
-              <span className="contact-label">WhatsApp:</span>
-              {isWhatsAppConfigured && whatsappLink ? (
+            <div className="footer-contact-actions">
+              <a href="#enquiry" className="btn btn-travel-secondary btn-sm">
+                Enquire Online
+              </a>
+              {isWhatsAppConfigured && whatsappLink && (
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="contact-link"
+                  className="footer-wa-link"
                 >
-                  Direct WhatsApp Channel
+                  WhatsApp Organiser
                 </a>
-              ) : (
-                <span className="contact-prep-text">Announcing upon launch</span>
               )}
-            </p>
-            {verifiedSocials.length > 0 ? (
-              <div className="footer-socials">
-                {verifiedSocials.map((s) => (
-                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="footer-social-link">
-                    {s.label}
-                  </a>
-                ))}
-              </div>
-            ) : (
-              <p className="footer-socials-note">
-                Community channels announcing upon retreat launch.
-              </p>
-            )}
+            </div>
           </div>
         </div>
 
-        <div className="footer-divider" aria-hidden="true" />
+        <div className="footer-divider-line" aria-hidden="true" />
 
-        <div className="footer-bottom">
-          <p className="footer-disclaimer">
-            Our programs and retreat experiences support holistic well-being, mindfulness, and personal growth. They are not intended as a substitute for professional clinical medical or psychological treatment.
+        <div className="footer-bottom-row">
+          <p className="footer-health-disclaimer">
+            Retreat practices support personal mindfulness, gentle movement, and holistic well-being. They are non-clinical and do not replace individual medical advice or care.
           </p>
-          <div className="footer-legal">
-            <p className="copyright">
-              © {currentYear} {site.wordmark}. All rights reserved. Kerala, India.
-            </p>
-            <p className="footnote">
-              Sample itinerary shown; activities honor local customs, seasonal conditions, and safety protocols.
-            </p>
+          <div className="footer-copyright">
+            © {currentYear} {site.brand}. All rights reserved.
           </div>
         </div>
       </div>

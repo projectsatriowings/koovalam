@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { LeafMark } from './Logo.jsx'
 import { track } from '../lib/analytics.js'
+import { site } from '../config/site.js'
 
 export default function Hero() {
   const bgRef = useRef(null)
@@ -16,9 +17,8 @@ export default function Hero() {
           const el = bgRef.current
           if (el) {
             const scrolled = window.scrollY
-            // Damped, capped parallax to keep motion restrained and performant
-            const offset = Math.min(scrolled * 0.14, 90)
-            el.style.transform = `translate3d(0, ${offset}px, 0) scale(1.04)`
+            const offset = Math.min(scrolled * 0.12, 70)
+            el.style.transform = `translate3d(0, ${offset}px, 0) scale(1.03)`
           }
           ticking = false
         })
@@ -31,65 +31,73 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="hero-luxury" id="top" aria-label="Koovalam Retreat Introduction">
-      {/* Background photograph with restrained parallax */}
-      <div className="hero-luxury-bg" ref={bgRef} aria-hidden="true">
+    <section className="hero-travel" id="top" aria-label="Koovalam Retreat Introduction">
+      {/* Background imagery with subtle parallax & luxury dark vignette */}
+      <div className="hero-travel-bg" ref={bgRef} aria-hidden="true">
         <picture>
           <source srcSet="images/hero-bg.webp" type="image/webp" />
           <img
             src="images/hero-bg.jpg"
-            alt="Misty morning light through lush Kerala palm canopy and sacred Bilva grove"
+            alt="Misty morning light through lush Kerala palm canopy and peaceful nature retreat"
             width="1600"
             height="1066"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
           />
         </picture>
-        <div className="hero-luxury-overlay" />
+        <div className="hero-travel-overlay" />
       </div>
 
-      <div className="wrap hero-luxury-wrap">
-        <div className="hero-luxury-content">
+      <div className="wrap hero-travel-wrap">
+        <div className="hero-travel-content">
           {/* Eyebrow badge with sacred Bilva leaf brandmark */}
-          <div className="hero-badge">
-            <span className="hero-badge-mark" aria-hidden="true">
-              <LeafMark color="var(--antique-gold-soft)" size={15} />
+          <div className="hero-travel-badge">
+            <span className="hero-travel-badge-icon" aria-hidden="true">
+              <LeafMark color="var(--antique-brass)" size={14} />
             </span>
-            <span className="hero-badge-text">Kerala, India · 4-Day Spiritual Wellness &amp; Nature Retreat</span>
+            <span className="hero-travel-badge-text">
+              Kerala, India · Boutique Wellness &amp; Cultural Retreat
+            </span>
           </div>
 
-          {/* Main Hero Headline: Retreat Tagline */}
-          <h1 className="hero-luxury-title">
-            <span className="title-row">Pause.</span>
-            <span className="title-row">Breathe.</span>
-            <span className="title-row title-italic">Reconnect.</span>
+          {/* Primary Hero Headline */}
+          <h1 className="hero-travel-title">
+            A Journey Back <span className="title-serif-italic">to Yourself</span>
           </h1>
 
-          {/* Primary Brand Statement */}
-          <p className="hero-brand-statement" aria-label="Brand Statement">
-            Rooted in Nature. Connected to Soul.
+          {/* Key Activities Pill Row */}
+          <div className="hero-activities-pills" aria-label="Core Retreat Inclusions">
+            <span className="activity-pill">Yoga</span>
+            <span className="pill-dot">·</span>
+            <span className="activity-pill">Pranayama</span>
+            <span className="pill-dot">·</span>
+            <span className="activity-pill">Meditation</span>
+            <span className="pill-dot">·</span>
+            <span className="activity-pill">Culture</span>
+            <span className="pill-dot">·</span>
+            <span className="activity-pill">Nature</span>
+          </div>
+
+          {/* Supporting Copy / Lede */}
+          <p className="hero-travel-lede">
+            Experience Kerala through mindful movement, yoga, cultural discovery and meaningful moments in nature. An unhurried small-group sanctuary designed to rest your senses, deepen your breath, and reconnect with what matters.
           </p>
 
-          {/* Editorial Lede */}
-          <p className="hero-luxury-lede">
-            Step away from daily noise into Kerala’s peaceful sanctuary. Four unhurried days immersed in classical yoga, restorative pranayama, guided mindfulness, sacred temple quiet, and still waters.
-          </p>
-
-          {/* Purposeful CTA Strategy */}
-          <div className="hero-luxury-actions">
+          {/* Conversion Actions */}
+          <div className="hero-travel-actions">
             <a
-              className="btn btn-gold hero-cta-primary"
-              href="#journey"
-              onClick={() => track('cta_explore_journey_hero')}
+              className="btn btn-travel-primary"
+              href="#enquiry"
+              onClick={() => track('cta_enquire_now_hero')}
             >
-              <span>Explore the Journey</span>
+              <span>Enquire Now</span>
               <svg
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden="true"
@@ -98,49 +106,55 @@ export default function Hero() {
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
+
             <a
-              className="btn btn-outline hero-cta-secondary"
-              href="#pause"
-              onClick={() => track('cta_discover_retreat_hero')}
+              className="btn btn-travel-ghost"
+              href="#experience"
+              onClick={() => track('cta_explore_experience_hero')}
             >
-              <span>Discover the Retreat</span>
+              <span>Explore the Experience</span>
             </a>
           </div>
+        </div>
 
-          {/* Three Brand Pillars: Body, Mind, Soul */}
-          <div className="hero-luxury-meta" aria-label="Brand Pillars: Body, Mind, and Soul">
-            <div className="meta-pillar">
-              <div className="meta-pillar-tag">
-                <span className="meta-label">BODY</span>
-                <span className="meta-val">Vitality &amp; Movement</span>
-              </div>
-              <span className="meta-sub">Physical wellness &amp; mindful asana</span>
+        {/* Integrated Trip Info Bar */}
+        <div className="hero-trip-strip" aria-label="Retreat Key Details">
+          <div className="trip-strip-grid">
+            <div className="trip-strip-item">
+              <span className="trip-strip-label">Destination</span>
+              <strong className="trip-strip-value">{site.retreat.location}</strong>
+              <span className="trip-strip-sub">Serene Sanctuary</span>
             </div>
-            <div className="meta-divider" aria-hidden="true" />
-            <div className="meta-pillar">
-              <div className="meta-pillar-tag">
-                <span className="meta-label">MIND</span>
-                <span className="meta-val">Peace &amp; Awareness</span>
-              </div>
-              <span className="meta-sub">Restorative breath &amp; Yoga Nidra</span>
+
+            <div className="trip-strip-item">
+              <span className="trip-strip-label">Duration &amp; Dates</span>
+              <strong className="trip-strip-value">3–4 Days</strong>
+              <span className="trip-strip-sub">Dec 17–19 · Provisional</span>
             </div>
-            <div className="meta-divider" aria-hidden="true" />
-            <div className="meta-pillar">
-              <div className="meta-pillar-tag">
-                <span className="meta-label">SOUL</span>
-                <span className="meta-val">Spiritual Connection</span>
+
+            <div className="trip-strip-item">
+              <span className="trip-strip-label">Style</span>
+              <strong className="trip-strip-value">Mindful &amp; Cultural</strong>
+              <span className="trip-strip-sub">Foundational · Small Group</span>
+            </div>
+
+            <div className="trip-strip-item">
+              <span className="trip-strip-label">Stay &amp; Food</span>
+              <strong className="trip-strip-value">Twin-Sharing</strong>
+              <span className="trip-strip-sub">100% Pure Vegetarian</span>
+            </div>
+
+            <div className="trip-strip-item trip-strip-price-item">
+              <span className="trip-strip-label">Provisional Fee</span>
+              <div className="trip-strip-price-row">
+                <strong className="trip-strip-price">{site.retreat.price}</strong>
+                <span className="trip-strip-unit">/ person</span>
               </div>
-              <span className="meta-sub">Temple quiet &amp; inner stillness</span>
+              <span className="trip-strip-sub">To be confirmed</span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Editorial scroll indicator */}
-      <a href="#summary" className="hero-scroll-indicator" aria-label="Scroll down to retreat overview">
-        <span className="scroll-text">Scroll to discover</span>
-        <span className="scroll-line" aria-hidden="true" />
-      </a>
     </section>
   )
 }

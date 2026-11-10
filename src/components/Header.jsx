@@ -12,14 +12,12 @@ export default function Header() {
   const closeBtnRef = useRef(null)
   const prevOpenRef = useRef(open)
 
-  // Navigation items with numbers for editorial mobile layout
+  // Simplified 5-item navigation for boutique travel experience
   const links = [
-    { href: '#pause', id: 'pause', label: 'The Sanctuary', number: '01' },
-    { href: '#koovalam', id: 'koovalam', label: 'Sacred Origin', number: '02' },
-    { href: '#retreat', id: 'retreat', label: 'Practices', number: '03' },
-    { href: '#journey', id: 'journey', label: '4-Day Journey', number: '04' },
-    { href: '#included', id: 'included', label: 'Inclusions', number: '05' },
-    { href: '#faq', id: 'faq', label: 'FAQ', number: '06' },
+    { href: '#experience', id: 'experience', label: 'Experience' },
+    { href: '#itinerary', id: 'itinerary', label: 'Itinerary' },
+    { href: '#stay-travel', id: 'stay-travel', label: 'Stay & Travel' },
+    { href: '#price', id: 'price', label: 'Investment' },
   ]
 
   // Track header solid state on scroll
@@ -34,7 +32,7 @@ export default function Header() {
 
   // Active section scroll spy using IntersectionObserver
   useEffect(() => {
-    const sectionIds = ['pause', 'koovalam', 'retreat', 'journey', 'included', 'faq']
+    const sectionIds = ['experience', 'itinerary', 'stay-travel', 'price', 'enquiry']
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean)
@@ -152,7 +150,7 @@ export default function Header() {
     <header className={`header ${solid ? 'header-solid' : 'header-transparent'} ${open ? 'nav-open' : ''}`}>
       {/* Backdrop overlay for mobile drawer */}
       <div
-        className={`nav-backdrop ${open ? 'visible' : ''}`}
+        className={`nav-backdrop ${open ? 'visible nav-backdrop-visible' : ''}`}
         onClick={closeDrawer}
         aria-hidden="true"
       />
@@ -173,7 +171,7 @@ export default function Header() {
         <nav
           ref={drawerRef}
           id="mobile-navigation-drawer"
-          className={`header-nav ${open ? 'open' : ''}`}
+          className={`header-nav ${open ? 'open nav-open' : ''}`}
           aria-label="Primary Navigation"
           role={open ? 'dialog' : undefined}
           aria-modal={open ? 'true' : undefined}
@@ -187,7 +185,7 @@ export default function Header() {
             <button
               ref={closeBtnRef}
               type="button"
-              className="menu-close-btn"
+              className="menu-close-btn mobile-close-btn"
               aria-label="Close navigation menu"
               onClick={closeDrawer}
             >
@@ -209,7 +207,7 @@ export default function Header() {
           </div>
 
           <div className="header-nav-list" role="list">
-            {links.map(({ href, id, label, number }) => {
+            {links.map(({ href, id, label }) => {
               const isActive = activeSection === id
               return (
                 <a
@@ -219,7 +217,6 @@ export default function Header() {
                   aria-current={isActive ? 'true' : undefined}
                   onClick={closeDrawer}
                 >
-                  <span className="nav-link-num" aria-hidden="true">{number}</span>
                   <span className="nav-link-text">{label}</span>
                 </a>
               )
@@ -228,14 +225,14 @@ export default function Header() {
 
           <div className="mobile-nav-footer">
             <a
-              className="btn btn-gold btn-mobile-enquire"
+              className="btn btn-primary btn-mobile-enquire"
               href="#enquiry"
               onClick={() => {
                 closeDrawer()
                 track('cta_enquire_mobile_menu')
               }}
             >
-              Reserve Your Interest
+              Enquire Now
             </a>
             <div className="mobile-nav-brand-footer">
               <p className="mobile-nav-note">Rooted in Nature. Connected to Soul.</p>
@@ -246,11 +243,11 @@ export default function Header() {
 
         <div className="header-actions">
           <a
-            className={`btn ${isLight ? 'btn-outline' : 'btn-gold'} header-cta`}
+            className={`btn ${isLight ? 'btn-outline' : 'btn-primary'} header-cta`}
             href="#enquiry"
             onClick={() => track('cta_enquire_header')}
           >
-            Reserve Interest
+            Enquire Now
           </a>
           <button
             ref={menuBtnRef}

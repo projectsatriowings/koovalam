@@ -1,42 +1,42 @@
 /* ─────────────────────────────────────────────────────────────────────────────
    KOOVALAM — MASTER DESIGN SYSTEM TOKENS
-   Rooted in Nature. Connected to Soul.
-   Kerala Luxury Wellness & Nature Retreat
+   Premium Boutique Kerala Retreat & Travel Experience
+   Conversion-Focused Redesign System
    ───────────────────────────────────────────────────────────────────────────── */
 :root {
-  /* Brand Palette Tokens */
-  --deep-forest: #173D2D;
-  --primary-forest: #244C39;
-  --botanical-green: #526F54;
-  --warm-cream: #F5F0E5;
-  --ivory: #FAF8F1;
-  --antique-gold: #B69A61;
-  --antique-gold-soft: #D5C299;
-  --antique-gold-text: #7D632B;
-  --earth-brown: #806B50;
-  --main-text: #27342B;
-  --secondary-text: #77766D;
+  /* Brand Palette Tokens (Section 5 Creative Direction) */
+  --deep-forest: #183D32;
+  --dark-evergreen: #102C24;
+  --warm-ivory: #F7F4EC;
+  --soft-sand: #E9E1D2;
+  --muted-terracotta: #A9664E;
+  --antique-brass: #A1844D;
+  --deep-charcoal: #282B27;
+  --pure-white: #FFFFFF;
 
-  /* Aliases for semantic & backward compatibility */
-  --forest: var(--primary-forest);
-  --deep: var(--deep-forest);
-  --cream: var(--warm-cream);
-  --gold: var(--antique-gold);
-  --gold-soft: var(--antique-gold-soft);
-  --bark: var(--earth-brown);
-  --sand: #EAE3D2;
-  --line: rgba(182, 154, 97, 0.22);
-  --line-light: rgba(182, 154, 97, 0.14);
-  --line-strong: rgba(36, 76, 57, 0.18);
-  --ink: var(--main-text);
-  --muted: var(--secondary-text);
+  /* Aliases & Semantic Mappings */
+  --primary-forest: var(--deep-forest);
+  --forest: var(--deep-forest);
+  --deep: var(--dark-evergreen);
+  --ivory: var(--warm-ivory);
+  --cream: var(--soft-sand);
+  --sand: var(--soft-sand);
+  --gold: var(--antique-brass);
+  --antique-gold: var(--antique-brass);
+  --terracotta: var(--muted-terracotta);
+  --main-text: var(--deep-charcoal);
+  --secondary-text: #595E57;
+  --line: rgba(161, 132, 77, 0.24);
+  --line-subtle: rgba(24, 61, 50, 0.08);
+  --line-strong: rgba(24, 61, 50, 0.22);
   --white: #FFFFFF;
 
   /* Typography */
-  --font-head: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-brand: 'Cinzel', 'Times New Roman', serif;
+  --font-head: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Layout & Geometry: Editorial & Refined (not SaaS bubbly) */
+
+  /* Layout & Geometry: Editorial & Refined */
   --radius-xs: 2px;
   --radius-sm: 4px;
   --radius: 6px;
@@ -44,20 +44,19 @@
   --radius-lg: 12px;
   --radius-pill: 9999px;
 
-  /* Elevation: Subtle, atmospheric, no garish colored neon glows */
-  --shadow-subtle: 0 2px 8px rgba(23, 61, 45, 0.04);
-  --shadow: 0 4px 16px rgba(23, 61, 45, 0.06);
-  --shadow-lift: 0 12px 32px rgba(23, 61, 45, 0.09);
-  --shadow-card: 0 1px 3px rgba(39, 52, 43, 0.04), 0 6px 20px rgba(39, 52, 43, 0.03);
+  /* Elevation */
+  --shadow-subtle: 0 2px 10px rgba(16, 44, 36, 0.04);
+  --shadow: 0 6px 20px rgba(16, 44, 36, 0.07);
+  --shadow-lift: 0 16px 36px rgba(16, 44, 36, 0.12);
 
   /* Structure */
   --header-h: 76px;
-  --max: 1200px;
-  --max-reading: 680px;
+  --max: 1240px;
+  --max-reading: 700px;
 
   /* Animation */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --transition-fast: 0.2s var(--ease);
   --transition-normal: 0.35s var(--ease);
-  --transition-slow: 0.7s var(--ease);
+  --transition-slow: 0.6s var(--ease);
 }

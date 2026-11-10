@@ -1,35 +1,25 @@
 import { useEffect } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
-import Journey from './components/Journey.jsx'
-import {
-  TrustStrip,
-  TicketStrip,
-  Pause,
-  BilvaStory,
-  Practices,
-  Highlights,
-  WhoFor,
-  Included,
-  SafeCare,
-  KoovalamWorld,
-} from './components/Sections.jsx'
-import { DatesCard, Faq, Testimonials } from './components/DatesFaq.jsx'
-import StickyCta from './components/StickyCta.jsx'
+import Experience from './components/Experience.jsx'
+import Itinerary from './components/Itinerary.jsx'
+import StayTravel from './components/StayTravel.jsx'
+import PriceParticipation from './components/PriceParticipation.jsx'
+import EnquirySection from './components/EnquirySection.jsx'
 import Footer from './components/Footer.jsx'
+import StickyCta from './components/StickyCta.jsx'
 
 /**
- * KOOVALAM — Master Wellness Retreat Experience
- * Rooted in Nature. Connected to Soul.
+ * KOOVALAM — Master Boutique Kerala Retreat Experience
+ * Conversion-Focused Travel Redesign
  */
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash)
       if (target) {
-        // Small delay to ensure layout paint before scroll
         requestAnimationFrame(() => {
-          target.scrollIntoView()
+          target.scrollIntoView({ behavior: 'smooth' })
         })
       }
     }
@@ -37,26 +27,28 @@ export default function App() {
 
   return (
     <>
-      <a className="skip-link" href="#main">
+      <a className="skip-link" href="#top">
         Skip to main content
       </a>
       <Header />
       <main id="main">
+        {/* Section 01: Hero / Retreat Introduction */}
         <Hero />
-        <TicketStrip />
-        <TrustStrip />
-        <Pause />
-        <BilvaStory />
-        <Practices />
-        <Journey />
-        <Highlights />
-        <WhoFor />
-        <Included />
-        <SafeCare />
-        <KoovalamWorld />
-        <Testimonials />
-        <Faq />
-        <DatesCard />
+
+        {/* Section 02: The Experience (7 Client-Specified Activities) */}
+        <Experience />
+
+        {/* Section 03: The Retreat Journey (Day-by-Day Itinerary) */}
+        <Itinerary />
+
+        {/* Section 04: Stay, Food & Travel */}
+        <StayTravel />
+
+        {/* Section 05: Price & Participation (₹9,999, Health Notice, 4 FAQs) */}
+        <PriceParticipation />
+
+        {/* Section 06: Enquiry & Registration (Primary Conversion Engine) */}
+        <EnquirySection />
       </main>
       <Footer />
       <StickyCta />

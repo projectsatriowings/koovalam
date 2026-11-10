@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { isWhatsAppConfigured, whatsappLink } from '../config/site.js'
 import { track } from '../lib/analytics.js'
 
 export default function StickyCta() {
@@ -7,7 +6,6 @@ export default function StickyCta() {
 
   useEffect(() => {
     const hero = document.getElementById('top')
-    const dates = document.getElementById('dates')
     const enquiry = document.getElementById('enquiry')
     const footer = document.querySelector('footer')
 
@@ -31,40 +29,51 @@ export default function StickyCta() {
         }
         update()
       },
-      { threshold: 0.05 }
+      { threshold: 0.08 }
     )
 
-    ;[hero, dates, enquiry, footer].forEach((el) => el && io.observe(el))
+    ;[hero, enquiry, footer].forEach((el) => el && io.observe(el))
     return () => io.disconnect()
   }, [])
 
   return (
     <aside
-      className={`luxury-sticky-cta ${show ? 'visible' : ''}`}
+      className={`travel-sticky-bar ${show ? 'visible' : ''}`}
       aria-hidden={!show}
-      aria-label="Quick enquiry actions"
+      aria-label="Quick retreat enquiry actions"
     >
-      <a
-        className="btn btn-gold sticky-btn-enquire"
-        href="#dates"
-        tabIndex={show ? 0 : -1}
-        onClick={() => track('cta_sticky_reserve')}
-      >
-        View Dates &amp; Status
-      </a>
-      {isWhatsAppConfigured && whatsappLink && (
+      <div className="travel-sticky-wrap">
+        <div className="travel-sticky-info">
+          <div className="sticky-price-row">
+            <strong className="sticky-price">From ₹9,999*</strong>
+            <span className="sticky-unit">/ person</span>
+          </div>
+          <span className="sticky-dates-tag">Dec 17–19 · Kerala</span>
+        </div>
+
         <a
-          className="sticky-wa-link"
-          href={whatsappLink}
-          target="_blank"
-          rel="noreferrer"
+          className="btn btn-travel-primary btn-sticky-action"
+          href="#enquiry"
           tabIndex={show ? 0 : -1}
-          aria-label="Direct WhatsApp message"
-          onClick={() => track('whatsapp_click_sticky')}
+          onClick={() => track('cta_sticky_bottom_bar')}
         >
-          <span>WA</span>
+          <span>Enquire Now</span>
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
         </a>
-      )}
+      </div>
     </aside>
   )
 }
