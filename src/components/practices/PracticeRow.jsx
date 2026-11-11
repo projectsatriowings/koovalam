@@ -76,6 +76,7 @@ export default function PracticeRow({
                     alt={item.alt}
                     width={1024}
                     height={1024}
+                    style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                     decoding="async"
                     loading={index === 0 ? 'eager' : 'lazy'}
                   />

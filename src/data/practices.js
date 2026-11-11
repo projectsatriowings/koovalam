@@ -21,7 +21,8 @@ export const mindfulPractices = [
       'Foundational movement, mobility, and body awareness designed for all levels. Practiced with gentle guidance and zero strain.',
     tags: ['Accessible postures'],
     image: 'practice-yoga',
-    alt: 'A person in a calm yoga pose on a veranda overlooking green palms',
+    alt: 'Participants seated calmly on green yoga mats inside a tented wooden-floored open-air Kerala pavilion',
+    objectPosition: 'center 58%',
   },
   {
     id: 'pranayama',
@@ -32,7 +33,8 @@ export const mindfulPractices = [
       'Conscious breathing practices designed to steady mental focus, ease tension, and restore natural breath awareness.',
     tags: ['Natural breath awareness', 'Ancient balancing rhythms'],
     image: 'practice-pranayama',
-    alt: 'A person seated cross-legged practising breathwork in soft morning light',
+    alt: 'Four participants seated cross-legged in pranayama breathwork inside a tented open-air Kerala pavilion',
+    objectPosition: 'center 62%',
   },
   {
     id: 'yoga-nidra',
@@ -43,7 +45,8 @@ export const mindfulPractices = [
       'Guided yogic sleep practiced comfortably lying down to support deep conscious relaxation and release daily fatigue.',
     tags: ['Restorative relaxation', 'Guided body scanning'],
     image: 'practice-yoga-nidra',
-    alt: 'A restful evening relaxation setup with a mat, blanket and bolster',
+    alt: 'Participants resting in Savasana with blankets and knee bolsters on blue mats inside an evening-lit open-air pavilion',
+    objectPosition: 'center 85%',
   },
   {
     id: 'meditation',
@@ -54,7 +57,8 @@ export const mindfulPractices = [
       'Quiet morning sitting and sensory awareness to greet the day with mental stillness and calm presence.',
     tags: ['Gentle guidance', 'Unhurried morning presence'],
     image: 'practice-meditation',
-    alt: 'A person seated in meditation facing an open door to a green garden',
+    alt: 'Four participants seated on woven mats beneath a bamboo-thatch veranda meditating toward misty morning greenery',
+    objectPosition: 'center 75%',
   },
   {
     id: 'cognitive',

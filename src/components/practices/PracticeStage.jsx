@@ -34,6 +34,7 @@ export default function PracticeStage({ items, activeIndex }) {
                   alt={item.alt}
                   width={1024}
                   height={1024}
+                  style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                   decoding="async"
                   loading={idx === 0 ? 'eager' : 'lazy'}
                 />
