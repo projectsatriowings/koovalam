@@ -229,6 +229,29 @@ section {
   box-shadow: 0 4px 14px rgba(23, 61, 45, 0.2);
 }
 
+.btn-primary {
+  background: var(--deep-forest);
+  border: 1px solid var(--antique-brass);
+  color: var(--warm-ivory);
+}
+
+.btn-primary:hover {
+  background: var(--dark-evergreen);
+  border-color: var(--antique-gold-soft);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--deep-forest);
+  color: var(--deep-forest);
+}
+
+.btn-secondary:hover {
+  background: var(--deep-forest);
+  color: var(--warm-ivory);
+}
+
 .btn-gold {
   background: var(--primary-forest);
   border: 1px solid var(--antique-gold);

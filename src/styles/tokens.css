@@ -19,10 +19,13 @@
   --forest: var(--deep-forest);
   --deep: var(--dark-evergreen);
   --ivory: var(--warm-ivory);
+  --warm-cream: var(--warm-ivory);
   --cream: var(--soft-sand);
   --sand: var(--soft-sand);
   --gold: var(--antique-brass);
   --antique-gold: var(--antique-brass);
+  --antique-gold-soft: #C8AF7B;
+  --earth-brown: #806B50;
   --terracotta: var(--muted-terracotta);
   --main-text: var(--deep-charcoal);
   --secondary-text: #595E57;
