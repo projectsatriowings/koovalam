@@ -22,7 +22,7 @@ export default function Footer() {
             <Logo light size={44} />
             <p className="footer-tagline">{site.tagline}</p>
             <p className="footer-brand-desc">
-              A spiritual wellness and mindfulness retreat in Kerala blending mindful movement, classical yoga, quiet village discovery and reflective space in nature.
+              Inspired by the sacred Bilva tree and rooted in the traditional wisdom of Kerala, Koovalam connects natural living, spiritual wellness retreats, and holistic experiences.
             </p>
             <div className="footer-location-badge">
               <svg
@@ -45,10 +45,11 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="footer-nav-col">
-            <h4 className="footer-col-title">Retreat Navigation</h4>
+            <h4 className="footer-col-title">Explore Koovalam</h4>
             <ul className="footer-links-list">
               <li><a href="#top">Home</a></li>
-              <li><a href="#experience">The Experience</a></li>
+              <li><a href="#philosophy">Body, Mind &amp; Soul</a></li>
+              <li><a href="#experience">Spiritual Wellness Retreat</a></li>
               <li><a href="#itinerary">Proposed Flow</a></li>
               <li><a href="#stay-travel">Stay &amp; Transport</a></li>
               <li><a href="#price">Retreat Investment</a></li>

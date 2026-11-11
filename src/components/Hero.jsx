@@ -56,13 +56,14 @@ export default function Hero() {
               <LeafMark color="var(--antique-brass)" size={14} />
             </span>
             <span className="hero-travel-badge-text">
-              Kerala, India · Spiritual Wellness &amp; Mindfulness Retreat
+              Koovalam · Rooted in Nature. Connected to Soul.
             </span>
           </div>
 
           {/* Primary Hero Headline */}
           <h1 className="hero-travel-title">
-            A Journey Back <span className="title-serif-italic">to Yourself</span>
+            Reconnect with Nature.{' '}
+            <span className="title-serif-italic">Rediscover Yourself.</span>
           </h1>
 
           {/* Key Activities Pill Row */}
@@ -73,14 +74,14 @@ export default function Hero() {
             <span className="pill-dot">·</span>
             <span className="activity-pill">Meditation</span>
             <span className="pill-dot">·</span>
-            <span className="activity-pill">Culture</span>
+            <span className="activity-pill">Temple Heritage</span>
             <span className="pill-dot">·</span>
             <span className="activity-pill">Nature</span>
           </div>
 
           {/* Supporting Copy / Lede */}
           <p className="hero-travel-lede">
-            Experience Kerala through mindful movement, yoga, cultural discovery and meaningful moments in nature. An unhurried experience designed to rest your senses, deepen your breath, and reconnect with what matters.
+            Inspired by the sacred Bilva tree and rooted in the traditional wisdom of Kerala, Koovalam invites you to slow down through yoga, meditation, natural living, and holistic nature experiences.
           </p>
 
           {/* Conversion Actions */}

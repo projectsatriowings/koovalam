@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
+import BrandPhilosophy from './components/brand/BrandPhilosophy.jsx'
 import Experience from './components/Experience.jsx'
 import Itinerary from './components/Itinerary.jsx'
 import StayTravel from './components/StayTravel.jsx'
@@ -32,22 +33,25 @@ export default function App() {
       </a>
       <Header />
       <main id="main">
-        {/* Section 01: Hero / Retreat Introduction */}
+        {/* Section 01: Hero / Brand & Retreat Introduction */}
         <Hero />
 
-        {/* Section 02: The Experience (7 Client-Specified Activities) */}
+        {/* Section 02: Three Dimensions of Well-Being (Body, Mind & Soul) */}
+        <BrandPhilosophy />
+
+        {/* Section 03: Koovalam Spiritual Wellness — Retreat Experience */}
         <Experience />
 
-        {/* Section 03: The Retreat Journey (Day-by-Day Itinerary) */}
+        {/* Section 04: The Retreat Journey (Day-by-Day Itinerary) */}
         <Itinerary />
 
-        {/* Section 04: Stay, Food & Travel */}
+        {/* Section 05: Stay, Food & Travel */}
         <StayTravel />
 
-        {/* Section 05: Price & Participation (₹9,999, Health Notice, 4 FAQs) */}
+        {/* Section 06: Price & Participation (₹9,999, Health Notice, 4 FAQs) */}
         <PriceParticipation />
 
-        {/* Section 06: Enquiry & Registration (Primary Conversion Engine) */}
+        {/* Section 07: Enquiry & Registration (Primary Conversion Engine) */}
         <EnquirySection />
       </main>
       <Footer />

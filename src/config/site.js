@@ -5,6 +5,7 @@ export const site = {
   brand: 'Koovalam',
   wordmark: 'KOOVALAM',
   tagline: 'Rooted in Nature. Connected to Soul.',
+  secondaryTagline: 'Reconnect with Nature. Rediscover Yourself.',
   // Verified organiser contact email
   email: 'info.koovalam@gmail.com',
   // PLACEHOLDER — replace with the real WhatsApp number (country code, digits
@@ -15,9 +16,9 @@ export const site = {
   // Functional backend email enquiry endpoint (served by api/enquire.js and dev middleware)
   formEndpoint: '/api/enquire',
   retreat: {
-    name: 'Koovalam Kerala Retreat',
-    headline: 'A Journey Back to Yourself',
-    subheadline: 'Mindful Movement, Yoga, Cultural Discovery & Meaningful Moments in Nature',
+    name: 'Koovalam Spiritual Wellness Retreat',
+    headline: 'Reconnect with Nature. Rediscover Yourself.',
+    subheadline: 'Nature, Wellness and Spirituality · Rooted in the traditional wisdom of Kerala',
     activitiesSummary: 'Yoga · Pranayama · Meditation · Temples · Culture · Nature',
     duration: '4 days / 3 nights',
     dates: 'December 17–20 (Confirmed)',

@@ -193,8 +193,7 @@ export default function SacredTemples({ category }) {
           </svg>
           <p className={styles.etiquetteText}>
             <strong>Visitor notes &amp; imagery:</strong> Photographs feature
-            Kottiyoor Temple and Tirunelli Temple alongside representative
-            Kerala stone sanctuary imagery. All visits are proposed and
+            Kottiyoor Temple and Tirunelli Temple. All visits are proposed and
             scheduled respectfully in keeping with temple dress codes, local
             customs, seasonal calendars, and organiser confirmation.
           </p>

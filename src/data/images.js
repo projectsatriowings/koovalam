@@ -11,7 +11,7 @@ export const images = {
   'practice-reflection': { alt: 'Hands holding a pen over an open journal beside herbal tea', aspect: '1 / 1', w: 1024, h: 1024 },
   'practice-nature-culture': { alt: 'A quiet footpath through lush Kerala greenery', aspect: '1 / 1', w: 1024, h: 1024 },
   'highlight-temple': { alt: 'A traditional Kerala temple courtyard in early morning light', aspect: '3 / 2', w: 1536, h: 1024 },
-  'highlight-tirunelli': { alt: 'An ancient carved stone sanctuary nestled in the misty forested valley of Wayanad with brass oil lamps', aspect: '3 / 2', w: 1264, h: 848 },
+  'highlight-tirunelli': { alt: 'Carved granite mandapam pillars and terracotta Nalambalam courtyard of Thirunelli Maha Vishnu Temple in Wayanad', aspect: '4 / 3', w: 600, h: 450 },
   'tirunelli-valley': { alt: 'Aerial view of Tirunelli Maha Vishnu Temple nestled in the green rainforest below the Brahmagiri mountain peaks in Wayanad', aspect: '16 / 9', w: 1376, h: 768 },
   'tirunelli-courtyard': { alt: 'Terracotta Nalambalam roofs and two-tiered pyramidal Sreekovil of Tirunelli Temple framed by Wayanad palms and misty ridges', aspect: '3 / 2', w: 1264, h: 848 },
   'kottiyoor-ikkare': { alt: 'Traditional terracotta-roofed Ikkare Kottiyoor Shiva shrine surrounded by lush Kerala foliage and laterite stone steps', aspect: '3 / 2', w: 1264, h: 848 },

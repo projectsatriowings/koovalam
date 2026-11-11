@@ -321,6 +321,10 @@
   aspect-ratio: 16 / 10;
 }
 
+.tileSanctum img {
+  object-position: center 78%;
+}
+
 .tileScrim {
   position: absolute;
   inset: 0;

@@ -55,26 +55,7 @@ export default function Itinerary() {
           </p>
         </div>
 
-        {/* ── 1. Unified Editorial Briefing Strip ── */}
-        <div className="itinerary-briefing-strip" role="note" aria-label="Planning and Operational Review">
-          <div className="briefing-col">
-            <div className="briefing-tag-row">
-              <span className="briefing-pill pill-neutral">CONFIRMED DATES · DEC 17–20 (4D / 3N)</span>
-            </div>
-            <p className="briefing-text">{itineraryData.dateNotice}</p>
-          </div>
-
-          <div className="briefing-divider" aria-hidden="true" />
-
-          <div className="briefing-col">
-            <div className="briefing-tag-row">
-              <span className="briefing-pill pill-amber">EXCURSIONS &amp; SAFETY CONDITIONS</span>
-            </div>
-            <p className="briefing-text">{itineraryData.logisticsNotice.text}</p>
-          </div>
-        </div>
-
-        {/* ── 2. Editorial Day Switcher Navigation (4 Days) ── */}
+        {/* ── 1. Editorial Day Switcher Navigation (4 Days) ── */}
         <div className="itinerary-day-nav" role="tablist" aria-label="Retreat Days">
           {itineraryData.days.map((item) => {
             const isActive = activeDay === item.day

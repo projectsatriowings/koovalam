@@ -12,8 +12,9 @@ export default function Header() {
   const closeBtnRef = useRef(null)
   const prevOpenRef = useRef(open)
 
-  // Simplified 5-item navigation for boutique travel experience
+  // Clean section navigation aligned with Brand Profile & Retreat flow
   const links = [
+    { href: '#philosophy', id: 'philosophy', label: 'Philosophy' },
     { href: '#experience', id: 'experience', label: 'Experience' },
     { href: '#itinerary', id: 'itinerary', label: 'Itinerary' },
     { href: '#stay-travel', id: 'stay-travel', label: 'Stay & Travel' },
@@ -32,7 +33,7 @@ export default function Header() {
 
   // Active section scroll spy using IntersectionObserver
   useEffect(() => {
-    const sectionIds = ['experience', 'itinerary', 'stay-travel', 'price', 'enquiry']
+    const sectionIds = ['philosophy', 'experience', 'itinerary', 'stay-travel', 'price', 'enquiry']
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean)
@@ -179,8 +180,8 @@ export default function Header() {
         >
           <div className="mobile-nav-header">
             <div className="mobile-nav-brand">
-              <span className="mobile-nav-tag">Kerala · Spiritual Retreat</span>
-              <span className="mobile-nav-subtag">Pause · Breathe · Reconnect</span>
+              <span className="mobile-nav-tag">Kerala · Spiritual Wellness</span>
+              <span className="mobile-nav-subtag">Rooted in Nature · Connected to Soul</span>
             </div>
             <button
               ref={closeBtnRef}

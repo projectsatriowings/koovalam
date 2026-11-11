@@ -13,14 +13,14 @@ export default function Experience() {
         <div className="section-head-travel text-center">
           <div className="travel-eyebrow">
             <LeafMark color="var(--antique-brass)" size={13} />
-            <span>THE KOOVALAM EXPERIENCE</span>
+            <span>KOOVALAM SPIRITUAL WELLNESS · THE RETREAT</span>
           </div>
           <h2 className="travel-heading">
-            More Than a Getaway. <br className="hide-mobile" />
-            <span className="serif-italic">An Experience to Reconnect.</span>
+            A Journey Within. <br className="hide-mobile" />
+            <span className="serif-italic">Nature, Wellness &amp; Spirituality.</span>
           </h2>
           <p className="travel-lede">
-            Rooted in authentic Kerala traditions, our retreat combines mindful movement, sacred temple heritage, and classical Indian arts. Every session is voluntary and guided with quiet care.
+            Rooted in the traditional wisdom of Kerala, this retreat brings together gentle yoga, pranayama, meditation, Yoga Nidra, sacred temple visits, and calm nature immersion — every session voluntary and guided with care.
           </p>
         </div>
 

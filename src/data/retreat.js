@@ -176,13 +176,6 @@ export const allActivities = experienceCategories.flatMap((cat) => cat.items)
 
 // 2. The Retreat Journey / Itinerary (December 17–20 · 4 Days / 3 Nights)
 export const itineraryData = {
-  dateNotice:
-    'Confirmed retreat dates: December 17–20 (4 days / 3 nights, 2:00 PM check-in on Dec 17 through 12:00 PM departure on Dec 20). The sample schedule below follows a calm progression; exact venue and minor session timings adapt to seasonal temple customs and river conditions.',
-  logisticsNotice: {
-    heading: 'Operational & Safety Review: Excursions & Cultural Arts',
-    text:
-      'Temple visits (including proposed Kottiyoor & Tirunelli visits subject to local customs and timings), the off-site Nila River boat safari (strictly subject to permissions, seasonal weather, licensed boat operator and life-jacket safety protocols), and evening cultural performances (traditional flute, Bharatanatyam, Mohiniyattam) are subject to final organiser confirmation.',
-  },
   proposedHighlightsUnderReview: [
     {
       name: 'Kottiyoor Temple Visit',
