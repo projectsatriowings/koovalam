@@ -86,10 +86,10 @@ export const resortGallery = [
     src: 'images/resort/cabin-exterior.jpg',
     title: 'Property Cottage Exterior',
     category: 'Property Cottage',
-    alt: 'Standalone cottage with terracotta-style tented roof and stone pathway amidst greenery',
+    alt: 'Standalone terracotta-walled cottage with peaked roof, white porch columns, and lush greenery',
     caption:
-      'Standalone cottage structure set along stone garden paths. Specific twin-sharing room allocations are confirmed prior to booking.',
-    aspect: '9 / 16',
+      'Standalone cottage structure surrounded by lush garden greenery. Specific twin-sharing room allocations are confirmed prior to booking.',
+    aspect: '16 / 9',
     featured: false,
   },
 ]

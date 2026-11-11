@@ -44,7 +44,7 @@ button {
 /* Editorial Headings */
 h1, h2, h3, h4 {
   font-family: var(--font-head);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--deep-forest);
   margin: 0 0 0.5em;
@@ -53,25 +53,25 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: clamp(2.8rem, 7.5vw, 5.4rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
 }
 
 h2 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.12;
 }
 
 h3 {
   font-size: clamp(1.4rem, 3vw, 1.85rem);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.25;
 }
 
 h4 {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--earth-brown);
@@ -118,7 +118,7 @@ p:last-child {
 }
 
 section {
-  padding: clamp(72px, 10vw, 128px) 0;
+  padding: clamp(36px, 4.5vw, 52px) 0;
   position: relative;
 }
 

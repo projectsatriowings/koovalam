@@ -301,7 +301,7 @@ export default function EnquirySection() {
             Retreat Enquiry <span className="serif-italic">&amp; Registration</span>
           </h2>
           <p className={styles.tightLede}>
-            Ask us about retreat dates, proposed temple visits, or suitability. We reply personally with room availability and no pressure.
+            Ask us about the Dec 17–20 retreat, proposed temple visits, or suitability. We reply personally with room availability and no pressure.
           </p>
         </div>
 
@@ -529,7 +529,7 @@ export default function EnquirySection() {
                         Your retreat preferences
                       </h3>
                       <p className={styles.stepSubtitle}>
-                        Everything can be adjusted once dates are confirmed.
+                        Everything can be adjusted with our coordinator before final room allocation.
                       </p>
 
                       <div className={styles.fieldsStack}>

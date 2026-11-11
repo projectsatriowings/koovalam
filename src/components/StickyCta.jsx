@@ -48,7 +48,7 @@ export default function StickyCta() {
             <strong className="sticky-price">₹9,999*</strong>
             <span className="sticky-unit">/ person (Provisional)</span>
           </div>
-          <span className="sticky-dates-tag">Kerala, India · Dates to be confirmed</span>
+          <span className="sticky-dates-tag">Kerala, India · Dec 17 – 20 (4D / 3N)</span>
         </div>
 
         <a

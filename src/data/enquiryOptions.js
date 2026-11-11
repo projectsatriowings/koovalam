@@ -86,7 +86,7 @@ export const REASSURANCE_PANEL_CONTENT = {
   timelineHeading: 'What happens next',
   timelineSteps: [
     { number: '1', text: 'You send your enquiry.' },
-    { number: '2', text: 'We reply with confirmed dates and room availability.' },
+    { number: '2', text: 'We reply with venue details and room availability for Dec 17–20.' },
     { number: '3', text: 'You decide, with no pressure.' },
   ],
 }

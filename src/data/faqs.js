@@ -21,7 +21,7 @@ export const faqCategories = [
       },
       {
         q: 'When will the exact venue be announced?',
-        a: 'The exact venue in Kerala will be announced alongside confirmed retreat dates. Registered early-interest guests will be notified first when dates, venue, and price are confirmed.',
+        a: 'The retreat dates are confirmed for December 17–20 (4 days / 3 nights). The exact venue in Kerala will be shared alongside room allocation and operational details before bookings open.',
       },
     ],
   },
@@ -100,8 +100,8 @@ export const faqCategories = [
     tagline: 'Dates, pricing and transparent reservation',
     questions: [
       {
-        q: 'When will retreat dates be announced?',
-        a: 'Retreat dates are announcing soon. By joining our early-interest list, you will be notified first as soon as confirmed dates and venue details are released.',
+        q: 'What are the confirmed retreat dates?',
+        a: 'The retreat is confirmed for December 17–20 (4 days / 3 nights). By joining our enquiry list, you will receive venue details and room availability.',
       },
       {
         q: 'How can visitors enquire about pricing?',

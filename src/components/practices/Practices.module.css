@@ -1,0 +1,431 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   KOOVALAM — YOGA & MINDFUL PRACTICES SHOWCASE
+   "Image + Practice List" on Desktop (>= 960px), Accordion on Mobile (< 960px)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.reassuranceStrip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reassuranceItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--deep-forest);
+  line-height: 1.4;
+}
+
+.reassuranceCheck {
+  color: var(--antique-brass);
+  flex-shrink: 0;
+}
+
+/* ── Two-Column Editorial Stage + List Layout ── */
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: minmax(0, clamp(340px, 34vw, 416px)) minmax(0, 1fr);
+  gap: clamp(44px, 5.2vw, 72px);
+  align-items: start;
+}
+
+/* ── Left Sticky Image Stage (Desktop >= 960px) ── */
+.stageColumn {
+  position: sticky;
+  top: calc(var(--header-h, 76px) + 28px);
+  align-self: start;
+}
+
+.stageFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--soft-sand);
+  box-shadow:
+    0 18px 44px rgba(16, 44, 36, 0.09),
+    0 2px 10px rgba(16, 44, 36, 0.04);
+  isolation: isolate;
+}
+
+.stageFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(161, 132, 77, 0.14);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.stageSlide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 800ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.stageSlideActive {
+  opacity: 1;
+  z-index: 2;
+}
+
+.stageSlide picture,
+.stageSlide img,
+.mobileMedia picture,
+.mobileMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.stageScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 44, 36, 0) 62%,
+    rgba(16, 44, 36, 0.56) 100%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.stageIndexBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  padding: 6px 13px;
+  border-radius: var(--radius-pill);
+  background: rgba(16, 44, 36, 0.72);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(200, 175, 123, 0.36);
+  color: #E8D7AD;
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+}
+
+.stageLabelPill {
+  position: absolute;
+  left: 18px;
+  bottom: 20px;
+  z-index: 5;
+  background: rgba(247, 244, 236, 0.94);
+  backdrop-filter: blur(8px);
+  color: var(--deep-forest);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(161, 132, 77, 0.28);
+  box-shadow: 0 2px 10px rgba(16, 44, 36, 0.14);
+}
+
+.stageProgressTrack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: rgba(247, 244, 236, 0.22);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.stageProgressBar {
+  height: 100%;
+  background: var(--antique-gold-soft);
+  transition: width 800ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ── Right Practice Accordion List ── */
+.listColumn {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--soft-sand);
+}
+
+.rowItem {
+  border-bottom: 1px solid var(--soft-sand);
+  border-left: 2px solid transparent;
+  padding-left: clamp(14px, 2vw, 22px);
+  transition:
+    border-color 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    padding 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rowItemActive {
+  border-left-color: var(--antique-brass);
+}
+
+.rowButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 19px 10px;
+  min-height: 58px;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  transition: padding 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rowItemActive .rowButton {
+  padding: 23px 10px 10px;
+}
+
+.rowButton:focus-visible {
+  outline: 2px solid var(--deep-forest);
+  outline-offset: -3px;
+  border-radius: 6px;
+}
+
+.rowHeaderLeft {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(12px, 1.8vw, 20px);
+  min-width: 0;
+  flex: 1;
+}
+
+.rowNum {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-variant: small-caps;
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.08em;
+  color: var(--antique-brass);
+  min-width: 1.9rem;
+  flex-shrink: 0;
+  transition: color 260ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rowTitle {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.8vw, 1.5625rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: #5C5346;
+  transition:
+    color 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    font-size 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rowButton:hover .rowTitle,
+.rowButton:focus-visible .rowTitle {
+  color: var(--deep-forest);
+}
+
+.rowItemActive .rowTitle {
+  font-size: clamp(1.75rem, 2.35vw, 2.125rem);
+  color: var(--deep-forest);
+}
+
+.rowIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--antique-brass);
+  flex-shrink: 0;
+  transition:
+    transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    color 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.rowItemActive .rowIcon {
+  transform: rotate(180deg);
+  color: var(--deep-forest);
+}
+
+/* ── Expandable Panel ── */
+.rowPanelOuter {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    grid-template-rows 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 450ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    visibility 0s linear 500ms;
+}
+
+.rowPanelOuterOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    grid-template-rows 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 500ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    visibility 0s linear 0s;
+}
+
+.rowPanelInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.rowPanelContent {
+  padding-left: calc(10px + 1.9rem + clamp(12px, 1.8vw, 20px));
+  padding-right: 10px;
+  padding-bottom: 24px;
+}
+
+.rowDescription {
+  font-family: var(--font-body);
+  font-size: 1.03125rem;
+  line-height: 1.7;
+  color: var(--main-text);
+  max-width: 52ch;
+  margin: 0 0 12px;
+}
+
+.rowTags {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.tagItem {
+  white-space: nowrap;
+}
+
+.tagDot {
+  color: var(--antique-brass);
+  font-weight: 700;
+}
+
+/* ── Mobile / Tablet Inline Accordion Image (< 960px) ── */
+.mobileMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 4px 0 14px;
+  background: var(--soft-sand);
+  box-shadow: 0 10px 26px rgba(16, 44, 36, 0.08);
+}
+
+.mobileMedia .stageLabelPill {
+  left: 14px;
+  bottom: 14px;
+}
+
+.mobileMedia .stageIndexBadge {
+  top: 12px;
+  right: 12px;
+  font-size: 0.82rem;
+  padding: 5px 11px;
+}
+
+/* ── Visually Hidden Screen-Reader Live Region ── */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Responsive (< 960px Single-Column Accordion) ── */
+@media (max-width: 959px) {
+  .showcaseGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .stageColumn {
+    display: none;
+  }
+
+  .rowItem {
+    padding-left: 12px;
+  }
+
+  .rowButton {
+    padding: 18px 8px;
+    min-height: 62px;
+  }
+
+  .rowItemActive .rowButton {
+    padding: 20px 8px 10px;
+  }
+
+  .rowPanelContent {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 20px;
+  }
+
+  .rowTitle {
+    font-size: 1.38rem;
+  }
+
+  .rowItemActive .rowTitle {
+    font-size: clamp(1.65rem, 4.8vw, 1.95rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .reassuranceStrip {
+    gap: 8px 16px;
+  }
+
+  .reassuranceItem {
+    font-size: 0.81rem;
+  }
+
+  .rowNum {
+    min-width: 1.55rem;
+    font-size: 0.98rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stageSlide,
+  .stageProgressBar,
+  .rowItem,
+  .rowButton,
+  .rowNum,
+  .rowTitle,
+  .rowIcon,
+  .rowPanelOuter {
+    transition-duration: 0ms !important;
+    transition-delay: 0ms !important;
+  }
+}

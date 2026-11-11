@@ -8,39 +8,34 @@ const dayVisuals = {
   1: {
     src: 'images/resort/open-air-pavilion.jpg',
     alt: 'Open-air pavilion in nature for opening retreat orientation',
-    caption: 'Open-air pavilion setting for the opening orientation circle and grounding breathwork',
-    tag: 'ARRIVAL & ORIENTATION',
+    caption: 'Open-air pavilion setting for the opening welcome circle and grounding breathwork',
+    tag: 'ARRIVAL & GROUNDING',
   },
   2: {
-    src: 'images/highlight-nila-river.jpg',
-    alt: 'Lush green Kerala scenery for mindful walking and nature connection',
-    caption: 'Serene Kerala village and nature landscapes for the guided mindful walking tour',
-    tag: 'NATURE & MOVEMENT',
+    src: 'images/resort/hill-platform.jpg',
+    alt: 'Lush hillside greenery for sensory nature walk and inner awareness',
+    caption: 'Surrounded by greenery for mindfulness practice, guided journaling and sensory grounding walk',
+    tag: 'BODY & INNER AWARENESS',
   },
   3: {
+    src: 'images/highlight-nila-river.jpg',
+    alt: 'Peaceful Nila River waters framed by Kerala palms',
+    caption: 'Mindful Nila River boat safari (afternoon sample, subject to weather and safe boat conditions)',
+    tag: 'CULTURE & NATURE',
+  },
+  4: {
     src: 'images/resort/dining-area.jpg',
     alt: 'Forest-view dining room for concluding vegetarian lunch and closing circle',
-    caption: 'Forest-canopy dining setting for contemplation and concluding vegetarian lunch',
+    caption: 'Forest-canopy dining room for personal integration sharing and concluding lunch',
     tag: 'INTEGRATION & CLOSING',
   },
 }
 
-// Approximate phase labels for the flow steps
-const phaseLabels = [
-  'AFTERNOON',
-  'LATE AFTERNOON',
-  'EVENING',
-  'NIGHT',
-  'MORNING',
-  'MID-DAY',
-  'AFTERNOON',
-  'EVENING',
-]
-
 export default function Itinerary() {
   const [activeDay, setActiveDay] = useState(1)
 
-  const currentDay = itineraryData.days.find((d) => d.day === activeDay) || itineraryData.days[0]
+  const currentDay =
+    itineraryData.days.find((d) => d.day === activeDay) || itineraryData.days[0]
   const currentVisual = dayVisuals[activeDay] || dayVisuals[1]
 
   return (
@@ -50,46 +45,43 @@ export default function Itinerary() {
         <div className="section-head-travel text-center">
           <div className="travel-eyebrow">
             <LeafMark color="var(--antique-brass)" size={13} />
-            <span>RETREAT SCHEDULE &amp; RHYTHM</span>
+            <span>DECEMBER 17–20 · 4 DAYS / 3 NIGHTS</span>
           </div>
           <h2 className="travel-heading">
-            Proposed Retreat <span className="serif-italic">Flow</span>
+            Suggested Daily <span className="serif-italic">Flow</span>
           </h2>
           <p className="travel-lede">
-            An illustrative daily arc balancing mindful practice, cultural discovery and restorative quiet space. Dates and programme duration will be confirmed by the organiser.
+            A calm sample schedule from morning to night balancing mindful practice, cultural discovery, and restful space. Timings adapt to the venue, season, temple customs and guest comfort.
           </p>
         </div>
 
-        {/* ── 1. Unified Editorial Briefing Strip (Replaces Clunky Beige Alert Boxes) ── */}
-        <div className="itinerary-briefing-strip" role="note" aria-label="Planning & Feasibility Briefing">
+        {/* ── 1. Unified Editorial Briefing Strip ── */}
+        <div className="itinerary-briefing-strip" role="note" aria-label="Planning and Operational Review">
           <div className="briefing-col">
             <div className="briefing-tag-row">
-              <span className="briefing-pill pill-neutral">DATES PENDING CONFIRMATION</span>
+              <span className="briefing-pill pill-neutral">CONFIRMED DATES · DEC 17–20 (4D / 3N)</span>
             </div>
-            <p className="briefing-text">
-              The client-supplied dates (December 17–19 / four-day trip) are under final operational confirmation. The sequence below illustrates the planned daily practices once calendar dates and duration are locked.
-            </p>
+            <p className="briefing-text">{itineraryData.dateNotice}</p>
           </div>
 
           <div className="briefing-divider" aria-hidden="true" />
 
           <div className="briefing-col">
             <div className="briefing-tag-row">
-              <span className="briefing-pill pill-amber">LOGISTICS &amp; TRAVEL REVIEW</span>
+              <span className="briefing-pill pill-amber">EXCURSIONS &amp; SAFETY CONDITIONS</span>
             </div>
-            <p className="briefing-text">
-              Kottiyoor Temple (Kannur) and Tirunelli Temple (Wayanad) visits, inter-district travel feasibility, and evening cultural performances (flute, Bharatanatyam, Mohiniyattam) are under organiser review prior to booking.
-            </p>
+            <p className="briefing-text">{itineraryData.logisticsNotice.text}</p>
           </div>
         </div>
 
-        {/* ── 2. Editorial Day Switcher Navigation ── */}
+        {/* ── 2. Editorial Day Switcher Navigation (4 Days) ── */}
         <div className="itinerary-day-nav" role="tablist" aria-label="Retreat Days">
           {itineraryData.days.map((item) => {
             const isActive = activeDay === item.day
             return (
               <button
                 key={item.day}
+                type="button"
                 role="tab"
                 aria-selected={isActive}
                 aria-controls={`day-panel-${item.day}`}
@@ -101,20 +93,20 @@ export default function Itinerary() {
                 }}
               >
                 <span className="nav-tab-number">DAY 0{item.day}</span>
-                <span className="nav-tab-label">{item.title.split('&')[0].trim()}</span>
+                <span className="nav-tab-label">{item.tabLabel}</span>
               </button>
             )
           })}
         </div>
 
-        {/* ── 3. Active Day Showcase Spread (Editorial Magazine Layout) ── */}
+        {/* ── 3. Active Day Showcase Spread ── */}
         <div
           className="itinerary-active-spread"
           id={`day-panel-${currentDay.day}`}
           role="tabpanel"
           aria-labelledby={`day-tab-${currentDay.day}`}
         >
-          {/* Left Column: Narrative, Subtitle & Flow Timeline */}
+          {/* Left Column: Narrative, Subtitle & Sample Schedule Timeline */}
           <div className="spread-narrative-col">
             <div className="spread-header">
               <div className="spread-day-watermark" aria-hidden="true">
@@ -129,29 +121,30 @@ export default function Itinerary() {
 
             <p className="spread-narrative-prose">{currentDay.narrative}</p>
 
-            {/* Vertical Flow Timeline Spine */}
+            {/* Vertical Daily Flow Timeline */}
             <div className="spread-timeline-spine">
               <div className="timeline-spine-label">
                 <span className="spine-dot" aria-hidden="true" />
-                <span>CHRONOLOGICAL DAILY FLOW</span>
+                <span>SUGGESTED DAILY FLOW</span>
               </div>
 
               <div className="timeline-steps-list">
-                {currentDay.highlights.map((point, idx) => {
-                  const phase = phaseLabels[idx % phaseLabels.length]
-                  return (
-                    <div key={idx} className="timeline-step-row">
-                      <div className="step-marker-col">
-                        <span className="step-circle" aria-hidden="true" />
-                        {idx < currentDay.highlights.length - 1 && <span className="step-line" aria-hidden="true" />}
-                      </div>
-                      <div className="step-content-col">
-                        <span className="step-phase-tag">{phase}</span>
-                        <p className="step-point-text">{point}</p>
-                      </div>
+                {currentDay.schedule.map((entry, idx) => (
+                  <div key={idx} className="timeline-step-row">
+                    <div className="step-marker-col">
+                      <span className="step-circle" aria-hidden="true" />
+                      {idx < currentDay.schedule.length - 1 && (
+                        <span className="step-line" aria-hidden="true" />
+                      )}
                     </div>
-                  )
-                })}
+                    <div className="step-content-col">
+                      <span className="step-phase-tag">
+                        {entry.time} · {entry.phase}
+                      </span>
+                      <p className="step-point-text">{entry.activity}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -174,12 +167,24 @@ export default function Itinerary() {
 
             {/* Day Practices Cluster */}
             <div className="spread-practices-strip">
-              <span className="practices-strip-title">Featured Day Inclusions:</span>
+              <span className="practices-strip-title">Day Highlights:</span>
               <div className="practices-pills-row">
-                {currentDay.highlights.slice(0, 4).map((h, i) => (
+                {(currentDay.featuredPills || []).map((pill, i) => (
                   <span key={i} className="practice-mini-pill">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>{h.split('&')[0].trim()}</span>
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="var(--antique-brass)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{pill}</span>
                   </span>
                 ))}
               </div>
@@ -187,18 +192,18 @@ export default function Itinerary() {
           </div>
         </div>
 
-        {/* ── 4. Proposed Experiences Under Review (Streamlined Minimal Grid) ── */}
+        {/* ── 4. Excursions & Cultural Highlights Under Confirmation ── */}
         <div className="itinerary-proposed-section">
           <div className="proposed-section-head">
             <div className="travel-eyebrow">
               <LeafMark color="var(--antique-brass)" size={12} />
-              <span>LOGISTICS &amp; ARTIST REVIEW</span>
+              <span>EXCURSIONS &amp; CULTURAL PROGRAMME</span>
             </div>
             <h3 className="proposed-section-title">
-              Temple Excursions &amp; Cultural Arts Under Scheduling Review
+              Temple Visits, River Safari &amp; Cultural Evenings Under Review
             </h3>
             <p className="proposed-section-sub">
-              To ensure unhurried comfort, travel feasibility between Kannur and Wayanad, and confirmed artist availability, these proposed experiences are not fixed to specific hours until formally finalised.
+              Every session is 100% voluntary and adaptable to personal comfort. Temple visits, Nila River boat safari (with licensed operator and life jackets), and cultural performances are finalised prior to booking.
             </p>
           </div>
 

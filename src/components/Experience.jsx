@@ -1,6 +1,7 @@
 import { experienceCategories } from '../data/retreat.js'
 import ImageSlot from './ImageSlot.jsx'
 import { LeafMark } from './Logo.jsx'
+import PracticeShowcase from './practices/PracticeShowcase.jsx'
 import { track } from '../lib/analytics.js'
 
 export default function Experience() {
@@ -24,59 +25,64 @@ export default function Experience() {
 
         {/* 3 Organised Experience Categories */}
         <div className="experience-categories-container">
-          {experienceCategories.map((cat, catIdx) => (
-            <div key={cat.id} className="experience-category-group">
-              <div className="category-group-header">
-                <span className="category-group-tag">{cat.categoryTag}</span>
-                <h3 className="category-group-title">{cat.categoryName}</h3>
-                <p className="category-group-desc">{cat.categoryDesc}</p>
-              </div>
+          {experienceCategories.map((cat, catIdx) => {
+            if (cat.id === 'practices') {
+              return <PracticeShowcase key={cat.id} />
+            }
+            return (
+              <div key={cat.id} className="experience-category-group">
+                <div className="category-group-header">
+                  <span className="category-group-tag">{cat.categoryTag}</span>
+                  <h3 className="category-group-title">{cat.categoryName}</h3>
+                  <p className="category-group-desc">{cat.categoryDesc}</p>
+                </div>
 
-              {/* Category Cards Grid */}
-              <div
-                className={`experience-cards-grid ${
-                  cat.items.length === 2 ? 'grid-2-col' : 'grid-3-col'
-                }`}
-              >
-                {cat.items.map((item, itemIdx) => (
-                  <article key={item.id} className="experience-card">
-                    <div className="experience-card-media">
-                      <ImageSlot name={item.image} className="experience-img-slot" />
-                      <span className="experience-card-tag">{item.tag}</span>
-                      {item.representativeImage && (
-                        <span className="representative-badge" title="Representative imagery">
-                          Representative Imagery
-                        </span>
-                      )}
-                    </div>
-                    <div className="experience-card-body">
-                      <div className="experience-card-num" aria-hidden="true">
-                        0{catIdx + 1}.{itemIdx + 1}
+                {/* Category Cards Grid */}
+                <div
+                  className={`experience-cards-grid ${
+                    cat.items.length === 2 ? 'grid-2-col' : 'grid-3-col'
+                  }`}
+                >
+                  {cat.items.map((item, itemIdx) => (
+                    <article key={item.id} className="experience-card">
+                      <div className="experience-card-media">
+                        <ImageSlot name={item.image} className="experience-img-slot" />
+                        <span className="experience-card-tag">{item.tag}</span>
+                        {item.representativeImage && (
+                          <span className="representative-badge" title="Representative imagery">
+                            Representative Imagery
+                          </span>
+                        )}
                       </div>
-                      <h4 className="experience-card-title">{item.title}</h4>
-                      <p className="experience-card-summary">{item.summary}</p>
-                      <div className="experience-card-highlight">
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="var(--antique-brass)"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                        >
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        <span>{item.highlight}</span>
+                      <div className="experience-card-body">
+                        <div className="experience-card-num" aria-hidden="true">
+                          0{catIdx + 1}.{itemIdx + 1}
+                        </div>
+                        <h4 className="experience-card-title">{item.title}</h4>
+                        <p className="experience-card-summary">{item.summary}</p>
+                        <div className="experience-card-highlight">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="var(--antique-brass)"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                          >
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                          <span>{item.highlight}</span>
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                ))}
+                    </article>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Mid-Page Secondary Conversion Callout */}

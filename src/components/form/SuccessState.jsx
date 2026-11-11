@@ -76,8 +76,8 @@ export default function SuccessState({
       </h3>
 
       <p className={styles.successCopy}>
-        We've received your enquiry and will reply on WhatsApp or email with
-        confirmed dates and room availability.
+        We've received your enquiry for December 17–20 and will reply on WhatsApp or
+        email with room availability and next steps.
       </p>
 
       {/* Short Recap of Chosen Options */}

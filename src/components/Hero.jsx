@@ -56,7 +56,7 @@ export default function Hero() {
               <LeafMark color="var(--antique-brass)" size={14} />
             </span>
             <span className="hero-travel-badge-text">
-              Kerala, India · Boutique Wellness &amp; Cultural Retreat
+              Kerala, India · Spiritual Wellness &amp; Mindfulness Retreat
             </span>
           </div>
 
@@ -127,9 +127,9 @@ export default function Hero() {
             </div>
 
             <div className="trip-strip-item">
-              <span className="trip-strip-label">Dates &amp; Duration</span>
-              <strong className="trip-strip-value">To be confirmed</strong>
-              <span className="trip-strip-sub">Subject to organiser review</span>
+              <span className="trip-strip-label">Confirmed Dates</span>
+              <strong className="trip-strip-value">Dec 17 – 20</strong>
+              <span className="trip-strip-sub">4 Days / 3 Nights</span>
             </div>
 
             <div className="trip-strip-item">

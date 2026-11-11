@@ -210,7 +210,7 @@ export async function processEnquiry(data, clientIp = '') {
   <div class="container">
     <div class="header">
       <h1>KOOVALAM</h1>
-      <p>Boutique Kerala Retreat · New Guest Enquiry</p>
+      <p>Spiritual Wellness &amp; Mindfulness Retreat · New Guest Enquiry</p>
     </div>
     <div class="content">
       <p class="intro">

@@ -22,7 +22,7 @@ export default function Footer() {
             <Logo light size={44} />
             <p className="footer-tagline">{site.tagline}</p>
             <p className="footer-brand-desc">
-              A boutique Kerala retreat experience blending mindful movement, classical yoga, quiet village discovery and reflective space in nature.
+              A spiritual wellness and mindfulness retreat in Kerala blending mindful movement, classical yoga, quiet village discovery and reflective space in nature.
             </p>
             <div className="footer-location-badge">
               <svg
@@ -64,7 +64,7 @@ export default function Footer() {
                 <strong>Location:</strong> Kerala, India
               </li>
               <li>
-                <strong>Dates &amp; Duration:</strong> To be confirmed
+                <strong>Dates &amp; Duration:</strong> Dec 17–20 (4 Days / 3 Nights)
               </li>
               <li>
                 <strong>Accommodation:</strong> Twin-Sharing (2 guests/room)

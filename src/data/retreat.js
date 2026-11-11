@@ -121,85 +121,275 @@ export const experienceCategories = [
 // Flat list for easy reference / mapping
 export const allActivities = experienceCategories.flatMap((cat) => cat.items)
 
-// 2. The Retreat Journey / Itinerary (Proposed sequence pending final confirmation)
+// 2. The Retreat Journey / Itinerary (December 17–20 · 4 Days / 3 Nights)
 export const itineraryData = {
   dateNotice:
-    'Dates and programme duration to be confirmed. The client-supplied details (December 17–19 / four-day trip) are under final operational review. The sequence below illustrates the planned retreat practices and activities pending final confirmation of dates and duration by the organiser.',
+    'Confirmed retreat dates: December 17–20 (4 days / 3 nights, 2:00 PM check-in on Dec 17 through 12:00 PM departure on Dec 20). The sample schedule below follows a calm progression; exact venue and minor session timings adapt to seasonal temple customs and river conditions.',
   logisticsNotice: {
-    heading: 'Important Logistical Notice: Temple Visits & Cultural Performances',
+    heading: 'Operational & Safety Review: Excursions & Cultural Arts',
     text:
-      'Kottiyoor Temple is located in Kannur district, while Tirunelli Temple is situated in Wayanad. The logistical feasibility of visiting both temples within a single retreat batch, inter-district travel arrangements, Kottiyoor shrine seasonal availability (Akkare vs Ikkare shrine), and scheduling of classical cultural performances (traditional flute, Bharatanatyam, Mohiniyattam) are under operational review by the organiser and will be finalised prior to booking.',
+      'Temple visits (including proposed Kottiyoor & Tirunelli visits subject to local customs and timings), the off-site Nila River boat safari (strictly subject to permissions, seasonal weather, licensed boat operator and life-jacket safety protocols), and evening cultural performances (traditional flute, Bharatanatyam, Mohiniyattam) are subject to final organiser confirmation.',
   },
   proposedHighlightsUnderReview: [
     {
       name: 'Kottiyoor Temple Visit',
       region: 'Kannur District',
-      status: 'Proposed · Under logistical review regarding travel feasibility & seasonal shrine schedule',
+      status: 'Proposed · Subject to local customs, seasonal shrine timings & travel feasibility',
     },
     {
       name: 'Tirunelli Temple Visit',
       region: 'Wayanad District',
-      status: 'Proposed · Under logistical review regarding inter-district travel & group timing',
+      status: 'Proposed · Subject to inter-district timing & organiser confirmation',
     },
     {
-      name: 'Traditional Flute Music Performance',
-      genre: 'Classical Music',
-      status: 'Proposed evening event · Subject to artist availability and retreat batch schedule',
+      name: 'Nila River Boat Safari',
+      region: 'Nature Excursion',
+      status: 'Day 3 afternoon sample · Subject to permissions, weather & licensed safe boat operation',
     },
     {
-      name: 'Bharatanatyam / Mohiniyattam Classical Dance',
-      genre: 'Classical Dance',
-      status: 'Proposed evening event · Subject to artist availability and organiser confirmation',
+      name: 'Traditional Flute & Classical Dance',
+      genre: 'Cultural Evenings',
+      status: 'Bharatanatyam / Mohiniyattam & flute · Subject to artist availability & confirmation',
     },
   ],
   days: [
     {
       day: 1,
+      tabLabel: 'Arrival',
       title: 'Arrival & Grounding',
-      subtitle: 'Arriving, settling in, and unwinding',
+      subtitle: 'Welcome drink, orientation circle & evening Yoga Nidra',
       narrative:
-        'Settle into your accommodation, unwind from travel, and join the opening orientation circle followed by gentle foundational movement and restorative evening breathwork.',
-      highlights: [
-        'Afternoon arrival & retreat orientation circle',
-        'Gentle foundational yoga and breath awareness',
-        'Vegetarian dinner',
-        'Restorative Yoga Nidra for restful sleep',
+        'Check in from 2:00 PM onwards, settle into your surroundings with a welcome drink, meet fellow guests in the opening circle, and ease into gentle foundational yoga, breathwork and restful Yoga Nidra.',
+      featuredPills: [
+        'Welcome & Orientation',
+        'Gentle Yoga & Mobility',
+        'Foundational Pranayama',
+        'Restorative Yoga Nidra',
       ],
-      timingNote: 'Proposed arrival schedule to be confirmed',
+      schedule: [
+        {
+          time: '2:00 – 3:30 PM',
+          phase: 'AFTERNOON',
+          activity: 'Arrival, welcome drink, check-in and settling in',
+        },
+        {
+          time: '3:30 – 4:15 PM',
+          phase: 'AFTERNOON',
+          activity: 'Opening circle: introductions, intentions and retreat guidelines',
+        },
+        {
+          time: '4:30 – 5:30 PM',
+          phase: 'LATE AFTERNOON',
+          activity: 'Gentle yoga and body-awareness practice',
+        },
+        {
+          time: '5:45 – 6:15 PM',
+          phase: 'EVENING',
+          activity: 'Foundational pranayama: natural breathing and alternate-nostril breathing, as appropriate',
+        },
+        {
+          time: '6:30 – 7:00 PM',
+          phase: 'EVENING',
+          activity: 'Guided meditation: arriving in the present moment',
+        },
+        {
+          time: '7:30 PM',
+          phase: 'EVENING',
+          activity: 'Vegetarian dinner and quiet personal time',
+        },
+        {
+          time: '8:30 – 9:00 PM',
+          phase: 'NIGHT',
+          activity: 'Yoga Nidra: deep relaxation and rest',
+        },
+      ],
+      timingNote: 'Dec 17 · Arrival Day · 2:00 PM to 9:00 PM (Sample schedule)',
     },
     {
       day: 2,
-      title: 'Movement, Breath & Village Discovery',
-      subtitle: 'Body awareness, village walking tour & quiet reflection',
+      tabLabel: 'Body & Breath',
+      title: 'Body, Breath & Inner Awareness',
+      subtitle: 'Morning meditation, mindfulness practices & sensory nature walk',
       narrative:
-        'Morning meditation and gentle yoga practice followed by vegetarian breakfast and reflective cognitive exercises. The afternoon includes a guided village walking tour.',
-      highlights: [
-        'Morning meditation & pranayama breathwork',
-        'Gentle mobility yoga practice',
-        'Vegetarian breakfast',
-        'Cognitive clarity & mindfulness exercise',
-        'Vegetarian lunch & quiet rest',
-        'Guided village walking tour',
-        'Evening reflection & vegetarian dinner',
-        'Restorative Yoga Nidra',
+        'Begin at 6:30 AM with silent sitting, mobility yoga, and pranayama, followed by breakfast, reflective mindfulness & journaling exercises, midday rest, an afternoon sensory nature walk, and evening Yoga Nidra.',
+      featuredPills: [
+        'Morning Meditation & Yoga',
+        'Cognitive Mindfulness',
+        'Guided Journaling',
+        'Sensory Nature Walk',
       ],
-      timingNote: 'Proposed full retreat day',
+      schedule: [
+        {
+          time: '6:30 – 7:00 AM',
+          phase: 'MORNING',
+          activity: 'Silent sitting and gentle morning meditation',
+        },
+        {
+          time: '7:00 – 8:00 AM',
+          phase: 'MORNING',
+          activity: 'Yoga practice: mobility, grounding and mindful movement',
+        },
+        {
+          time: '8:00 – 8:30 AM',
+          phase: 'MORNING',
+          activity: 'Pranayama practice',
+        },
+        {
+          time: '8:30 – 9:30 AM',
+          phase: 'MORNING',
+          activity: 'Vegetarian breakfast',
+        },
+        {
+          time: '10:00 – 11:15 AM',
+          phase: 'LATE MORNING',
+          activity: 'Mindfulness and cognitive practices: noticing thoughts, emotions and habitual responses',
+        },
+        {
+          time: '11:30 AM – 12:15 PM',
+          phase: 'LATE MORNING',
+          activity: 'Guided journaling: personal strengths, values and supportive beliefs',
+        },
+        {
+          time: '12:30 PM',
+          phase: 'MIDDAY',
+          activity: 'Vegetarian lunch and quiet rest',
+        },
+        {
+          time: '4:00 – 5:00 PM',
+          phase: 'AFTERNOON',
+          activity: 'Nature walk / mindful observation and sensory grounding',
+        },
+        {
+          time: '5:15 – 6:00 PM',
+          phase: 'EVENING',
+          activity: 'Meditation: self-compassion and emotional awareness',
+        },
+        {
+          time: '7:00 PM',
+          phase: 'EVENING',
+          activity: 'Vegetarian dinner',
+        },
+        {
+          time: '8:15 – 8:45 PM',
+          phase: 'NIGHT',
+          activity: 'Yoga Nidra: guided conscious rest',
+        },
+      ],
+      timingNote: 'Dec 18 · Full Retreat Day · 6:30 AM to 8:45 PM (Sample schedule)',
     },
     {
       day: 3,
-      title: 'Contemplation & Integration',
-      subtitle: 'Spiritual heritage, closing reflection, and conclusion',
+      tabLabel: 'Culture & Nature',
+      title: 'Culture, Nature & Reflection',
+      subtitle: 'Morning temple visit, afternoon Nila River safari & gratitude circle',
       narrative:
-        'Morning stillness, gentle breath practice, and quiet reflection. Followed by vegetarian breakfast, closing circle, and concluding vegetarian lunch.',
-      highlights: [
-        'Morning meditation & gentle breath practice',
-        'Contemplative morning reflection',
-        'Vegetarian breakfast',
-        'Closing reflection & personal integration',
-        'Concluding vegetarian lunch',
-        'Departure arrangements to be confirmed',
+        'Greet the morning with meditation, gentle yoga and breakfast before a quiet cultural temple visit (subject to local customs & timings), restful lunch, an afternoon Nila River boat safari (conditions permitting), and an evening reflection circle.',
+      featuredPills: [
+        'Morning Yoga & Breath',
+        'Sacred Temple Visit',
+        'Nila River Boat Safari',
+        'Evening Reflection Circle',
       ],
-      timingNote: 'Proposed conclusion schedule to be confirmed',
+      schedule: [
+        {
+          time: '6:30 – 7:00 AM',
+          phase: 'MORNING',
+          activity: 'Morning meditation',
+        },
+        {
+          time: '7:00 – 8:00 AM',
+          phase: 'MORNING',
+          activity: 'Gentle yoga and pranayama',
+        },
+        {
+          time: '8:00 – 9:00 AM',
+          phase: 'MORNING',
+          activity: 'Vegetarian breakfast',
+        },
+        {
+          time: '9:30 AM – 12:00 PM',
+          phase: 'LATE MORNING',
+          activity: 'Temple visit: a quiet cultural and spiritual experience (subject to local customs and timings)',
+        },
+        {
+          time: '12:30 PM',
+          phase: 'MIDDAY',
+          activity: 'Vegetarian lunch and rest',
+        },
+        {
+          time: '3:00 – 5:00 PM',
+          phase: 'AFTERNOON',
+          activity: 'Nila River boat safari: mindful nature experience, subject to weather and safe operating conditions',
+        },
+        {
+          time: '5:30 – 6:15 PM',
+          phase: 'EVENING',
+          activity: 'Reflection circle: gratitude, connection and insights from the day',
+        },
+        {
+          time: '7:00 PM',
+          phase: 'EVENING',
+          activity: 'Vegetarian dinner',
+        },
+        {
+          time: '8:15 – 8:45 PM',
+          phase: 'NIGHT',
+          activity: 'Restorative relaxation / Yoga Nidra',
+        },
+      ],
+      timingNote: 'Dec 19 · Full Retreat Day · 6:30 AM to 8:45 PM (Sample schedule)',
+    },
+    {
+      day: 4,
+      tabLabel: 'Integration',
+      title: 'Integration & Closing',
+      subtitle: 'Morning meditation, yoga, optional ice bath & closing circle',
+      narrative:
+        'A calm concluding morning of quiet meditation, intention setting, closing yoga, and an optional guided ice bath session before breakfast, followed by an integration workshop to build a simple personal wellness routine, optional closing sharing, and lunch before departure.',
+      featuredPills: [
+        'Quiet Morning Meditation',
+        'Closing Yoga & Breath',
+        'Optional Morning Ice Bath',
+        'Integration & Closing Circle',
+      ],
+      schedule: [
+        {
+          time: '6:30 – 7:00 AM',
+          phase: 'MORNING',
+          activity: 'Quiet meditation and intention setting',
+        },
+        {
+          time: '7:00 – 8:00 AM',
+          phase: 'MORNING',
+          activity: 'Closing yoga and breath practice',
+        },
+        {
+          time: '8:00 – 8:30 AM',
+          phase: 'MORNING',
+          activity: 'Optional guided ice bath session (mindful cold immersion, subject to personal comfort)',
+        },
+        {
+          time: '8:30 – 9:15 AM',
+          phase: 'MORNING',
+          activity: 'Vegetarian breakfast',
+        },
+        {
+          time: '9:30 – 10:45 AM',
+          phase: 'LATE MORNING',
+          activity: 'Integration workshop: identifying helpful habits and creating a simple personal wellness routine',
+        },
+        {
+          time: '10:45 – 11:30 AM',
+          phase: 'LATE MORNING',
+          activity: 'Closing circle, sharing (optional) and feedback',
+        },
+        {
+          time: '12:00 PM',
+          phase: 'MIDDAY',
+          activity: 'Vegetarian lunch, check-out and departure',
+        },
+      ],
+      timingNote: 'Dec 20 · Closing Day · 6:30 AM to 12:00 PM (Sample schedule)',
     },
   ],
 }
@@ -237,17 +427,15 @@ export const investment = {
   clarityNote:
     'Provisional price: ₹9,999 per person — subject to organiser confirmation. No payment or deposit is required at this stage.',
   inclusions: [
-    'Twin-sharing accommodation — two guests per room (planned)',
-    'Vegetarian meals as part of the planned retreat experience (arrangements to be confirmed)',
-    'Guided Classical Yoga sessions',
-    'Guided Pranayama breathwork sessions',
-    'Restorative Yoga Nidra sessions',
-    'Morning Meditation sessions',
-    'Cognitive exercises & mindfulness reflection',
-    'Guided village walking tour',
+    '3 nights twin-sharing accommodation — two guests per room (Dec 17–20)',
+    'Vegetarian meals & drinking water (final catering arrangements to be confirmed)',
+    'All scheduled yoga, pranayama, meditation and Yoga Nidra sessions',
+    'Facilitated mindfulness, cognitive reflection & guided journaling activities',
+    'Simple take-home wellness routine and participant reflection sheet',
+    'Mindful nature walk and sensory grounding',
   ],
   inclusionNotice:
-    'Note: Temple visits (Kottiyoor Temple & Tirunelli Temple), pooja arrangements, traditional arts performances (flute music, Bharatanatyam, Mohiniyattam), artist fees, and transport arrangements are proposed experiences currently under organiser review. They are not confirmed inclusions within the provisional ₹9,999 package fee until formally confirmed by the organiser.',
+    'Note: Temple visits (including proposed Kottiyoor & Tirunelli visits), pooja arrangements, Nila River boat safari (strictly subject to permissions, weather & licensed safe boat operation), traditional arts performances (flute music, Bharatanatyam, Mohiniyattam), and station pickup transport are subject to operational confirmation prior to booking.',
   participation: {
     ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
     couplesNote: 'Couples may join.',
@@ -264,15 +452,15 @@ export const compactFaqs = [
     a: 'No previous experience is needed. All yoga and breath sessions are foundational, gentle, and 100% voluntary. You are always welcome to participate at your own comfort level.',
   },
   {
-    q: 'When will the exact dates and venue be confirmed?',
-    a: 'Dates and programme duration are to be confirmed by the organiser. The client-supplied details (December 17–19 / four-day trip) are currently under operational review. Confirmed dates and Kerala venue details will be shared once finalised.',
+    q: 'What are the retreat dates and when will the venue be confirmed?',
+    a: 'The retreat is confirmed for December 17–20 (4 days / 3 nights, 2:00 PM check-in on Dec 17 through 12:00 PM departure on Dec 20). Exact venue details in Kerala, facilitators and operational timings will be confirmed by the organiser prior to booking.',
   },
   {
     q: 'What are the stay and meal arrangements?',
-    a: 'Accommodation is on a twin-sharing basis (two guests per room) in Kerala, India. Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
+    a: 'Accommodation is on a twin-sharing basis (two guests per room) for 3 nights in Kerala, India. Vegetarian meals and drinking water are planned as part of the retreat, with final arrangements confirmed by the organiser.',
   },
   {
-    q: 'Are the temple visits and cultural performances included?',
-    a: 'Proposed visits to Kottiyoor Temple and Tirunelli Temple, as well as classical flute and dance performances (Bharatanatyam / Mohiniyattam), are currently under operational review regarding travel feasibility and artist availability. Their inclusion status within the retreat package will be confirmed by the organiser prior to booking.',
+    q: 'Are the temple visits, Nila River boat safari and cultural performances included?',
+    a: 'Temple visits (subject to local customs and timings), the Nila River boat safari (subject to weather, permissions and safe operating conditions), and classical performances (flute, Bharatanatyam / Mohiniyattam) are subject to operational feasibility and artist availability prior to confirmation.',
   },
 ]

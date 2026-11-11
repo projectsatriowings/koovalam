@@ -6,7 +6,7 @@
 /* ── Section Header Editorial Pattern ── */
 .section-head-travel {
   max-width: var(--max-reading);
-  margin: 0 auto clamp(36px, 6vw, 64px);
+  margin: 0 auto clamp(24px, 3.8vw, 36px);
 }
 
 .section-head-travel.text-center {
@@ -30,18 +30,24 @@
 .travel-heading {
   font-family: var(--font-head);
   font-size: clamp(2.2rem, 4.8vw, 3.4rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.14;
   color: var(--deep-forest);
   margin: 0 0 16px;
   letter-spacing: -0.015em;
 }
 
-.travel-heading .serif-italic,
+.travel-heading .serif-italic {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--deep-forest);
+}
+
+.hero-travel-title .title-serif-italic,
 .title-serif-italic {
   font-style: italic;
-  font-weight: 400;
-  color: var(--deep-forest);
+  font-weight: 700;
+  color: var(--warm-ivory);
 }
 
 .travel-lede {
@@ -552,9 +558,10 @@
 .hero-travel-title {
   font-family: var(--font-head);
   font-size: clamp(2.8rem, 6.8vw, 5.2rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.06;
   color: var(--warm-ivory);
+  text-shadow: 0 2px 18px rgba(10, 26, 19, 0.48);
   margin: 0 0 16px;
   letter-spacing: -0.02em;
 }
@@ -684,23 +691,17 @@
   }
 }
 
-/* ── Section 02: The Experience ── */
-.section-experience {
-  padding: clamp(64px, 9vw, 110px) 0;
-  background: var(--warm-ivory);
-}
-
 /* ── Section 02: The Experience (Organised Categories) ── */
 .section-experience {
-  padding: clamp(64px, 9vw, 110px) 0;
+  padding: clamp(36px, 4.5vw, 52px) 0;
   background: var(--warm-ivory);
 }
 
 .experience-categories-container {
   display: flex;
   flex-direction: column;
-  gap: clamp(48px, 6vw, 72px);
-  margin-bottom: clamp(48px, 7vw, 72px);
+  gap: clamp(28px, 4vw, 44px);
+  margin-bottom: clamp(24px, 3.5vw, 36px);
 }
 
 .experience-category-group {
@@ -728,6 +729,7 @@
 .category-group-title {
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 6px;
 }
@@ -830,6 +832,7 @@
 .experience-card-title {
   font-family: var(--font-head);
   font-size: 1.45rem;
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 10px;
   line-height: 1.25;
@@ -883,6 +886,7 @@
 .conversion-bar-title {
   font-family: var(--font-head);
   font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 6px;
 }
@@ -902,7 +906,7 @@
 
 /* ── Section 03: Itinerary ── */
 .section-itinerary {
-  padding: clamp(64px, 9vw, 110px) 0;
+  padding: clamp(36px, 4.5vw, 52px) 0;
   background: #FFFFFF;
 }
 
@@ -912,7 +916,7 @@
   align-items: stretch;
   gap: clamp(20px, 3.5vw, 36px);
   max-width: 1040px;
-  margin: 0 auto clamp(32px, 5vw, 48px);
+  margin: 0 auto clamp(20px, 3vw, 28px);
   padding: clamp(16px, 2.5vw, 24px) clamp(18px, 3vw, 28px);
   background: var(--warm-ivory);
   border: 1px solid rgba(161, 132, 77, 0.24);
@@ -972,8 +976,8 @@
   display: flex;
   justify-content: center;
   gap: clamp(8px, 1.5vw, 16px);
-  max-width: 820px;
-  margin: 0 auto clamp(32px, 5vw, 48px);
+  max-width: 900px;
+  margin: 0 auto clamp(20px, 3vw, 28px);
 }
 
 .itinerary-nav-tab {
@@ -1031,7 +1035,7 @@
   gap: clamp(32px, 5vw, 64px);
   align-items: start;
   max-width: 1040px;
-  margin: 0 auto clamp(48px, 7vw, 72px);
+  margin: 0 auto clamp(28px, 4vw, 40px);
 }
 
 .spread-narrative-col {
@@ -1069,6 +1073,7 @@
 .spread-main-title {
   font-family: var(--font-head);
   font-size: clamp(1.85rem, 3.2vw, 2.45rem);
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 6px;
   line-height: 1.2;
@@ -1189,18 +1194,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: right center;
+  transform: scale(1.14);
+  transform-origin: 88% 22%;
   display: block;
   transition: transform 0.6s ease;
 }
 
 .spread-image-card:hover .spread-img {
-  transform: scale(1.03);
+  transform: scale(1.17);
 }
 
 .spread-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(17,24,16,0) 35%, rgba(17,24,16,0.85) 100%);
+  background: linear-gradient(180deg, rgba(17,24,16,0) 38%, rgba(17,24,16,0.88) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1268,18 +1276,19 @@
 .itinerary-proposed-section {
   max-width: 1040px;
   margin: 0 auto;
-  padding-top: clamp(36px, 5vw, 52px);
+  padding-top: clamp(24px, 3.5vw, 34px);
   border-top: 1px solid rgba(161, 132, 77, 0.22);
 }
 
 .proposed-section-head {
   text-align: center;
-  margin-bottom: clamp(24px, 4vw, 36px);
+  margin-bottom: clamp(18px, 2.5vw, 24px);
 }
 
 .proposed-section-title {
   font-family: var(--font-head);
   font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 6px 0 10px;
 }
@@ -1319,7 +1328,7 @@
   font-size: 1.12rem;
   color: var(--deep-forest);
   margin: 0 0 8px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -1360,8 +1369,17 @@
 
 @media (max-width: 640px) {
   .itinerary-day-nav {
-    flex-direction: column;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .itinerary-nav-tab {
+    justify-content: center;
+    padding: 12px 10px;
+  }
+  .nav-tab-label {
+    font-size: 0.92rem;
+    line-height: 1.25;
   }
   .proposed-highlights-row {
     grid-template-columns: 1fr;
@@ -1375,13 +1393,13 @@
 }
 
 .section-stay-travel {
-  padding: clamp(64px, 9vw, 110px) 0;
+  padding: clamp(36px, 4.5vw, 52px) 0;
   background: var(--soft-sand);
 }
 
 /* ── Section 04: Real Resort Photography & Stay Details ── */
 .stay-gallery-wrapper {
-  margin-bottom: clamp(36px, 5vw, 56px);
+  margin-bottom: clamp(24px, 3.5vw, 34px);
 }
 
 .gallery-asymmetric-grid {
@@ -1489,7 +1507,7 @@
 .gallery-item-title {
   font-family: var(--font-head);
   font-size: clamp(1.15rem, 1.8vw, 1.45rem);
-  font-weight: 500;
+  font-weight: 700;
   color: #FFFFFF;
   margin: 0 0 4px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
@@ -1498,7 +1516,7 @@
 .gallery-item-subtitle {
   font-family: var(--font-head);
   font-size: clamp(0.95rem, 1.3vw, 1.15rem);
-  font-weight: 500;
+  font-weight: 700;
   color: #FFFFFF;
   margin: 0 0 4px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
@@ -1847,6 +1865,7 @@
 .card-title {
   font-family: var(--font-head);
   font-size: 1.45rem;
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 4px;
 }
@@ -1894,7 +1913,7 @@
 
 /* ── Section 05: Price & Participation ── */
 .section-price-participation {
-  padding: clamp(64px, 9vw, 110px) 0;
+  padding: clamp(36px, 4.5vw, 52px) 0;
   background: var(--warm-ivory);
 }
 
@@ -1902,7 +1921,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(24px, 4vw, 40px);
-  margin-bottom: clamp(48px, 7vw, 72px);
+  margin-bottom: clamp(28px, 4vw, 40px);
 }
 
 .investment-pricing-card {
@@ -1976,6 +1995,7 @@
 .inclusions-title {
   font-family: var(--font-head);
   font-size: 1.25rem;
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 14px;
 }
@@ -2041,6 +2061,7 @@
 .advisory-title {
   font-family: var(--font-head);
   font-size: 1.18rem;
+  font-weight: 700;
   color: var(--muted-terracotta);
   margin: 0 0 4px;
 }
@@ -2062,6 +2083,7 @@
 .criteria-heading {
   font-family: var(--font-head);
   font-size: 1.35rem;
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 16px;
 }
@@ -2139,6 +2161,7 @@
 .compact-faq-title {
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 6px;
 }
@@ -2221,7 +2244,7 @@
 }
 
 .section-enquiry-travel {
-  padding: clamp(64px, 9vw, 110px) 0;
+  padding: clamp(36px, 4.5vw, 52px) 0;
   background: #FFFFFF;
 }
 
@@ -2633,14 +2656,14 @@
 .travel-footer {
   background: var(--dark-evergreen);
   color: var(--warm-ivory);
-  padding: clamp(60px, 8vw, 90px) 0 36px;
+  padding: clamp(40px, 5vw, 56px) 0 28px;
 }
 
 .footer-main-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
   gap: clamp(28px, 4vw, 48px);
-  margin-bottom: clamp(36px, 6vw, 56px);
+  margin-bottom: clamp(24px, 4vw, 34px);
 }
 
 .footer-brand-col {
