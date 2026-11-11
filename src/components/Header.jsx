@@ -164,7 +164,7 @@ export default function Header() {
             if (open) closeDrawer()
           }}
         >
-          <Logo light={isLight} size={42} />
+          <Logo light={isLight} size={60} className="header-logo" />
         </a>
 
         {/* Primary Navigation / Mobile Drawer */}

@@ -2,6 +2,7 @@ import { experienceCategories } from '../data/retreat.js'
 import ImageSlot from './ImageSlot.jsx'
 import { LeafMark } from './Logo.jsx'
 import PracticeShowcase from './practices/PracticeShowcase.jsx'
+import SacredTemples from './temples/SacredTemples.jsx'
 import { track } from '../lib/analytics.js'
 
 export default function Experience() {
@@ -28,6 +29,9 @@ export default function Experience() {
           {experienceCategories.map((cat, catIdx) => {
             if (cat.id === 'practices') {
               return <PracticeShowcase key={cat.id} />
+            }
+            if (cat.id === 'temples') {
+              return <SacredTemples key={cat.id} category={cat} />
             }
             return (
               <div key={cat.id} className="experience-category-group">
