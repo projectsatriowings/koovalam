@@ -77,8 +77,8 @@ export const experienceCategories = [
           {
             slot: 'ikkare',
             image: 'kottiyoor-ikkare',
-            label: 'Ikkare Shrine',
-            captionTitle: 'Ikkare Kottiyoor Shrine',
+            label: 'Permanent Shrine',
+            captionTitle: 'Permanent Laterite & Timber Shrine',
             location: 'Kannur · Laterite & Timber Sanctuary',
           },
           {
@@ -91,17 +91,17 @@ export const experienceCategories = [
           {
             slot: 'akkare',
             image: 'kottiyoor-akkare',
-            label: 'Akkare Riverside',
-            captionTitle: 'Akkare Riverside Sanctuary',
+            label: 'Bavali Riverside',
+            captionTitle: 'Bavali Riverside Sanctuary',
             location: 'Kannur · Bavali Stream & Western Ghats',
           },
         ],
         representativeImage: false,
         summary:
-          'A significant Shiva pilgrimage destination set amidst the serene forests of the Western Ghats in Kannur. Encompassing the permanent timber-and-laterite Ikkare shrine, its forest canopy walkway, and the riverside Akkare sanctuary, it invites peaceful presence.',
+          'A significant Shiva pilgrimage destination set amidst the serene forests of the Western Ghats in Kannur. Encompassing the permanent timber-and-laterite shrine, its forest canopy walkway, and the sacred grove along the Bavali river, it invites peaceful presence.',
         highlight: 'Historic Shiva pilgrimage · Subject to temple calendar & organiser confirmation',
         meta: [
-          { label: 'Sanctuary & Setting', value: 'Ikkare shrine & Akkare riverside forest grove' },
+          { label: 'Sanctuary & Setting', value: 'Permanent shrine & Bavali riverside forest grove' },
           { label: 'Visiting Scope', value: 'Seasonal temple calendar & organiser confirmation' },
         ],
       },
@@ -327,14 +327,15 @@ export const itineraryData = {
       day: 2,
       tabLabel: 'Body & Breath',
       title: 'Body, Breath & Inner Awareness',
-      subtitle: 'Morning meditation, mindfulness practices & sensory nature walk',
+      subtitle: 'Morning meditation, mindfulness practices & evening flute sound healing',
       narrative:
-        'Begin at 6:30 AM with silent sitting, mobility yoga, and pranayama, followed by breakfast, reflective mindfulness & journaling exercises, midday rest, an afternoon sensory nature walk, and evening Yoga Nidra.',
+        'Begin at 6:30 AM with silent sitting, mobility yoga, and pranayama, followed by breakfast, reflective mindfulness & journaling exercises, midday rest, an afternoon sensory nature walk, evening Yoga Nidra, and a closing classical flute performance.',
       featuredPills: [
         'Morning Meditation & Yoga',
         'Cognitive Mindfulness',
         'Guided Journaling',
         'Sensory Nature Walk',
+        'Classical Flute Sound Healing',
       ],
       schedule: [
         {
@@ -392,8 +393,13 @@ export const itineraryData = {
           phase: 'NIGHT',
           activity: 'Yoga Nidra: guided conscious rest',
         },
+        {
+          time: '8:45 – 9:45 PM',
+          phase: 'NIGHT',
+          activity: 'Flute performance: classical flute music & sound healing meditation',
+        },
       ],
-      timingNote: 'Dec 18 · Full Retreat Day · 6:30 AM to 8:45 PM (Sample schedule)',
+      timingNote: 'Dec 18 · Full Retreat Day · 6:30 AM to 9:45 PM (Sample schedule)',
     },
     {
       day: 3,
@@ -461,53 +467,53 @@ export const itineraryData = {
       day: 4,
       tabLabel: 'Integration',
       title: 'Integration & Closing',
-      subtitle: 'Morning meditation, yoga, optional ice bath & closing circle',
+      subtitle: 'Optional ice bath, quiet meditation, closing yoga & departure lunch',
       narrative:
-        'A calm concluding morning of quiet meditation, intention setting, closing yoga, and an optional guided ice bath session before breakfast, followed by an integration workshop to build a simple personal wellness routine, optional closing sharing, and lunch before departure.',
+        'Begin at 6:00 AM with an optional guided ice bath, quiet meditation & intention setting, and closing yoga before breakfast, followed by an integration workshop to build a simple personal wellness routine, closing circle, and farewell lunch prior to check-out at 12:30 PM.',
       featuredPills: [
+        'Optional Morning Ice Bath',
         'Quiet Morning Meditation',
         'Closing Yoga & Breath',
-        'Optional Morning Ice Bath',
         'Integration & Closing Circle',
       ],
       schedule: [
         {
-          time: '6:30 – 7:00 AM',
+          time: '6:00 – 6:30 AM',
+          phase: 'EARLY MORNING',
+          activity: 'Ice bath session (optional mindful cold immersion, subject to personal comfort)',
+        },
+        {
+          time: '6:30 – 7:30 AM',
           phase: 'MORNING',
           activity: 'Quiet meditation and intention setting',
         },
         {
-          time: '7:00 – 8:00 AM',
+          time: '7:30 – 8:30 AM',
           phase: 'MORNING',
           activity: 'Closing yoga and breath practice',
         },
         {
-          time: '8:00 – 8:30 AM',
-          phase: 'MORNING',
-          activity: 'Optional guided ice bath session (mindful cold immersion, subject to personal comfort)',
-        },
-        {
-          time: '8:30 – 9:15 AM',
+          time: '8:30 – 9:30 AM',
           phase: 'MORNING',
           activity: 'Vegetarian breakfast',
         },
         {
-          time: '9:30 – 10:45 AM',
+          time: '10:00 – 11:15 AM',
           phase: 'LATE MORNING',
           activity: 'Integration workshop: identifying helpful habits and creating a simple personal wellness routine',
         },
         {
-          time: '10:45 – 11:30 AM',
+          time: '11:15 AM – 12:00 PM',
           phase: 'LATE MORNING',
           activity: 'Closing circle, sharing (optional) and feedback',
         },
         {
-          time: '12:00 PM',
+          time: '12:30 PM',
           phase: 'MIDDAY',
           activity: 'Vegetarian lunch, check-out and departure',
         },
       ],
-      timingNote: 'Dec 20 · Closing Day · 6:30 AM to 12:00 PM (Sample schedule)',
+      timingNote: 'Dec 20 · Closing Day · 6:00 AM to 12:30 PM (Sample schedule)',
     },
   ],
 }
@@ -569,7 +575,7 @@ export const compactFaqs = [
   },
   {
     q: 'What are the retreat dates and when will the venue be confirmed?',
-    a: 'The retreat is confirmed for December 17–20 (4 days / 3 nights, 2:00 PM check-in on Dec 17 through 12:00 PM departure on Dec 20). Exact venue details in Kerala, facilitators and operational timings will be confirmed by the organiser prior to booking.',
+    a: 'The retreat is confirmed for December 17–20 (4 days / 3 nights, 2:00 PM check-in on Dec 17 through 12:30 PM departure on Dec 20). Exact venue details in Kerala, facilitators and operational timings will be confirmed by the organiser prior to booking.',
   },
   {
     q: 'What are the stay and meal arrangements?',

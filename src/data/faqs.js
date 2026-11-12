@@ -17,7 +17,7 @@ export const faqCategories = [
       },
       {
         q: 'How long is the retreat?',
-        a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:00 PM on Day 01 and concluding after our closing circle and lunch around 12:00 PM on Day 04.',
+        a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:00 PM on Day 01 and concluding after our closing circle and lunch from 12:30 PM on Day 04.',
       },
       {
         q: 'When will the exact venue be announced?',
@@ -41,7 +41,7 @@ export const faqCategories = [
       },
       {
         q: 'Which meals are included?',
-        a: 'Meals are included according to the retreat itinerary: welcome drink and dinner on arrival Day 01 (check-in from 2:00 PM); breakfast, lunch, and dinner on Days 02 and 03; and breakfast and lunch prior to departure on Day 04 (~12:00 PM). Drinking water is provided throughout.',
+        a: 'Meals are included according to the retreat itinerary: welcome drink and dinner on arrival Day 01 (check-in from 2:00 PM); breakfast, lunch, and dinner on Days 02 and 03; and breakfast and lunch prior to departure on Day 04 (12:30 PM). Drinking water is provided throughout.',
       },
       {
         q: 'Can dietary requirements and allergies be communicated in advance?',
@@ -129,7 +129,7 @@ export const faqCategories = [
       },
       {
         q: 'What are the arrival and departure timings?',
-        a: 'Check-in, welcome drinks, and settling in commence from 2:00 PM on Day 01, with our opening circle at 3:30 PM. The retreat concludes after our closing circle and farewell lunch around 12:00 PM on Day 04.',
+        a: 'Check-in, welcome drinks, and settling in commence from 2:00 PM on Day 01, with our opening circle at 3:30 PM. The retreat concludes after our closing circle and farewell lunch from 12:30 PM on Day 04.',
       },
       {
         q: 'What personal arrangements should guests make?',
