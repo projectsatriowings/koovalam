@@ -1,6 +1,7 @@
 import { LeafMark } from '../Logo.jsx'
+import WhatsAppIcon from '../WhatsAppIcon.jsx'
 import { REASSURANCE_PANEL_CONTENT } from '../../data/enquiryOptions.js'
-import { site, isWhatsAppConfigured, isEmailConfigured } from '../../config/site.js'
+import { site, buildWhatsAppLink, isEmailConfigured } from '../../config/site.js'
 import { track } from '../../lib/analytics.js'
 import styles from './EnquiryForm.module.css'
 
@@ -9,11 +10,7 @@ import styles from './EnquiryForm.module.css'
  * Collapses into a compact green header block with 2x2 chips on tablet/mobile.
  */
 export default function ReassurancePanel() {
-  const prefilledWhatsAppHref = isWhatsAppConfigured
-    ? `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-        site.whatsappMessage || 'Hi, I would like to enquire about the Koovalam Kerala Retreat.'
-      )}`
-    : null
+  const prefilledWhatsAppHref = buildWhatsAppLink()
 
   const fallbackEmailHref = isEmailConfigured
     ? `mailto:${site.email}?subject=${encodeURIComponent(
@@ -80,23 +77,11 @@ export default function ReassurancePanel() {
             <a
               href={prefilledWhatsAppHref}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className={styles.waDirectBtn}
               onClick={() => track('enquiry_panel_whatsapp_click')}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-              </svg>
+              <WhatsAppIcon size={17} />
               <span>Prefer WhatsApp? Message us directly</span>
             </a>
           ) : (

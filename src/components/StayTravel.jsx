@@ -161,8 +161,8 @@ export default function StayTravel() {
           <article className="stay-travel-card">
             <div className="card-media">
               <img
-                src="images/safe-care.jpg"
-                alt="Kerala travel and arrival coordination"
+                src="images/pickup-transport.jpg"
+                alt="Arrival pickup SUV waiting outside a palm-lined Kerala railway station portico"
                 className="stay-media-slot"
                 loading="lazy"
               />

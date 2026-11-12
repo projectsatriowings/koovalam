@@ -9,6 +9,7 @@ import PriceParticipation from './components/PriceParticipation.jsx'
 import EnquirySection from './components/EnquirySection.jsx'
 import Footer from './components/Footer.jsx'
 import StickyCta from './components/StickyCta.jsx'
+import FloatingWhatsApp from './components/FloatingWhatsApp.jsx'
 
 /**
  * KOOVALAM — Master Boutique Kerala Retreat Experience
@@ -56,6 +57,7 @@ export default function App() {
       </main>
       <Footer />
       <StickyCta />
+      <FloatingWhatsApp />
     </>
   )
 }

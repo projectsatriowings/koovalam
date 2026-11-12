@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { LeafMark } from '../Logo.jsx'
-import { site, isWhatsAppConfigured, isEmailConfigured } from '../../config/site.js'
+import { site, buildWhatsAppLink, isEmailConfigured } from '../../config/site.js'
 import { track } from '../../lib/analytics.js'
 import styles from './EnquiryForm.module.css'
 
@@ -37,9 +37,7 @@ export default function SuccessState({
     .filter(Boolean)
     .join('\n')
 
-  const waHref = isWhatsAppConfigured
-    ? `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(prefillSummary)}`
-    : null
+  const waHref = buildWhatsAppLink(prefillSummary)
 
   const emailHref = isEmailConfigured
     ? `mailto:${site.email}?subject=${encodeURIComponent(

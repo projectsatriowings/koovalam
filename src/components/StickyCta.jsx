@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { track } from '../lib/analytics.js'
 
 export default function StickyCta() {
   const [show, setShow] = useState(false)
+  const barRef = useRef(null)
 
   useEffect(() => {
     const hero = document.getElementById('top')
@@ -36,8 +37,28 @@ export default function StickyCta() {
     return () => io.disconnect()
   }, [])
 
+  useEffect(() => {
+    const syncOffset = () => {
+      const root = document.documentElement
+      if (!show || window.innerWidth > 960 || !barRef.current) {
+        root.style.setProperty('--sticky-cta-offset', '0px')
+        return
+      }
+      const height = Math.ceil(barRef.current.getBoundingClientRect().height)
+      root.style.setProperty('--sticky-cta-offset', `${height}px`)
+    }
+
+    syncOffset()
+    window.addEventListener('resize', syncOffset)
+    return () => {
+      window.removeEventListener('resize', syncOffset)
+      document.documentElement.style.setProperty('--sticky-cta-offset', '0px')
+    }
+  }, [show])
+
   return (
     <aside
+      ref={barRef}
       className={`travel-sticky-bar ${show ? 'visible' : ''}`}
       aria-hidden={!show}
       aria-label="Quick retreat enquiry actions"

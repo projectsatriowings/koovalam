@@ -12,7 +12,7 @@ import styles from './Practices.module.css'
 
 const DESKTOP_QUERY = '(min-width: 960px)'
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
-const AUTO_ADVANCE_MS = 6500
+const AUTO_ADVANCE_MS = 4000
 
 function useMediaMatch(query, defaultValue) {
   const [matches, setMatches] = useState(() =>

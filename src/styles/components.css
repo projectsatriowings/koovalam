@@ -2339,6 +2339,116 @@
   }
 }
 
+/* ── Persistent Floating WhatsApp Enquiry Button ── */
+@keyframes waFloatBob {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+@keyframes waPulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.42;
+  }
+  70% {
+    transform: scale(1.34);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.34);
+    opacity: 0;
+  }
+}
+
+.floating-wa-btn {
+  position: fixed;
+  right: clamp(16px, 2.5vw, 28px);
+  bottom: calc(22px + var(--sticky-cta-offset, 0px));
+  z-index: 96;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #25D366 0%, #169B49 100%);
+  border: 2.5px solid rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 12px 28px rgba(16, 44, 36, 0.26),
+    0 4px 10px rgba(0, 0, 0, 0.14);
+  color: #FFFFFF;
+  text-decoration: none;
+  animation: waFloatBob 3.2s ease-in-out infinite;
+  will-change: transform;
+  transition:
+    bottom 0.3s var(--ease),
+    opacity 0.25s var(--ease),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.floating-wa-btn::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.55);
+  pointer-events: none;
+  animation: waPulseRing 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.floating-wa-btn.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+  transform: translate3d(0, 14px, 0);
+}
+
+.floating-wa-btn.is-hidden::after {
+  animation: none;
+}
+
+.floating-wa-btn:hover {
+  animation-play-state: paused;
+  background: linear-gradient(145deg, #28DC6C 0%, #138B40 100%);
+  color: #FFFFFF;
+  box-shadow:
+    0 16px 34px rgba(16, 44, 36, 0.32),
+    0 6px 14px rgba(22, 155, 73, 0.3);
+}
+
+.floating-wa-btn:hover::after {
+  animation: none;
+  opacity: 0;
+}
+
+.floating-wa-btn:focus-visible {
+  outline: 2px solid var(--deep-forest);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .floating-wa-btn {
+    width: 56px;
+    height: 56px;
+  }
+  .floating-wa-btn svg {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-wa-btn,
+  .floating-wa-btn::after {
+    animation: none;
+  }
+}
+
 /* ── Refined Travel Footer ── */
 .travel-footer {
   background: var(--dark-evergreen);
@@ -2461,10 +2571,31 @@
 }
 
 .footer-wa-link {
-  font-size: 0.84rem;
-  color: var(--antique-brass);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  background: #1B7A46;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-wa-link:hover {
+  background: #156338;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+}
+
+.footer-wa-link:focus-visible {
+  outline: 2px solid #E8D7AD;
+  outline-offset: 3px;
 }
 
 .footer-divider-line {

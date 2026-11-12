@@ -1,10 +1,11 @@
 import Logo from './Logo.jsx'
+import WhatsAppIcon from './WhatsAppIcon.jsx'
 import {
   site,
   whatsappLink,
-  isEmailConfigured,
   isWhatsAppConfigured,
 } from '../config/site.js'
+import { track } from '../lib/analytics.js'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -110,10 +111,12 @@ export default function Footer() {
                 <a
                   href={whatsappLink}
                   target="_blank"
-                  rel="noreferrer"
-                  className="footer-wa-link"
+                  rel="noopener noreferrer"
+                  className="btn btn-sm footer-wa-link"
+                  onClick={() => track('footer_whatsapp_click')}
                 >
-                  WhatsApp Organiser
+                  <WhatsAppIcon size={16} />
+                  <span>WhatsApp ({site.whatsappDisplay})</span>
                 </a>
               )}
             </div>

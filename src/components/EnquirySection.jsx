@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { site, isWhatsAppConfigured, isEmailConfigured } from '../config/site.js'
+import { site, buildWhatsAppLink, isEmailConfigured } from '../config/site.js'
 import {
   PARTICIPANT_OPTIONS,
   PICKUP_OPTIONS,
@@ -274,9 +274,7 @@ export default function EnquirySection() {
     .filter(Boolean)
     .join('\n')
 
-  const errorWhatsAppHref = isWhatsAppConfigured
-    ? `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(recoveryMessage)}`
-    : null
+  const errorWhatsAppHref = buildWhatsAppLink(recoveryMessage)
 
   const errorEmailHref = isEmailConfigured
     ? `mailto:${site.email}?subject=${encodeURIComponent(

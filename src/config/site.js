@@ -6,13 +6,13 @@ export const site = {
   wordmark: 'KOOVALAM',
   tagline: 'Rooted in Nature. Connected to Soul.',
   secondaryTagline: 'Reconnect with Nature. Rediscover Yourself.',
-  // Verified organiser contact email
+  // Verified organiser WhatsApp & contact email
   email: 'info.koovalam@gmail.com',
-  // PLACEHOLDER — replace with the real WhatsApp number (country code, digits
-  // only, no "+" or spaces) before launch. The wa.me link uses this value.
-  whatsappNumber: '91XXXXXXXXXX',
+  // Real WhatsApp number (country code, digits only, no "+" or spaces) for wa.me links
+  whatsappNumber: '917358400296',
+  whatsappDisplay: '+91 73584 00296',
   whatsappMessage:
-    "Hi, I would like to enquire about the Koovalam Kerala Retreat.",
+    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 17–20, Kerala). Could you please share room availability and next steps?',
   // Functional backend email enquiry endpoint (served by api/enquire.js and dev middleware)
   formEndpoint: '/api/enquire',
   retreat: {
@@ -66,6 +66,12 @@ export const isFormConfigured = Boolean(
 export const isContactConfigured =
   isWhatsAppConfigured || isEmailConfigured || isFormConfigured
 
-export const whatsappLink = isWhatsAppConfigured
-  ? `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`
-  : null
+export function buildWhatsAppLink(message = site.whatsappMessage) {
+  if (!isWhatsAppConfigured) return null
+  const text =
+    message ||
+    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 17–20, Kerala).'
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(text)}`
+}
+
+export const whatsappLink = buildWhatsAppLink()
