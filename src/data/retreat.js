@@ -61,10 +61,10 @@ export const experienceCategories = [
   },
   {
     id: 'temples',
-    categoryName: 'Sacred Temple Visits',
-    categoryTag: 'Spiritual Heritage · Contemplative Quiet',
+    categoryName: 'Sacred Temples & Nila River Safari',
+    categoryTag: 'Spiritual Heritage · Mindful River Excursion',
     categoryDesc:
-      'Proposed visits to two historic Kerala pilgrimage sites. Experienced respectfully with quiet contemplation. Access to specific shrines, festivals, or rituals is subject to organiser confirmation and temple customs.',
+      'Proposed visits to two historic Kerala pilgrimage sites alongside a calm afternoon boat drift along the Bharathapuzha (Nila) river. Experienced respectfully with quiet contemplation, subject to organiser confirmation, weather, and safe boat operation.',
     items: [
       {
         id: 'kottiyoor-temple',
@@ -137,6 +137,41 @@ export const experienceCategories = [
         meta: [
           { label: 'Heritage', value: 'Ancient stone shrine & ancestral-rite traditions' },
           { label: 'Participation', value: 'Historical contemplation · No spiritual outcomes guaranteed' },
+        ],
+      },
+      {
+        id: 'nila-river-safari',
+        title: 'Nila River Boat Safari',
+        tag: 'Bharathapuzha Basin · Afternoon Excursion',
+        kicker: 'Bharathapuzha · Mindful River Excursion',
+        pillLabel: 'Nila River · Palm-Lined Banks',
+        image: 'nila-safari-cruise',
+        galleryLayout: 'landscape-top',
+        gallery: [
+          {
+            slot: 'river-cruise',
+            image: 'nila-safari-cruise',
+            label: 'Sunset River Cruise',
+            hasBadge: true,
+          },
+          {
+            slot: 'river-vallam',
+            image: 'nila-country-boat',
+            label: 'Traditional Country Boat',
+          },
+          {
+            slot: 'river-banks',
+            image: 'nila-palm-banks',
+            label: 'Palm-Lined Nila Waters',
+          },
+        ],
+        representativeImage: true,
+        summary:
+          'An unhurried afternoon boat drift along the historic Bharathapuzha (Nila) river, gliding past coconut-palm banks and calm waters in quiet reflection—conducted with licensed operators and mandatory life jackets.',
+        highlight: 'Mindful afternoon river drift · Subject to weather, permissions & safe boat operation',
+        meta: [
+          { label: 'Excursion & Safety', value: 'Calm river cruise · Licensed boat operator & life jackets' },
+          { label: 'Operating Scope', value: 'Day 03 afternoon · Subject to weather & water conditions' },
         ],
       },
     ],

@@ -20,7 +20,7 @@ export default function Experience() {
             <span className="serif-italic">Nature, Wellness &amp; Spirituality.</span>
           </h2>
           <p className="travel-lede">
-            Rooted in the traditional wisdom of Kerala, this retreat brings together gentle yoga, pranayama, meditation, Yoga Nidra, sacred temple visits, and calm nature immersion — every session voluntary and guided with care.
+            Rooted in the traditional wisdom of Kerala, this retreat brings together gentle yoga, pranayama, meditation, Yoga Nidra, sacred temple visits, the mindful Nila River boat safari, and calm nature immersion — every session voluntary and guided with care.
           </p>
         </div>
 

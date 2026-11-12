@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import BrandPhilosophy from './components/brand/BrandPhilosophy.jsx'
@@ -7,6 +7,7 @@ import Itinerary from './components/Itinerary.jsx'
 import StayTravel from './components/StayTravel.jsx'
 import PriceParticipation from './components/PriceParticipation.jsx'
 import EnquirySection from './components/EnquirySection.jsx'
+import EnquiryModal from './components/form/EnquiryModal.jsx'
 import Footer from './components/Footer.jsx'
 import StickyCta from './components/StickyCta.jsx'
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx'
@@ -16,6 +17,20 @@ import FloatingWhatsApp from './components/FloatingWhatsApp.jsx'
  * Conversion-Focused Travel Redesign
  */
 export default function App() {
+  const [enquiryOpen, setEnquiryOpen] = useState(false)
+  const returnFocusRef = useRef(null)
+
+  const openEnquiryModal = useCallback((triggerEl) => {
+    if (triggerEl) {
+      returnFocusRef.current = triggerEl
+    }
+    setEnquiryOpen(true)
+  }, [])
+
+  const closeEnquiryModal = useCallback(() => {
+    setEnquiryOpen(false)
+  }, [])
+
   useEffect(() => {
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash)
@@ -32,10 +47,10 @@ export default function App() {
       <a className="skip-link" href="#top">
         Skip to main content
       </a>
-      <Header />
+      <Header onOpenEnquiry={openEnquiryModal} />
       <main id="main">
         {/* Section 01: Hero / Brand & Retreat Introduction */}
-        <Hero />
+        <Hero onOpenEnquiry={openEnquiryModal} />
 
         {/* Section 02: Three Dimensions of Well-Being (Body, Mind & Soul) */}
         <BrandPhilosophy />
@@ -58,6 +73,11 @@ export default function App() {
       <Footer />
       <StickyCta />
       <FloatingWhatsApp />
+      <EnquiryModal
+        isOpen={enquiryOpen}
+        onClose={closeEnquiryModal}
+        returnFocusRef={returnFocusRef}
+      />
     </>
   )
 }

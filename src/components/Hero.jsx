@@ -3,7 +3,7 @@ import { LeafMark } from './Logo.jsx'
 import { track } from '../lib/analytics.js'
 import { site } from '../config/site.js'
 
-export default function Hero() {
+export default function Hero({ onOpenEnquiry }) {
   const bgRef = useRef(null)
 
   useEffect(() => {
@@ -86,10 +86,13 @@ export default function Hero() {
 
           {/* Conversion Actions */}
           <div className="hero-travel-actions">
-            <a
+            <button
+              type="button"
               className="btn btn-travel-primary"
-              href="#enquiry"
-              onClick={() => track('cta_enquire_now_hero')}
+              onClick={(e) => {
+                track('cta_enquire_now_hero')
+                onOpenEnquiry?.(e.currentTarget)
+              }}
             >
               <span>Enquire Now</span>
               <svg
@@ -106,7 +109,7 @@ export default function Hero() {
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
-            </a>
+            </button>
 
             <a
               className="btn btn-travel-ghost"

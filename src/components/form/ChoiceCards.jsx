@@ -5,6 +5,7 @@ import styles from './EnquiryForm.module.css'
  * Built on native <input type="radio"> inside <fieldset>/<legend> for full keyboard & SR support.
  */
 export default function ChoiceCards({
+  idPrefix = '',
   name,
   legend,
   options,
@@ -13,7 +14,8 @@ export default function ChoiceCards({
   required = true,
   error = '',
 }) {
-  const errorId = error ? `${name}-error` : undefined
+  const scopedName = idPrefix ? `${idPrefix}-${name}` : name
+  const errorId = error ? `${scopedName}-error` : undefined
 
   return (
     <fieldset
@@ -34,7 +36,7 @@ export default function ChoiceCards({
       <div className={styles.choiceCardsGrid}>
         {options.map((opt) => {
           const isSelected = value === opt.value
-          const optId = `${name}-${opt.value.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+          const optId = `${scopedName}-${opt.value.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
 
           return (
             <label
@@ -47,7 +49,7 @@ export default function ChoiceCards({
               <input
                 type="radio"
                 id={optId}
-                name={name}
+                name={scopedName}
                 value={opt.value}
                 checked={isSelected}
                 onChange={() => onChange(opt.value)}

@@ -1,102 +1,160 @@
-import { PARTICIPANT_OPTIONS } from '../../data/enquiryOptions.js'
+import { useEffect, useState } from 'react'
 import styles from './EnquiryForm.module.css'
 
+const MIN_PARTICIPANTS = 1
+const MAX_PARTICIPANTS = 50
+
+function parseParticipantCount(value) {
+  const match = String(value || '').match(/\d+/)
+  const parsed = match ? parseInt(match[0], 10) : 1
+  if (Number.isNaN(parsed)) return MIN_PARTICIPANTS
+  return Math.min(MAX_PARTICIPANTS, Math.max(MIN_PARTICIPANTS, parsed))
+}
+
+function formatParticipantValue(count) {
+  return count === 1 ? '1 Person' : `${count} People`
+}
+
 /**
- * Accessible − / count / + stepper paired with a direct "4 or more" pill.
- * Emits exact canonical strings expected by the backend email payload.
+ * Exact guest count control pairing accessible − / + stepper buttons
+ * with direct numeric input (1–50 guests) so organisers always receive
+ * the exact headcount.
  */
 export default function ParticipantStepper({
   value,
   onChange,
   label = 'Number of Participants',
+  horizontal = false,
 }) {
-  const currentIndex = Math.max(
-    0,
-    PARTICIPANT_OPTIONS.findIndex((o) => o.value === value)
-  )
-  const currentOption = PARTICIPANT_OPTIONS[currentIndex] || PARTICIPANT_OPTIONS[0]
-  const groupOption =
-    PARTICIPANT_OPTIONS.find((o) => o.isGroup) ||
-    PARTICIPANT_OPTIONS[PARTICIPANT_OPTIONS.length - 1]
+  const count = parseParticipantCount(value)
+  const [draft, setDraft] = useState(String(count))
 
-  const isGroupSelected = currentOption.value === groupOption.value
-  const isAtMin = currentIndex <= 0
-  const isAtMax = currentIndex >= PARTICIPANT_OPTIONS.length - 1
+  useEffect(() => {
+    setDraft(String(count))
+  }, [count])
+
+  const adjustBy = (delta) => {
+    onChange((prevVal) => {
+      const current = parseParticipantCount(prevVal)
+      const next = Math.min(MAX_PARTICIPANTS, Math.max(MIN_PARTICIPANTS, current + delta))
+      return formatParticipantValue(next)
+    })
+  }
 
   const handleDecrement = () => {
-    if (!isAtMin) {
-      onChange(PARTICIPANT_OPTIONS[currentIndex - 1].value)
-    }
+    adjustBy(-1)
   }
 
   const handleIncrement = () => {
-    if (!isAtMax) {
-      onChange(PARTICIPANT_OPTIONS[currentIndex + 1].value)
+    adjustBy(1)
+  }
+
+  const commitCount = (next) => {
+    const clamped = Math.min(MAX_PARTICIPANTS, Math.max(MIN_PARTICIPANTS, next))
+    setDraft(String(clamped))
+    onChange(formatParticipantValue(clamped))
+  }
+
+  const handleInputChange = (e) => {
+    const digitsOnly = e.target.value.replace(/\D/g, '')
+    setDraft(digitsOnly)
+    if (!digitsOnly) return
+    const num = parseInt(digitsOnly, 10)
+    if (!Number.isNaN(num) && num >= MIN_PARTICIPANTS && num <= MAX_PARTICIPANTS) {
+      onChange(formatParticipantValue(num))
     }
   }
 
-  const handleToggleGroup = () => {
-    if (isGroupSelected) {
-      onChange(PARTICIPANT_OPTIONS[0].value)
+  const handleInputBlur = () => {
+    const num = parseInt(draft, 10)
+    if (Number.isNaN(num) || num < MIN_PARTICIPANTS) {
+      commitCount(MIN_PARTICIPANTS)
+    } else if (num > MAX_PARTICIPANTS) {
+      commitCount(MAX_PARTICIPANTS)
     } else {
-      onChange(groupOption.value)
+      commitCount(num)
     }
+  }
+
+  const unitLabel = count === 1 ? 'Person' : 'People'
+
+  const labelContent = (
+    <>
+      <span>{label}</span>
+      <span className={styles.reqMark} aria-hidden="true">
+        {' '}
+        *
+      </span>
+    </>
+  )
+
+  const stepperControl = (
+    <div className={styles.stepperBar} role="group" aria-label={label}>
+      <button
+        type="button"
+        className={styles.stepBtn}
+        onClick={handleDecrement}
+        disabled={count <= MIN_PARTICIPANTS}
+        aria-label="Decrease number of participants"
+      >
+        −
+      </button>
+
+      <div className={styles.stepperValueWrap}>
+        <input
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          aria-label="Exact number of participants"
+          value={draft}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          maxLength={2}
+          className={styles.stepperNumberInput}
+        />
+        <span className={styles.stepperUnit} aria-hidden="true">
+          {unitLabel}
+        </span>
+      </div>
+
+      <button
+        type="button"
+        className={styles.stepBtn}
+        onClick={handleIncrement}
+        disabled={count >= MAX_PARTICIPANTS}
+        aria-label="Increase number of participants"
+      >
+        +
+      </button>
+    </div>
+  )
+
+  if (horizontal) {
+    return (
+      <div className={styles.stepperHorizontalRow}>
+        <div className={styles.stepperHorizontalLabel}>{labelContent}</div>
+        <input
+          type="hidden"
+          name="participants"
+          value={formatParticipantValue(count)}
+        />
+        {stepperControl}
+      </div>
+    )
   }
 
   return (
     <fieldset className={styles.fieldsetClean}>
-      <legend className={styles.legendTitle}>
-        <span>{label}</span>
-        <span className={styles.reqMark} aria-hidden="true">
-          {' '}
-          *
-        </span>
-      </legend>
+      <legend className={styles.legendTitle}>{labelContent}</legend>
 
-      {/* Preserves form field name & canonical value */}
-      <input type="hidden" name="participants" value={currentOption.value} />
+      {/* Preserves form field name & exact count string */}
+      <input
+        type="hidden"
+        name="participants"
+        value={formatParticipantValue(count)}
+      />
 
-      <div className={styles.stepperContainer}>
-        <div className={styles.stepperBar} role="group" aria-label={label}>
-          <button
-            type="button"
-            className={styles.stepBtn}
-            onClick={handleDecrement}
-            disabled={isAtMin}
-            aria-label="Decrease number of participants"
-          >
-            −
-          </button>
-
-          <span className={styles.stepperValue} aria-live="polite">
-            {currentOption.label}
-          </span>
-
-          <button
-            type="button"
-            className={styles.stepBtn}
-            onClick={handleIncrement}
-            disabled={isAtMax}
-            aria-label="Increase number of participants"
-          >
-            +
-          </button>
-        </div>
-
-        <button
-          type="button"
-          className={`${styles.groupPillBtn} ${
-            isGroupSelected ? styles.groupPillActive : ''
-          }`}
-          aria-pressed={isGroupSelected}
-          onClick={handleToggleGroup}
-        >
-          4 or more (Group)
-        </button>
-      </div>
-
-      <p className={styles.stepperHint}>{currentOption.shortDesc}</p>
+      <div className={styles.stepperContainer}>{stepperControl}</div>
     </fieldset>
   )
 }
-

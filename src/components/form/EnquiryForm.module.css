@@ -330,7 +330,7 @@
 .stepSubtitle {
   font-size: 0.92rem;
   color: var(--secondary-text);
-  margin: 0 0 26px;
+  margin: 0 0 20px;
   line-height: 1.5;
 }
 
@@ -567,7 +567,7 @@
 .stepperContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 14px;
   flex-wrap: wrap;
 }
@@ -613,49 +613,38 @@
   outline-offset: 2px;
 }
 
-.stepperValue {
-  min-width: 116px;
-  padding: 0 14px;
+.stepperValueWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 118px;
+  padding: 0 12px;
+}
+
+.stepperNumberInput {
+  width: 34px;
+  padding: 4px 2px;
+  border: none;
+  border-bottom: 1.5px solid #D8CEBC;
+  background: transparent;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1F3D2B;
-}
-
-.groupPillBtn {
-  min-height: 48px;
-  padding: 10px 18px;
-  border-radius: 11px;
-  border: 1px solid #D8CEBC;
-  background: #FFFFFF;
-  color: #1F3D2B;
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all var(--transition-fast);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1F3D2B;
+  transition: border-color var(--transition-fast);
 }
 
-.groupPillBtn:hover {
-  border-color: #1F3D2B;
+.stepperNumberInput:focus {
+  outline: none;
+  border-bottom-color: #B08D4A;
 }
 
-.groupPillActive {
-  border-color: #1F3D2B;
-  background: rgba(31, 61, 43, 0.08);
+.stepperUnit {
+  font-size: 0.94rem;
   font-weight: 600;
-  box-shadow: inset 0 0 0 1px #1F3D2B;
-}
-
-.groupPillBtn:focus-visible {
-  outline: 2px solid #B08D4A;
-  outline-offset: 2px;
-}
-
-.stepperHint {
-  margin-top: 6px;
-  font-size: 0.83rem;
-  color: var(--secondary-text);
+  color: #1F3D2B;
 }
 
 /* ── Choice Cards (Accessible Radio Group replacing dropdowns) ── */
@@ -803,6 +792,10 @@
   line-height: 1.48;
   color: #1F3D2B;
   font-weight: 500;
+}
+
+.consentNoWrap {
+  white-space: nowrap;
 }
 
 /* ── Form Action Buttons & Privacy Footer ── */
@@ -1201,14 +1194,423 @@
 
   .stepperContainer {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .stepperBar {
     justify-content: space-between;
   }
+}
 
-  .groupPillBtn {
-    width: 100%;
+/* ── Popup Enquiry Modal (Hero / Header Enquire CTAs) ── */
+@keyframes enquiryBackdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enquiryModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 2vw, 24px);
+  background: rgba(12, 30, 19, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: enquiryBackdropIn 0.22s ease forwards;
+}
+
+.modalDialog {
+  position: relative;
+  width: 100%;
+  max-width: 670px;
+  margin: auto;
+  border-radius: 22px;
+  animation: enquiryModalIn 0.28s var(--ease, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 12;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(223, 194, 137, 0.45);
+  background: rgba(251, 248, 240, 0.12);
+  color: #FBF8F0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.modalCloseBtn:hover {
+  background: #FBF8F0;
+  color: #1F3D2B;
+  border-color: #FBF8F0;
+  transform: translateY(-1px);
+}
+
+.modalCloseBtn:focus-visible {
+  outline: 2px solid #DFC289;
+  outline-offset: 2px;
+}
+
+.modalCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #FBF8F0;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(223, 194, 137, 0.36);
+  box-shadow:
+    0 32px 80px rgba(6, 18, 11, 0.45),
+    0 8px 24px rgba(6, 18, 11, 0.22);
+}
+
+.modalHeaderBand {
+  position: relative;
+  padding: 16px 58px 14px 26px;
+  background: linear-gradient(135deg, #162E1F 0%, #1F3D2B 58%, #244732 100%);
+  color: #FBF8F0;
+  border-bottom: 1px solid rgba(223, 194, 137, 0.28);
+  overflow: hidden;
+}
+
+.modalHeaderWatermark {
+  position: absolute;
+  right: -12px;
+  bottom: -24px;
+  opacity: 0.08;
+  pointer-events: none;
+  transform: rotate(-10deg);
+}
+
+.modalEyebrow {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #DFC289;
+  margin-bottom: 4px;
+}
+
+.modalHeading {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-head);
+  font-size: clamp(1.38rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.16;
+  margin: 0 0 3px;
+}
+
+.modalHeading:focus {
+  outline: none;
+}
+
+.modalSubtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 0.84rem;
+  line-height: 1.42;
+  color: rgba(251, 248, 240, 0.84);
+  margin: 0 0 10px;
+}
+
+.modalTrustRow {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+.modalTrustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: rgba(251, 248, 240, 0.94);
+  background: rgba(251, 248, 240, 0.09);
+  border: 1px solid rgba(223, 194, 137, 0.24);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.modalTrustDot {
+  color: #DFC289;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.modalBody {
+  padding: 16px 26px 16px;
+  background: #FBF8F0;
+}
+
+.stepperHorizontalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+  background: #FFFDF9;
+  border: 1px solid #E5DEC9;
+  border-radius: 11px;
+  padding: 6px 8px 6px 14px;
+}
+
+.stepperHorizontalLabel {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #1F3D2B;
+}
+
+/* Tailored compact spacing inside popup so full form fits cleanly on laptops */
+.modalCard .fieldsStack {
+  gap: 10px;
+}
+
+.modalCard .pairRow {
+  gap: 14px;
+}
+
+.modalCard .fieldGroup {
+  gap: 4px;
+}
+
+.modalCard .fieldLabel {
+  font-size: 0.84rem;
+}
+
+.modalCard .textInput {
+  min-height: 44px;
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-size: 0.94rem;
+}
+
+.modalCard .phoneJoined {
+  min-height: 44px;
+  border-radius: 10px;
+}
+
+.modalCard .countryCodeSelect {
+  font-size: 0.88rem;
+  padding: 0 8px 0 10px;
+  min-width: 84px;
+}
+
+.modalCard .phoneLocalInput {
+  padding: 9px 12px;
+  font-size: 0.94rem;
+}
+
+.modalCard .stepperBar {
+  min-height: 40px;
+  padding: 3px;
+  border-radius: 9px;
+}
+
+.modalCard .stepBtn {
+  width: 34px;
+  height: 34px;
+  font-size: 1.1rem;
+}
+
+.modalCard .stepperValueWrap {
+  min-width: 100px;
+  padding: 0 8px;
+}
+
+.modalCard .stepperNumberInput {
+  width: 30px;
+  font-size: 0.98rem;
+}
+
+.modalCard .stepperUnit {
+  font-size: 0.88rem;
+}
+
+.modalCard .textArea {
+  min-height: 44px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.modalCard .consentWrapper {
+  margin-top: 0;
+}
+
+.modalCard .consentLabel {
+  min-height: 32px;
+  padding: 1px 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.modalCard .consentText {
+  font-size: 0.86rem;
+}
+
+.modalCard .stepActions {
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.modalCard .primarySubmitBtn {
+  min-height: 46px;
+  padding: 11px 24px;
+}
+
+.modalCard .errorBanner {
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.modalUtilityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding-top: 2px;
+}
+
+.modalPrivacyText {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--secondary-text);
+}
+
+.modalDirectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1F3D2B;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(176, 141, 74, 0.45);
+  padding-bottom: 1px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.modalDirectLink:hover {
+  color: #16301F;
+  border-color: #1F3D2B;
+}
+
+.modalDirectLink:focus-visible {
+  outline: 2px solid #B08D4A;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .modalBackdrop {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .modalDialog {
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .modalCard {
+    border-radius: 18px;
+  }
+
+  .modalCloseBtn {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .modalHeaderBand {
+    padding: 16px 50px 12px 16px;
+  }
+
+  .modalEyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .modalTrustRow {
+    gap: 5px 6px;
+  }
+
+  .modalTrustItem {
+    font-size: 0.69rem;
+    padding: 2px 8px;
+  }
+
+  .modalBody {
+    padding: 14px 16px 16px;
+  }
+
+  .modalCard .pairRow {
+    gap: 10px;
+  }
+
+  .stepperHorizontalRow {
+    padding: 8px 10px 8px 12px;
+  }
+
+  .modalCard .textArea {
+    min-height: 58px;
+  }
+
+  .modalUtilityRow {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modalBackdrop,
+  .modalDialog {
+    animation: none;
   }
 }

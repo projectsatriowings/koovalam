@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react'
 import Logo from './Logo.jsx'
 import { track } from '../lib/analytics.js'
 
-export default function Header() {
+export default function Header({ onOpenEnquiry }) {
   const [solid, setSolid] = useState(false)
   const [open, setOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -225,16 +225,17 @@ export default function Header() {
           </div>
 
           <div className="mobile-nav-footer">
-            <a
+            <button
+              type="button"
               className="btn btn-primary btn-mobile-enquire"
-              href="#enquiry"
               onClick={() => {
                 closeDrawer()
                 track('cta_enquire_mobile_menu')
+                onOpenEnquiry?.(menuBtnRef.current)
               }}
             >
               Enquire Now
-            </a>
+            </button>
             <div className="mobile-nav-brand-footer">
               <p className="mobile-nav-note">Rooted in Nature. Connected to Soul.</p>
               <span className="mobile-nav-location">Kerala, India</span>
@@ -243,13 +244,16 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <a
+          <button
+            type="button"
             className={`btn ${isLight ? 'btn-outline' : 'btn-primary'} header-cta`}
-            href="#enquiry"
-            onClick={() => track('cta_enquire_header')}
+            onClick={(e) => {
+              track('cta_enquire_header')
+              onOpenEnquiry?.(e.currentTarget)
+            }}
           >
             Enquire Now
-          </a>
+          </button>
           <button
             ref={menuBtnRef}
             type="button"

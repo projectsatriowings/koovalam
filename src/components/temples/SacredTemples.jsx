@@ -9,6 +9,9 @@ const SLOT_CLASS = {
   valley: styles.tileValley,
   courtyard: styles.tileCourtyard,
   sanctum: styles.tileSanctum,
+  'river-cruise': styles.tileValley,
+  'river-vallam': styles.tileCourtyard,
+  'river-banks': styles.tileRiverRight,
 }
 
 /**
@@ -23,7 +26,9 @@ function TempleTriptych({ gallery, spreadIndex, layout = 'portrait-left' }) {
       {gallery.map((photo) => {
         const slotClass = SLOT_CLASS[photo.slot] || ''
         const isTopRightTile =
-          photo.slot === 'ikkare' || photo.slot === 'valley'
+          Boolean(photo.hasBadge) ||
+          photo.slot === 'ikkare' ||
+          photo.slot === 'valley'
 
         return (
           <div
@@ -146,9 +151,11 @@ export default function SacredTemples({ category }) {
           </svg>
           <p className={styles.etiquetteText}>
             <strong>Visitor notes &amp; imagery:</strong> Photographs feature
-            Kottiyoor Temple and Tirunelli Temple. All visits are proposed and
-            scheduled respectfully in keeping with temple dress codes, local
-            customs, seasonal calendars, and organiser confirmation.
+            Kottiyoor Temple, Tirunelli Temple, and the serene Bharathapuzha
+            (Nila) river. Temple visits are proposed in keeping with dress
+            codes, seasonal calendars, and organiser confirmation; the Nila
+            River boat safari runs with licensed operators and life jackets,
+            subject to weather and safe water conditions.
           </p>
         </div>
       </Reveal>

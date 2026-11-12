@@ -12,6 +12,7 @@ export default function SuccessState({
   formData,
   containerRef,
   onReset,
+  disableAutoScroll = false,
 }) {
   const headingRef = useRef(null)
 
@@ -19,19 +20,20 @@ export default function SuccessState({
     (formData.fullName || '').trim().split(/\s+/)[0] || 'Friend'
 
   useEffect(() => {
-    containerRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    if (!disableAutoScroll) {
+      containerRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
     const timer = setTimeout(() => {
       headingRef.current?.focus()
     }, 100)
     return () => clearTimeout(timer)
-  }, [containerRef])
+  }, [containerRef, disableAutoScroll])
 
   const prefillSummary = [
     `Hi Koovalam team, I just submitted an enquiry on the website.`,
     `Name: ${formData.fullName}`,
     `Participants: ${formData.participants}`,
-    `Pickup: ${formData.pickup}`,
-    `Accommodation: ${formData.accommodation}`,
+    formData.origin ? `City / Country: ${formData.origin}` : null,
     formData.message ? `Note: ${formData.message}` : null,
   ]
     .filter(Boolean)
@@ -78,19 +80,19 @@ export default function SuccessState({
         email with room availability and next steps.
       </p>
 
-      {/* Short Recap of Chosen Options */}
-      <div className={styles.recapBox} aria-label="Summary of your retreat preferences">
+      {/* Short Recap of Submitted Details */}
+      <div className={styles.recapBox} aria-label="Summary of your retreat enquiry">
         <div className={styles.recapItem}>
           <span className={styles.recapLabel}>Participants</span>
           <span className={styles.recapValue}>{formData.participants}</span>
         </div>
         <div className={styles.recapItem}>
-          <span className={styles.recapLabel}>Pickup</span>
-          <span className={styles.recapValue}>{formData.pickup}</span>
+          <span className={styles.recapLabel}>Retreat Dates</span>
+          <span className={styles.recapValue}>Dec 17 – 20 (4D / 3N)</span>
         </div>
         <div className={styles.recapItem}>
-          <span className={styles.recapLabel}>Accommodation</span>
-          <span className={styles.recapValue}>{formData.accommodation}</span>
+          <span className={styles.recapLabel}>Contact</span>
+          <span className={styles.recapValue}>{formData.phone || formData.email}</span>
         </div>
       </div>
 

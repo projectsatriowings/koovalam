@@ -120,8 +120,8 @@ export async function processEnquiry(data, clientIp = '') {
   const phone = (data.phone || '').trim()
   const participants = (data.participants || '1 Person').trim()
   const origin = (data.origin || data.travellingFrom || '').trim()
-  const pickup = (data.pickup || 'Kuttipuram Railway Station (Organiser Pickup Hub)').trim()
-  const accommodation = (data.accommodation || 'Twin Sharing (Standard — Two Guests per Room)').trim()
+  const pickup = (data.pickup || '').trim()
+  const accommodation = (data.accommodation || '').trim()
   const message = (data.message || data.notes || '').trim()
 
   // 4. Validate required fields
@@ -238,14 +238,22 @@ export async function processEnquiry(data, clientIp = '') {
           <td class="label">City / Country of Origin</td>
           <td class="value">${escapeHtml(origin || 'Not specified')}</td>
         </tr>
-        <tr>
+        ${
+          pickup
+            ? `<tr>
           <td class="label">Pickup Preference</td>
           <td class="value">${escapeHtml(pickup)}</td>
-        </tr>
-        <tr>
+        </tr>`
+            : ''
+        }
+        ${
+          accommodation
+            ? `<tr>
           <td class="label">Accommodation Preference</td>
           <td class="value">${escapeHtml(accommodation)}</td>
-        </tr>
+        </tr>`
+            : ''
+        }
         <tr>
           <td class="label">Submission Timestamp</td>
           <td class="value">${escapeHtml(timestampFormatted)} (IST)<br><small style="color: #888;">${escapeHtml(timestampIso)}</small></td>
@@ -280,8 +288,8 @@ export async function processEnquiry(data, clientIp = '') {
     `WhatsApp / Phone: ${phone}`,
     `Participants: ${participants}`,
     `Origin: ${origin || 'Not specified'}`,
-    `Pickup Preference: ${pickup}`,
-    `Accommodation Preference: ${accommodation}`,
+    pickup ? `Pickup Preference: ${pickup}` : null,
+    accommodation ? `Accommodation Preference: ${accommodation}` : null,
     `Submission Time: ${timestampFormatted} (IST) / ${timestampIso}`,
     ``,
     message ? `Message / Questions:\n${message}\n` : null,

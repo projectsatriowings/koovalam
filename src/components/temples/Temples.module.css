@@ -321,6 +321,11 @@
   aspect-ratio: 16 / 10;
 }
 
+.tileRiverRight {
+  grid-area: sanctum;
+  aspect-ratio: 16 / 10;
+}
+
 .tileSanctum img {
   object-position: center 78%;
 }
@@ -402,7 +407,8 @@
   }
 
   .tileCourtyard,
-  .tileSanctum {
+  .tileSanctum,
+  .tileRiverRight {
     aspect-ratio: 4 / 3;
   }
 
