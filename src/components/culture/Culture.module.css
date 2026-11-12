@@ -1,0 +1,477 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   KOOVALAM — KERALA CULTURAL EXPERIENCES TWO-TIER ARCHITECTURAL SHOWCASE
+   Tier 01: Daylight Village Walk Panoramic Strip (on Warm Ivory)
+   Tier 02: Twilight Cultural Pavilion Bento Stage (on Deep Forest Emerald)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.cultureStack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+/* ── Tier 01: Daylight Village Discovery Horizontal Strip ── */
+.villageStrip {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+}
+
+.villageMediaFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--soft-sand);
+  box-shadow:
+    0 18px 44px rgba(16, 44, 36, 0.09),
+    0 2px 10px rgba(16, 44, 36, 0.04);
+  isolation: isolate;
+}
+
+.villageMediaFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(161, 132, 77, 0.14);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.villageMediaFrame picture,
+.villageMediaFrame img,
+.artTile picture,
+.artTile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease);
+}
+
+.villageStrip:hover .villageMediaFrame img,
+.artTile:hover img {
+  transform: scale(1.025);
+}
+
+.mediaScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 44, 36, 0) 56%,
+    rgba(16, 44, 36, 0.64) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.mediaIndexBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 4;
+  padding: 6px 13px;
+  border-radius: var(--radius-pill);
+  background: rgba(16, 44, 36, 0.76);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(200, 175, 123, 0.38);
+  color: #E8D7AD;
+  font-family: var(--font-head);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+}
+
+.mediaTagPill {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 4;
+  background: rgba(247, 244, 236, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--deep-forest);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(161, 132, 77, 0.28);
+  box-shadow: 0 2px 10px rgba(16, 44, 36, 0.14);
+}
+
+.villageProse {
+  padding-left: clamp(16px, 2vw, 24px);
+  border-left: 2px solid var(--antique-brass);
+  display: flex;
+  flex-direction: column;
+}
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--antique-brass);
+  margin-bottom: 6px;
+}
+
+.villageTitle {
+  font-family: var(--font-head);
+  font-size: clamp(1.7rem, 2.7vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: var(--deep-forest);
+  margin: 0 0 12px;
+}
+
+.villageSummary {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--main-text);
+  margin: 0 0 20px;
+  max-width: 50ch;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(161, 132, 77, 0.24);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.metaLabel {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--antique-brass);
+}
+
+.metaValue {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+/* ── Tier 02: Deep Evergreen Twilight Cultural Pavilion Stage ── */
+.eveningStage {
+  background: linear-gradient(155deg, #102C24 0%, #15352C 100%);
+  border: 1px solid rgba(161, 132, 77, 0.36);
+  border-radius: 24px;
+  padding: clamp(22px, 3.6vw, 40px);
+  color: var(--warm-ivory);
+  box-shadow: 0 22px 52px rgba(10, 26, 18, 0.14);
+}
+
+.stageHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 16px 36px;
+  align-items: end;
+  padding-bottom: clamp(18px, 2.4vw, 26px);
+  margin-bottom: clamp(20px, 2.6vw, 28px);
+  border-bottom: 1px solid rgba(200, 175, 123, 0.22);
+}
+
+.stageKicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #D7BD83;
+  margin-bottom: 6px;
+}
+
+.stageTitle {
+  font-family: var(--font-head);
+  font-size: clamp(1.72rem, 2.8vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: var(--warm-ivory);
+  margin: 0;
+}
+
+.stageLeadCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.stageLead {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: rgba(247, 244, 236, 0.86);
+  margin: 0;
+}
+
+.stageStatusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 13px;
+  border-radius: var(--radius-pill);
+  background: rgba(247, 244, 236, 0.08);
+  border: 1px solid rgba(215, 189, 131, 0.34);
+  color: #E8D7AD;
+  font-family: var(--font-body);
+  font-size: 0.71rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stageStatusDot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #D7BD83;
+}
+
+/* ── Asymmetric 3-Art Bento Stage Grid ── */
+.stageGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    'bharatanatyam mohiniyattam'
+    'bharatanatyam flute';
+  gap: clamp(14px, 1.8vw, 20px);
+}
+
+.artTile {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0C211B;
+  border: 1px solid rgba(215, 189, 131, 0.24);
+  box-shadow: 0 14px 34px rgba(8, 20, 15, 0.32);
+  isolation: isolate;
+}
+
+.tileBharatanatyam {
+  grid-area: bharatanatyam;
+}
+
+.tileBharatanatyam img {
+  object-position: center 22%;
+}
+
+.tileMohiniyattam {
+  grid-area: mohiniyattam;
+  aspect-ratio: 16 / 9;
+}
+
+.tileMohiniyattam img {
+  object-position: center 22%;
+}
+
+.tileFlute {
+  grid-area: flute;
+  aspect-ratio: 16 / 9;
+}
+
+.tileFlute img {
+  object-position: center 42%;
+}
+
+.tileScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 26, 18, 0.02) 34%,
+    rgba(10, 26, 18, 0.72) 68%,
+    rgba(10, 26, 18, 0.94) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.artBadgeNum {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: rgba(16, 44, 36, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(215, 189, 131, 0.36);
+  color: #E8D7AD;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.artOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: clamp(16px, 2vw, 22px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-shadow: 0 1px 10px rgba(8, 20, 15, 0.72);
+}
+
+.artKicker {
+  font-family: var(--font-body);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #D7BD83;
+}
+
+.artTitle {
+  font-family: var(--font-head);
+  font-size: clamp(1.32rem, 1.9vw, 1.62rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: none;
+  color: #F7F4EC;
+  margin: 0;
+}
+
+.artCaption {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: rgba(247, 244, 236, 0.86);
+  margin: 2px 0 0;
+}
+
+/* ── Bottom Evergreen Stage Programme Note ── */
+.stageFootnote {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: clamp(18px, 2.4vw, 26px);
+  padding-top: clamp(14px, 2vw, 18px);
+  border-top: 1px solid rgba(200, 175, 123, 0.22);
+}
+
+.stageFootnoteIcon {
+  flex-shrink: 0;
+  color: #D7BD83;
+  margin-top: 2px;
+}
+
+.stageFootnoteText {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.56;
+  color: rgba(247, 244, 236, 0.82);
+  margin: 0;
+}
+
+.stageFootnoteText strong {
+  color: #F7F4EC;
+  font-weight: 600;
+}
+
+/* ── Responsive Stacking (< 900px) ── */
+@media (max-width: 900px) {
+  .villageStrip,
+  .stageHeader {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .villageMediaFrame {
+    border-radius: 16px;
+  }
+
+  .eveningStage {
+    border-radius: 20px;
+    padding: 20px 18px;
+  }
+
+  .stageGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'bharatanatyam'
+      'mohiniyattam'
+      'flute';
+    gap: 16px;
+  }
+
+  .tileBharatanatyam {
+    aspect-ratio: 3 / 4;
+    height: auto;
+  }
+
+  .tileMohiniyattam,
+  .tileFlute {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .metaGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .mediaIndexBadge,
+  .artBadgeNum {
+    top: 12px;
+    right: 12px;
+    font-size: 0.76rem;
+    padding: 5px 10px;
+  }
+
+  .mediaTagPill {
+    left: 12px;
+    bottom: 12px;
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+}

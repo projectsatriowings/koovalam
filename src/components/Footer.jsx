@@ -89,8 +89,22 @@ export default function Footer() {
               Have questions regarding retreat suitability, group enquiries or health considerations?
             </p>
             <div className="footer-contact-actions">
-              <a href="#enquiry" className="btn btn-travel-secondary btn-sm">
-                Enquiry Information
+              <a href="#enquiry" className="btn btn-travel-ghost btn-sm footer-enquiry-btn">
+                <span>Enquiry Information</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
               </a>
               {isWhatsAppConfigured && whatsappLink && (
                 <a

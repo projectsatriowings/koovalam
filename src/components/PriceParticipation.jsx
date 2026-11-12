@@ -65,9 +65,6 @@ export default function PriceParticipation() {
                   </li>
                 ))}
               </ul>
-              <p className="inclusion-disclaimer-note">
-                {investment.inclusionNotice}
-              </p>
             </div>
 
             <div className="pricing-card-action">

@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import { images } from '../../data/images.js'
-import { LeafMark } from '../Logo.jsx'
+import RetreatMedia from '../RetreatMedia.jsx'
 import Reveal from '../Reveal.jsx'
 import styles from './Temples.module.css'
 
@@ -11,51 +9,6 @@ const SLOT_CLASS = {
   valley: styles.tileValley,
   courtyard: styles.tileCourtyard,
   sanctum: styles.tileSanctum,
-}
-
-/**
- * Renders a sanctuary photograph with conditional WebP source and fallback.
- */
-function TempleMedia({ imageName, altFallback, hasWebp = false }) {
-  const [failed, setFailed] = useState(false)
-  const meta = images[imageName] || {
-    alt: altFallback,
-    aspect: '3 / 2',
-    w: 1536,
-    h: 1024,
-  }
-
-  if (failed) {
-    return (
-      <div
-        className="slot"
-        style={{ width: '100%', height: '100%', aspectRatio: meta.aspect }}
-        role="img"
-        aria-label={meta.alt || altFallback}
-      >
-        <div className="slot-fallback">
-          <LeafMark color="var(--antique-gold)" size={48} />
-        </div>
-      </div>
-    )
-  }
-
-  return (
-    <picture>
-      {hasWebp && (
-        <source srcSet={`images/${imageName}.webp`} type="image/webp" />
-      )}
-      <img
-        src={`images/${imageName}.jpg`}
-        alt={meta.alt}
-        width={meta.w}
-        height={meta.h}
-        loading="lazy"
-        decoding="async"
-        onError={() => setFailed(true)}
-      />
-    </picture>
-  )
 }
 
 /**
@@ -77,7 +30,7 @@ function TempleTriptych({ gallery, spreadIndex, layout = 'portrait-left' }) {
             key={photo.image}
             className={`${styles.triptychTile} ${slotClass}`}
           >
-            <TempleMedia
+            <RetreatMedia
               imageName={photo.image}
               altFallback={photo.label}
               hasWebp={photo.hasWebp}
@@ -135,7 +88,7 @@ export default function SacredTemples({ category }) {
                     />
                   ) : (
                     <div className={styles.mediaFrame}>
-                      <TempleMedia
+                      <RetreatMedia
                         imageName={item.image}
                         altFallback={item.title}
                         hasWebp={item.hasWebp}

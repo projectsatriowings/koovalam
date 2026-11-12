@@ -986,25 +986,36 @@
 }
 
 .spread-header {
-  position: relative;
   margin-bottom: 16px;
 }
 
+.spread-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(14px, 2.5vw, 24px);
+}
+
+.spread-title-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .spread-day-watermark {
-  position: absolute;
-  right: -10px;
-  top: -15px;
+  flex: 0 0 auto;
   font-family: var(--font-head);
-  font-size: clamp(5rem, 8vw, 7rem);
+  font-variant-numeric: lining-nums;
+  font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 700;
-  color: rgba(161, 132, 77, 0.1);
+  color: rgba(161, 132, 77, 0.16);
   line-height: 1;
+  letter-spacing: -0.02em;
   pointer-events: none;
   user-select: none;
 }
 
 .spread-timing-badge {
-  display: inline-block;
+  display: block;
   font-size: 0.74rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1015,11 +1026,12 @@
 
 .spread-main-title {
   font-family: var(--font-head);
-  font-size: clamp(1.85rem, 3.2vw, 2.45rem);
+  font-size: clamp(1.75rem, 3.1vw, 2.45rem);
   font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 6px;
-  line-height: 1.2;
+  line-height: 1.18;
+  text-wrap: balance;
 }
 
 .spread-subtitle {
@@ -1317,6 +1329,12 @@
   .nav-tab-label {
     font-size: 0.92rem;
     line-height: 1.25;
+  }
+  .spread-header-row {
+    gap: 12px;
+  }
+  .spread-day-watermark {
+    font-size: 2.5rem;
   }
   .proposed-highlights-row {
     grid-template-columns: 1fr;
@@ -2242,14 +2260,6 @@
   margin-bottom: 16px;
 }
 
-.inclusion-disclaimer-note {
-  font-size: 0.8rem;
-  font-style: italic;
-  color: var(--secondary-text);
-  margin-top: 14px;
-  line-height: 1.45;
-}
-
 .caption-tag {
   font-size: 0.68rem;
   font-weight: 700;
@@ -2425,7 +2435,29 @@
 .footer-contact-actions {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
+}
+
+.footer-enquiry-btn {
+  min-height: 44px;
+  padding: 10px 20px;
+  background: rgba(247, 244, 236, 0.09);
+  border-color: rgba(215, 189, 131, 0.62);
+  color: var(--warm-ivory);
+  font-weight: 600;
+  gap: 8px;
+}
+
+.footer-enquiry-btn:hover {
+  background: var(--antique-brass);
+  border-color: #E8D7AD;
+  color: #FFFFFF;
+}
+
+.footer-enquiry-btn:focus-visible {
+  outline: 2px solid #E8D7AD;
+  outline-offset: 3px;
 }
 
 .footer-wa-link {

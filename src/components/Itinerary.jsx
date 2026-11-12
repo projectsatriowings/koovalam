@@ -90,13 +90,15 @@ export default function Itinerary() {
           {/* Left Column: Narrative, Subtitle & Sample Schedule Timeline */}
           <div className="spread-narrative-col">
             <div className="spread-header">
-              <div className="spread-day-watermark" aria-hidden="true">
-                0{currentDay.day}
-              </div>
-              <div className="spread-title-wrap">
-                <span className="spread-timing-badge">{currentDay.timingNote}</span>
-                <h3 className="spread-main-title">{currentDay.title}</h3>
-                <p className="spread-subtitle">{currentDay.subtitle}</p>
+              <span className="spread-timing-badge">{currentDay.timingNote}</span>
+              <div className="spread-header-row">
+                <div className="spread-title-wrap">
+                  <h3 className="spread-main-title">{currentDay.title}</h3>
+                  <p className="spread-subtitle">{currentDay.subtitle}</p>
+                </div>
+                <div className="spread-day-watermark" aria-hidden="true">
+                  0{currentDay.day}
+                </div>
               </div>
             </div>
 
