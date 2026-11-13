@@ -7,7 +7,7 @@ export default function EnquirySection() {
   return (
     <section
       className={styles.sectionEnquiry}
-      id="enquiry"
+      id="enquiry-section"
       aria-label="Retreat Enquiry and Registration"
     >
       <div className="wrap">

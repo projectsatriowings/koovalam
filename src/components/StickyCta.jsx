@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { track } from '../lib/analytics.js'
+import { scrollToEnquiry } from '../lib/scroll.js'
 
 export default function StickyCta() {
   const [show, setShow] = useState(false)
@@ -76,7 +77,10 @@ export default function StickyCta() {
           className="btn btn-travel-primary btn-sticky-action"
           href="#enquiry"
           tabIndex={show ? 0 : -1}
-          onClick={() => track('cta_sticky_bottom_bar')}
+          onClick={(e) => {
+            track('cta_sticky_bottom_bar')
+            scrollToEnquiry(e)
+          }}
         >
           <span>Enquire Now</span>
           <svg

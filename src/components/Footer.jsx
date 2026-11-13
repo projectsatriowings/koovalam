@@ -6,6 +6,7 @@ import {
   isWhatsAppConfigured,
 } from '../config/site.js'
 import { track } from '../lib/analytics.js'
+import { scrollToEnquiry } from '../lib/scroll.js'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -54,7 +55,11 @@ export default function Footer() {
               <li><a href="#itinerary">Proposed Flow</a></li>
               <li><a href="#stay-travel">Stay &amp; Transport</a></li>
               <li><a href="#price">Retreat Investment</a></li>
-              <li><a href="#enquiry">Enquire &amp; Register</a></li>
+              <li>
+                <a href="#enquiry" onClick={scrollToEnquiry}>
+                  Enquire &amp; Register
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -90,7 +95,14 @@ export default function Footer() {
               Have questions regarding retreat suitability, group enquiries or health considerations?
             </p>
             <div className="footer-contact-actions">
-              <a href="#enquiry" className="btn btn-travel-ghost btn-sm footer-enquiry-btn">
+              <a
+                href="#enquiry"
+                className="btn btn-travel-ghost btn-sm footer-enquiry-btn"
+                onClick={(e) => {
+                  track('footer_cta_enquiry_info')
+                  scrollToEnquiry(e)
+                }}
+              >
                 <span>Enquiry Information</span>
                 <svg
                   width="14"

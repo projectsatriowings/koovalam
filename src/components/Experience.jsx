@@ -4,6 +4,7 @@ import CulturalExperiences from './culture/CulturalExperiences.jsx'
 import PracticeShowcase from './practices/PracticeShowcase.jsx'
 import SacredTemples from './temples/SacredTemples.jsx'
 import { track } from '../lib/analytics.js'
+import { scrollToEnquiry } from '../lib/scroll.js'
 
 export default function Experience() {
   return (
@@ -53,7 +54,10 @@ export default function Experience() {
           <a
             className="btn btn-travel-accent"
             href="#enquiry"
-            onClick={() => track('cta_enquire_after_experience')}
+            onClick={(e) => {
+              track('cta_enquire_after_experience')
+              scrollToEnquiry(e)
+            }}
           >
             <span>Ask Us About the Experience</span>
             <svg

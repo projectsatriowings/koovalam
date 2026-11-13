@@ -34,6 +34,7 @@ export default function EnquiryCard({
   className = '',
   headingId,
   initialFocusRef,
+  id,
 }) {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA)
   const [consentChecked, setConsentChecked] = useState(false)
@@ -345,7 +346,7 @@ export default function EnquiryCard({
                         value={formData.fullName}
                         onChange={handleInputChange}
                         onBlur={() => handleBlur('fullName')}
-                        placeholder="e.g. Priya Nair"
+                        placeholder="e.g. Priya"
                         className={`${styles.textInput} ${
                           validationErrors.fullName ? styles.inputHasError : ''
                         }`}
@@ -383,7 +384,7 @@ export default function EnquiryCard({
                         value={formData.email}
                         onChange={handleInputChange}
                         onBlur={() => handleBlur('email')}
-                        placeholder="e.g. priya.nair@example.com"
+                        placeholder="e.g. priya@example.com"
                         className={`${styles.textInput} ${
                           validationErrors.email ? styles.inputHasError : ''
                         }`}
@@ -415,7 +416,7 @@ export default function EnquiryCard({
                 <ParticipantStepper
                   value={formData.participants}
                   onChange={(val) => handleFieldChange('participants', val)}
-                  horizontal={isModal}
+                  horizontal
                 />
 
                 {/* Optional Message / Questions */}
@@ -637,7 +638,11 @@ export default function EnquiryCard({
         {liveStatus}
       </div>
 
-      <div ref={cardRef} className={`${styles.splitCard} ${className}`}>
+      <div
+        id={id || (!isModal ? 'enquiry' : undefined)}
+        ref={cardRef}
+        className={`${styles.splitCard} ${className}`}
+      >
         {/* Left Forest-Green Panel */}
         <ReassurancePanel />
 

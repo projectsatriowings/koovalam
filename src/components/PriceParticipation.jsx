@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { investment, compactFaqs } from '../data/retreat.js'
 import { LeafMark } from './Logo.jsx'
 import { track } from '../lib/analytics.js'
+import { scrollToEnquiry } from '../lib/scroll.js'
 
 export default function PriceParticipation() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -71,7 +72,10 @@ export default function PriceParticipation() {
               <a
                 className="btn btn-travel-primary btn-full-width"
                 href="#enquiry"
-                onClick={() => track('cta_enquire_from_price_card')}
+                onClick={(e) => {
+                  track('cta_enquire_from_price_card')
+                  scrollToEnquiry(e)
+                }}
               >
                 <span>Enquire About This Retreat</span>
                 <svg
