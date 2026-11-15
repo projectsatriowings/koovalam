@@ -61,10 +61,10 @@ export const experienceCategories = [
   },
   {
     id: 'temples',
-    categoryName: 'Sacred Temples & Nila River Safari',
-    categoryTag: 'Spiritual Heritage · Mindful River Excursion',
+    categoryName: 'Sacred Temple Sanctuaries',
+    categoryTag: 'Spiritual Heritage · Ancient Pilgrimage',
     categoryDesc:
-      'Proposed visits to two historic Kerala pilgrimage sites alongside a calm afternoon boat drift along the Bharathapuzha (Nila) river. Experienced respectfully with quiet contemplation, subject to organiser confirmation, weather, and safe boat operation.',
+      'Proposed visits to two historic Kerala pilgrimage sites. Experienced respectfully with quiet contemplation, subject to local customs, temple timings, and organiser confirmation.',
     items: [
       {
         id: 'kottiyoor-temple',
@@ -139,41 +139,6 @@ export const experienceCategories = [
           { label: 'Participation', value: 'Historical contemplation · No spiritual outcomes guaranteed' },
         ],
       },
-      {
-        id: 'nila-river-safari',
-        title: 'Nila River Boat Safari',
-        tag: 'Bharathapuzha Basin · Afternoon Excursion',
-        kicker: 'Bharathapuzha · Mindful River Excursion',
-        pillLabel: 'Nila River · Palm-Lined Banks',
-        image: 'nila-safari-cruise',
-        galleryLayout: 'landscape-top',
-        gallery: [
-          {
-            slot: 'river-cruise',
-            image: 'nila-safari-cruise',
-            label: 'Sunset River Cruise',
-            hasBadge: true,
-          },
-          {
-            slot: 'river-vallam',
-            image: 'nila-country-boat',
-            label: 'Traditional Country Boat',
-          },
-          {
-            slot: 'river-banks',
-            image: 'nila-palm-banks',
-            label: 'Palm-Lined Nila Waters',
-          },
-        ],
-        representativeImage: true,
-        summary:
-          'An unhurried afternoon boat drift along the historic Bharathapuzha (Nila) river, gliding past coconut-palm banks and calm waters in quiet reflection—conducted with licensed operators and mandatory life jackets.',
-        highlight: 'Mindful afternoon river drift · Subject to weather, permissions & safe boat operation',
-        meta: [
-          { label: 'Excursion & Safety', value: 'Calm river cruise · Licensed boat operator & life jackets' },
-          { label: 'Operating Scope', value: 'Day 03 afternoon · Subject to weather & water conditions' },
-        ],
-      },
     ],
   },
   {
@@ -246,7 +211,7 @@ export const experienceCategories = [
 // Flat list for easy reference / mapping
 export const allActivities = experienceCategories.flatMap((cat) => cat.items)
 
-// 2. The Retreat Journey / Itinerary (December 17–20 · 4 Days / 3 Nights)
+// 2. The Retreat Journey / Itinerary (December 25–28 · 4 Days / 3 Nights)
 export const itineraryData = {
   proposedHighlightsUnderReview: [
     {
@@ -258,11 +223,6 @@ export const itineraryData = {
       name: 'Tirunelli Temple Visit',
       region: 'Wayanad District',
       status: 'Proposed · Subject to inter-district timing & organiser confirmation',
-    },
-    {
-      name: 'Nila River Boat Safari',
-      region: 'Nature Excursion',
-      status: 'Day 3 afternoon sample · Subject to permissions, weather & licensed safe boat operation',
     },
     {
       name: 'Traditional Flute & Classical Dance',
@@ -321,7 +281,7 @@ export const itineraryData = {
           activity: 'Yoga Nidra: deep relaxation and rest',
         },
       ],
-      timingNote: 'Dec 17 · Arrival Day · 2:00 PM to 9:00 PM (Sample schedule)',
+      timingNote: 'Dec 25 · Arrival Day · 2:00 PM to 9:00 PM (Sample schedule)',
     },
     {
       day: 2,
@@ -399,19 +359,19 @@ export const itineraryData = {
           activity: 'Flute performance: classical flute music & sound healing meditation',
         },
       ],
-      timingNote: 'Dec 18 · Full Retreat Day · 6:30 AM to 9:45 PM (Sample schedule)',
+      timingNote: 'Dec 26 · Full Retreat Day · 6:30 AM to 9:45 PM (Sample schedule)',
     },
     {
       day: 3,
       tabLabel: 'Culture & Nature',
       title: 'Culture, Nature & Reflection',
-      subtitle: 'Morning temple visit, afternoon Nila River safari & gratitude circle',
+      subtitle: 'Morning temple visit, afternoon nature pause & gratitude circle',
       narrative:
-        'Greet the morning with meditation, gentle yoga and breakfast before a quiet cultural temple visit (subject to local customs & timings), restful lunch, an afternoon Nila River boat safari (conditions permitting), and an evening reflection circle.',
+        'Greet the morning with meditation, gentle yoga and breakfast before a quiet cultural temple visit (subject to local customs & timings), restful lunch, an unhurried afternoon for rest and guided journaling, and an evening reflection circle.',
       featuredPills: [
         'Morning Yoga & Breath',
         'Sacred Temple Visit',
-        'Nila River Boat Safari',
+        'Mindful Nature Pause',
         'Evening Reflection Circle',
       ],
       schedule: [
@@ -443,7 +403,7 @@ export const itineraryData = {
         {
           time: '3:00 – 5:00 PM',
           phase: 'AFTERNOON',
-          activity: 'Nila River boat safari: mindful nature experience, subject to weather and safe operating conditions',
+          activity: 'Mindful nature pause: sensory observation, restful personal contemplation and journaling',
         },
         {
           time: '5:30 – 6:15 PM',
@@ -461,7 +421,7 @@ export const itineraryData = {
           activity: 'Restorative relaxation / Yoga Nidra',
         },
       ],
-      timingNote: 'Dec 19 · Full Retreat Day · 6:30 AM to 8:45 PM (Sample schedule)',
+      timingNote: 'Dec 27 · Full Retreat Day · 6:30 AM to 8:45 PM (Sample schedule)',
     },
     {
       day: 4,
@@ -513,7 +473,7 @@ export const itineraryData = {
           activity: 'Vegetarian lunch, check-out and departure',
         },
       ],
-      timingNote: 'Dec 20 · Closing Day · 6:00 AM to 12:30 PM (Sample schedule)',
+      timingNote: 'Dec 28 · Closing Day · 6:00 AM to 12:30 PM (Sample schedule)',
     },
   ],
 }
@@ -551,7 +511,7 @@ export const investment = {
   clarityNote:
     'Provisional price: ₹9,999 per person — subject to organiser confirmation. No payment or deposit is required at this stage.',
   inclusions: [
-    '3 nights twin-sharing accommodation — two guests per room (Dec 17–20)',
+    '3 nights twin-sharing accommodation — two guests per room (Dec 25–28)',
     'Vegetarian meals & drinking water (final catering arrangements to be confirmed)',
     'All scheduled yoga, pranayama, meditation and Yoga Nidra sessions',
     'Facilitated mindfulness, cognitive reflection & guided journaling activities',
@@ -575,14 +535,14 @@ export const compactFaqs = [
   },
   {
     q: 'What are the retreat dates and when will the venue be confirmed?',
-    a: 'The retreat is confirmed for December 17–20 (4 days / 3 nights, 2:00 PM check-in on Dec 17 through 12:30 PM departure on Dec 20). Exact venue details in Kerala, facilitators and operational timings will be confirmed by the organiser prior to booking.',
+    a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights, 2:00 PM check-in on Dec 25 through 12:30 PM departure on Dec 28). Exact venue details in Kerala, facilitators and operational timings will be confirmed by the organiser prior to booking.',
   },
   {
     q: 'What are the stay and meal arrangements?',
     a: 'Accommodation is on a twin-sharing basis (two guests per room) for 3 nights in Kerala, India. Vegetarian meals and drinking water are planned as part of the retreat, with final arrangements confirmed by the organiser.',
   },
   {
-    q: 'Are the temple visits, Nila River boat safari and cultural performances included?',
-    a: 'Temple visits (subject to local customs and timings), the Nila River boat safari (subject to weather, permissions and safe operating conditions), and classical performances (flute, Bharatanatyam / Mohiniyattam) are subject to operational feasibility and artist availability prior to confirmation.',
+    q: 'Are the temple visits and cultural performances included?',
+    a: 'Temple visits (subject to local customs and timings) and classical performances (flute, Bharatanatyam / Mohiniyattam) are part of the proposed retreat experience, subject to operational feasibility and artist availability prior to confirmation.',
   },
 ]

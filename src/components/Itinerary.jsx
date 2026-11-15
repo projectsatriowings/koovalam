@@ -18,9 +18,9 @@ const dayVisuals = {
     tag: 'BODY & INNER AWARENESS',
   },
   3: {
-    src: 'images/highlight-nila-river.jpg',
-    alt: 'Peaceful Nila River waters framed by Kerala palms',
-    caption: 'Mindful Nila River boat safari (afternoon sample, subject to weather and safe boat conditions)',
+    src: 'images/highlight-temple.jpg',
+    alt: 'Ancient Kerala temple architecture and peaceful granite courtyards',
+    caption: 'Quiet heritage temple visit for unhurried morning reflection and sacred contemplation',
     tag: 'CULTURE & NATURE',
   },
   4: {
@@ -45,7 +45,7 @@ export default function Itinerary() {
         <div className="section-head-travel text-center">
           <div className="travel-eyebrow">
             <LeafMark color="var(--antique-brass)" size={13} />
-            <span>DECEMBER 17–20 · 4 DAYS / 3 NIGHTS</span>
+            <span>DECEMBER 25–28 · 4 DAYS / 3 NIGHTS</span>
           </div>
           <h2 className="travel-heading">
             Suggested Daily <span className="serif-italic">Flow</span>
@@ -183,10 +183,10 @@ export default function Itinerary() {
               <span>EXCURSIONS &amp; CULTURAL PROGRAMME</span>
             </div>
             <h3 className="proposed-section-title">
-              Temple Visits, River Safari &amp; Cultural Evenings Under Review
+              Temple Visits &amp; Cultural Evenings Under Review
             </h3>
             <p className="proposed-section-sub">
-              Every session is 100% voluntary and adaptable to personal comfort. Temple visits, Nila River boat safari (with licensed operator and life jackets), and cultural performances are finalised prior to booking.
+              Every session is 100% voluntary and adaptable to personal comfort. Temple visits and classical cultural performances are finalised prior to booking.
             </p>
           </div>
 

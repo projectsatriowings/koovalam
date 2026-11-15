@@ -9,9 +9,6 @@ const SLOT_CLASS = {
   valley: styles.tileValley,
   courtyard: styles.tileCourtyard,
   sanctum: styles.tileSanctum,
-  'river-cruise': styles.tileValley,
-  'river-vallam': styles.tileCourtyard,
-  'river-banks': styles.tileRiverRight,
 }
 
 /**
@@ -151,11 +148,9 @@ export default function SacredTemples({ category }) {
           </svg>
           <p className={styles.etiquetteText}>
             <strong>Visitor notes &amp; imagery:</strong> Photographs feature
-            Kottiyoor Temple, Tirunelli Temple, and the serene Bharathapuzha
-            (Nila) river. Temple visits are proposed in keeping with dress
-            codes, seasonal calendars, and organiser confirmation; the Nila
-            River boat safari runs with licensed operators and life jackets,
-            subject to weather and safe water conditions.
+            Kottiyoor Temple and Tirunelli Temple. Temple visits are proposed in
+            keeping with dress codes, seasonal calendars, and organiser
+            confirmation.
           </p>
         </div>
       </Reveal>

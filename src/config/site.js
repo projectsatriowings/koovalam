@@ -12,7 +12,7 @@ export const site = {
   whatsappNumber: '917358400296',
   whatsappDisplay: '+91 73584 00296',
   whatsappMessage:
-    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 17–20, Kerala). Could you please share room availability and next steps?',
+    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 25–28, Kerala). Could you please share room availability and next steps?',
   // Functional backend email enquiry endpoint (served by api/enquire.js and dev middleware)
   formEndpoint: '/api/enquire',
   retreat: {
@@ -21,7 +21,7 @@ export const site = {
     subheadline: 'Nature, Wellness and Spirituality · Rooted in the traditional wisdom of Kerala',
     activitiesSummary: 'Yoga · Pranayama · Meditation · Temples · Culture · Nature',
     duration: '4 days / 3 nights',
-    dates: 'December 17–20 (Confirmed)',
+    dates: 'December 25–28 (Confirmed)',
     location: 'Kerala, India',
     venue: 'Kerala, India (Venue to be confirmed by organiser)',
     price: '₹9,999',
@@ -70,7 +70,7 @@ export function buildWhatsAppLink(message = site.whatsappMessage) {
   if (!isWhatsAppConfigured) return null
   const text =
     message ||
-    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 17–20, Kerala).'
+    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 25–28, Kerala).'
   return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(text)}`
 }
 

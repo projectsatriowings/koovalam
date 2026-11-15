@@ -71,7 +71,7 @@ export default function Footer() {
                 <strong>Location:</strong> Kerala, India
               </li>
               <li>
-                <strong>Dates &amp; Duration:</strong> Dec 17–20 (4 Days / 3 Nights)
+                <strong>Dates &amp; Duration:</strong> Dec 25–28 (4 Days / 3 Nights)
               </li>
               <li>
                 <strong>Accommodation:</strong> Twin-Sharing (2 guests/room)

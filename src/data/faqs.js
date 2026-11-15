@@ -21,7 +21,7 @@ export const faqCategories = [
       },
       {
         q: 'When will the exact venue be announced?',
-        a: 'The retreat dates are confirmed for December 17–20 (4 days / 3 nights). The exact venue in Kerala will be shared alongside room allocation and operational details before bookings open.',
+        a: 'The retreat dates are confirmed for December 25–28 (4 days / 3 nights). The exact venue in Kerala will be shared alongside room allocation and operational details before bookings open.',
       },
     ],
   },
@@ -69,7 +69,7 @@ export const faqCategories = [
       },
       {
         q: 'What activities are included in the retreat?',
-        a: 'The programme includes gentle Classical Yoga, foundational pranayama breathwork, morning silent sitting and guided meditation, evening restorative Yoga Nidra, guided values journaling and reflection circles, an unhurried nature walk, a morning temple visit, an afternoon river safari (conditional), and a take-home wellness routine.',
+        a: 'The programme includes gentle Classical Yoga, foundational pranayama breathwork, morning silent sitting and guided meditation, evening restorative Yoga Nidra, guided values journaling and reflection circles, an unhurried nature walk, a morning temple visit, evening classical arts performances, and a take-home wellness routine.',
       },
     ],
   },
@@ -77,19 +77,19 @@ export const faqCategories = [
     id: 'experiences',
     number: '04',
     title: 'Cultural & Nature Experiences',
-    tagline: 'Temple quiet and the Nila River safari',
+    tagline: 'Temple quiet and living Kerala heritage',
     questions: [
       {
         q: 'Is the temple visit compulsory?',
         a: 'No. Participation in the Day 03 morning temple visit is completely voluntary. Guests who choose to attend are requested to respect local customs and any applicable temple dress requirements.',
       },
       {
-        q: 'Is the Nila River boat safari guaranteed?',
-        a: 'No. While the boat safari is included in the retreat fee as a scheduled off-site nature excursion on Day 03, it is strictly conditional and not guaranteed. It depends on safe river flow, seasonal weather, and local operating permissions.',
+        q: 'What should I wear for temple visits?',
+        a: 'Modest traditional or simple, respectful attire covering shoulders and knees is recommended. Specific guidelines and local customs will be shared by the organiser prior to the visit.',
       },
       {
-        q: 'What happens if weather or river conditions prevent the safari?',
-        a: 'The Nila River boat safari is strictly conditional upon seasonal weather, river conditions, and permissions. If conditions prevent the safari from operating safely, the time will be adapted within the retreat schedule. The excursion is not guaranteed.',
+        q: 'Are the classical arts and music performances included?',
+        a: 'Yes, the evening classical flute sound healing and traditional arts performances are part of the retreat schedule, subject to artist scheduling and venue availability.',
       },
     ],
   },
@@ -101,7 +101,7 @@ export const faqCategories = [
     questions: [
       {
         q: 'What are the confirmed retreat dates?',
-        a: 'The retreat is confirmed for December 17–20 (4 days / 3 nights). By joining our enquiry list, you will receive venue details and room availability.',
+        a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights). By joining our enquiry list, you will receive venue details and room availability.',
       },
       {
         q: 'How can visitors enquire about pricing?',

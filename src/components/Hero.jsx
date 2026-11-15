@@ -132,7 +132,7 @@ export default function Hero({ onOpenEnquiry }) {
 
             <div className="trip-strip-item">
               <span className="trip-strip-label">Confirmed Dates</span>
-              <strong className="trip-strip-value">Dec 17 – 20</strong>
+              <strong className="trip-strip-value">Dec 25 – 28</strong>
               <span className="trip-strip-sub">4 Days / 3 Nights</span>
             </div>
 

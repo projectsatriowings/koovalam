@@ -35,14 +35,14 @@ const DAY_METADATA = {
       'Representative Kerala nature study · Dedicated afternoon walks for sensory grounding and mindful observation under the canopy of indigenous greenery.',
   },
   3: {
-    milestoneTag: 'MILESTONE 03 · THE RIVER',
-    pillar: 'CULTURE, SACRED WATERS & GRATITUDE',
+    milestoneTag: 'MILESTONE 03 · THE HERITAGE',
+    pillar: 'CULTURE, SACRED STILLNESS & GRATITUDE',
     narrative:
-      'Day 03 expands the retreat from the inner sanctuary outward into the cultural landscape of Kerala. Following gentle morning yoga and pranayama, participants visit a historic temple to experience early-morning serenity, stone courtyards, and centuries of contemplative quiet. In the afternoon, a mindful Nila River boat safari invites quiet drifting, concluding with an evening reflection circle on gratitude and personal insight.',
-    quote: 'Stepping gently into centuries of stone stillness in the morning, drifting along calm river waters in the afternoon.',
-    captionPill: 'HERITAGE & RIVER IMMERSION STUDY',
+      'Day 03 expands the retreat from the inner sanctuary outward into the cultural landscape of Kerala. Following gentle morning yoga and pranayama, participants visit a historic temple to experience early-morning serenity, stone courtyards, and centuries of contemplative quiet. The afternoon offers restful personal reflection and nature immersion, concluding with an evening circle on gratitude and personal insight.',
+    quote: 'Stepping gently into centuries of stone stillness in the morning, resting in spacious presence in the afternoon.',
+    captionPill: 'HERITAGE & SACRED TEMPLE STUDY',
     captionText:
-      'Representative imagery. The retreat location is Kerala, India (exact venue to be confirmed). The morning temple visit and afternoon Nila River boat safari are off-site experiences subject to local customs, temple timings, weather, and safe operating conditions, and are not guaranteed.',
+      'Representative imagery. The retreat location is Kerala, India (exact venue to be confirmed). The morning temple visit is an off-site experience subject to local customs, temple timings, and safe operating conditions.',
   },
   4: {
     milestoneTag: 'MILESTONE 04 · THE RETURN',
@@ -152,7 +152,7 @@ function DayFolio({ d }) {
             <span className="crown-sparkle" aria-hidden="true">✦</span>
             <span>SIGNATURE RETREAT EXPERIENCE · DAY 03 IMMERSION</span>
           </div>
-          <span className="crown-subtitle">TEMPLE SERENITY &amp; NILA RIVER DRIFT</span>
+          <span className="crown-subtitle">TEMPLE SERENITY &amp; SACRED STILLNESS</span>
         </div>
       )}
 
@@ -205,9 +205,9 @@ function DayFolio({ d }) {
               </div>
               <div className="dual-media-item">
                 <div className="media-aspect-wrapper">
-                  <ImageSlot name="highlight-nila-river" />
+                  <ImageSlot name="cultural-evenings" />
                 </div>
-                <span className="dual-media-tag">02 · AFTERNOON RIVER SAFARI</span>
+                <span className="dual-media-tag">02 · CLASSICAL ARTS EVENING</span>
               </div>
             </div>
           ) : (
@@ -312,7 +312,7 @@ export default function Journey() {
               <span className="ethos-banner-kicker">A LIVING RHYTHM, NOT A RIGID TIMETABLE</span>
               <h3 className="ethos-banner-title">Gentle, Non-Dogmatic &amp; 100% Voluntary</h3>
               <p className="ethos-banner-text">
-                This schedule reflects the authentic four-day arc of our retreat programme. The retreat is held in Kerala, India (exact venue to be confirmed). In keeping with our mindful philosophy, outdoor walks and the off-site Nila River boat safari adapt organically to weather, temple timings, and safe operating conditions, and are not guaranteed. Every session is an invitation: if you need to sleep in, take a solitary walk, or rest in your room, you are always supported in doing so. Practices are designed for general relaxation and well-being; they are non-dogmatic and are not clinical or medical treatments.
+                This schedule reflects the authentic four-day arc of our retreat programme. The retreat is held in Kerala, India (exact venue to be confirmed). In keeping with our mindful philosophy, outdoor walks and temple visits adapt organically to weather, temple timings, and safe operating conditions. Every session is an invitation: if you need to sleep in, take a solitary walk, or rest in your room, you are always supported in doing so. Practices are designed for general relaxation and well-being; they are non-dogmatic and are not clinical or medical treatments.
               </p>
             </div>
           </div>

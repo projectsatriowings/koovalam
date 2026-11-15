@@ -282,7 +282,7 @@ export default function EnquiryCard({
             Send a Retreat Enquiry
           </h3>
           <p className={styles.stepSubtitle}>
-            Share your details below — our organiser replies personally with room availability for Dec 17–20.
+            Share your details below — our organiser replies personally with room availability for Dec 25–28.
           </p>
         </>
       )}
@@ -594,7 +594,7 @@ export default function EnquiryCard({
 
             <div className={styles.modalEyebrow}>
               <LeafMark color="#DFC289" stemColor="#DFC289" size={13} />
-              <span>KOOVALAM RETREAT · DEC 17–20 · KERALA</span>
+              <span>KOOVALAM RETREAT · DEC 25–28 · KERALA</span>
             </div>
 
             <h3

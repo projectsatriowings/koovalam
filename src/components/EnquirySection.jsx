@@ -21,7 +21,7 @@ export default function EnquirySection() {
             Retreat Enquiry <span className="serif-italic">&amp; Registration</span>
           </h2>
           <p className={styles.tightLede}>
-            Ask us about the Dec 17–20 retreat, proposed temple visits, or suitability. We reply personally with room availability and no pressure.
+            Ask us about the Dec 25–28 retreat, proposed temple visits, or suitability. We reply personally with room availability and no pressure.
           </p>
         </div>
 

@@ -87,7 +87,7 @@ export function Pause() {
       num: '03',
       pillar: 'SOUL',
       title: 'Spiritual Reverence & Inner Stillness',
-      desc: 'A gentle homecoming to your center through quiet temple visits, the mindful Nila River boat safari, and spacious guided reflection.',
+      desc: 'A gentle homecoming to your center through quiet temple visits, guided meditation, and spacious reflection.',
     },
   ]
 
@@ -540,9 +540,9 @@ export function Practices() {
                 </div>
                 <div className="wide-feature-content">
                   <span className="practice-card-subtitle">Cultural Heritage &amp; Mindful Excursions</span>
-                  <h3 className="wide-feature-title">Temple Stillness &amp; Nila River Safari</h3>
+                  <h3 className="wide-feature-title">Temple Stillness &amp; Sacred Sanctuaries</h3>
                   <p className="wide-feature-desc">
-                    Spiritual wellness at Koovalam is deeply connected to the living landscapes of Kerala. Enjoy unhurried morning visits to quiet heritage temple courtyards, walk barefoot on cool granite, and drift peacefully along the historic Nila River on a mindful boat safari — letting the rhythm of flowing water restore inner stillness.
+                    Spiritual wellness at Koovalam is deeply connected to the living landscapes of Kerala. Enjoy unhurried morning visits to quiet heritage temple courtyards, walk barefoot on cool granite, and immerse in peaceful presence — letting centuries of contemplative quiet restore inner stillness.
                   </p>
                   <div className="wide-feature-meta">
                     <div className="meta-pill">
@@ -551,7 +551,7 @@ export function Practices() {
                     </div>
                     <div className="meta-pill">
                       <span className="pill-dot" aria-hidden="true" />
-                      <span>Nila River boat safari (weather &amp; permissions permitting)</span>
+                      <span>Sacred stone sanctuaries &amp; contemplative walkways</span>
                     </div>
                   </div>
                 </div>
@@ -699,38 +699,38 @@ export function Highlights() {
           </Reveal>
         </div>
 
-        {/* 2. Wide Riparian Feature: Nila River Boat Safari (Off-Site, Conditional) */}
+        {/* 2. Wide Nature Feature: Contemplative Nature Immersion */}
         <Reveal>
           <div className="experience-panorama-card">
             <div className="panorama-grid">
               <div className="panorama-body">
                 <div className="experience-meta-strip">
-                  <span className="experience-badge river-badge">DAY 03 AFTERNOON · NATURE EXCURSION</span>
+                  <span className="experience-badge river-badge">DAY 03 AFTERNOON · NATURE IMMERSION</span>
                   <span className="experience-timing">3:00 – 5:00 PM</span>
                 </div>
-                <h3 className="panorama-title">Mindful Nila River Boat Safari</h3>
+                <h3 className="panorama-title">Mindful Nature Pause &amp; Personal Reflection</h3>
                 <p className="panorama-desc">
-                  In the afternoon, participants embark on a mindful boat safari along the calm waters of the Nila River. Drifting peacefully as palm silhouettes reflect on the water, this nature excursion offers an expansive pause — letting the quiet movement of water bring natural mental rest.
+                  In the afternoon, participants enjoy an unhurried pause amidst indigenous Kerala greenery. Resting peacefully under shady canopies, this contemplative session invites quiet journaling and sensory grounding — letting the natural surroundings bring deep mental calm.
                 </p>
 
-                {/* Prominent Conditionality & Inclusion Callout Box */}
+                {/* Excursion Note Box */}
                 <div className="excursion-conditionality-box">
                   <div className="conditionality-header">
                     <span className="conditionality-status-dot" aria-hidden="true" />
-                    <span className="conditionality-kicker">INCLUSION STATUS: CONDITIONAL &amp; WEATHER-DEPENDENT</span>
+                    <span className="conditionality-kicker">AFTERNOON RETREAT FLOW</span>
                   </div>
                   <p className="conditionality-text">
-                    The Nila River boat safari is listed in retreat inclusions as an off-site nature excursion. However, inclusion does not guarantee operation: the safari is strictly conditional upon seasonal weather, river conditions, permissions, and safe operating protocols. The retreat location is Kerala, India (exact venue to be confirmed).
+                    Dedicated unhurried time for personal stillness, mindful contemplation, and journaling following the morning temple visit. The retreat location is Kerala, India (exact venue to be confirmed).
                   </p>
                 </div>
               </div>
 
               <div className="panorama-media-wrap">
-                <ImageSlot name="highlight-nila-river" />
+                <ImageSlot name="highlight-temple" />
                 <div className="panorama-media-caption">
-                  <span className="media-caption-tag">REPRESENTATIVE RIVER STUDY</span>
+                  <span className="media-caption-tag">HERITAGE &amp; NATURE STUDY</span>
                   <p className="media-caption-text">
-                    The Nila River in afternoon light. Off-site excursion subject to weather, permissions, and safe operating conditions.
+                    Serene Kerala sanctuary setting for unhurried contemplative stillness and reflection.
                   </p>
                 </div>
               </div>
@@ -804,14 +804,14 @@ export function Highlights() {
 
               <div className="matrix-col matrix-col-conditional">
                 <div className="matrix-col-header">
-                  <span className="matrix-step-badge">RIVER EXCURSION</span>
-                  <h5 className="matrix-col-title">Nila River Boat Safari</h5>
+                  <span className="matrix-step-badge">NATURE IMMERSION</span>
+                  <h5 className="matrix-col-title">Mindful Nature Pause</h5>
                 </div>
                 <p className="matrix-col-desc">
-                  A mindful afternoon boat drift along the Nila River, listed in retreat inclusions but strictly weather-dependent.
+                  An unhurried afternoon nature pause and journaling session amidst tranquil Kerala greenery.
                 </p>
                 <div className="matrix-col-footer">
-                  <span className="matrix-status-tag tag-conditional">Included in Fee · Conditional (Not Guaranteed)</span>
+                  <span className="matrix-status-tag tag-optional">Included in Fee · Voluntary &amp; Restorative</span>
                 </div>
               </div>
             </div>
@@ -967,15 +967,11 @@ export function Included() {
     },
     {
       title: 'Scheduled Excursion Fee Coverage',
-      detail: 'Temple cultural visit and Nila River boat safari included in fee (operational conditions apply).',
+      detail: 'Temple cultural visit and traditional arts evening included in fee (operational conditions apply).',
     },
   ]
 
   const conditionalFactors = [
-    {
-      title: 'Nila River Boat Safari',
-      detail: 'Included in fee, but strictly conditional upon seasonal weather, river conditions, and permissions. Not guaranteed.',
-    },
     {
       title: 'Heritage Temple Visit',
       detail: 'Scheduled cultural visit subject to temple timings. Guests are requested to respect local customs and any applicable temple dress requirements. Participation is 100% voluntary.',
@@ -1147,9 +1143,9 @@ export function Included() {
                 <span className="folio-badge">DAY 03 PROGRAMME</span>
                 <span className="folio-timing">HERITAGE &amp; RIPARIAN EXPLORATION</span>
               </div>
-              <h3 className="excursions-title">Scheduled Temple Visit &amp; Nila River Safari</h3>
+              <h3 className="excursions-title">Scheduled Temple Visit &amp; Cultural Evening</h3>
               <p className="excursions-sublead">
-                Two distinct Kerala experiences scheduled for Day 03, combining quiet cultural reverence and peaceful outdoor contemplation.
+                Two distinct Kerala experiences scheduled for Day 03, combining quiet cultural reverence and evening classical arts immersion.
               </p>
             </div>
 
@@ -1170,26 +1166,26 @@ export function Included() {
                 </div>
               </div>
 
-              {/* Excursion 2: Nila River Safari */}
-              <div className="excursion-card excursion-conditional">
+              {/* Excursion 2: Classical Arts Evening */}
+              <div className="excursion-card">
                 <div className="excursion-card-top">
-                  <span className="excursion-tag-pill tag-river">DAY 03 AFTERNOON · 3:00 – 5:00 PM</span>
-                  <span className="excursion-fee-tag tag-conditional-fee">Included · Conditional</span>
+                  <span className="excursion-tag-pill tag-cultural">DAY 03 EVENING · 8:15 – 9:45 PM</span>
+                  <span className="excursion-fee-tag">Included in Fee</span>
                 </div>
-                <h4 className="excursion-card-title">Mindful Nila River Boat Safari</h4>
+                <h4 className="excursion-card-title">Classical Arts &amp; Sound Healing</h4>
                 <p className="excursion-card-desc">
-                  An afternoon mindful boat drift along the calm waters of the Nila River. Listed as an included retreat excursion, but operation is strictly dependent on conditions.
+                  An evening cultural immersion featuring traditional bamboo flute music and sound healing meditation in a serene Kerala timber pavilion.
                 </p>
-                <div className="excursion-status-line conditional-alert">
-                  <span className="status-bullet" aria-hidden="true">⚠️</span>
-                  <span><strong>Conditionality:</strong> Strictly conditional upon seasonal weather, river flow, permissions, and safe operating protocols. Not guaranteed.</span>
+                <div className="excursion-status-line">
+                  <span className="status-bullet" aria-hidden="true">✦</span>
+                  <span><strong>Setting:</strong> Traditional music and cultural recital subject to artist schedule and confirmation.</span>
                 </div>
               </div>
             </div>
 
             <div className="excursions-location-note">
               <p>
-                <strong>Excursion Setting:</strong> Both the temple visit and Nila River boat safari are conducted off-site as part of the scheduled Day 03 programme. The exact retreat venue location is Kerala, India (to be confirmed).
+                <strong>Excursion Setting:</strong> The temple visit is conducted off-site as part of the scheduled Day 03 programme. The exact retreat venue location is Kerala, India (to be confirmed).
               </p>
             </div>
           </div>
@@ -1350,7 +1346,7 @@ export function SafeCare() {
     'Focus on present-moment nervous system regulation, gentle grounding, and self-compassion.',
     'No aggressive or forceful pranayama; we never encourage pushing through pain, dizziness, or strain.',
     'Individual health, dietary, and physical mobility needs are addressed privately prior to arrival.',
-    'River safari conducted with authorised operators, individual life jackets, and clear weather protocols.',
+    'Temple visits conducted with respectful cultural orientation, clear timings, and voluntary participation.',
   ]
 
   return (

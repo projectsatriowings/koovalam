@@ -76,7 +76,7 @@ export default function SuccessState({
       </h3>
 
       <p className={styles.successCopy}>
-        We've received your enquiry for December 17–20 and will reply on WhatsApp or
+        We've received your enquiry for December 25–28 and will reply on WhatsApp or
         email with room availability and next steps.
       </p>
 
@@ -88,7 +88,7 @@ export default function SuccessState({
         </div>
         <div className={styles.recapItem}>
           <span className={styles.recapLabel}>Retreat Dates</span>
-          <span className={styles.recapValue}>Dec 17 – 20 (4D / 3N)</span>
+          <span className={styles.recapValue}>Dec 25 – 28 (4D / 3N)</span>
         </div>
         <div className={styles.recapItem}>
           <span className={styles.recapLabel}>Contact</span>
