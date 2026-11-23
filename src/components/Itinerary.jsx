@@ -8,26 +8,26 @@ const dayVisuals = {
   1: {
     src: 'images/resort/open-air-pavilion.jpg',
     alt: 'Open-air pavilion in nature for opening retreat orientation',
-    caption: 'Open-air pavilion setting for the opening welcome circle and grounding breathwork',
-    tag: 'ARRIVAL & GROUNDING',
+    caption: 'Open-air pavilion setting for welcome ceremony, dinner, and evening campfire gathering',
+    tag: 'ARRIVAL & WELCOME',
   },
   2: {
     src: 'images/resort/hill-platform.jpg',
     alt: 'Lush hillside greenery for sensory nature walk and inner awareness',
-    caption: 'Surrounded by greenery for mindfulness practice, guided journaling and sensory grounding walk',
-    tag: 'BODY & INNER AWARENESS',
+    caption: 'Surrounded by greenery for sunrise meditation, gentle yoga, and sacred fire ritual',
+    tag: 'SUNRISE & SACRED PRACTICES',
   },
   3: {
     src: 'images/highlight-temple.jpg',
     alt: 'Ancient Kerala temple architecture and peaceful granite courtyards',
-    caption: 'Quiet heritage temple visit for unhurried morning reflection and sacred contemplation',
-    tag: 'CULTURE & NATURE',
+    caption: 'Tirunelli Temple visit, sightseeing of waterfalls and gardens, and evening campfire music',
+    tag: 'SACRED JOURNEY & NATURE',
   },
   4: {
     src: 'images/resort/dining-area.jpg',
     alt: 'Forest-view dining room for concluding vegetarian lunch and closing circle',
-    caption: 'Forest-canopy dining room for personal integration sharing and concluding lunch',
-    tag: 'INTEGRATION & CLOSING',
+    caption: 'Guided plantation walk, closing reflection circle, and concluding farewell lunch',
+    tag: 'NATURE & FAREWELL',
   },
 }
 

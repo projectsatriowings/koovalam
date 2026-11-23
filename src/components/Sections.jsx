@@ -657,7 +657,7 @@ export function Highlights() {
             <div className="experience-body">
               <div className="experience-meta-strip">
                 <span className="experience-badge">DAY 03 MORNING · CULTURAL VISIT</span>
-                <span className="experience-timing">9:30 AM – 12:00 PM</span>
+                <span className="experience-timing">5:00 AM – 7:30 AM</span>
               </div>
               <h3 className="experience-title">Temple Serenity &amp; Contemplative Quiet</h3>
               <p className="experience-desc">
@@ -1153,12 +1153,12 @@ export function Included() {
               {/* Excursion 1: Temple */}
               <div className="excursion-card">
                 <div className="excursion-card-top">
-                  <span className="excursion-tag-pill tag-cultural">DAY 03 MORNING · 9:30 AM – 12:00 PM</span>
+                  <span className="excursion-tag-pill tag-cultural">DAY 03 MORNING · 5:00 AM – 7:30 AM</span>
                   <span className="excursion-fee-tag">Included in Fee</span>
                 </div>
                 <h4 className="excursion-card-title">Heritage Temple Contemplation</h4>
                 <p className="excursion-card-desc">
-                  A quiet cultural and spiritual visit scheduled for Day 03 morning. Guests are requested to respect local customs and any applicable temple dress requirements. Participation is voluntary.
+                  A quiet cultural and spiritual visit scheduled for Day 03 morning to Tirunelli Temple with optional ancestral rites. Guests are requested to respect local customs and any applicable temple dress requirements. Participation is voluntary.
                 </p>
                 <div className="excursion-status-line">
                   <span className="status-bullet" aria-hidden="true">✦</span>
@@ -1169,7 +1169,7 @@ export function Included() {
               {/* Excursion 2: Classical Arts Evening */}
               <div className="excursion-card">
                 <div className="excursion-card-top">
-                  <span className="excursion-tag-pill tag-cultural">DAY 03 EVENING · 8:15 – 9:45 PM</span>
+                  <span className="excursion-tag-pill tag-cultural">DAY 03 NIGHT · 9:00 – 10:00 PM</span>
                   <span className="excursion-fee-tag">Included in Fee</span>
                 </div>
                 <h4 className="excursion-card-title">Classical Arts &amp; Sound Healing</h4>

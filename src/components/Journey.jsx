@@ -14,13 +14,13 @@ const DAY_METADATA = {
     milestoneTag: 'MILESTONE 01 · THE ARRIVAL',
     pillar: 'SETTLING & EMBODIED PRESENCE',
     narrative:
-      'Arriving at Koovalam is a conscious transition from the velocity of travel to the stillness of nature. After check-in from 2:00 PM and a refreshing welcome drink, the retreat opens with a quiet circle to set personal intentions. Gentle movement, foundational breathwork, and evening Yoga Nidra prepare the nervous system for deep, undisturbed rest.',
-    quote: 'Check-in opens at 2:00 PM. No hurry, no demands — your first practice is simply giving yourself permission to stop.',
+      'Arriving at Koovalam is a conscious transition from the velocity of travel to the stillness of nature. After check-in from 2:30 PM and afternoon tea, the retreat gathers for an evening welcome ceremony, dinner, and campfire introductions to prepare for deep, undisturbed rest.',
+    quote: 'Check-in opens at 2:30 PM. No hurry, no demands — your first practice is simply giving yourself permission to stop.',
     imageName: 'included-stay',
     imageBadge: 'SERENE ARRIVAL COURTYARD',
     captionPill: 'REPRESENTATIVE KERALA RETREAT SETTING',
     captionText:
-      'Representative imagery. The retreat will be hosted in Kerala, India (exact venue to be confirmed). Check-in opens from 2:00 PM to unpack, breathe, and begin in an unhurried, peaceful atmosphere.',
+      'Representative imagery. The retreat will be hosted in Kerala, India (exact venue to be confirmed). Check-in opens from 2:30 PM to unpack, breathe, and begin in an unhurried, peaceful atmosphere.',
   },
   2: {
     milestoneTag: 'MILESTONE 02 · THE CLEARING',

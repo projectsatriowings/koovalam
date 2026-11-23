@@ -129,7 +129,7 @@ export const faqCategories = [
       },
       {
         q: 'What are the arrival and departure timings?',
-        a: 'Check-in, welcome drinks, and settling in commence from 2:00 PM on Day 01, with our opening circle at 3:30 PM. The retreat concludes after our closing circle and farewell lunch from 12:30 PM on Day 04.',
+        a: 'Check-in, guest arrival, and settling in commence from 2:30 PM on Day 01, with our welcome ceremony at 6:00 PM. The retreat concludes on Day 04 with a closing reflection circle, check-out at 12:30 PM, lunch, and pack-up and departure from 2:00 PM onwards.',
       },
       {
         q: 'What personal arrangements should guests make?',
