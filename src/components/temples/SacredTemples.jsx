@@ -113,6 +113,15 @@ export default function SacredTemples({ category }) {
                   <h4 className={styles.templeTitle}>{item.title}</h4>
                   <p className={styles.templeSummary}>{item.summary}</p>
 
+                  {item.ritualPoint && (
+                    <div className={styles.ritualCallout}>
+                      <span className={styles.ritualDot} aria-hidden="true" />
+                      <p className={styles.ritualText}>
+                        <strong>Ancestral Rites:</strong> {item.ritualPoint}
+                      </p>
+                    </div>
+                  )}
+
                   {metaItems.length > 0 && (
                     <dl className={styles.metaGrid}>
                       {metaItems.map((entry) => (

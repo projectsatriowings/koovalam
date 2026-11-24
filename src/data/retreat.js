@@ -84,11 +84,13 @@ export const experienceCategories = [
         ],
         representativeImage: false,
         summary:
-          'Also known as Thirunelli Maha Vishnu Temple, this ancient stone sanctuary rests in a Wayanad valley beside the Brahmagiri hills—long revered for its ancestral-rite heritage and historical stillness.',
-        highlight: 'Brahmagiri valley heritage · Revered ancestral-rite traditions respectfully introduced',
+          'Also known as Thirunelli Maha Vishnu Temple, this ancient stone sanctuary rests in a Wayanad valley beside the Brahmagiri hills—long revered for its ancestral-rite heritage and historical stillness. During this visit, traditional Bali Tharpanam and Pinda Daan rituals for ancestors can be performed.',
+        ritualPoint:
+          'Bali Tharpanam and Pinda Daan for ancestors can be performed during this sacred temple visit (Optional for interested participants).',
+        highlight: 'Brahmagiri valley heritage · Bali Tharpanam and Pinda Daan for ancestors can be performed',
         meta: [
-          { label: 'Heritage', value: 'Ancient stone shrine & ancestral-rite traditions' },
-          { label: 'Participation', value: 'Historical contemplation · No spiritual outcomes guaranteed' },
+          { label: 'Ancestral Rites', value: 'Bali Tharpanam & Pinda Daan for ancestors can be performed' },
+          { label: 'Heritage & Setting', value: 'Ancient stone shrine in Brahmagiri valley' },
         ],
       },
     ],

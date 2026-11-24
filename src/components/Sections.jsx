@@ -659,9 +659,9 @@ export function Highlights() {
                 <span className="experience-badge">DAY 03 MORNING · CULTURAL VISIT</span>
                 <span className="experience-timing">5:00 AM – 7:30 AM</span>
               </div>
-              <h3 className="experience-title">Temple Serenity &amp; Contemplative Quiet</h3>
+              <h3 className="experience-title">Temple Serenity &amp; Ancestral Rites</h3>
               <p className="experience-desc">
-                A quiet cultural and spiritual visit scheduled for Day 03 morning. Held in deep respect of local customs, architectural heritage, and temple timings, guests are invited to experience the stillness of traditional courtyards and oil lamps. There are no rushed tourist agendas — simply an invitation to quiet presence. Participation is completely voluntary and optional, with specific guidance on local customs shared prior to the visit.
+                A quiet cultural and spiritual visit scheduled for Day 03 morning (5:00 AM – 7:30 AM) to the ancient Tirunelli Temple in Wayanad. During this visit, traditional Bali Tharpanam and Pinda Daan rituals for ancestors can be performed by interested guests. Participation is completely voluntary and optional, with guidance on local customs shared prior to the visit.
               </p>
               <div className="experience-disclosure-tag">
                 <span className="disclosure-label">Programme Status:</span>
@@ -1156,9 +1156,9 @@ export function Included() {
                   <span className="excursion-tag-pill tag-cultural">DAY 03 MORNING · 5:00 AM – 7:30 AM</span>
                   <span className="excursion-fee-tag">Included in Fee</span>
                 </div>
-                <h4 className="excursion-card-title">Heritage Temple Contemplation</h4>
+                <h4 className="excursion-card-title">Heritage Temple &amp; Ancestral Rites</h4>
                 <p className="excursion-card-desc">
-                  A quiet cultural and spiritual visit scheduled for Day 03 morning to Tirunelli Temple with optional ancestral rites. Guests are requested to respect local customs and any applicable temple dress requirements. Participation is voluntary.
+                  A quiet cultural and spiritual visit scheduled for Day 03 morning to Tirunelli Temple. Traditional Bali Tharpanam and Pinda Daan rituals for ancestors can be performed (optional). Guests are requested to respect local customs and dress requirements. Participation is voluntary.
                 </p>
                 <div className="excursion-status-line">
                   <span className="status-bullet" aria-hidden="true">✦</span>

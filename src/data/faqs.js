@@ -84,6 +84,10 @@ export const faqCategories = [
         a: 'No. Participation in the Day 03 morning temple visit is completely voluntary. Guests who choose to attend are requested to respect local customs and any applicable temple dress requirements.',
       },
       {
+        q: 'Can ancestral rites like Bali Tharpanam or Pinda Daan be performed at Tirunelli Temple?',
+        a: 'Yes. During our scheduled Day 03 morning visit (5:00 AM – 7:30 AM) to the historic Tirunelli Temple in Wayanad, traditional Bali Tharpanam and Pinda Daan rituals for ancestors can be performed by interested participants. This is completely optional and voluntary.',
+      },
+      {
         q: 'What should I wear for temple visits?',
         a: 'Modest traditional or simple, respectful attire covering shoulders and knees is recommended. Specific guidelines and local customs will be shared by the organiser prior to the visit.',
       },
