@@ -32,8 +32,8 @@ export const site = {
     food: 'Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
     pickup: 'Requested pickup point: Kuttipuram Railway Station (Transport inclusion pending confirmation)',
     groupSize: 'Small group experience',
-    ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
-    templeVisits: 'Kottiyoor Temple & Tirunelli Temple (Proposed · Logistical feasibility under organiser review)',
+    ageRange: '18–60 years (Stated intended participant range, subject to final eligibility confirmation)',
+    templeVisits: 'Tirunelli Temple (Proposed · Logistical feasibility under organiser review)',
     culturalArts: 'Traditional Flute, Bharatanatyam & Mohiniyattam (Proposed · Subject to artist availability)',
   },
   socials: [
@@ -51,14 +51,14 @@ export const site = {
  */
 export const isWhatsAppConfigured = Boolean(
   site.whatsappNumber &&
-    !site.whatsappNumber.includes('X') &&
-    site.whatsappNumber.trim() !== ''
+  !site.whatsappNumber.includes('X') &&
+  site.whatsappNumber.trim() !== ''
 )
 
 export const isEmailConfigured = Boolean(
   site.email &&
-    !site.email.endsWith('.example') &&
-    site.email.trim() !== ''
+  !site.email.endsWith('.example') &&
+  site.email.trim() !== ''
 )
 
 export const isFormConfigured = Boolean(

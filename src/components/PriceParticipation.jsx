@@ -209,7 +209,7 @@ export default function PriceParticipation() {
               <div className="criteria-specs">
                 <div className="criteria-spec-item">
                   <div className="spec-label">Stated Intended Age Range</div>
-                  <strong className="spec-val">18–70 years</strong>
+                  <strong className="spec-val">18–60 years</strong>
                   <p className="spec-sub">
                     Subject to final eligibility confirmation. Practices are gentle and foundational.
                   </p>

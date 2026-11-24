@@ -148,7 +148,7 @@ export default function SacredTemples({ category }) {
           </svg>
           <p className={styles.etiquetteText}>
             <strong>Visitor notes &amp; imagery:</strong> Photographs feature
-            Kottiyoor Temple and Tirunelli Temple. Temple visits are proposed in
+            Tirunelli Temple. Temple visits are proposed in
             keeping with dress codes, seasonal calendars, and organiser
             confirmation.
           </p>

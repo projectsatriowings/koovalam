@@ -1576,28 +1576,34 @@
   font-size: 0.92rem;
   line-height: 1.62;
   color: var(--secondary-text);
-  margin-bottom: 20px;
-  flex: 1;
+  margin-bottom: 18px;
 }
 
 .card-specs-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 14px 16px;
+  margin: auto 0 0 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line-subtle);
+  gap: 10px;
+  background: var(--warm-ivory);
+  border: 1px solid rgba(161, 132, 77, 0.18);
+  border-radius: 8px;
 }
 
 .card-specs-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   font-size: 0.82rem;
   color: var(--deep-forest);
   font-weight: 500;
+  line-height: 1.4;
+}
+
+.card-specs-list li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 @media (max-width: 960px) {

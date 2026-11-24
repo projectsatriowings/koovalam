@@ -102,9 +102,7 @@ export default function StayTravel() {
               <div className="card-category">ACCOMMODATION</div>
               <h3 className="card-title">{stay.title}</h3>
               <p className="card-subtitle">{stay.subtitle}</p>
-              <p className="card-desc">
-                Accommodation is available in both Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) in Wayanad, Kerala. Shared lounges and open pavilions offer relaxing community spaces.
-              </p>
+              <p className="card-desc">{stay.description}</p>
               <ul className="card-specs-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -137,13 +135,11 @@ export default function StayTravel() {
               <div className="card-category">DINING</div>
               <h3 className="card-title">{food.title}</h3>
               <p className="card-subtitle">{food.subtitle}</p>
-              <p className="card-desc">
-                Wholesome vegetarian meals prepared as part of the planned retreat experience, served in the scenic forest-view dining room.
-              </p>
+              <p className="card-desc">{food.description}</p>
               <ul className="card-specs-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Vegetarian retreat experience</span>
+                  <span>Wholesome vegetarian breakfast, lunch &amp; dinner</span>
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -151,7 +147,7 @@ export default function StayTravel() {
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Final meal schedule confirmed by organiser</span>
+                  <span>Herbal drinking water &amp; tea throughout</span>
                 </li>
               </ul>
             </div>
@@ -176,15 +172,15 @@ export default function StayTravel() {
               <ul className="card-specs-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Requested pickup point: Kuttipuram Railway Station</span>
+                  <span>Suggested rail hub: Kuttipuram Railway Station</span>
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Arrival coordination to be confirmed</span>
+                  <span>Calicut (CCJ) Airport road connectivity</span>
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Transport inclusion pending confirmation</span>
+                  <span>Arrival coordination confirmed by organiser</span>
                 </li>
               </ul>
             </div>

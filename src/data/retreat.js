@@ -55,47 +55,8 @@ export const experienceCategories = [
     categoryName: 'Sacred Temple Sanctuaries',
     categoryTag: 'Spiritual Heritage · Ancient Pilgrimage',
     categoryDesc:
-      'Proposed visits to two historic Kerala pilgrimage sites. Experienced respectfully with quiet contemplation, subject to local customs, temple timings, and organiser confirmation.',
+      'Proposed visit to the historic Tirunelli Temple in Wayanad. Experienced respectfully with quiet contemplation, subject to local customs, temple timings, and organiser confirmation.',
     items: [
-      {
-        id: 'kottiyoor-temple',
-        title: 'Kottiyoor Temple',
-        tag: 'Kannur District · Shiva Pilgrimage Heritage',
-        kicker: 'Kannur District · Shiva Pilgrimage',
-        pillLabel: 'Kannur · Western Ghats',
-        image: 'kottiyoor-ikkare',
-        gallery: [
-          {
-            slot: 'ikkare',
-            image: 'kottiyoor-ikkare',
-            label: 'Permanent Shrine',
-            captionTitle: 'Permanent Laterite & Timber Shrine',
-            location: 'Kannur · Laterite & Timber Sanctuary',
-          },
-          {
-            slot: 'walkway',
-            image: 'kottiyoor-walkway',
-            label: 'Forest Path',
-            captionTitle: 'Sacred Woodland Approach',
-            location: 'Kannur · Shaded Canopy Path',
-          },
-          {
-            slot: 'akkare',
-            image: 'kottiyoor-akkare',
-            label: 'Bavali Riverside',
-            captionTitle: 'Bavali Riverside Sanctuary',
-            location: 'Kannur · Bavali Stream & Western Ghats',
-          },
-        ],
-        representativeImage: false,
-        summary:
-          'A significant Shiva pilgrimage destination set amidst the serene forests of the Western Ghats in Kannur. Encompassing the permanent timber-and-laterite shrine, its forest canopy walkway, and the sacred grove along the Bavali river, it invites peaceful presence.',
-        highlight: 'Historic Shiva pilgrimage · Subject to temple calendar & organiser confirmation',
-        meta: [
-          { label: 'Sanctuary & Setting', value: 'Permanent shrine & Bavali riverside forest grove' },
-          { label: 'Visiting Scope', value: 'Seasonal temple calendar & organiser confirmation' },
-        ],
-      },
       {
         id: 'tirunelli-temple',
         title: 'Tirunelli Temple',
@@ -205,11 +166,6 @@ export const allActivities = experienceCategories.flatMap((cat) => cat.items)
 // 2. The Retreat Journey / Itinerary (December 25–28 · 4 Days / 3 Nights)
 export const itineraryData = {
   proposedHighlightsUnderReview: [
-    {
-      name: 'Kottiyoor Temple Visit',
-      region: 'Kannur District',
-      status: 'Proposed · Subject to local customs, seasonal shrine timings & travel feasibility',
-    },
     {
       name: 'Tirunelli Temple Visit',
       region: 'Wayanad District',
@@ -468,23 +424,23 @@ export const itineraryData = {
 export const stayFoodTravel = {
   stay: {
     title: 'Single & Double Occupancy',
-    subtitle: 'Twin-sharing and private single rooms available',
+    subtitle: 'Private & twin-sharing options',
     description:
-      'Accommodation is available in both Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) in Wayanad, Kerala. Shared lounges and open pavilions offer relaxing community spaces.',
+      'Peaceful, nature-facing accommodation in Wayanad with relaxing open verandas and shared pavilions for mindful rest between daily sessions.',
     tag: 'Single & Twin Options',
   },
   food: {
     title: 'Vegetarian Meals',
-    subtitle: 'Planned retreat dining',
+    subtitle: 'Wholesome retreat dining',
     description:
-      'Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
+      'Nutritious vegetarian meals freshly prepared with local Kerala ingredients, served unhurriedly in the scenic open forest-view dining pavilion.',
     tag: 'Vegetarian Experience',
   },
   travel: {
     title: 'Pickup & Transport',
-    subtitle: 'Requested pickup point: Kuttipuram Railway Station',
+    subtitle: 'Station & airport connectivity',
     description:
-      'Requested pickup point: Kuttipuram Railway Station. Transport coordination details and whether transfer arrangements are included in the retreat package will be confirmed by the organiser.',
+      'Convenient road connectivity and transfer coordination for guests arriving in Wayanad, with organised pickup schedules confirmed prior to arrival.',
     tag: 'Requested Pickup Hub',
   },
 }
@@ -524,7 +480,7 @@ export const investment = {
     'Evening campfire gatherings and instrumental music experience',
   ],
   participation: {
-    ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
+    ageRange: '18–60 years (Stated intended participant range, subject to final eligibility confirmation)',
     couplesNote: 'Couples, solo travelers, and friends may join with flexible room options.',
     familyNote: 'No family package is offered. Retreat activities are structured for adult participants.',
     surgeryNotice:
