@@ -127,7 +127,7 @@ export default function Hero({ onOpenEnquiry }) {
             <div className="trip-strip-item">
               <span className="trip-strip-label">Location</span>
               <strong className="trip-strip-value">{site.retreat.location}</strong>
-              <span className="trip-strip-sub">Venue to be confirmed</span>
+              <span className="trip-strip-sub">Confirmed Location</span>
             </div>
 
             <div className="trip-strip-item">
@@ -144,17 +144,18 @@ export default function Hero({ onOpenEnquiry }) {
 
             <div className="trip-strip-item">
               <span className="trip-strip-label">Stay &amp; Food</span>
-              <strong className="trip-strip-value">Twin-Sharing</strong>
+              <strong className="trip-strip-value">Twin &amp; Single</strong>
               <span className="trip-strip-sub">Vegetarian Meals Planned</span>
             </div>
 
             <div className="trip-strip-item trip-strip-price-item">
-              <span className="trip-strip-label">Provisional Fee</span>
+              <span className="trip-strip-label">Retreat Investment</span>
               <div className="trip-strip-price-row">
+                <span style={{ fontSize: '0.74rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'rgba(255,255,255,0.7)', marginRight: '3px' }}>From</span>
                 <strong className="trip-strip-price">{site.retreat.price}</strong>
                 <span className="trip-strip-unit">/ person</span>
               </div>
-              <span className="trip-strip-sub">Subject to confirmation</span>
+              <span className="trip-strip-sub">Double ₹17,999 · Single ₹26,999</span>
             </div>
           </div>
         </div>

@@ -20,13 +20,13 @@ const DAY_METADATA = {
     imageBadge: 'SERENE ARRIVAL COURTYARD',
     captionPill: 'REPRESENTATIVE KERALA RETREAT SETTING',
     captionText:
-      'Representative imagery. The retreat will be hosted in Kerala, India (exact venue to be confirmed). Check-in opens from 2:30 PM to unpack, breathe, and begin in an unhurried, peaceful atmosphere.',
+      'Representative imagery. The retreat will be hosted in Wayanad, Kerala. Check-in opens from 2:30 PM to unpack, breathe, and begin in an unhurried, peaceful atmosphere.',
   },
   2: {
     milestoneTag: 'MILESTONE 02 · THE CLEARING',
     pillar: 'BODY, BREATH & INNER OBSERVATION',
     narrative:
-      'A complete day immersed in stillness and conscious movement. Day 02 begins with silent morning sitting and grounding classical yoga, moves into cognitive mindfulness and guided reflective journaling, and flows into an afternoon nature walk and self-compassion meditation before evening rest.',
+      'A complete day immersed in stillness and conscious movement. Day 02 begins with silent morning sitting and grounding classical yoga, moves into guided reflective journaling, and flows into an afternoon nature walk and self-compassion meditation before evening rest.',
     quote: 'A dedicated full day to listen inwardly — moving through morning quiet, conscious breath, and self-compassion.',
     imageName: 'practice-nature-culture',
     imageBadge: 'SENSORY NATURE GROUNDING',
@@ -42,7 +42,7 @@ const DAY_METADATA = {
     quote: 'Stepping gently into centuries of stone stillness in the morning, resting in spacious presence in the afternoon.',
     captionPill: 'HERITAGE & SACRED TEMPLE STUDY',
     captionText:
-      'Representative imagery. The retreat location is Kerala, India (exact venue to be confirmed). The morning temple visit is an off-site experience subject to local customs, temple timings, and safe operating conditions.',
+      'Representative imagery. The retreat location is confirmed in Wayanad, Kerala. The morning temple visit is an off-site experience subject to local customs, temple timings, and safe operating conditions.',
   },
   4: {
     milestoneTag: 'MILESTONE 04 · THE RETURN',
@@ -252,7 +252,7 @@ export default function Journey() {
               <span className="chapter-badge">04</span>
               <span className="chapter-eyebrow">CHAPTER 04 · THE FOUR-DAY JOURNEY</span>
             </div>
-            <span className="chapter-tagline">4 Days · 3 Nights · Kerala, India</span>
+            <span className="chapter-tagline">4 Days · 3 Nights · Wayanad, Kerala</span>
           </div>
 
           <div className="chapter-lead-block">
@@ -312,7 +312,7 @@ export default function Journey() {
               <span className="ethos-banner-kicker">A LIVING RHYTHM, NOT A RIGID TIMETABLE</span>
               <h3 className="ethos-banner-title">Gentle, Non-Dogmatic &amp; 100% Voluntary</h3>
               <p className="ethos-banner-text">
-                This schedule reflects the authentic four-day arc of our retreat programme. The retreat is held in Kerala, India (exact venue to be confirmed). In keeping with our mindful philosophy, outdoor walks and temple visits adapt organically to weather, temple timings, and safe operating conditions. Every session is an invitation: if you need to sleep in, take a solitary walk, or rest in your room, you are always supported in doing so. Practices are designed for general relaxation and well-being; they are non-dogmatic and are not clinical or medical treatments.
+                This schedule reflects the authentic four-day arc of our retreat programme. The retreat is held in Wayanad, Kerala. In keeping with our mindful philosophy, outdoor walks and temple visits adapt organically to weather, temple timings, and safe operating conditions. Every session is an invitation: if you need to sleep in, take a solitary walk, or rest in your room, you are always supported in doing so. Practices are designed for general relaxation and well-being; they are non-dogmatic and are not clinical or medical treatments.
               </p>
             </div>
           </div>

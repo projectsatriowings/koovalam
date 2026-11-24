@@ -36,12 +36,91 @@ export default function PriceParticipation() {
           <div className="investment-pricing-card">
             <div className="pricing-card-header">
               <span className="pricing-status-pill">{investment.statusTag}</span>
-              <div className="pricing-amount-wrap">
-                <span className="pricing-currency">₹</span>
-                <span className="pricing-number">9,999</span>
-                <span className="pricing-unit">/ {investment.unit}</span>
+
+              {/* Dual Occupancy Tiers */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                  gap: '12px',
+                  margin: '14px 0 16px',
+                }}
+              >
+                <div
+                  style={{
+                    background: 'var(--warm-ivory)',
+                    border: '1.5px solid var(--antique-brass)',
+                    borderRadius: '8px',
+                    padding: '16px',
+                    position: 'relative',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
+                      color: 'var(--deep-forest)',
+                      display: 'block',
+                      marginBottom: '6px',
+                    }}
+                  >
+                    Double Occupancy
+                  </span>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--deep-forest)' }}>₹</span>
+                    <span style={{ fontFamily: 'var(--font-head)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1 }}>
+                      17,999
+                    </span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500 }}>
+                      / person
+                    </span>
+                  </div>
+                  <span style={{ fontSize: '0.76rem', color: 'var(--secondary-text)', display: 'block', marginTop: '6px' }}>
+                    Twin-sharing · 2 guests per room
+                  </span>
+                </div>
+
+                <div
+                  style={{
+                    background: '#FAF8F5',
+                    border: '1.5px solid rgba(161, 132, 77, 0.4)',
+                    borderRadius: '8px',
+                    padding: '16px',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
+                      color: 'var(--antique-brass)',
+                      display: 'block',
+                      marginBottom: '6px',
+                    }}
+                  >
+                    Single Occupancy
+                  </span>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--deep-forest)' }}>₹</span>
+                    <span style={{ fontFamily: 'var(--font-head)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1 }}>
+                      26,999
+                    </span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500 }}>
+                      / person
+                    </span>
+                  </div>
+                  <span style={{ fontSize: '0.76rem', color: 'var(--secondary-text)', display: 'block', marginTop: '6px' }}>
+                    Private room for one guest
+                  </span>
+                </div>
               </div>
-              <p className="pricing-note">{investment.clarityNote}</p>
+
+              <p className="pricing-note">
+                Experience four days of mindful living, connection, relaxation and self-discovery in the serene landscapes of Wayanad. Clearly stated per person to ensure full clarity.
+              </p>
             </div>
 
             <div className="pricing-inclusions-block">

@@ -720,7 +720,7 @@ export function Highlights() {
                     <span className="conditionality-kicker">AFTERNOON RETREAT FLOW</span>
                   </div>
                   <p className="conditionality-text">
-                    Dedicated unhurried time for personal stillness, mindful contemplation, and journaling following the morning temple visit. The retreat location is Kerala, India (exact venue to be confirmed).
+                    Dedicated unhurried time for personal stillness, mindful contemplation, and journaling following the morning temple visit. The retreat location is confirmed in Wayanad, Kerala.
                   </p>
                 </div>
               </div>
@@ -947,7 +947,7 @@ export function Included() {
   const confirmedInclusions = [
     {
       title: '3 Nights’ Retreat Accommodation',
-      detail: 'Four days and three nights in Kerala, India (venue to be confirmed). Quiet rooms arranged for rest.',
+      detail: 'Four days and three nights in Wayanad, Kerala. Choice of Double Occupancy (Twin Sharing) or Single Occupancy (Private Room).',
     },
     {
       title: 'Scheduled Vegetarian Meals & Drinking Water',
@@ -1055,12 +1055,12 @@ export function Included() {
               </div>
               <h3 className="folio-title">Restful Retreat Accommodation</h3>
               <p className="folio-desc">
-                Three nights of quiet retreat accommodation in the calm natural landscape of Kerala, India. Spaces arranged for quiet rest, deep restorative sleep, and contemplative pause away from everyday obligations. Check-in commences from 2:00 PM on Day 01, and check-out is around 12:00 PM on Day 04.
+                Three nights of quiet retreat accommodation in the calm natural landscape of Wayanad, Kerala. Guests may choose between Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person). Spaces are arranged for quiet rest, restorative sleep, and contemplative pause. Check-in commences from 2:30 PM on Day 01, and check-out is at 12:30 PM on Day 04.
               </p>
               <div className="folio-disclosure-box">
-                <span className="disclosure-label">Setting &amp; Venue Status:</span>
+                <span className="disclosure-label">Setting &amp; Room Options:</span>
                 <p className="disclosure-text">
-                  Location is Kerala, India. The exact venue, property facilities, and room configurations will be confirmed and shared transparently before any booking is requested.
+                  Location is confirmed in Wayanad, Kerala. Both Double Occupancy and Single Occupancy options are available. Room configurations and sanctuary amenities are shared transparently upon enquiry.
                 </p>
               </div>
             </div>

@@ -12,7 +12,7 @@ export const site = {
   whatsappNumber: '917358400296',
   whatsappDisplay: '+91 73584 00296',
   whatsappMessage:
-    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 25–28, Kerala). Could you please share room availability and next steps?',
+    'Namaste Koovalam Team, I would like to enquire about the Koovalam Spiritual Wellness Retreat (Dec 25–28, Wayanad, Kerala). Could you please share room availability for Single / Double Occupancy and next steps?',
   // Functional backend email enquiry endpoint (served by api/enquire.js and dev middleware)
   formEndpoint: '/api/enquire',
   retreat: {
@@ -22,11 +22,13 @@ export const site = {
     activitiesSummary: 'Yoga · Pranayama · Meditation · Temples · Culture · Nature',
     duration: '4 days / 3 nights',
     dates: 'December 25–28 (Confirmed)',
-    location: 'Kerala, India',
-    venue: 'Kerala, India (Venue to be confirmed by organiser)',
-    price: '₹9,999',
-    priceNote: 'Provisional price: ₹9,999 per person — subject to organiser confirmation',
-    accommodation: 'Twin-sharing accommodation — two guests per room',
+    location: 'Wayanad, Kerala',
+    venue: 'Wayanad, Kerala (Confirmed)',
+    price: '₹17,999',
+    priceDouble: '₹17,999',
+    priceSingle: '₹26,999',
+    priceNote: 'Double Occupancy: ₹17,999 per person · Single Occupancy: ₹26,999 per person',
+    accommodation: 'Single & Twin-Sharing Accommodation (Private or 2 guests/room)',
     food: 'Vegetarian meals are part of the planned retreat experience. Final meal arrangements will be confirmed by the organiser.',
     pickup: 'Requested pickup point: Kuttipuram Railway Station (Transport inclusion pending confirmation)',
     groupSize: 'Small group experience',

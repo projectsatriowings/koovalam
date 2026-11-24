@@ -42,7 +42,7 @@ export default function EnquiryForm() {
         </h3>
 
         <p className="launch-notice-lead">
-          We are currently finalising retreat dates, venue arrangements, and official communication channels for the Koovalam 4-day retreat in Kerala, India.
+          We are currently finalising retreat dates, venue arrangements, and official communication channels for the Koovalam 4-day retreat in Wayanad, Kerala.
         </p>
 
         <p className="launch-notice-desc">

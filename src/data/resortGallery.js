@@ -88,7 +88,7 @@ export const resortGallery = [
     category: 'Property Cottage',
     alt: 'Standalone terracotta-walled cottage with peaked roof, white porch columns, and lush greenery',
     caption:
-      'Standalone cottage structure surrounded by lush garden greenery. Specific twin-sharing room allocations are confirmed prior to booking.',
+      'Standalone cottage structure surrounded by lush garden greenery. Specific room allocations for Single or Double Occupancy are confirmed prior to booking.',
     aspect: '16 / 9',
     featured: false,
   },

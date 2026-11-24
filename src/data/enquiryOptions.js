@@ -6,7 +6,7 @@ export const PARTICIPANT_OPTIONS = [
     count: 1,
     value: '1 Person',
     label: '1 Person',
-    shortDesc: 'Solo guest · Twin-sharing room',
+    shortDesc: 'Solo guest · Single or Twin room',
   },
   {
     count: 2,
@@ -49,14 +49,19 @@ export const PICKUP_OPTIONS = [
 
 export const ACCOMMODATION_OPTIONS = [
   {
-    value: 'Twin Sharing (Standard — Two Guests per Room)',
-    title: 'Twin Sharing',
-    description: 'Standard planned arrangement — two guests per room',
+    value: 'Double Occupancy / Twin Sharing (₹17,999 per person)',
+    title: 'Double Occupancy (Twin Sharing)',
+    description: '₹17,999 per person — two guests sharing room',
   },
   {
-    value: 'Need Clarification / Single Room Query',
-    title: 'Need Clarification / Single Room Query',
-    description: 'Ask the organiser about private room availability or pairing',
+    value: 'Single Occupancy / Private Room (₹26,999 per person)',
+    title: 'Single Occupancy (Private Room)',
+    description: '₹26,999 per person — dedicated private room for one guest',
+  },
+  {
+    value: 'Need Guidance / Flexible',
+    title: 'Need Guidance / Flexible',
+    description: 'Ask the organiser about room options or pairing',
   },
 ]
 
@@ -81,7 +86,7 @@ export const REASSURANCE_PANEL_CONTENT = {
     '100% Non-Binding Enquiry',
     'Zero Upfront Payment',
     'Vegetarian Meals Planned',
-    'Twin-Sharing Accommodation',
+    'Single & Twin-Sharing Stay',
   ],
   timelineHeading: 'What happens next',
   timelineSteps: [

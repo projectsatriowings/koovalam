@@ -60,17 +60,6 @@ export const mindfulPractices = [
     alt: 'Four participants seated on woven mats beneath a bamboo-thatch veranda meditating toward misty morning greenery',
     objectPosition: 'center 75%',
   },
-  {
-    id: 'cognitive',
-    number: '05',
-    title: 'Cognitive exercises',
-    label: 'Clarity & Self-Reflection',
-    description:
-      'Mindfulness exercises and reflective journaling for personal clarity and observing daily thought patterns. Non-clinical wellness practice.',
-    tags: ['Mindful mental clarity', 'Non-clinical reflection'],
-    image: 'practice-reflection',
-    alt: 'Hands holding a pen over an open journal beside herbal tea',
-  },
 ]
 
 export const practices = [

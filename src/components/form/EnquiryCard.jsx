@@ -617,7 +617,7 @@ export default function EnquiryCard({
               </li>
               <li className={styles.modalTrustItem}>
                 <span className={styles.modalTrustDot} aria-hidden="true">✓</span>
-                <span>Twin-Sharing Stay</span>
+                <span>Single &amp; Twin Sharing</span>
               </li>
               <li className={styles.modalTrustItem}>
                 <span className={styles.modalTrustDot} aria-hidden="true">✓</span>

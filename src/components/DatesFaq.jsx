@@ -63,14 +63,14 @@ export function DatesCard() {
             <div className="dates-status-pillar-card">
               <div className="pillar-header">
                 <span className="pillar-eyebrow">SANCTUARY LOCATION</span>
-                <span className="pillar-badge badge-neutral">Kerala, India</span>
+                <span className="pillar-badge badge-confirmed">Wayanad, Kerala</span>
               </div>
-              <h3 className="pillar-title">Venue — Kerala, India</h3>
+              <h3 className="pillar-title">Location — Wayanad, Kerala</h3>
               <p className="pillar-text">
-                The retreat will take place in Kerala, India. The exact venue and accommodation details are yet to be confirmed and will be shared before reservations open.
+                The retreat location is confirmed in Wayanad, Kerala. The specific sanctuary property and accommodation arrangements will be shared before reservations open.
               </p>
               <div className="pillar-footer">
-                <span className="pillar-status-note">Exact property to be confirmed</span>
+                <span className="pillar-status-note">Confirmed in Wayanad, Kerala</span>
               </div>
             </div>
 
@@ -78,14 +78,14 @@ export function DatesCard() {
             <div className="dates-status-pillar-card">
               <div className="pillar-header">
                 <span className="pillar-eyebrow">INVESTMENT &amp; PRICING</span>
-                <span className="pillar-badge badge-pending">To Be Announced</span>
+                <span className="pillar-badge badge-confirmed">From ₹17,999 / person</span>
               </div>
-              <h3 className="pillar-title">Pricing — To Be Announced</h3>
+              <h3 className="pillar-title">Pricing — Double ₹17,999 · Single ₹26,999</h3>
               <p className="pillar-text">
-                Confirmed pricing and a clear breakdown of inclusions will be shared before reservations open. No payment is being accepted at this stage.
+                Retreat investment is ₹17,999 per person for Double Occupancy (Twin-Sharing) and ₹26,999 per person for Single Occupancy (Private Room). Clearly stated per person to ensure full transparency.
               </p>
               <div className="pillar-footer">
-                <span className="pillar-status-note">Shared prior to reservations</span>
+                <span className="pillar-status-note">Double &amp; Single Occupancy Available</span>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ export function DatesCard() {
               </div>
               <div className="spec-item">
                 <span className="spec-label">Investment</span>
-                <span className="spec-value">{r.price}</span>
+                <span className="spec-value">Double ₹17,999 · Single ₹26,999 / person</span>
               </div>
               <div className="spec-item">
                 <span className="spec-label">Check-In</span>

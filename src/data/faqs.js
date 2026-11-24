@@ -13,15 +13,15 @@ export const faqCategories = [
     questions: [
       {
         q: 'Where is the retreat located?',
-        a: 'The retreat takes place in Kerala, India. The exact venue is to be confirmed and will be shared transparently before bookings open.',
+        a: 'The retreat location is confirmed in Wayanad, Kerala. The specific sanctuary property and arrival details will be shared transparently before bookings open.',
       },
       {
         q: 'How long is the retreat?',
-        a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:00 PM on Day 01 and concluding after our closing circle and lunch from 12:30 PM on Day 04.',
+        a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:30 PM on Day 01 and concluding after our closing circle, farewell lunch, and departure from 2:00 PM onwards on Day 04.',
       },
       {
         q: 'When will the exact venue be announced?',
-        a: 'The retreat dates are confirmed for December 25–28 (4 days / 3 nights). The exact venue in Kerala will be shared alongside room allocation and operational details before bookings open.',
+        a: 'The retreat dates are confirmed for December 25–28 (4 days / 3 nights) in Wayanad, Kerala. The specific sanctuary property, room allocation, and travel directions will be shared before bookings open.',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const faqCategories = [
     questions: [
       {
         q: 'What accommodation is provided?',
-        a: 'Three nights of quiet retreat accommodation in Kerala are included as part of your retreat fee. Because the exact venue is to be confirmed, specific room details and property facilities will be shared before reservations are confirmed.',
+        a: 'Three nights of quiet retreat accommodation in Wayanad, Kerala are included. Both Double Occupancy (Twin Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) are available.',
       },
       {
         q: 'Are meals vegetarian?',
@@ -104,8 +104,8 @@ export const faqCategories = [
         a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights). By joining our enquiry list, you will receive venue details and room availability.',
       },
       {
-        q: 'How can visitors enquire about pricing?',
-        a: 'Confirmed pricing and a clear breakdown of inclusions will be shared before reservations open. No payment is being accepted at this stage.',
+        q: 'What is the retreat investment and what is included?',
+        a: 'The retreat investment is ₹17,999 per person for Double Occupancy (Twin Sharing) and ₹26,999 per person for Single Occupancy (Private Room). This clearly stated per-person fee covers 3 nights accommodation in Wayanad, all scheduled vegetarian meals, guided yoga, meditation, breathwork, excursions, and take-home materials.',
       },
       {
         q: 'How does the reservation process work?',
@@ -133,7 +133,7 @@ export const faqCategories = [
       },
       {
         q: 'What personal arrangements should guests make?',
-        a: 'Guests independently arrange their own travel and transportation to the retreat venue in Kerala, India (detailed arrival directions will be provided upon confirmation). Guests are also advised to secure their own personal travel and medical insurance if desired.',
+        a: 'Guests independently arrange their own travel and transportation to the retreat venue in Wayanad, Kerala (detailed arrival directions will be provided upon confirmation). Guests are also advised to secure their own personal travel and medical insurance if desired.',
       },
     ],
   },

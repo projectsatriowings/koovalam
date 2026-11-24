@@ -48,15 +48,6 @@ export const experienceCategories = [
           'Quiet morning sitting and sensory awareness to greet the day with mental stillness and calm presence.',
         highlight: 'Gentle guidance · Unhurried morning presence',
       },
-      {
-        id: 'cognitive',
-        title: 'Cognitive Exercises',
-        tag: 'Clarity & Self-Reflection',
-        image: 'practice-reflection',
-        summary:
-          'Mindfulness exercises and reflective journaling for personal clarity and observing daily thought patterns. Non-clinical wellness practice.',
-        highlight: 'Mindful mental clarity · Non-clinical reflection',
-      },
     ],
   },
   {
@@ -476,11 +467,11 @@ export const itineraryData = {
 // 3. Stay, Food & Travel Details
 export const stayFoodTravel = {
   stay: {
-    title: 'Twin-Sharing Accommodation',
-    subtitle: 'Two guests sharing per room',
+    title: 'Single & Double Occupancy',
+    subtitle: 'Twin-sharing and private single rooms available',
     description:
-      'Accommodation is arranged on a twin-sharing basis (two guests per room) in Kerala, India. Specific property details, room photographs, and location arrangements will be shared once the venue is confirmed by the organiser.',
-    tag: 'Twin-Sharing Standard',
+      'Accommodation is available in both Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) in Wayanad, Kerala. Shared lounges and open pavilions offer relaxing community spaces.',
+    tag: 'Single & Twin Options',
   },
   food: {
     title: 'Vegetarian Meals',
@@ -500,22 +491,41 @@ export const stayFoodTravel = {
 
 // 4. Investment & Participation
 export const investment = {
-  price: '₹9,999',
+  price: '₹17,999',
+  doublePrice: '₹17,999',
+  singlePrice: '₹26,999',
   unit: 'per person',
-  statusTag: 'Provisional · Subject to Confirmation',
+  statusTag: 'Confirmed Investment Tiers',
   clarityNote:
-    'Provisional price: ₹9,999 per person — subject to organiser confirmation. No payment or deposit is required at this stage.',
+    'Double Occupancy: ₹17,999 per person · Single Occupancy: ₹26,999 per person. Experience four days of mindful living, connection, relaxation and self-discovery in the serene landscapes of Wayanad.',
+  tiers: [
+    {
+      name: 'Double Occupancy',
+      tag: 'Twin-Sharing',
+      price: '₹17,999',
+      unit: 'per person',
+      desc: 'Two guests sharing a spacious room with twin beds',
+    },
+    {
+      name: 'Single Occupancy',
+      tag: 'Private Room',
+      price: '₹26,999',
+      unit: 'per person',
+      desc: 'Dedicated private room for one guest',
+    },
+  ],
   inclusions: [
-    '3 nights twin-sharing accommodation — two guests per room (Dec 25–28)',
-    'Vegetarian meals & drinking water (final catering arrangements to be confirmed)',
+    '3 nights accommodation in Wayanad — choice of Double (Twin-Sharing) or Single (Private Room)',
+    'Wholesome, locally prepared vegetarian meals & drinking water throughout',
     'All scheduled yoga, pranayama, meditation and Yoga Nidra sessions',
-    'Facilitated mindfulness, cognitive reflection & guided journaling activities',
+    'Facilitated mindfulness, reflection & guided journaling activities',
+    'Guided plantation walk, waterfalls sightseeing, and heritage temple excursion',
     'Simple take-home wellness routine and participant reflection sheet',
-    'Mindful nature walk and sensory grounding',
+    'Evening campfire gatherings and instrumental music experience',
   ],
   participation: {
     ageRange: '18–70 years (Stated intended participant range, subject to final eligibility confirmation)',
-    couplesNote: 'Couples may join.',
+    couplesNote: 'Couples, solo travelers, and friends may join with flexible room options.',
     familyNote: 'No family package is offered. Retreat activities are structured for adult participants.',
     surgeryNotice:
       'Important Health Notice: Participants who have recently undergone surgery should contact the organiser before considering registration. Please discuss any mobility or health-related concerns privately with the organiser.',
@@ -530,11 +540,11 @@ export const compactFaqs = [
   },
   {
     q: 'What are the retreat dates and when will the venue be confirmed?',
-    a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights, 2:30 PM check-in on Dec 25 through 2:00 PM onwards departure on Dec 28). Exact venue details in Kerala, facilitators and operational timings will be confirmed by the organiser prior to booking.',
+    a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights, 2:30 PM check-in on Dec 25 through 2:00 PM onwards departure on Dec 28) in Wayanad, Kerala. Exact property details, facilitators and operational timings will be confirmed by the organiser prior to booking.',
   },
   {
     q: 'What are the stay and meal arrangements?',
-    a: 'Accommodation is on a twin-sharing basis (two guests per room) for 3 nights in Kerala, India. Vegetarian meals and drinking water are planned as part of the retreat, with final arrangements confirmed by the organiser.',
+    a: 'Accommodation is available in both Double Occupancy (Twin-Sharing at ₹17,999 per person) and Single Occupancy (Private Room at ₹26,999 per person) for 3 nights in Wayanad, Kerala. Vegetarian meals and drinking water are included throughout the retreat.',
   },
   {
     q: 'Are the temple visits and cultural performances included?',

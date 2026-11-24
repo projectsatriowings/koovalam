@@ -103,20 +103,20 @@ export default function StayTravel() {
               <h3 className="card-title">{stay.title}</h3>
               <p className="card-subtitle">{stay.subtitle}</p>
               <p className="card-desc">
-                Accommodation is arranged on a twin-sharing basis (two guests per room) in Kerala, India. Shared lounges and open pavilions offer relaxing community spaces, with room allocation confirmed by the organiser.
+                Accommodation is available in both Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) in Wayanad, Kerala. Shared lounges and open pavilions offer relaxing community spaces.
               </p>
               <ul className="card-specs-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Two guests sharing per room</span>
+                  <span>Double Occupancy (Twin Sharing) · ₹17,999 / person</span>
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Located in Kerala, India</span>
+                  <span>Single Occupancy (Private Room) · ₹26,999 / person</span>
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Specific room allocation confirmed by organiser</span>
+                  <span>Located in Wayanad, Kerala</span>
                 </li>
               </ul>
             </div>

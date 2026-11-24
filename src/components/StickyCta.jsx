@@ -67,10 +67,11 @@ export default function StickyCta() {
       <div className="travel-sticky-wrap">
         <div className="travel-sticky-info">
           <div className="sticky-price-row">
-            <strong className="sticky-price">₹9,999*</strong>
-            <span className="sticky-unit">/ person (Provisional)</span>
+            <span style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.75)', marginRight: '3px' }}>From</span>
+            <strong className="sticky-price">₹17,999</strong>
+            <span className="sticky-unit">/ person</span>
           </div>
-          <span className="sticky-dates-tag">Kerala, India · Dec 25 – 28 (4D / 3N)</span>
+          <span className="sticky-dates-tag">Wayanad · Dec 25–28 · Twin &amp; Single</span>
         </div>
 
         <a

@@ -64,7 +64,7 @@ export default function App() {
         {/* Section 05: Stay, Food & Travel */}
         <StayTravel />
 
-        {/* Section 06: Price & Participation (₹9,999, Health Notice, 4 FAQs) */}
+        {/* Section 06: Price & Participation (Single ₹26,999 / Double ₹17,999, Health Notice, 4 FAQs) */}
         <PriceParticipation />
 
         {/* Section 07: Enquiry & Registration (Primary Conversion Engine) */}

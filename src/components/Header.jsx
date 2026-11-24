@@ -238,7 +238,7 @@ export default function Header({ onOpenEnquiry }) {
             </button>
             <div className="mobile-nav-brand-footer">
               <p className="mobile-nav-note">Rooted in Nature. Connected to Soul.</p>
-              <span className="mobile-nav-location">Kerala, India</span>
+              <span className="mobile-nav-location">Wayanad, Kerala</span>
             </div>
           </div>
         </nav>

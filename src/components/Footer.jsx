@@ -41,7 +41,7 @@ export default function Footer() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Kerala, India</span>
+              <span>Wayanad, Kerala</span>
             </div>
           </div>
 
@@ -68,22 +68,22 @@ export default function Footer() {
             <h4 className="footer-col-title">Retreat Information</h4>
             <ul className="footer-facts-list">
               <li>
-                <strong>Location:</strong> Kerala, India
+                <strong>Location:</strong> Wayanad, Kerala (Confirmed)
               </li>
               <li>
                 <strong>Dates &amp; Duration:</strong> Dec 25–28 (4 Days / 3 Nights)
               </li>
               <li>
-                <strong>Accommodation:</strong> Twin-Sharing (2 guests/room)
+                <strong>Accommodation:</strong> Single &amp; Twin-Sharing (Private or 2 guests/room)
               </li>
               <li>
-                <strong>Dining:</strong> Vegetarian meals planned
+                <strong>Dining:</strong> Wholesome vegetarian meals planned
               </li>
               <li>
                 <strong>Requested Pickup:</strong> Kuttipuram Station
               </li>
               <li>
-                <strong>Provisional Price:</strong> ₹9,999 / person
+                <strong>Investment:</strong> Double ₹17,999 · Single ₹26,999 / person
               </li>
             </ul>
           </div>
