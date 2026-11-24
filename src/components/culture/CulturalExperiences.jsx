@@ -3,6 +3,7 @@ import Reveal from '../Reveal.jsx'
 import styles from './Culture.module.css'
 
 const ART_TILE_CLASS = {
+  kathakali: styles.tileKathakali,
   bharatanatyam: styles.tileBharatanatyam,
   mohiniyattam: styles.tileMohiniyattam,
   flute: styles.tileFlute,
@@ -11,7 +12,7 @@ const ART_TILE_CLASS = {
 /**
  * Two-tier editorial showcase for Kerala Cultural Experiences:
  * 1) Daylight Scenic Village Tour strip on warm ivory
- * 2) Deep-forest twilight pavilion stage featuring Bharatanatyam, Mohiniyattam & Flute
+ * 2) Deep-forest twilight pavilion stage featuring Kathakali, Bharatanatyam, Mohiniyattam & Flute
  */
 export default function CulturalExperiences({ category }) {
   const villageItem = category.items.find((i) => i.id === 'village-tour') || category.items[0]
@@ -82,7 +83,7 @@ export default function CulturalExperiences({ category }) {
                   <p className={styles.stageLead}>{eveningItem.summary}</p>
                   <span className={styles.stageStatusPill}>
                     <span className={styles.stageStatusDot} aria-hidden="true" />
-                    <span>Proposed · Subject to artist confirmation</span>
+                    <span>Arranged on Request · Not Included in Package</span>
                   </span>
                 </div>
               </div>
@@ -129,10 +130,7 @@ export default function CulturalExperiences({ category }) {
                   <line x1="12" y1="8" x2="12.01" y2="8" />
                 </svg>
                 <p className={styles.stageFootnoteText}>
-                  <strong>Cultural evenings &amp; participation:</strong> All evening
-                  recitals are relaxed and 100% voluntary. Bharatanatyam, Mohiniyattam,
-                  and traditional flute performances are subject to performer
-                  availability and final organiser confirmation prior to booking.
+                  <strong>Notice on Cultural Performances:</strong> Classical dances and musical performances (Kathakali, Bharatanatyam, Mohiniyattam, and traditional Flute) are <strong>not included in the standard retreat package</strong>. Based on guest requests, we will arrange these authentic cultural recitals with regional master artists.
                 </p>
               </div>
             </article>

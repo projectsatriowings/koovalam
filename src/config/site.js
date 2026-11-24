@@ -34,7 +34,7 @@ export const site = {
     groupSize: 'Small group experience',
     ageRange: '18–60 years (Stated intended participant range, subject to final eligibility confirmation)',
     templeVisits: 'Tirunelli Temple (Proposed · Logistical feasibility under organiser review)',
-    culturalArts: 'Traditional Flute, Bharatanatyam & Mohiniyattam (Proposed · Subject to artist availability)',
+    culturalArts: 'Kathakali, Bharatanatyam, Mohiniyattam & Flute (Not included in package · Arranged upon request)',
   },
   socials: [
     { label: 'Instagram', href: '#' },

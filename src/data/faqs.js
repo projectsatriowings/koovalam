@@ -88,8 +88,8 @@ export const faqCategories = [
         a: 'Modest traditional or simple, respectful attire covering shoulders and knees is recommended. Specific guidelines and local customs will be shared by the organiser prior to the visit.',
       },
       {
-        q: 'Are the classical arts and music performances included?',
-        a: 'Yes, the evening classical flute sound healing and traditional arts performances are part of the retreat schedule, subject to artist scheduling and venue availability.',
+        q: 'Are the classical arts and dance performances included in the package?',
+        a: 'No, classical dances and music performances (Kathakali, Bharatanatyam, Mohiniyattam, and traditional Flute) are not included in the standard retreat package. Based on guest requests, we will happily arrange these special cultural recitals with authentic regional artists.',
       },
     ],
   },

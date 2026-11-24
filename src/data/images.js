@@ -11,6 +11,7 @@ export const images = {
   'practice-reflection': { alt: 'Hands holding a pen over an open journal beside herbal tea', aspect: '1 / 1', w: 1024, h: 1024 },
   'practice-nature-culture': { alt: 'A quiet sunlit footpath through lush Kerala coconut palms and banana groves', aspect: '3 / 2', w: 1600, h: 1066 },
   'cultural-evenings': { alt: 'Mohiniyattam classical dancer in cream-and-gold Kasavu attire performing beside a bamboo flutist and brass Nilavilakku lamp in a Kerala timber pavilion', aspect: '3 / 2', w: 1264, h: 848 },
+  'kathakali-performance': { alt: 'Traditional Kathakali artist in elaborate classical green facial makeup (Paccha), ornate headdress, and ceremonial costume performing expressive mudras accompanied by percussion', aspect: '4 / 3', w: 800, h: 600 },
   'bharatanatyam-recital': { alt: 'Bharatanatyam classical dancer in turquoise-blue and gold silk performing a balanced posture in a warm twilight Kerala timber pavilion beside a lit brass Nilavilakku oil lamp', aspect: '3 / 4', w: 896, h: 1200 },
   'mohiniyattam-recital': { alt: 'Mohiniyattam dancer in white-and-gold Kerala Kasavu silk performing classical mudras before a warm traditional Kerala mural wall', aspect: '3 / 2', w: 1264, h: 848 },
   'flute-performance': { alt: 'Indian classical flutist playing a seasoned bamboo bansuri flute in cream traditional cotton attire illuminated by warm evening oil-lamp light', aspect: '3 / 2', w: 1264, h: 848 },

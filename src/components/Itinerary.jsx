@@ -174,35 +174,6 @@ export default function Itinerary() {
             </div>
           </div>
         </div>
-
-        {/* ── 4. Excursions & Cultural Highlights Under Confirmation ── */}
-        <div className="itinerary-proposed-section">
-          <div className="proposed-section-head">
-            <div className="travel-eyebrow">
-              <LeafMark color="var(--antique-brass)" size={12} />
-              <span>EXCURSIONS &amp; CULTURAL PROGRAMME</span>
-            </div>
-            <h3 className="proposed-section-title">
-              Temple Visits &amp; Cultural Evenings Under Review
-            </h3>
-            <p className="proposed-section-sub">
-              Every session is 100% voluntary and adaptable to personal comfort. Temple visits and classical cultural performances are finalised prior to booking.
-            </p>
-          </div>
-
-          <div className="proposed-highlights-row">
-            {itineraryData.proposedHighlightsUnderReview.map((feat, idx) => (
-              <div key={idx} className="proposed-highlight-item">
-                <span className="highlight-category">{feat.region || feat.genre}</span>
-                <h4 className="highlight-name">{feat.name}</h4>
-                <div className="highlight-status-wrap">
-                  <span className="status-indicator-dot" aria-hidden="true" />
-                  <span className="highlight-status-text">{feat.status}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

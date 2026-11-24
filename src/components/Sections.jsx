@@ -1170,22 +1170,22 @@ export function Included() {
               <div className="excursion-card">
                 <div className="excursion-card-top">
                   <span className="excursion-tag-pill tag-cultural">DAY 03 NIGHT · 9:00 – 10:00 PM</span>
-                  <span className="excursion-fee-tag">Included in Fee</span>
+                  <span className="excursion-fee-tag" style={{ background: 'rgba(215, 189, 131, 0.15)', color: 'var(--antique-brass)', borderColor: 'rgba(215, 189, 131, 0.4)' }}>Arranged on Request</span>
                 </div>
-                <h4 className="excursion-card-title">Classical Arts &amp; Sound Healing</h4>
+                <h4 className="excursion-card-title">Traditional Arts &amp; Cultural Performances</h4>
                 <p className="excursion-card-desc">
-                  An evening cultural immersion featuring traditional bamboo flute music and sound healing meditation in a serene Kerala timber pavilion.
+                  Classical dance and music performances (Kathakali, Bharatanatyam, Mohiniyattam, and Flute) are not included in the standard retreat package, but can be arranged upon guest request.
                 </p>
                 <div className="excursion-status-line">
                   <span className="status-bullet" aria-hidden="true">✦</span>
-                  <span><strong>Setting:</strong> Traditional music and cultural recital subject to artist schedule and confirmation.</span>
+                  <span><strong>Arrangement:</strong> Not included in package. Arranged on request with regional master artists.</span>
                 </div>
               </div>
             </div>
 
             <div className="excursions-location-note">
               <p>
-                <strong>Excursion Setting:</strong> The temple visit is conducted off-site as part of the scheduled Day 03 programme. The exact retreat venue location is Kerala, India (to be confirmed).
+                <strong>Excursion Setting:</strong> The temple visit is conducted off-site as part of the scheduled Day 03 programme. The retreat location is Wayanad, Kerala (Confirmed).
               </p>
             </div>
           </div>

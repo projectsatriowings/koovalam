@@ -121,14 +121,21 @@ export const experienceCategories = [
         title: 'Traditional Arts & Cultural Evenings',
         tag: 'Classical Indian Performing Arts',
         kicker: 'Evening Gathering · Classical Heritage',
-        pillLabel: 'Flute · Bharatanatyam · Mohiniyattam',
-        image: 'bharatanatyam-recital',
+        pillLabel: 'Kathakali · Bharatanatyam · Mohiniyattam · Flute',
+        image: 'kathakali-performance',
         hasWebp: false,
         representativeImage: false,
         summary:
-          'Experience India’s living classical heritage at dusk—expressive Bharatanatyam and Kerala Mohiniyattam recitals accompanied by contemplative bamboo flute melodies.',
-        highlight: 'Traditional flute, Bharatanatyam & Mohiniyattam · Subject to artist availability',
+          'Experience India’s living classical heritage at dusk—expressive Kathakali, sculptural Bharatanatyam, and Kerala Mohiniyattam recitals accompanied by contemplative bamboo flute melodies.',
+        highlight: 'Arranged upon request · Not included in the retreat package',
         gallery: [
+          {
+            slot: 'kathakali',
+            image: 'kathakali-performance',
+            kicker: 'Kerala Classical Dance-Drama',
+            title: 'Kathakali',
+            caption: 'Elaborate facial makeup (Paccha), expressive eye movements & sacred epic storytelling',
+          },
           {
             slot: 'bharatanatyam',
             image: 'bharatanatyam-recital',
@@ -152,8 +159,8 @@ export const experienceCategories = [
           },
         ],
         meta: [
-          { label: 'Repertoire', value: 'Flute music, Bharatanatyam & Mohiniyattam' },
-          { label: 'Scheduling', value: 'Proposed evenings · Subject to artist availability' },
+          { label: 'Repertoire', value: 'Kathakali, Bharatanatyam, Mohiniyattam & Flute' },
+          { label: 'Package Inclusions', value: 'Not included in package · Arranged upon request' },
         ],
       },
     ],
@@ -165,18 +172,6 @@ export const allActivities = experienceCategories.flatMap((cat) => cat.items)
 
 // 2. The Retreat Journey / Itinerary (December 25–28 · 4 Days / 3 Nights)
 export const itineraryData = {
-  proposedHighlightsUnderReview: [
-    {
-      name: 'Tirunelli Temple Visit',
-      region: 'Wayanad District',
-      status: 'Proposed · Subject to inter-district timing & organiser confirmation',
-    },
-    {
-      name: 'Traditional Flute & Classical Dance',
-      genre: 'Cultural Evenings',
-      status: 'Bharatanatyam / Mohiniyattam & flute · Subject to artist availability & confirmation',
-    },
-  ],
   days: [
     {
       day: 1,
@@ -504,6 +499,6 @@ export const compactFaqs = [
   },
   {
     q: 'Are the temple visits and cultural performances included?',
-    a: 'Temple visits (subject to local customs and timings) and classical performances (flute, Bharatanatyam / Mohiniyattam) are part of the proposed retreat experience, subject to operational feasibility and artist availability prior to confirmation.',
+    a: 'The Tirunelli Temple excursion is part of the retreat schedule (100% voluntary). Classical dances and cultural performances (Kathakali, Bharatanatyam, Mohiniyattam, and Flute) are not included in the standard retreat package and can be arranged upon guest request.',
   },
 ]

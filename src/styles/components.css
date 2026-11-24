@@ -1227,80 +1227,6 @@
   color: var(--deep-forest);
 }
 
-/* ── 4. Proposed Experiences Section (Streamlined Minimal Grid) ── */
-.itinerary-proposed-section {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding-top: clamp(24px, 3.5vw, 34px);
-  border-top: 1px solid rgba(161, 132, 77, 0.22);
-}
-
-.proposed-section-head {
-  text-align: center;
-  margin-bottom: clamp(18px, 2.5vw, 24px);
-}
-
-.proposed-section-title {
-  font-family: var(--font-head);
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-  font-weight: 700;
-  color: var(--deep-forest);
-  margin: 6px 0 10px;
-}
-
-.proposed-section-sub {
-  font-size: 0.92rem;
-  line-height: 1.62;
-  color: var(--secondary-text);
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.proposed-highlights-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(16px, 2.5vw, 24px);
-}
-
-.proposed-highlight-item {
-  padding: 0 0 0 16px;
-  border-left: 2px solid rgba(161, 132, 77, 0.28);
-  display: flex;
-  flex-direction: column;
-}
-
-.highlight-category {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--antique-brass);
-  margin-bottom: 6px;
-}
-
-.highlight-name {
-  font-family: var(--font-head);
-  font-size: 1.12rem;
-  color: var(--deep-forest);
-  margin: 0 0 8px;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.highlight-status-wrap {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  margin-top: auto;
-}
-
-.highlight-status-text {
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: var(--secondary-text);
-  margin: 0;
-}
-
 /* ── Responsive Refinements ── */
 @media (max-width: 960px) {
   .itinerary-active-spread {
@@ -1309,10 +1235,6 @@
   }
   .spread-visual-col {
     position: static;
-  }
-  .proposed-highlights-row {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 28px;
   }
 }
 
@@ -1335,15 +1257,6 @@
   }
   .spread-day-watermark {
     font-size: 2.5rem;
-  }
-  .proposed-highlights-row {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .proposed-highlight-item {
-    border-left: none;
-    border-top: 1px solid rgba(161, 132, 77, 0.24);
-    padding: 16px 0 0;
   }
 }
 
