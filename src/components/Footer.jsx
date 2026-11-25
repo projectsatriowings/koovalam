@@ -88,9 +88,6 @@ export default function Footer() {
                 <strong>Dining:</strong> Wholesome vegetarian meals planned
               </li>
               <li>
-                <strong>Requested Pickup:</strong> Kuttipuram Station
-              </li>
-              <li>
                 <strong>Investment:</strong> Double ₹17,999 · Single ₹26,999 / person
               </li>
             </ul>
