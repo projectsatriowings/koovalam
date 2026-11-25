@@ -26,7 +26,14 @@ export default function Footer() {
             <p className="footer-brand-desc">
               Inspired by the sacred Bilva tree and rooted in the traditional wisdom of Kerala, Koovalam connects natural living, spiritual wellness retreats, and holistic experiences.
             </p>
-            <div className="footer-location-badge">
+            <a
+              href="https://maps.app.goo.gl/pqxBp6FtidViJ6RSA?g_st=ac"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-location-badge"
+              style={{ textDecoration: 'none' }}
+              title="Open Oxyfarm Resorts on Google Maps"
+            >
               <svg
                 width="14"
                 height="14"
@@ -41,8 +48,8 @@ export default function Footer() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Wayanad, Kerala</span>
-            </div>
+              <span>Oxyfarm Resorts, Wayanad</span>
+            </a>
           </div>
 
           {/* Navigation Links */}
@@ -54,6 +61,7 @@ export default function Footer() {
               <li><a href="#experience">Spiritual Wellness Retreat</a></li>
               <li><a href="#itinerary">Proposed Flow</a></li>
               <li><a href="#stay-travel">Stay &amp; Transport</a></li>
+              <li><a href="#resort-location">Resort &amp; Map</a></li>
               <li><a href="#price">Retreat Investment</a></li>
               <li>
                 <a href="#enquiry" onClick={scrollToEnquiry}>
@@ -68,7 +76,7 @@ export default function Footer() {
             <h4 className="footer-col-title">Retreat Information</h4>
             <ul className="footer-facts-list">
               <li>
-                <strong>Location:</strong> Wayanad, Kerala (Confirmed)
+                <strong>Venue:</strong> Oxyfarm Resorts, Wayanad (Confirmed)
               </li>
               <li>
                 <strong>Dates &amp; Duration:</strong> Dec 25–28 (4 Days / 3 Nights)

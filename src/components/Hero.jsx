@@ -126,8 +126,8 @@ export default function Hero({ onOpenEnquiry }) {
           <div className="trip-strip-grid">
             <div className="trip-strip-item">
               <span className="trip-strip-label">Location</span>
-              <strong className="trip-strip-value">{site.retreat.location}</strong>
-              <span className="trip-strip-sub">Confirmed Location</span>
+              <strong className="trip-strip-value">{site.retreat.resortName || 'Oxyfarm Resorts'}</strong>
+              <span className="trip-strip-sub">Wayanad, Kerala (Confirmed)</span>
             </div>
 
             <div className="trip-strip-item">

@@ -68,12 +68,12 @@ export default function PriceParticipation() {
                   >
                     Double Occupancy
                   </span>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                    <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--deep-forest)' }}>₹</span>
-                    <span style={{ fontFamily: 'var(--font-head)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--deep-forest)' }}>₹</span>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '2.1rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1, letterSpacing: '-0.02em', fontVariantNumeric: 'lining-nums' }}>
                       17,999
                     </span>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500 }}>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500, marginLeft: '2px' }}>
                       / person
                     </span>
                   </div>
@@ -103,12 +103,12 @@ export default function PriceParticipation() {
                   >
                     Single Occupancy
                   </span>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                    <span style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--deep-forest)' }}>₹</span>
-                    <span style={{ fontFamily: 'var(--font-head)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--deep-forest)' }}>₹</span>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '2.1rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1, letterSpacing: '-0.02em', fontVariantNumeric: 'lining-nums' }}>
                       26,999
                     </span>
-                    <span style={{ fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500 }}>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500, marginLeft: '2px' }}>
                       / person
                     </span>
                   </div>

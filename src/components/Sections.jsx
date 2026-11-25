@@ -1042,9 +1042,9 @@ export function Included() {
             <div className="folio-media-wrap">
               <ImageSlot name="included-stay" />
               <div className="folio-media-caption">
-                <span className="caption-tag">REPRESENTATIVE SETTING</span>
+                <span className="caption-tag">CONFIRMED RESORT</span>
                 <p className="caption-text">
-                  Kerala retreat accommodation. Exact venue and room details will be confirmed prior to booking.
+                  Retreat accommodation at Oxyfarm Resorts, Wayanad, Kerala.
                 </p>
               </div>
             </div>
@@ -1055,12 +1055,12 @@ export function Included() {
               </div>
               <h3 className="folio-title">Restful Retreat Accommodation</h3>
               <p className="folio-desc">
-                Three nights of quiet retreat accommodation in the calm natural landscape of Wayanad, Kerala. Guests may choose between Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person). Spaces are arranged for quiet rest, restorative sleep, and contemplative pause. Check-in commences from 2:30 PM on Day 01, and check-out is at 12:30 PM on Day 04.
+                Three nights of quiet retreat accommodation at Oxyfarm Resorts in the calm natural landscape of Wayanad, Kerala. Guests may choose between Double Occupancy (Twin-Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person). Spaces are arranged for quiet rest, restorative sleep, and contemplative pause. Check-in commences from 2:30 PM on Day 01, and check-out is at 12:30 PM on Day 04.
               </p>
               <div className="folio-disclosure-box">
                 <span className="disclosure-label">Setting &amp; Room Options:</span>
                 <p className="disclosure-text">
-                  Location is confirmed in Wayanad, Kerala. Both Double Occupancy and Single Occupancy options are available. Room configurations and sanctuary amenities are shared transparently upon enquiry.
+                  Confirmed at Oxyfarm Resorts, Mylattumala, Wayanad. Both Double Occupancy and Single Occupancy options are available. Room configurations and sanctuary amenities are shared transparently upon enquiry.
                 </p>
               </div>
             </div>

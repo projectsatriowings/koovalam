@@ -1525,6 +1525,356 @@
   }
 }
 
+/* ── Redesigned Editorial Sanctuary Destination & Map Stage ── */
+.sanctuary-stage-card {
+  margin-top: clamp(32px, 4.5vw, 52px);
+  background: linear-gradient(155deg, #102C24 0%, #15382E 100%);
+  border: 1px solid rgba(200, 175, 123, 0.35);
+  border-radius: clamp(18px, 2.8vw, 26px);
+  box-shadow: 0 24px 56px rgba(10, 26, 18, 0.16);
+  padding: clamp(24px, 3.8vw, 42px);
+  color: var(--warm-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle atmospheric gold leaf glow behind the card */
+.sanctuary-stage-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 175, 123, 0.12) 0%, rgba(200, 175, 123, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Header: Title & Action Controls ── */
+.sanctuary-stage-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px 32px;
+  align-items: end;
+  padding-bottom: clamp(18px, 2.5vw, 26px);
+  margin-bottom: clamp(20px, 3vw, 30px);
+  border-bottom: 1px solid rgba(200, 175, 123, 0.22);
+  position: relative;
+  z-index: 2;
+}
+
+.sanctuary-title-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.sanctuary-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #D7BD83;
+  margin-bottom: 8px;
+}
+
+.sanctuary-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  animation: pulse-dot 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  flex-shrink: 0;
+}
+
+.sanctuary-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--warm-ivory);
+  margin: 0 0 6px;
+}
+
+.sanctuary-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: rgba(247, 244, 236, 0.78);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.sanctuary-actions-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-sanctuary-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #C8AF7B 0%, #B89955 100%);
+  color: #102C24;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+}
+
+.btn-sanctuary-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(200, 175, 123, 0.35);
+  filter: brightness(1.05);
+  color: #102C24;
+}
+
+/* ── Main Stage Body (2-Column Grid) ── */
+.sanctuary-stage-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(24px, 3.5vw, 42px);
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+
+.sanctuary-details-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.sanctuary-narrative {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(247, 244, 236, 0.88);
+  margin: 0 0 20px;
+}
+
+/* ── Verified Address Strip ── */
+.sanctuary-address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(12, 36, 29, 0.85);
+  border: 1px solid rgba(200, 175, 123, 0.28);
+  border-left: 3px solid #C8AF7B;
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+
+.sanctuary-address-icon {
+  flex-shrink: 0;
+  color: #D7BD83;
+  margin-top: 2px;
+}
+
+.sanctuary-address-text {
+  flex: 1;
+}
+
+.address-kicker {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #D7BD83;
+  margin-bottom: 4px;
+}
+
+.sanctuary-address-text address {
+  font-style: normal;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--warm-ivory);
+}
+
+/* ── 4 Feature Badges (2x2 Grid) ── */
+.sanctuary-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+  margin-top: auto;
+}
+
+.sanctuary-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(200, 175, 123, 0.08);
+  border: 1px solid rgba(200, 175, 123, 0.18);
+  border-radius: 10px;
+}
+
+.feature-icon-badge {
+  font-size: 1.15rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-title {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--warm-ivory);
+  margin: 0 0 3px;
+  line-height: 1.25;
+}
+
+.feature-desc {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: rgba(247, 244, 236, 0.75);
+  margin: 0;
+}
+
+/* ── Right Column: Interactive Media Stage ── */
+.sanctuary-media-col {
+  display: flex;
+  flex-direction: column;
+  background: #0B221B;
+  border: 1px solid rgba(200, 175, 123, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  min-height: 420px;
+}
+
+.media-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(16, 44, 36, 0.95);
+  border-bottom: 1px solid rgba(200, 175, 123, 0.22);
+}
+
+.media-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #D7BD83;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.media-stage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #D7BD83;
+  letter-spacing: 0.04em;
+  padding-right: 4px;
+}
+
+.pulse-dot-green {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.3);
+}
+
+.media-stage-viewport {
+  flex: 1;
+  position: relative;
+  min-height: 340px;
+  background: #0B221B;
+}
+
+.sanctuary-map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  border: 0;
+  display: block;
+}
+
+.media-stage-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(16, 44, 36, 0.95);
+  border-top: 1px solid rgba(200, 175, 123, 0.2);
+}
+
+.media-coords-note {
+  font-size: 0.74rem;
+  color: rgba(247, 244, 236, 0.72);
+  font-weight: 500;
+}
+
+.stage-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #D7BD83;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.stage-directions-btn:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 960px) {
+  .sanctuary-stage-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .sanctuary-stage-body {
+    grid-template-columns: 1fr;
+  }
+  .sanctuary-media-col {
+    min-height: 320px;
+  }
+  .media-stage-viewport,
+  .sanctuary-map-iframe {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sanctuary-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .sanctuary-actions-col {
+    width: 100%;
+  }
+  .btn-sanctuary-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ── Section 05: Price & Participation ── */
 .section-price-participation {
   padding: clamp(36px, 4.5vw, 52px) 0;

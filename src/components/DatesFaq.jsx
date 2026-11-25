@@ -63,14 +63,14 @@ export function DatesCard() {
             <div className="dates-status-pillar-card">
               <div className="pillar-header">
                 <span className="pillar-eyebrow">SANCTUARY LOCATION</span>
-                <span className="pillar-badge badge-confirmed">Wayanad, Kerala</span>
+                <span className="pillar-badge badge-confirmed">Oxyfarm Resorts, Wayanad</span>
               </div>
-              <h3 className="pillar-title">Location — Wayanad, Kerala</h3>
+              <h3 className="pillar-title">Venue — Oxyfarm Resorts, Wayanad</h3>
               <p className="pillar-text">
-                The retreat location is confirmed in Wayanad, Kerala. The specific sanctuary property and accommodation arrangements will be shared before reservations open.
+                The retreat is confirmed at Oxyfarm Resorts, situated in Mylattumala, Wayanad, Kerala. Bordering the Periya Reserved Forest, the sanctuary provides peaceful cottage accommodations, open pavilions, and organic plantation grounds.
               </p>
               <div className="pillar-footer">
-                <span className="pillar-status-note">Confirmed in Wayanad, Kerala</span>
+                <span className="pillar-status-note">Confirmed at Oxyfarm Resorts, Wayanad</span>
               </div>
             </div>
 

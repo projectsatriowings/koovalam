@@ -13,15 +13,15 @@ export const faqCategories = [
     questions: [
       {
         q: 'Where is the retreat located?',
-        a: 'The retreat location is confirmed in Wayanad, Kerala. The specific sanctuary property and arrival details will be shared transparently before bookings open.',
+        a: 'The retreat is hosted at Oxyfarm Resorts, located at Mylattumala, Alattil P.O., Thalapuzha via, Mananthavady, Wayanad, Kerala — 670644. Nestled on the scenic slopes of Mylattumala and bordering the Periya Reserved Forest, the resort provides peaceful cottage accommodations enveloped by nature.',
       },
       {
         q: 'How long is the retreat?',
         a: 'The retreat spans four days and three nights (4 days · 3 nights), beginning with arrival and settling in from 2:30 PM on Day 01 and concluding after our closing circle, farewell lunch, and departure from 2:00 PM onwards on Day 04.',
       },
       {
-        q: 'When will the exact venue be announced?',
-        a: 'The retreat dates are confirmed for December 25–28 (4 days / 3 nights) in Wayanad, Kerala. The specific sanctuary property, room allocation, and travel directions will be shared before bookings open.',
+        q: 'What is the venue and how do I reach it?',
+        a: 'The retreat takes place at Oxyfarm Resorts in Wayanad, Kerala from December 25–28. It is conveniently accessible by road from Kannur International Airport (CNN, ~35 km road distance) and Kozhikode Calicut Airport (CCJ). Detailed arrival directions and Google Maps guidance are shared upon reservation.',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const faqCategories = [
     questions: [
       {
         q: 'What accommodation is provided?',
-        a: 'Three nights of quiet retreat accommodation in Wayanad, Kerala are included. Both Double Occupancy (Twin Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) are available.',
+        a: 'Three nights of quiet nature cottage accommodation at Oxyfarm Resorts, Wayanad are included. Both Double Occupancy (Twin Sharing at ₹17,999/person) and Single Occupancy (Private Room at ₹26,999/person) are available.',
       },
       {
         q: 'Are meals vegetarian?',

@@ -420,24 +420,31 @@ export const itineraryData = {
 // 3. Stay, Food & Travel Details
 export const stayFoodTravel = {
   stay: {
-    title: 'Single & Double Occupancy',
+    title: 'Stay at Oxyfarm Resorts',
     subtitle: 'Private & twin-sharing options',
     description:
-      'Peaceful, nature-facing accommodation in Wayanad with relaxing open verandas and shared pavilions for mindful rest between daily sessions.',
+      'Peaceful eco-cottage accommodation at Oxyfarm Resorts in Mylattumala, Wayanad. Relax on open verandas, walk along garden footpaths, and rest deeply between mindful daily sessions.',
     tag: 'Single & Twin Options',
+    resortName: 'Oxyfarm Resorts',
+    location: 'Mylattumala, Wayanad, Kerala',
+    address: 'Mylattumala, Alattil P.O., Thalapuzha via, Mananthavady, Wayanad, Kerala — 670644',
+    website: 'https://www.oxyfarmresorts.com/',
+    googleMapsUrl: 'https://maps.app.goo.gl/pqxBp6FtidViJ6RSA?g_st=ac',
+    googleMapsEmbedUrl:
+      'https://maps.google.com/maps?q=Oxyfarm+Resorts+Mylattumala+Alattil+Wayanad+Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed',
   },
   food: {
     title: 'Vegetarian Meals',
     subtitle: 'Wholesome retreat dining',
     description:
-      'Nutritious vegetarian meals freshly prepared with local Kerala ingredients, served unhurriedly in the scenic open forest-view dining pavilion.',
+      'Nutritious vegetarian meals freshly prepared with local Kerala ingredients, served unhurriedly in the scenic open forest-view dining pavilion at Oxyfarm Resorts.',
     tag: 'Vegetarian Experience',
   },
   travel: {
     title: 'Pickup & Transport',
     subtitle: 'Station & airport connectivity',
     description:
-      'Convenient road connectivity and transfer coordination for guests arriving in Wayanad, with organised pickup schedules confirmed prior to arrival.',
+      'Convenient road connectivity and transfer coordination for guests arriving at Oxyfarm Resorts, Wayanad from Kannur (CNN) or Calicut (CCJ) airports and railway hubs.',
     tag: 'Requested Pickup Hub',
   },
 }
@@ -468,7 +475,7 @@ export const investment = {
     },
   ],
   inclusions: [
-    '3 nights accommodation in Wayanad — choice of Double (Twin-Sharing) or Single (Private Room)',
+    '3 nights accommodation at Oxyfarm Resorts, Wayanad — choice of Double (Twin-Sharing) or Single (Private Room)',
     'Wholesome, locally prepared vegetarian meals & drinking water throughout',
     'All scheduled yoga, pranayama, meditation and Yoga Nidra sessions',
     'Facilitated mindfulness, reflection & guided journaling activities',
@@ -492,12 +499,12 @@ export const compactFaqs = [
     a: 'No previous experience is needed. All yoga and breath sessions are foundational, gentle, and 100% voluntary. You are always welcome to participate at your own comfort level.',
   },
   {
-    q: 'What are the retreat dates and when will the venue be confirmed?',
-    a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights, 2:30 PM check-in on Dec 25 through 2:00 PM onwards departure on Dec 28) in Wayanad, Kerala. Exact property details, facilitators and operational timings will be confirmed by the organiser prior to booking.',
+    q: 'What are the retreat dates and venue?',
+    a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights, 2:30 PM check-in on Dec 25 through 2:00 PM onwards departure on Dec 28) at Oxyfarm Resorts in Mylattumala, Wayanad, Kerala. Room allocations and arrival travel guidance will be provided upon enquiry.',
   },
   {
     q: 'What are the stay and meal arrangements?',
-    a: 'Accommodation is available in both Double Occupancy (Twin-Sharing at ₹17,999 per person) and Single Occupancy (Private Room at ₹26,999 per person) for 3 nights in Wayanad, Kerala. Vegetarian meals and drinking water are included throughout the retreat.',
+    a: 'Accommodation is provided at Oxyfarm Resorts, Wayanad in both Double Occupancy (Twin-Sharing at ₹17,999 per person) and Single Occupancy (Private Room at ₹26,999 per person) for 3 nights. Freshly prepared vegetarian meals and herbal drinking water are included throughout.',
   },
   {
     q: 'Are the temple visits and cultural performances included?',
