@@ -69,7 +69,7 @@ export const faqCategories = [
       },
       {
         q: 'What activities are included in the retreat?',
-        a: 'The programme includes gentle Classical Yoga, foundational pranayama breathwork, morning silent sitting and guided meditation, evening restorative Yoga Nidra, guided values journaling and reflection circles, an unhurried nature walk, a morning temple visit, evening classical arts performances, and a take-home wellness routine.',
+        a: 'The programme includes gentle Classical Yoga, foundational pranayama breathwork, Mylattumala sunrise meditation above the clouds, evening restorative Yoga Nidra, guided values journaling and reflection circles, the sacred Tirunelli Temple excursion with optional Bali Tharpanam / Pinda Daan, afternoon sightseeing (Makkiyad Meenmutty Waterfall, Kunkichira Tribal Museum, Gurukula Botanical Sanctuary), a guided coffee and tea plantation walk, and campfire gatherings with live instrumental music.',
       },
     ],
   },
@@ -77,8 +77,12 @@ export const faqCategories = [
     id: 'experiences',
     number: '04',
     title: 'Cultural & Nature Experiences',
-    tagline: 'Temple quiet and living Kerala heritage',
+    tagline: 'Temple quiet, sightseeing and living Kerala heritage',
     questions: [
+      {
+        q: 'What sightseeing and nature expeditions are scheduled in the retreat?',
+        a: 'Our schedule features three distinct nature and heritage highlights: (1) Day 02 Early Dawn: The panoramic Mylattumala Sunrise Experience & hilltop meditation overlooking an ocean of clouds; (2) Day 03 Afternoon: Curated sightseeing to the secluded Makkiyad Meenmutty Waterfall, the Kunkichira Tribal Heritage Museum, and the internationally celebrated Gurukula Botanical Sanctuary; and (3) Day 04 Early Morning: An invigorating guided walking tour through lush coffee, tea, and black pepper plantations surrounding the retreat sanctuary.',
+      },
       {
         q: 'Is the temple visit compulsory?',
         a: 'No. Participation in the Day 03 morning temple visit is completely voluntary. Guests who choose to attend are requested to respect local customs and any applicable temple dress requirements.',

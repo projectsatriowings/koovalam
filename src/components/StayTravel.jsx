@@ -172,7 +172,7 @@ export default function StayTravel() {
               <ul className="card-specs-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Suggested rail hub: Kuttipuram Railway Station</span>
+                  <span>Rail connectivity: Kannur (CAN) &amp; Kozhikode (CLT) stations</span>
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>

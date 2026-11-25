@@ -51,6 +51,91 @@ export const experienceCategories = [
     ],
   },
   {
+    id: 'sightseeing',
+    categoryName: 'Wayanad Sightseeing & Nature Expeditions',
+    categoryTag: 'Sunrise · Waterfalls · Tribal Heritage · Botanical Sanctuary · Plantations',
+    categoryDesc:
+      'Immerse in Wayanad’s untouched highland beauty—from dawn breaking across an ethereal sea of clouds atop Mylattumala to cascading rainforest waterfalls, indigenous tribal heritage, and ancient botanical gardens.',
+    items: [
+      {
+        id: 'mylattumala-sunrise',
+        title: 'Mylattumala Sunrise Experience & Meditation',
+        tag: 'Wayanad · Dawn Above the Clouds',
+        kicker: 'Hilltop Sunrise · Sea of Clouds',
+        pillLabel: 'Mylattumala Hill · Wayanad',
+        image: 'mylattumala-sunrise',
+        summary:
+          'Ascend to the panoramic Mylattumala viewpoint rising directly above Oxyfarm Resorts. Greet the golden dawn breaking across an ethereal sea of rolling clouds, followed by guided morning meditation in nature’s serene silence.',
+        highlight: 'Sea of clouds dawn view · Guided hilltop meditation · Right above the resort',
+        meta: [
+          { label: 'Setting & Altitude', value: 'Panoramic misty hilltop overlooking Wayanad valley' },
+          { label: 'Schedule', value: 'Day 02 Early Morning (5:00 AM – 7:00 AM)' },
+        ],
+      },
+      {
+        id: 'makkiyad-waterfall',
+        title: 'Makkiyad Meenmutty Waterfall',
+        tag: 'Mananthavady · Forest Cascade',
+        kicker: 'Sightseeing Destination · Waterfalls',
+        pillLabel: 'Makkiyad Meenmutty · Natural Pool',
+        image: 'makkiyad-meenmutty-waterfall',
+        summary:
+          'A secluded multi-tiered natural waterfall cascading down dramatic rock cliffs into refreshing natural pools framed by dense Western Ghats rainforest canopy and pristine wilderness.',
+        highlight: 'Pristine forest cascade · Natural rock pools · Dense rainforest setting',
+        meta: [
+          { label: 'Location', value: 'Makkiyad near Mananthavady, Wayanad' },
+          { label: 'Excursion', value: 'Day 03 Afternoon Sightseeing (2:30 PM – 6:00 PM)' },
+        ],
+      },
+      {
+        id: 'kunkichira-museum',
+        title: 'Kunkichira Tribal Heritage Museum',
+        tag: 'Indigenous Culture · Living Traditions',
+        kicker: 'Sightseeing Destination · Tribal Museum',
+        pillLabel: 'Kunkichira · Wayanad Tribal Heritage',
+        image: 'kunkichira-tribal-museum',
+        summary:
+          'Explore the profound living history and indigenous wisdom of Wayanad’s native tribal communities. The museum showcases traditional ancestral dwellings, handcrafted tools, folklore, and centuries of living in harmony with nature.',
+        highlight: 'Authentic tribal architecture · Indigenous artifacts · Cultural heritage',
+        meta: [
+          { label: 'Focus', value: 'Wayanad tribal traditions, craftsmanship & history' },
+          { label: 'Excursion', value: 'Day 03 Afternoon Sightseeing (2:30 PM – 6:00 PM)' },
+        ],
+      },
+      {
+        id: 'gurukula-sanctuary',
+        title: 'Gurukula Botanical Sanctuary',
+        tag: 'Western Ghats Flora · Rare Ferns & Orchids',
+        kicker: 'Sightseeing Destination · Botanical Sanctuary',
+        pillLabel: 'Gurukula Sanctuary · Conservation Garden',
+        image: 'gurukula-botanical-sanctuary',
+        summary:
+          'An internationally acclaimed 55-acre conservation sanctuary dedicated to saving the native flora of the Western Ghats. Walk through micro-climates of rare native orchids, prehistoric ferns, moss canopies, and tropical plant species.',
+        highlight: '55-acre native rainforest garden · Rare orchids & ferns · Global conservation landmark',
+        meta: [
+          { label: 'Conservation', value: 'Native Western Ghats endemic plant sanctuary' },
+          { label: 'Excursion', value: 'Day 03 Afternoon Sightseeing (2:30 PM – 6:00 PM)' },
+        ],
+      },
+      {
+        id: 'plantation-walk',
+        title: 'Guided Plantation Walk (Coffee & Tea Estate)',
+        tag: 'Spice & Estate Trails · Fresh Mountain Air',
+        kicker: 'Morning Walk · Estate Immersion',
+        pillLabel: 'Coffee, Tea & Pepper Estates',
+        image: 'tea-plantation-walk',
+        hasWebp: false,
+        summary:
+          'An invigorating morning sensory trail through flourishing tea, coffee, and pepper plantations surrounding the sanctuary. Learn about traditional spice and crop cultivation while walking unhurriedly in fresh mountain greenery.',
+        highlight: 'Aromatic coffee & tea trails · Fresh woodland air · Sensory nature connection',
+        meta: [
+          { label: 'Setting', value: 'Organic coffee, tea & black pepper plantation hills' },
+          { label: 'Schedule', value: 'Day 04 Early Morning (5:30 AM – 7:30 AM)' },
+        ],
+      },
+    ],
+  },
+  {
     id: 'temples',
     categoryName: 'Sacred Temple Sanctuaries',
     categoryTag: 'Spiritual Heritage · Ancient Pilgrimage',
@@ -225,12 +310,12 @@ export const itineraryData = {
     {
       day: 2,
       tabLabel: 'Body & Breath',
-      title: 'Sunrise, Mindfulness & Sacred Practices',
+      title: 'Mylattumala Sunrise, Mindfulness & Sacred Practices',
       subtitle: 'Connect with nature, mindful movement, selfless service, breath and inner stillness.',
       narrative:
-        'Greet the dawn at 5:00 AM with the Mylaytumala sunrise experience and meditation, gentle yoga, karma yoga, evening pranayama, sacred fire ritual (Havan), dinner, and restorative Yoga Nidra before lights off at 10:30 PM.',
+        'Greet the dawn at 5:00 AM with the breathtaking Mylattumala sunrise experience and meditation above the sea of clouds, gentle yoga, karma yoga, evening pranayama, sacred fire ritual (Havan), dinner, and restorative Yoga Nidra before lights off at 10:30 PM.',
       featuredPills: [
-        'Mylaytumala Sunrise & Meditation',
+        'Mylattumala Sunrise & Meditation',
         'Gentle Yoga',
         'Karma Yoga',
         'Havan (Sacred Fire Ritual)',
@@ -240,7 +325,7 @@ export const itineraryData = {
         {
           time: '5:00 – 7:00 AM',
           phase: 'EARLY MORNING',
-          activity: 'Mylaytumala Sunrise Experience & Meditation',
+          activity: 'Mylattumala Sunrise Experience & Meditation (Wayanad)',
         },
         {
           time: '7:00 – 7:45 AM',
@@ -303,14 +388,15 @@ export const itineraryData = {
     {
       day: 3,
       tabLabel: 'Culture & Nature',
-      title: 'Sacred Journey, Nature & Connection',
+      title: 'Sacred Journey, Sightseeing & Connection',
       subtitle: 'A journey of remembrance, spiritual connection, nature exploration and peaceful bonding.',
       narrative:
-        'Early morning journey to Tirunelli Temple with optional ancestral rites, yoga and meditation, afternoon sightseeing of waterfalls, museum and botanical garden, followed by evening pranayama, dinner, and campfire instrumental music.',
+        'Early morning sacred journey to Tirunelli Temple with optional ancestral rites (Bali Tharpanam / Pinda Daan), yoga and meditation, afternoon sightseeing of Makkiyad Meenmutty Waterfall, Kunkichira Tribal Museum, and Gurukula Botanical Sanctuary, followed by evening pranayama, dinner, and campfire instrumental music.',
       featuredPills: [
         'Tirunelli Temple Visit',
         'Yoga & Meditation',
-        'Sightseeing & Waterfalls',
+        'Makkiyad Meenmutty Waterfall',
+        'Kunkichira Tribal Museum & Gurukula Sanctuary',
         'Campfire & Live Music',
       ],
       schedule: [
@@ -337,7 +423,7 @@ export const itineraryData = {
         {
           time: '2:30 – 6:00 PM',
           phase: 'AFTERNOON',
-          activity: 'Sightseeing – Waterfalls, Museum & Botanical Garden',
+          activity: 'Sightseeing: Makkiyad Meenmutty Waterfall, Kunkichira Tribal Museum & Gurukula Botanical Sanctuary',
         },
         {
           time: '6:30 – 7:30 PM',
@@ -365,12 +451,12 @@ export const itineraryData = {
     {
       day: 4,
       tabLabel: 'Integration',
-      title: 'Nature, Reflection & Farewell',
+      title: 'Plantation Walk, Reflection & Farewell',
       subtitle: 'Reconnect with nature, reflect on the journey and carry the retreat experience into everyday life.',
       narrative:
         'Begin with an early morning guided walk through tea, pepper, and coffee plantations, followed by breakfast, pranayama and meditation, closing circle and reflection, check-out at 12:30 PM, farewell lunch, and pack-up and departure from 2:00 PM onwards.',
       featuredPills: [
-        'Guided Plantation Walk',
+        'Guided Plantation Walk (Coffee & Tea Estate)',
         'Pranayama & Meditation',
         'Closing Circle & Reflection',
         'Pack-up & Departure',
@@ -478,8 +564,11 @@ export const investment = {
     '3 nights accommodation at Oxyfarm Resorts, Wayanad — choice of Double (Twin-Sharing) or Single (Private Room)',
     'Wholesome, locally prepared vegetarian meals & drinking water throughout',
     'All scheduled yoga, pranayama, meditation and Yoga Nidra sessions',
+    'Mylattumala sunrise experience and hilltop morning meditation above the clouds',
+    'Curated afternoon sightseeing: Makkiyad Meenmutty Waterfall, Kunkichira Tribal Museum & Gurukula Botanical Sanctuary',
+    'Guided early morning plantation walk through coffee, tea, and pepper estates',
+    'Sacred Tirunelli Temple excursion with optional Bali Tharpanam / Pinda Daan for ancestors',
     'Facilitated mindfulness, reflection & guided journaling activities',
-    'Guided plantation walk, waterfalls sightseeing, and heritage temple excursion',
     'Simple take-home wellness routine and participant reflection sheet',
     'Evening campfire gatherings and instrumental music experience',
   ],

@@ -3,6 +3,7 @@ import { LeafMark } from './Logo.jsx'
 import CulturalExperiences from './culture/CulturalExperiences.jsx'
 import PracticeShowcase from './practices/PracticeShowcase.jsx'
 import SacredTemples from './temples/SacredTemples.jsx'
+import SightseeingExperiences from './sightseeing/SightseeingExperiences.jsx'
 import { track } from '../lib/analytics.js'
 import { scrollToEnquiry } from '../lib/scroll.js'
 
@@ -25,11 +26,14 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* 3 Organised Experience Categories */}
+        {/* 4 Organised Experience Categories */}
         <div className="experience-categories-container">
           {experienceCategories.map((cat) => {
             if (cat.id === 'practices') {
               return <PracticeShowcase key={cat.id} />
+            }
+            if (cat.id === 'sightseeing') {
+              return <SightseeingExperiences key={cat.id} category={cat} />
             }
             if (cat.id === 'temples') {
               return <SacredTemples key={cat.id} category={cat} />
@@ -45,7 +49,7 @@ export default function Experience() {
         <div className="experience-conversion-bar">
           <div className="conversion-bar-content">
             <h4 className="conversion-bar-title">
-              Have questions about the practices, temple visits, or cultural evenings?
+              Have questions about the practices, sightseeing, temple visits, or cultural evenings?
             </h4>
             <p className="conversion-bar-sub">
               All sessions are adaptable for beginners and gentle on the body. We are happy to answer any questions.
