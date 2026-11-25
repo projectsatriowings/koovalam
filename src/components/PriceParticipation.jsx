@@ -26,127 +26,84 @@ export default function PriceParticipation() {
             <span className="serif-italic">&amp; Guest Suitability</span>
           </h2>
           <p className="travel-lede">
-            Provisional pricing details, planned package activities, and clear participant guidance before you enquire.
+            Confirmed per-person pricing tiers, planned all-inclusive arrangements, and clear participant guidance before you enquire.
           </p>
         </div>
 
-        {/* Top 2-Column Split: Investment Card + Participation & Health Notice Card */}
+        {/* ── Main 2-Column Split: Investment Showcase (Left) + Participant & Health Guidelines (Right) ── */}
         <div className="investment-grid">
-          {/* Column 1: Pricing & Planned Inclusions */}
+          {/* Column 1: Pricing & All-Inclusive Inclusions */}
           <div className="investment-pricing-card">
-            <div className="pricing-card-header">
-              <span className="pricing-status-pill">{investment.statusTag}</span>
+            <div className="pricing-card-top-block">
+              <div className="pricing-status-header">
+                <span className="pricing-status-pill">{investment.statusTag}</span>
+                <span className="pricing-season-tag">Dec 25–28 · Wayanad, Kerala</span>
+              </div>
 
               {/* Dual Occupancy Tiers */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-                  gap: '12px',
-                  margin: '14px 0 16px',
-                }}
-              >
-                <div
-                  style={{
-                    background: 'var(--warm-ivory)',
-                    border: '1.5px solid var(--antique-brass)',
-                    borderRadius: '8px',
-                    padding: '16px',
-                    position: 'relative',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontSize: '0.72rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
-                      color: 'var(--deep-forest)',
-                      display: 'block',
-                      marginBottom: '6px',
-                    }}
-                  >
-                    Double Occupancy
-                  </span>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--deep-forest)' }}>₹</span>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '2.1rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1, letterSpacing: '-0.02em', fontVariantNumeric: 'lining-nums' }}>
-                      17,999
-                    </span>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500, marginLeft: '2px' }}>
-                      / person
-                    </span>
+              <div className="pricing-tiers-row">
+                {/* Double Occupancy */}
+                <div className="pricing-tier-box double-box">
+                  <span className="tier-box-label">Double Occupancy</span>
+                  <div className="tier-box-price-wrap">
+                    <span className="tier-box-currency">₹</span>
+                    <span className="tier-box-num">17,999</span>
+                    <span className="tier-box-unit">/ person</span>
                   </div>
-                  <span style={{ fontSize: '0.76rem', color: 'var(--secondary-text)', display: 'block', marginTop: '6px' }}>
+                  <span className="tier-box-note">
                     Twin-sharing · 2 guests per room
                   </span>
                 </div>
 
-                <div
-                  style={{
-                    background: '#FAF8F5',
-                    border: '1.5px solid rgba(161, 132, 77, 0.4)',
-                    borderRadius: '8px',
-                    padding: '16px',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontSize: '0.72rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
-                      color: 'var(--antique-brass)',
-                      display: 'block',
-                      marginBottom: '6px',
-                    }}
-                  >
-                    Single Occupancy
-                  </span>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--deep-forest)' }}>₹</span>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '2.1rem', fontWeight: 700, color: 'var(--deep-forest)', lineHeight: 1, letterSpacing: '-0.02em', fontVariantNumeric: 'lining-nums' }}>
-                      26,999
-                    </span>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--secondary-text)', fontWeight: 500, marginLeft: '2px' }}>
-                      / person
-                    </span>
+                {/* Single Occupancy */}
+                <div className="pricing-tier-box single-box">
+                  <span className="tier-box-label label-gold">Single Occupancy</span>
+                  <div className="tier-box-price-wrap">
+                    <span className="tier-box-currency">₹</span>
+                    <span className="tier-box-num">26,999</span>
+                    <span className="tier-box-unit">/ person</span>
                   </div>
-                  <span style={{ fontSize: '0.76rem', color: 'var(--secondary-text)', display: 'block', marginTop: '6px' }}>
+                  <span className="tier-box-note">
                     Private room for one guest
                   </span>
                 </div>
               </div>
 
-              <p className="pricing-note">
-                Experience four days of mindful living, connection, relaxation and self-discovery in the serene landscapes of Wayanad. Clearly stated per person to ensure full clarity.
+              <p className="pricing-intro-note">
+                Experience four days of mindful living, connection, and relaxation in the serene landscapes of Wayanad. Clearly stated per person with zero hidden charges.
               </p>
+
+              {/* 10 Inclusions in a Compact 2-Column Grid */}
+              <div className="pricing-inclusions-block">
+                <div className="inclusions-header-row">
+                  <h3 className="inclusions-title">Planned Activities &amp; Arrangements (All Included):</h3>
+                  <span className="inclusions-badge">10 Inclusions</span>
+                </div>
+
+                <ul className="inclusions-grid-2col-compact">
+                  {investment.inclusions.map((inc, i) => (
+                    <li key={i}>
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--antique-brass)"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      <span>{inc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div className="pricing-inclusions-block">
-              <h3 className="inclusions-title">Planned Activities &amp; Arrangements:</h3>
-              <ul className="inclusions-list">
-                {investment.inclusions.map((inc, i) => (
-                  <li key={i} className="inclusion-item">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="var(--antique-brass)"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span>{inc}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+            {/* Action Button at Bottom */}
             <div className="pricing-card-action">
               <a
                 className="btn btn-travel-primary btn-full-width"
@@ -173,14 +130,14 @@ export default function PriceParticipation() {
                 </svg>
               </a>
               <span className="pricing-no-risk">
-                No payment or deposit required at this stage · Non-binding
+                No payment or deposit required at this stage · Non-binding enquiry
               </span>
             </div>
           </div>
 
-          {/* Column 2: Participation Guidelines & Surgery Notice */}
+          {/* Column 2: Health Notice, Participant Information, Transit & Reassurance */}
           <div className="participation-details-card">
-            {/* Surgery & Health Notice */}
+            {/* 1. Surgery & Health Notice */}
             <div className="health-advisory-box" role="alert">
               <div className="advisory-icon" aria-hidden="true">
                 <svg
@@ -204,6 +161,7 @@ export default function PriceParticipation() {
               </div>
             </div>
 
+            {/* 2. Participant Eligibility Information */}
             <div className="participation-criteria-block">
               <h3 className="criteria-heading">Participant Information</h3>
               <div className="criteria-specs">
@@ -223,12 +181,25 @@ export default function PriceParticipation() {
 
                 <div className="criteria-spec-item">
                   <div className="spec-label">Package Structure</div>
-                  <strong className="spec-val">No Family Package</strong>
+                  <strong className="spec-val">Adult Immersion · No Family Package</strong>
                   <p className="spec-sub">{investment.participation.familyNote}</p>
                 </div>
               </div>
             </div>
 
+            {/* 3. Nearest Transit Hubs & Pick-up Arrangement */}
+            <div className="participation-transit-block">
+              <span className="transit-hub-tag">NEAREST TRANSIT HUBS</span>
+              <h4 className="transit-hub-title">Getting to Oxyfarm Resorts</h4>
+              <p className="transit-hub-text">
+                <strong>Airport:</strong> Kannur (CNN) · <strong>Train:</strong> Thalassery · <strong>Bus:</strong> Mananthavady
+              </p>
+              <span className="transit-hub-badge">
+                Pick-up not included in package · Arranged upon request
+              </span>
+            </div>
+
+            {/* 4. Voluntary Participation Quote */}
             <div className="reassurance-quote-box">
               <p className="reassurance-quote">
                 “All sessions and practices are voluntary. Participants are welcome to engage at their own comfort level or take personal quiet time.”
@@ -237,7 +208,7 @@ export default function PriceParticipation() {
           </div>
         </div>
 
-        {/* Compact Essential FAQs */}
+        {/* ── Frequently Asked Questions (Full-Width Accordion) ── */}
         <div className="compact-faq-container">
           <div className="compact-faq-head text-center">
             <h3 className="compact-faq-title">Frequently Asked Questions</h3>

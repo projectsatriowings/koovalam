@@ -527,11 +527,22 @@ export const stayFoodTravel = {
     tag: 'Vegetarian Experience',
   },
   travel: {
-    title: 'Pickup & Transport',
-    subtitle: 'Station & airport connectivity',
+    title: 'Getting Here & Pick-up',
+    subtitle: 'Nearest airport, railway & bus hubs',
     description:
-      'Convenient road connectivity and transfer coordination for guests arriving at Oxyfarm Resorts, Wayanad from Kannur (CNN) or Calicut (CCJ) airports and railway hubs.',
-    tag: 'Requested Pickup Hub',
+      'Convenient travel connectivity to Oxyfarm Resorts in Wayanad. Please note that pick-up and drop-off are not included in the retreat package, but if requested from Kannur Airport, Thalassery Railway Station, or Mananthavady Bus Stop, private transfers can be arranged upon request.',
+    tag: 'Arranged on Request',
+    nearestAirport: 'Kannur International Airport (CNN)',
+    nearestRailway: 'Thalassery Railway Station',
+    nearestBusStop: 'Mananthavady Bus Stop',
+    pickupNotice:
+      'Pick-up is not included in the package. If requested from Kannur Airport, Thalassery Railway Station, or Mananthavady Bus Stop, it can be arranged on request.',
+    nearbyLandmarks: [
+      { name: 'Gurukula Botanical Sanctuary', distance: '2 km' },
+      { name: 'Periya', distance: '3 km' },
+      { name: 'Komachi Park', distance: '8 km' },
+      { name: 'Muneeswaran Kunnu', distance: '15 km' },
+    ],
   },
 }
 
@@ -588,8 +599,8 @@ export const compactFaqs = [
     a: 'No previous experience is needed. All yoga and breath sessions are foundational, gentle, and 100% voluntary. You are always welcome to participate at your own comfort level.',
   },
   {
-    q: 'What are the retreat dates and venue?',
-    a: 'The retreat is confirmed for December 25–28 (4 days / 3 nights, 2:30 PM check-in on Dec 25 through 2:00 PM onwards departure on Dec 28) at Oxyfarm Resorts in Mylattumala, Wayanad, Kerala. Room allocations and arrival travel guidance will be provided upon enquiry.',
+    q: 'What are the retreat dates and venue, and how do I reach it?',
+    a: 'The retreat is confirmed for December 25–28 at Oxyfarm Resorts in Mylattumala, Wayanad, Kerala. The nearest hubs are Kannur International Airport (CNN), Thalassery Railway Station, and Mananthavady Bus Stop. Pick-up is not included in the retreat package, but transfers from these locations can be arranged upon request.',
   },
   {
     q: 'What are the stay and meal arrangements?',

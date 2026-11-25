@@ -21,7 +21,7 @@ export const faqCategories = [
       },
       {
         q: 'What is the venue and how do I reach it?',
-        a: 'The retreat takes place at Oxyfarm Resorts in Wayanad, Kerala from December 25–28. It is conveniently accessible by road from Kannur International Airport (CNN, ~35 km road distance) and Kozhikode Calicut Airport (CCJ). Detailed arrival directions and Google Maps guidance are shared upon reservation.',
+        a: 'The retreat takes place at Oxyfarm Resorts in Mylattumala, Wayanad, Kerala from December 25–28. The nearest transit hubs are: (1) Nearest Airport: Kannur International Airport (CNN); (2) Nearest Train Station: Thalassery Railway Station; (3) Nearest Bus Stop: Mananthavady Bus Stop. Please note that pick-up is not included in the package, but if any requested pickup from these locations is needed, it can be arranged upon request.',
       },
     ],
   },
@@ -141,7 +141,7 @@ export const faqCategories = [
       },
       {
         q: 'What personal arrangements should guests make?',
-        a: 'Guests independently arrange their own travel and transportation to the retreat venue in Wayanad, Kerala (detailed arrival directions will be provided upon confirmation). Guests are also advised to secure their own personal travel and medical insurance if desired.',
+        a: 'Guests independently arrange their own travel and transportation to Wayanad, Kerala. Please note that pick-up is not included in the standard retreat package, but private transfers from Kannur International Airport (CNN), Thalassery Railway Station, or Mananthavady Bus Stop can be arranged on request. Guests are also advised to secure their own personal travel and medical insurance if desired.',
       },
     ],
   },

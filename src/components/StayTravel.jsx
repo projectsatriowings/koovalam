@@ -105,15 +105,15 @@ export default function StayTravel() {
               <p className="card-desc">{stay.description}</p>
               <ul className="card-specs-list">
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                   <span>Double Occupancy (Twin Sharing) · ₹17,999 / person</span>
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                   <span>Single Occupancy (Private Room) · ₹26,999 / person</span>
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                   <span>Oxyfarm Resorts, Mylattumala, Wayanad</span>
                 </li>
               </ul>
@@ -138,15 +138,15 @@ export default function StayTravel() {
               <p className="card-desc">{food.description}</p>
               <ul className="card-specs-list">
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                   <span>Wholesome vegetarian breakfast, lunch &amp; dinner</span>
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                   <span>Scenic forest-view dining setting</span>
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
                   <span>Herbal drinking water &amp; tea throughout</span>
                 </li>
               </ul>
@@ -171,16 +171,20 @@ export default function StayTravel() {
               <p className="card-desc">{travel.description}</p>
               <ul className="card-specs-list">
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Rail connectivity: Kannur (CAN) &amp; Kozhikode (CLT) stations</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span><strong>Nearest Airport:</strong> Kannur International Airport (CNN)</span>
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Kannur (CNN) &amp; Calicut (CCJ) road access</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span><strong>Nearest Train Station:</strong> Thalassery Railway Station</span>
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Arrival coordination confirmed by organiser</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span><strong>Nearest Bus Stop:</strong> Mananthavady Bus Stop</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span><strong>Pick-up:</strong> Not included in package · Arranged upon request</span>
                 </li>
               </ul>
             </div>
@@ -251,36 +255,44 @@ export default function StayTravel() {
               {/* 4 Feature Badges in a 2x2 Grid */}
               <div className="sanctuary-features-grid">
                 <div className="sanctuary-feature-item">
-                  <div className="feature-icon-badge">🌄</div>
-                  <div>
-                    <h4 className="feature-title">Mylattumala Sunrise</h4>
-                    <p className="feature-desc">On-site hillside trail for Day 02 morning meditation</p>
-                  </div>
-                </div>
-
-                <div className="sanctuary-feature-item">
-                  <div className="feature-icon-badge">🌲</div>
-                  <div>
-                    <h4 className="feature-title">Periya Forest Edge</h4>
-                    <p className="feature-desc">Bordering protected reserve with pristine mountain air</p>
-                  </div>
-                </div>
-
-                <div className="sanctuary-feature-item">
                   <div className="feature-icon-badge">✈️</div>
                   <div>
-                    <h4 className="feature-title">Airport Connectivity</h4>
-                    <p className="feature-desc">~35 km from Kannur (CNN); easy Calicut (CCJ) road access</p>
+                    <h4 className="feature-title">Nearest Airport</h4>
+                    <p className="feature-desc">Kannur International Airport (CNN) · ~35 km</p>
                   </div>
                 </div>
 
                 <div className="sanctuary-feature-item">
-                  <div className="feature-icon-badge">🛕</div>
+                  <div className="feature-icon-badge">🚆</div>
                   <div>
-                    <h4 className="feature-title">Tirunelli Temple</h4>
-                    <p className="feature-desc">Convenient base for Day 03 morning ancestral rites visit</p>
+                    <h4 className="feature-title">Nearest Train Station</h4>
+                    <p className="feature-desc">Thalassery Railway Station · Railhead</p>
                   </div>
                 </div>
+
+                <div className="sanctuary-feature-item">
+                  <div className="feature-icon-badge">🚌</div>
+                  <div>
+                    <h4 className="feature-title">Nearest Bus Stop</h4>
+                    <p className="feature-desc">Mananthavady Bus Stop · Local access</p>
+                  </div>
+                </div>
+
+                <div className="sanctuary-feature-item">
+                  <div className="feature-icon-badge">🚗</div>
+                  <div>
+                    <h4 className="feature-title">Pick-up on Request</h4>
+                    <p className="feature-desc">Not in package · Arranged upon request</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Nearby Landmarks Strip */}
+              <div className="sanctuary-nearby-strip">
+                <span className="nearby-strip-label">NEARBY LANDMARKS</span>
+                <p className="nearby-strip-text">
+                  Gurukula Botanical Sanctuary 2 km · Periya 3 km · Komachi Park 8 km · Muneeswaran Kunnu 15 km
+                </p>
               </div>
             </div>
 
