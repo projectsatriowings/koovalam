@@ -47,7 +47,7 @@ export const site = {
     { label: 'YouTube', href: '#' },
   ],
   testimonials: [],
-  canonical: 'https://koovalam.example/',
+  canonical: 'https://koovalam.com/',
 }
 
 /**
