@@ -103,20 +103,27 @@ export default function StayTravel() {
               <h3 className="card-title">{stay.title}</h3>
               <p className="card-subtitle">{stay.subtitle}</p>
               <p className="card-desc">{stay.description}</p>
-              <ul className="card-specs-list">
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span>Double Occupancy (Twin Sharing) · ₹17,999 / person</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span>Single Occupancy (Private Room) · ₹26,999 / person</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span>Oxyfarm Resorts, Mylattumala, Wayanad</span>
-                </li>
-              </ul>
+              <div className="card-specs-box">
+                <div className="card-specs-heading">Inclusions &amp; Room Options</div>
+                <ul className="card-specs-list">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Double Occupancy (Twin Sharing) · ₹17,999 / person</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Single Occupancy (Private Room) · ₹26,999 / person</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Eco-cottages with en-suite bath &amp; 24/7 hot water</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Serene forest silence for deep restorative sleep</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </article>
 
@@ -136,20 +143,27 @@ export default function StayTravel() {
               <h3 className="card-title">{food.title}</h3>
               <p className="card-subtitle">{food.subtitle}</p>
               <p className="card-desc">{food.description}</p>
-              <ul className="card-specs-list">
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span>Wholesome vegetarian breakfast, lunch &amp; dinner</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span>Scenic forest-view dining setting</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span>Herbal drinking water &amp; tea throughout</span>
-                </li>
-              </ul>
+              <div className="card-specs-box">
+                <div className="card-specs-heading">Culinary &amp; Meal Inclusions</div>
+                <ul className="card-specs-list">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Wholesome vegetarian breakfast, lunch &amp; dinner</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Freshly cooked Sattvic recipes with local ingredients</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Scenic open forest-view dining pavilion</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span>Herbal drinking water &amp; Ayurvedic tea throughout</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </article>
 
@@ -169,31 +183,34 @@ export default function StayTravel() {
               <h3 className="card-title">{travel.title}</h3>
               <p className="card-subtitle">{travel.subtitle}</p>
               <p className="card-desc">{travel.description}</p>
-              <ul className="card-specs-list">
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span><strong>Nearest Airport:</strong> Kannur International Airport (CNN)</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span><strong>Nearest Train Station:</strong> Thalassery Railway Station</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span><strong>Nearest Bus Stop:</strong> Mananthavady Bus Stop</span>
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-                  <span><strong>Pick-up:</strong> Not included in package · Arranged upon request</span>
-                </li>
-              </ul>
+              <div className="card-specs-box">
+                <div className="card-specs-heading">Transit Hubs &amp; Access</div>
+                <ul className="card-specs-list">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Nearest Airport:</strong> Kannur Int'l Airport (CNN) · ~35 km</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Nearest Train:</strong> Thalassery Railway Station</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Nearest Bus Stop:</strong> Mananthavady Bus Stop</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--antique-brass)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Pick-up:</strong> Arranged upon request (not in package)</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </article>
         </div>
 
         {/* ── Redesigned Editorial Sanctuary Destination & Map Showcase ── */}
         <div className="sanctuary-stage-card" id="resort-location">
-          {/* Header Row: Title & Map Navigation Button */}
+          {/* Header Row: Title */}
           <div className="sanctuary-stage-header">
             <div className="sanctuary-title-col">
               <div className="sanctuary-eyebrow">
@@ -204,27 +221,6 @@ export default function StayTravel() {
               <p className="sanctuary-subtitle">
                 Mylattumala · Alattil P.O. · Thalapuzha via Mananthavady
               </p>
-            </div>
-
-            <div className="sanctuary-actions-col">
-              <a
-                href="https://maps.app.goo.gl/pqxBp6FtidViJ6RSA?g_st=ac"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-sanctuary-primary"
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
-                  <line x1="9" y1="3" x2="9" y2="18" />
-                  <line x1="15" y1="6" x2="15" y2="21" />
-                </svg>
-                <span>Open in Google Maps</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
             </div>
           </div>
 
@@ -317,7 +313,7 @@ export default function StayTravel() {
               <div className="media-stage-viewport">
                 <iframe
                   title="Oxyfarm Resorts Wayanad Location Map"
-                  src="https://maps.google.com/maps?q=11.808008,75.868248&hl=en&z=14&output=embed"
+                  src={stay.googleMapsEmbedUrl || "https://maps.google.com/maps?q=Oxyfarm+Resorts,+Mylattumala,+Wayanad&t=&z=14&ie=UTF8&iwloc=&output=embed"}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

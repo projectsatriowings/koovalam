@@ -284,20 +284,6 @@ export default function SightseeingExperiences({ category }) {
               ═════════════════════════════════════════════════════════════════ */}
           {plantationItem && (
             <article className={styles.plantationStrip}>
-              <div className={styles.plantationMediaFrame}>
-                <RetreatMedia
-                  imageName={plantationItem.image}
-                  altFallback={plantationItem.title}
-                  hasWebp={Boolean(plantationItem.hasWebp)}
-                />
-                <span className={styles.plantationIndexBadge} aria-hidden="true">
-                  03
-                </span>
-                <span className={styles.plantationTagPill}>
-                  Day 04 Morning · 5:30 AM – 7:30 AM
-                </span>
-              </div>
-
               <div className={styles.plantationProse}>
                 <span className={styles.kickerDark}>
                   {plantationItem.kicker || 'Morning Walk · Estate Immersion'}
@@ -366,6 +352,20 @@ export default function SightseeingExperiences({ category }) {
                     ))}
                   </dl>
                 )}
+              </div>
+
+              <div className={styles.plantationMediaFrame}>
+                <RetreatMedia
+                  imageName={plantationItem.image}
+                  altFallback={plantationItem.title}
+                  hasWebp={Boolean(plantationItem.hasWebp)}
+                />
+                <span className={styles.plantationIndexBadge} aria-hidden="true">
+                  03
+                </span>
+                <span className={styles.plantationTagPill}>
+                  Day 04 Morning · 5:30 AM – 7:30 AM
+                </span>
               </div>
             </article>
           )}

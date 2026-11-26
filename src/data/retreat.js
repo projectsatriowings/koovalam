@@ -509,7 +509,7 @@ export const stayFoodTravel = {
     title: 'Stay at Oxyfarm Resorts',
     subtitle: 'Private & twin-sharing options',
     description:
-      'Peaceful eco-cottage accommodation at Oxyfarm Resorts in Mylattumala, Wayanad. Relax on open verandas, walk along garden footpaths, and rest deeply between mindful daily sessions.',
+      'Peaceful eco-cottage accommodation nestled in Wayanad’s misty hills. Relax on private verandas, stroll garden paths, and rest deeply between mindful daily sessions.',
     tag: 'Single & Twin Options',
     resortName: 'Oxyfarm Resorts',
     location: 'Mylattumala, Wayanad, Kerala',
@@ -517,20 +517,20 @@ export const stayFoodTravel = {
     website: 'https://www.oxyfarmresorts.com/',
     googleMapsUrl: 'https://maps.app.goo.gl/pqxBp6FtidViJ6RSA?g_st=ac',
     googleMapsEmbedUrl:
-      'https://maps.google.com/maps?q=Oxyfarm+Resorts+Mylattumala+Alattil+Wayanad+Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed',
+      'https://maps.google.com/maps?q=Oxyfarm+Resorts,+Mylattumala,+Wayanad&t=&z=14&ie=UTF8&iwloc=&output=embed',
   },
   food: {
     title: 'Vegetarian Meals',
     subtitle: 'Wholesome retreat dining',
     description:
-      'Nutritious vegetarian meals freshly prepared with local Kerala ingredients, served unhurriedly in the scenic open forest-view dining pavilion at Oxyfarm Resorts.',
+      'Nutritious vegetarian meals freshly prepared with locally sourced Kerala ingredients, served unhurriedly in the scenic open forest-view dining pavilion at Oxyfarm.',
     tag: 'Vegetarian Experience',
   },
   travel: {
     title: 'Getting Here & Pick-up',
-    subtitle: 'Nearest airport, railway & bus hubs',
+    subtitle: 'Nearest transit connectivity',
     description:
-      'Convenient travel connectivity to Oxyfarm Resorts in Wayanad. Please note that pick-up and drop-off are not included in the retreat package, but if requested from Kannur Airport, Thalassery Railway Station, or Mananthavady Bus Stop, private transfers can be arranged upon request.',
+      'Convenient travel connectivity to Oxyfarm Resorts in Wayanad via scenic hill roads. Private taxi transfers from nearby transit hubs can be arranged on request.',
     tag: 'Arranged on Request',
     nearestAirport: 'Kannur International Airport (CNN)',
     nearestRailway: 'Thalassery Railway Station',

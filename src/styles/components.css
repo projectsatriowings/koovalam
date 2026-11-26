@@ -1447,6 +1447,8 @@
 .stay-media-slot {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .card-badge {
@@ -1465,7 +1467,7 @@
 }
 
 .card-content {
-  padding: clamp(20px, 3vw, 28px);
+  padding: clamp(20px, 2.5vw, 26px);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -1485,13 +1487,14 @@
   font-weight: 700;
   color: var(--deep-forest);
   margin: 0 0 4px;
+  line-height: 1.25;
 }
 
 .card-subtitle {
   font-size: 0.88rem;
   color: var(--muted-terracotta);
   font-weight: 500;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 }
 
 .card-desc {
@@ -1501,16 +1504,33 @@
   margin-bottom: 18px;
 }
 
-.card-specs-list {
-  list-style: none;
+.card-specs-box {
+  margin-top: auto;
   padding: 14px 16px;
-  margin: auto 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   background: var(--warm-ivory);
   border: 1px solid rgba(161, 132, 77, 0.18);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-specs-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--antique-brass);
+  margin-bottom: 2px;
+}
+
+.card-specs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 
 .card-specs-list li {

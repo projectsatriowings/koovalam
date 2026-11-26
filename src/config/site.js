@@ -28,7 +28,8 @@ export const site = {
     resortAddress: 'Mylattumala, Alattil P.O., Thalapuzha via, Mananthavady, Wayanad, Kerala — 670644',
     resortWebsite: 'https://www.oxyfarmresorts.com/',
     googleMapsUrl: 'https://maps.app.goo.gl/pqxBp6FtidViJ6RSA?g_st=ac',
-    googleMapsEmbedUrl: 'https://maps.google.com/maps?q=Oxyfarm+Resorts+Mylattumala+Alattil+Wayanad+Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed',
+    googleMapsEmbedUrl:
+      'https://maps.google.com/maps?q=Oxyfarm+Resorts,+Mylattumala,+Wayanad&t=&z=14&ie=UTF8&iwloc=&output=embed',
     price: '₹17,999',
     priceDouble: '₹17,999',
     priceSingle: '₹26,999',
