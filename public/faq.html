@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self'; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';" />
   <title>Frequently Asked Questions | Koovalam Retreat</title>
-  <meta name="description" content="Find answers to common questions about Koovalam spiritual wellness retreats: pricing, venue, food, travel, and schedule in Wayanad, Kerala." />
+  <meta name="description" content="Find answers to all questions about Koovalam spiritual wellness retreats: pricing, venue, food, travel, and daily schedule in Wayanad, Kerala." />
   <link rel="canonical" href="https://koovalam.com/faq.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
       --bg: #f9f7f2;
       --card-bg: #ffffff;
       --text: #2a332d;
-      --text-muted: #5e6b62;
+      --text-muted: #526156;
       --primary: #2d4a3e;
       --accent: #b08d57;
       --border: #e4dfd3;
@@ -25,7 +25,7 @@
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.75;
     }
     header {
       background: var(--primary);
@@ -34,7 +34,7 @@
       border-bottom: 2px solid var(--accent);
     }
     .header-inner {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -53,52 +53,125 @@
       text-decoration: none;
       margin-left: 1.5rem;
       font-size: 0.95rem;
+      transition: color 0.2s;
     }
     .nav-links a:hover { color: #ffffff; text-decoration: underline; }
     main {
-      max-width: 840px;
+      max-width: 900px;
       margin: 3rem auto;
-      padding: 2.5rem 2rem;
+      padding: 3rem 2.5rem;
       background: var(--card-bg);
       border-radius: 12px;
       border: 1px solid var(--border);
       box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     }
+    .eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       color: var(--primary);
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .faq-category {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .faq-category:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
     }
     h2 {
       font-family: 'Cinzel', serif;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       color: var(--primary);
-      margin: 2rem 0 0.5rem;
-      padding-bottom: 0.35rem;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.5rem;
     }
-    p, ul {
-      margin-bottom: 1.25rem;
-      color: var(--text-muted);
-      font-size: 1rem;
+    .category-desc {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 1.5rem;
     }
-    ul { padding-left: 1.5rem; }
-    li { margin-bottom: 0.5rem; }
     .faq-item {
       margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px dashed #ebe5d8;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     .faq-q {
       font-weight: 600;
       color: var(--primary);
       font-size: 1.1rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
     }
+    .faq-a {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+    .faq-a p {
+      margin-bottom: 0.75rem;
+    }
+    .faq-a ul {
+      margin-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .faq-a li {
+      margin-bottom: 0.4rem;
+    }
+    .cta-banner {
+      margin-top: 3rem;
+      background: #f4efe4;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-banner h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .cta-banner p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .btn-action {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .btn-action:hover { background: #1f352c; }
     footer {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 3rem auto 2rem;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       color: var(--text-muted);
       font-size: 0.9rem;
       border-top: 1px solid var(--border);
@@ -123,37 +196,239 @@
     </div>
   </header>
   <main>
+    <p class="eyebrow">Help &amp; Answers</p>
     <h1>Frequently Asked Questions</h1>
-    <p>Everything you need to know about the Koovalam 4-day spiritual wellness retreat at Oxyfarm Resorts, Wayanad.</p>
+    <p class="lede">
+      Here are simple answers to common questions about our retreat. We explain our location, rooms, food, daily yoga, and booking steps. We want you to feel fully prepared and at ease.
+    </p>
 
-    <h2>Retreat Experience & Eligibility</h2>
-    <div class="faq-item">
-      <div class="faq-q">What is the focus of the Koovalam retreat?</div>
-      <p>Koovalam unites natural living, gentle yoga, pranayama breathwork, meditation, and mindful temple experiences rooted in Kerala's living heritage. All sessions are non-dogmatic and voluntary.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can beginners participate?</div>
-      <p>Yes. Our practices are structured for all experience levels, from complete beginners to experienced practitioners.</p>
-    </div>
+    <!-- Category 1: Location & Setting -->
+    <section class="faq-category">
+      <h2>01. Retreat Location &amp; Dates</h2>
+      <p class="category-desc">Where we stay and how to reach us</p>
+      
+      <div class="faq-item">
+        <div class="faq-q">Where is the retreat held?</div>
+        <div class="faq-a">
+          <p>
+            The retreat takes place at Oxyfarm Resorts in Wayanad, Kerala. The resort is set on the green hills of Mylattumala. It borders the calm Periya forest.
+          </p>
+          <p>
+            There is no city noise here. You hear birds singing at dawn and wind in the trees. The air is cool and fresh all year.
+          </p>
+        </div>
+      </div>
 
-    <h2>Accommodation & Dining</h2>
-    <div class="faq-item">
-      <div class="faq-q">Where is the retreat held?</div>
-      <p>The retreat is hosted at Oxyfarm Resorts, set in the serene mist-clad hills of Mylattumala, Wayanad, Kerala.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What meals are provided?</div>
-      <p>Nourishing vegetarian meals prepared with locally sourced Kerala ingredients, herbal drinking water, and teas are included throughout the stay.</p>
-    </div>
+      <div class="faq-item">
+        <div class="faq-q">How many days is the retreat and what are the dates?</div>
+        <div class="faq-a">
+          <p>
+            The retreat lasts for 4 days and 3 nights. It runs from December 25 to December 28.
+          </p>
+          <p>
+            Check-in starts at 2:30 PM on Day 1. You will have time to settle into your room and drink fresh herbal tea. We finish at 2:00 PM on Day 4 after a warm farewell lunch.
+          </p>
+        </div>
+      </div>
 
-    <h2>Pricing & Booking</h2>
-    <div class="faq-item">
-      <div class="faq-q">What is the investment?</div>
-      <p>Double Occupancy is ₹17,999 per person; Single Private Occupancy is ₹26,999. Inclusions encompass 4 days/3 nights accommodation, all meals, daily yoga and meditation, and guided excursions.</p>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I reserve my place?</div>
-      <p>Submit an enquiry on our <a href="/#enquiry">registration form</a> or message our team directly via WhatsApp at +91 73584 00296.</p>
+      <div class="faq-item">
+        <div class="faq-q">How do I reach the resort?</div>
+        <div class="faq-a">
+          <p>
+            You can travel by plane, train, or bus:
+          </p>
+          <ul>
+            <li><strong>By Plane:</strong> Fly to Kannur International Airport (CNN). It is about 80 km away. A scenic drive takes about 2.5 hours.</li>
+            <li><strong>By Train:</strong> The nearest major station is Thalassery Railway Station. It is about 80 km away.</li>
+            <li><strong>By Bus:</strong> Mananthavady Bus Stand is just 14 km away from the resort.</li>
+          </ul>
+          <p>
+            Guests book their own travel tickets. If you need a taxi from the airport or rail station, our team can help you book one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 2: Accommodation & Meals -->
+    <section class="faq-category">
+      <h2>02. Rooms &amp; Pure Vegetarian Food</h2>
+      <p class="category-desc">Cottages, wholesome meals, and dietary care</p>
+
+      <div class="faq-item">
+        <div class="faq-q">What are the rooms like?</div>
+        <div class="faq-a">
+          <p>
+            You stay in clean, comfortable nature cottages at Oxyfarm Resorts. Each room has private bathrooms with warm running water. You get large windows with open views of green hills and tea plants.
+          </p>
+          <p>
+            We offer two room options:
+          </p>
+          <ul>
+            <li><strong>Twin-Sharing Room:</strong> ₹17,999 per person. You share a room with two separate beds. You can come with a friend or share with a fellow guest.</li>
+            <li><strong>Private Single Room:</strong> ₹26,999 per person. You get your own private cottage and bathroom. This option is great for quiet rest.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What food do you serve?</div>
+        <div class="faq-a">
+          <p>
+            We serve 100% vegetarian meals. Our cooks use fresh vegetables from local Kerala farms. The food is based on ancient Ayurvedic wisdom.
+          </p>
+          <p>
+            Meals are light, warm, and easy to digest. We use mild spices, coconut, and whole grains. Warm herbal drinking water is ready for you all day.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can you handle food allergies?</div>
+        <div class="faq-a">
+          <p>
+            Yes. Please tell us about your food needs when you book. We can handle lactose-free, nut-free, or mild non-spicy meals. Our kitchen team will take good care of you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 3: Yoga & Daily Practices -->
+    <section class="faq-category">
+      <h2>03. Yoga &amp; Daily Practices</h2>
+      <p class="category-desc">Gentle movement, breathwork, and voluntary sessions</p>
+
+      <div class="faq-item">
+        <div class="faq-q">Do I need to be good at yoga to join?</div>
+        <div class="faq-a">
+          <p>
+            No. You do not need any past yoga experience. You do not need to be flexible.
+          </p>
+          <p>
+            Our yoga is slow and gentle. We focus on easy body stretches and calm breathing. Our teachers guide you step by step. You move only in ways that feel safe and good.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Are all classes compulsory?</div>
+        <div class="faq-a">
+          <p>
+            No. Every class and walk is 100% voluntary. You can join what you like. If you want to sleep late, read a book, or sit on your porch, you are free to do so. This is your time to heal.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What sessions do we practice each day?</div>
+        <div class="faq-a">
+          <p>
+            Our daily schedule includes:
+          </p>
+          <ul>
+            <li><strong>Gentle Classical Yoga:</strong> Morning movement to wake up the body.</li>
+            <li><strong>Breathing Practice:</strong> Simple breath exercises to quiet the mind and lower stress.</li>
+            <li><strong>Sunrise Meditation:</strong> Sitting in peace above the morning clouds on Mylattumala hill.</li>
+            <li><strong>Guided Deep Rest:</strong> Lying down for guided body relaxation before sleep.</li>
+            <li><strong>Quiet Journaling:</strong> Time to write down your thoughts and set peaceful goals.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 4: Excursions & Heritage -->
+    <section class="faq-category">
+      <h2>04. Excursions &amp; Nature Walks</h2>
+      <p class="category-desc">Old temples, waterfalls, and tea gardens</p>
+
+      <div class="faq-item">
+        <div class="faq-q">What trips are included in the retreat?</div>
+        <div class="faq-a">
+          <p>
+            We take three gentle trips into nature:
+          </p>
+          <ul>
+            <li><strong>Tirunelli Temple Trip:</strong> We visit this quiet, ancient forest temple in the morning hills. Guests who wish may sit by the sacred stream.</li>
+            <li><strong>Waterfall and Plant Garden:</strong> We visit Meenmutty Waterfall and the Gurukula plant garden. You will see rare Western Ghats plants and clear streams.</li>
+            <li><strong>Plantation Walk:</strong> We take a slow walk through green tea, coffee, and pepper plants around the resort.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What should I wear to the temple?</div>
+        <div class="faq-a">
+          <p>
+            Please wear simple, modest clothes that cover your shoulders and knees. Cotton kurtas, loose pants, or long skirts work very well. We will share full tips before the visit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 5: Pricing & Booking -->
+    <section class="faq-category">
+      <h2>05. Pricing &amp; Registration</h2>
+      <p class="category-desc">Clear rates, inclusions, and how to book</p>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the retreat price and what is included?</div>
+        <div class="faq-a">
+          <p>
+            Our rates are clear and all-inclusive:
+          </p>
+          <ul>
+            <li><strong>Twin-Sharing Room:</strong> ₹17,999 per person.</li>
+            <li><strong>Private Single Room:</strong> ₹26,999 per person.</li>
+          </ul>
+          <p>
+            This fee covers your room for 3 nights, all meals, tea, drinking water, daily yoga classes, guided walks, and temple trips. There are no hidden fees.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I book my spot?</div>
+        <div class="faq-a">
+          <p>
+            Send us an enquiry on our <a href="/#enquiry">main page</a>, or message us on WhatsApp at <a href="https://wa.me/917358400296">+91 73584 00296</a>. We will check room availability and share bank transfer details to confirm your room.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category 6: Packing & Practical Tips -->
+    <section class="faq-category">
+      <h2>06. Packing &amp; Practical Tips</h2>
+      <p class="category-desc">What to bring, weather, and phone signal</p>
+
+      <div class="faq-item">
+        <div class="faq-q">What should I pack for the retreat?</div>
+        <div class="faq-a">
+          <p>
+            We suggest packing:
+          </p>
+          <ul>
+            <li>Loose cotton clothes for yoga and sitting.</li>
+            <li>Walking shoes or sports sneakers for trails.</li>
+            <li>A light sweater or warm shawl for cool hill mornings.</li>
+            <li>A refillable water bottle, a small journal, and personal toiletries.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is there mobile network and Wi-Fi?</div>
+        <div class="faq-a">
+          <p>
+            Yes. Airtel and Jio get good mobile signal at the resort. Wi-Fi is ready in the main lounge. We encourage guests to put away phones and enjoy the calm silence of nature.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-banner">
+      <h3>Have another question?</h3>
+      <p>We are always happy to help you. Message us on WhatsApp or call our team today.</p>
+      <a href="https://wa.me/917358400296" class="btn-action">Chat on WhatsApp (+91 73584 00296)</a>
     </div>
   </main>
   <footer>
@@ -161,7 +436,7 @@
     <p>
       <a href="/">Home</a> |
       <a href="/faq.html">Frequently Asked Questions</a> |
-      <a href="/terms.html">Terms & Conditions</a> |
+      <a href="/terms.html">Terms &amp; Conditions</a> |
       <a href="/privacy-policy.html">Privacy Policy</a>
     </p>
   </footer>
