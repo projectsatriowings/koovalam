@@ -61,8 +61,10 @@ export default function Footer() {
               <li><a href="#experience">Spiritual Wellness Retreat</a></li>
               <li><a href="#itinerary">Proposed Flow</a></li>
               <li><a href="#stay-travel">Stay &amp; Transport</a></li>
-              <li><a href="#resort-location">Resort &amp; Map</a></li>
               <li><a href="#price">Retreat Investment</a></li>
+              <li><a href="/faq.html">Frequently Asked Questions</a></li>
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms &amp; Conditions</a></li>
               <li>
                 <a href="#enquiry" onClick={scrollToEnquiry}>
                   Enquire &amp; Register
@@ -146,6 +148,13 @@ export default function Footer() {
           <p className="footer-health-disclaimer">
             Retreat practices support personal mindfulness, gentle movement, and holistic well-being. They are non-clinical and do not replace individual medical advice or care.
           </p>
+          <div className="footer-legal-links" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.85rem' }}>
+            <a href="/faq.html" style={{ color: 'var(--text-muted, #a3b899)', textDecoration: 'none' }}>FAQs</a>
+            <span aria-hidden="true">·</span>
+            <a href="/privacy-policy.html" style={{ color: 'var(--text-muted, #a3b899)', textDecoration: 'none' }}>Privacy Policy</a>
+            <span aria-hidden="true">·</span>
+            <a href="/terms.html" style={{ color: 'var(--text-muted, #a3b899)', textDecoration: 'none' }}>Terms &amp; Conditions</a>
+          </div>
           <div className="footer-copyright">
             © {currentYear} {site.brand}. All rights reserved.
           </div>
