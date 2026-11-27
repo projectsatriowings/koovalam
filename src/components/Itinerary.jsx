@@ -47,9 +47,9 @@ export default function Itinerary() {
             <LeafMark color="var(--antique-brass)" size={13} />
             <span>DECEMBER 25–28 · 4 DAYS / 3 NIGHTS</span>
           </div>
-          <h2 className="travel-heading">
+          <h3 className="travel-heading">
             Suggested Daily <span className="serif-italic">Flow</span>
-          </h2>
+          </h3>
           <p className="travel-lede">
             A calm sample schedule from morning to night balancing mindful practice, cultural discovery, and restful space. Timings adapt to the venue, season, temple customs and guest comfort.
           </p>

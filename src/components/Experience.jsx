@@ -17,10 +17,10 @@ export default function Experience() {
             <LeafMark color="var(--antique-brass)" size={13} />
             <span>KOOVALAM SPIRITUAL WELLNESS · THE RETREAT</span>
           </div>
-          <h2 className="travel-heading">
+          <h3 className="travel-heading">
             A Journey Within. <br className="hide-mobile" />
             <span className="serif-italic">Nature, Wellness &amp; Spirituality.</span>
-          </h2>
+          </h3>
           <p className="travel-lede">
             Rooted in the traditional wisdom of Kerala, this retreat brings together gentle yoga, pranayama, meditation, Yoga Nidra, sacred temple visits, and calm nature immersion — every session voluntary and guided with care.
           </p>

@@ -17,9 +17,9 @@ export default function EnquirySection() {
             <LeafMark color="var(--antique-brass)" size={13} />
             <span>CONNECT WITH US</span>
           </div>
-          <h2 className="travel-heading">
+          <h3 className="travel-heading">
             Retreat Enquiry <span className="serif-italic">&amp; Registration</span>
-          </h2>
+          </h3>
           <p className={styles.tightLede}>
             Ask us about the Dec 25–28 retreat, proposed temple visits, or suitability. We reply personally with room availability and no pressure.
           </p>

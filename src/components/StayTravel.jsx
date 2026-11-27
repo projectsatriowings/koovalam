@@ -43,10 +43,10 @@ export default function StayTravel() {
             <LeafMark color="var(--antique-brass)" size={13} />
             <span>RETREAT SETTING &amp; ESSENTIALS</span>
           </div>
-          <h2 className="travel-heading">
+          <h3 className="travel-heading">
             A Stay Surrounded <br className="hide-mobile" />
             <span className="serif-italic">by Nature</span>
-          </h2>
+          </h3>
           <p className="travel-lede">
             Discover the setting where your retreat experience unfolds, with welcoming shared spaces and a natural atmosphere.
           </p>

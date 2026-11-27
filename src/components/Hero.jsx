@@ -79,10 +79,10 @@ export default function Hero({ onOpenEnquiry }) {
             <span className="activity-pill">Nature</span>
           </div>
 
-          {/* Supporting Copy / Lede */}
-          <p className="hero-travel-lede">
+          {/* Supporting Copy / Lede & Single Subheading */}
+          <h2 className="hero-travel-lede">
             Inspired by the sacred Bilva tree and rooted in the traditional wisdom of Kerala, Koovalam invites you to slow down through yoga, meditation, natural living, and holistic nature experiences.
-          </p>
+          </h2>
 
           {/* Conversion Actions */}
           <div className="hero-travel-actions">

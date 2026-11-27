@@ -21,10 +21,10 @@ export default function PriceParticipation() {
             <LeafMark color="var(--antique-brass)" size={13} />
             <span>TRANSPARENT PARTICIPATION</span>
           </div>
-          <h2 className="travel-heading">
+          <h3 className="travel-heading">
             Retreat Investment <br className="hide-mobile" />
             <span className="serif-italic">&amp; Guest Suitability</span>
-          </h2>
+          </h3>
           <p className="travel-lede">
             Confirmed per-person pricing tiers, planned all-inclusive arrangements, and clear participant guidance before you enquire.
           </p>

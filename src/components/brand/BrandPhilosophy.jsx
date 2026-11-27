@@ -24,10 +24,10 @@ export default function BrandPhilosophy() {
                 <span>{spiritualDimensions.eyebrow}</span>
               </div>
 
-              <h2 className={styles.heading}>
+              <h3 className={styles.heading}>
                 {spiritualDimensions.headingPrefix}{' '}
                 <span className="serif-italic">{spiritualDimensions.headingAccent}</span>
-              </h2>
+              </h3>
 
               <p className={styles.intro}>{spiritualDimensions.intro}</p>
 
