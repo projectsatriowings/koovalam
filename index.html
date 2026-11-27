@@ -48,11 +48,94 @@
     "description": "A 4-day / 3-night spiritual wellness and mindfulness retreat experience at Oxyfarm Resorts, Wayanad, Kerala."
   }
   </script>
+  <style>
+    /* Prevent FOUC and white flash during initial page load */
+    html {
+      background-color: #102C24;
+    }
+    body {
+      margin: 0;
+      background-color: #102C24;
+      color: #F7F4EC;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    #root {
+      min-height: 100vh;
+      min-height: 100svh;
+      background-color: #102C24;
+    }
+    .initial-loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100svh;
+      background-color: #102C24;
+      color: #F7F4EC;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .initial-loader-mark {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 16px;
+      animation: koovalamPulse 2s ease-in-out infinite;
+    }
+    .initial-loader-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #C8AF7B;
+    }
+    .initial-loader-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(247, 244, 236, 0.65);
+      margin-top: 6px;
+    }
+    @keyframes koovalamPulse {
+      0%, 100% { opacity: 0.5; transform: scale(0.97); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .initial-loader-mark { animation: none; opacity: 0.9; }
+    }
+  </style>
 </head>
 <body>
   <div id="root">
-    <!-- Static semantic content for search engines, assistive technologies, and no-JS visitors -->
-    <header class="site-header" role="banner">
+    <noscript>
+      <!-- Static semantic content for search engines, assistive technologies, and no-JS visitors -->
+      <style>
+        .site-header { padding: 20px 24px; border-bottom: 1px solid rgba(161, 132, 77, 0.25); background: #102c24; }
+        .brand-title { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #c8af7b; text-decoration: none; font-weight: 700; letter-spacing: 0.1em; }
+        .site-header nav ul { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; padding: 12px 0 0; margin: 0; }
+        .site-header nav a { color: #f7f4ec; text-decoration: none; font-size: 0.9rem; }
+        .site-header nav a:hover { color: #c8af7b; }
+        #main { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+        .content-section, .hero-section { margin-bottom: 48px; }
+        .eyebrow { color: #c8af7b; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+        h1 { font-family: 'Cinzel', serif; font-size: 2.2rem; line-height: 1.2; color: #f7f4ec; margin-bottom: 12px; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #c8af7b; margin-bottom: 16px; }
+        h3 { font-family: 'Cinzel', serif; font-size: 1.3rem; color: #c8af7b; margin-bottom: 12px; border-bottom: 1px solid rgba(161, 132, 77, 0.2); padding-bottom: 8px; }
+        h4 { font-family: 'Cinzel', serif; font-size: 1.05rem; color: #f7f4ec; margin: 16px 0 6px; }
+        p, li { color: rgba(247, 244, 236, 0.9); line-height: 1.75; margin-bottom: 12px; }
+        ul, ol { padding-left: 20px; margin-bottom: 16px; }
+        .hero-cta-group { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+        .cta-primary { background: #c8af7b; color: #102c24; padding: 10px 22px; text-decoration: none; font-weight: 600; border-radius: 4px; display: inline-block; }
+        .cta-secondary { border: 1px solid #c8af7b; color: #c8af7b; padding: 10px 22px; text-decoration: none; font-weight: 600; border-radius: 4px; display: inline-block; }
+        .site-footer { border-top: 1px solid rgba(161, 132, 77, 0.25); padding: 32px 20px; text-align: center; font-size: 0.85rem; color: rgba(247, 244, 236, 0.7); background: #0c201a; }
+        .site-footer nav { margin-top: 12px; }
+        .site-footer a { color: #c8af7b; text-decoration: none; }
+      </style>
+      <header class="site-header" role="banner">
       <nav aria-label="Primary Navigation">
         <a href="/" class="brand-title">Koovalam</a>
         <ul>
@@ -61,6 +144,7 @@
           <li><a href="#itinerary">Itinerary</a></li>
           <li><a href="#stay-travel">Stay &amp; Travel</a></li>
           <li><a href="#price">Pricing</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
           <li><a href="/faq.html">FAQs</a></li>
           <li><a href="/privacy-policy.html">Privacy</a></li>
           <li><a href="/terms.html">Terms</a></li>
@@ -226,6 +310,7 @@
       <p>&copy; 2026 Koovalam. Rooted in Nature. Connected to Soul.</p>
       <nav aria-label="Footer Navigation">
         <a href="/">Home</a> |
+        <a href="/blogs.html">Blogs</a> |
         <a href="/faq.html">Frequently Asked Questions</a> |
         <a href="/privacy-policy.html">Privacy Policy</a> |
         <a href="/terms.html">Terms of Service</a> |
@@ -233,6 +318,21 @@
         <a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank" rel="noopener noreferrer">Facebook</a>
       </nav>
     </footer>
+    </noscript>
+
+    <!-- Initial branded loader: displayed seamlessly until React bundle mounts -->
+    <div class="initial-loader" aria-hidden="true">
+      <svg class="initial-loader-mark" viewBox="0 0 100 100" fill="none" stroke="#C8AF7B" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke-width="2.8" />
+        <line x1="50" y1="73" x2="50" y2="88" stroke="#A1844D" stroke-width="3.2" stroke-linecap="round" />
+        <path d="M 50 73 C 34 60, 32 28, 50 13 C 68 28, 66 60, 50 73 Z" stroke-width="2.4" stroke-linejoin="round" />
+        <path d="M 50 73 L 50 14" stroke-width="2" stroke-linecap="round" />
+        <path d="M 48 73 C 36 52, 16 34, 6 44 C 16 63, 36 78, 48 73 Z" stroke-width="2.4" stroke-linejoin="round" />
+        <path d="M 52 73 C 64 52, 84 34, 94 44 C 84 63, 64 78, 52 73 Z" stroke-width="2.4" stroke-linejoin="round" />
+      </svg>
+      <div class="initial-loader-title">Koovalam</div>
+      <div class="initial-loader-sub">Rooted in Nature · Connected to Soul</div>
+    </div>
   </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

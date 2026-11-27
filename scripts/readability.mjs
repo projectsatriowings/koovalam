@@ -40,6 +40,7 @@ function analyzeReadability(text) {
 
 const pages = [
   'dist/index.html',
+  'dist/blogs.html',
   'dist/faq.html',
   'dist/privacy-policy.html',
   'dist/terms.html'

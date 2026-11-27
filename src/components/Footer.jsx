@@ -116,6 +116,7 @@ export default function Footer() {
               <li><a href="#itinerary">Proposed Flow</a></li>
               <li><a href="#stay-travel">Stay &amp; Transport</a></li>
               <li><a href="#price">Retreat Investment</a></li>
+              <li><a href="/blogs.html">The Koovalam Journal (Blogs)</a></li>
               <li><a href="/faq.html">Frequently Asked Questions</a></li>
               <li><a href="/privacy-policy.html">Privacy Policy</a></li>
               <li><a href="/terms.html">Terms &amp; Conditions</a></li>

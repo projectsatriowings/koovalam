@@ -4,6 +4,7 @@ console.log('=== AUDIT VERIFICATION: ALL 4 PAGES CONTENT & SEO ===\n');
 
 const pages = [
   { name: 'Home Page', file: 'dist/index.html' },
+  { name: 'Blogs Page', file: 'dist/blogs.html' },
   { name: 'FAQ Page', file: 'dist/faq.html' },
   { name: 'Privacy Policy', file: 'dist/privacy-policy.html' },
   { name: 'Terms of Service', file: 'dist/terms.html' }

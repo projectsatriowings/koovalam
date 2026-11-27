@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const pages = ['dist/index.html', 'dist/faq.html', 'dist/privacy-policy.html', 'dist/terms.html'];
+const pages = ['dist/index.html', 'dist/blogs.html', 'dist/faq.html', 'dist/privacy-policy.html', 'dist/terms.html'];
 
 console.log('=== H1 & H2 HEADING AUDIT (dist/) ===\n');
 

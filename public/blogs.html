@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self'; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';" />
+  <title>The Koovalam Journal — Spiritual Wellness, Nature &amp; Mindful Living</title>
+  <meta name="description" content="Read articles and stories on Ayurvedic wisdom, gentle yoga, Kerala nature sanctuaries, and spiritual retreat living from Koovalam in Wayanad." />
+  <link rel="canonical" href="https://koovalam.com/blogs.html" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png?v=3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f9f7f2;
+      --card-bg: #ffffff;
+      --text: #2a332d;
+      --text-muted: #526156;
+      --primary: #102c24;
+      --primary-forest: #183d32;
+      --accent: #b08d57;
+      --accent-soft: #c8af7b;
+      --border: #e4dfd3;
+      --border-subtle: rgba(16, 44, 36, 0.08);
+      --cream: #f7f4ec;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.25rem 2rem;
+      border-bottom: 2px solid var(--accent);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo-svg {
+      width: 38px;
+      height: 38px;
+    }
+    .brand-link {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #f7f4ee;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #e2ddd0;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent-soft);
+      font-weight: 600;
+    }
+    .btn-header-enquire {
+      background: var(--accent-soft);
+      color: var(--primary);
+      padding: 0.5rem 1.15rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-header-enquire:hover {
+      background: #dfc794;
+      transform: translateY(-1px);
+    }
+    .hero-banner {
+      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-forest) 100%);
+      color: var(--cream);
+      padding: 4.5rem 2rem 3.5rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--accent);
+    }
+    .hero-banner-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-soft);
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      color: #ffffff;
+      margin-bottom: 0.85rem;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    h2.blog-main-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+      color: var(--accent-soft);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      font-style: italic;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: rgba(247, 244, 236, 0.88);
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .filter-pill {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2ddd0;
+      border: 1px solid rgba(200, 175, 123, 0.35);
+      padding: 0.45rem 1.15rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: var(--accent-soft);
+      color: var(--primary);
+      border-color: var(--accent-soft);
+      font-weight: 600;
+    }
+    main {
+      max-width: 1140px;
+      margin: 3.5rem auto 5rem;
+      padding: 0 1.5rem;
+    }
+    .search-row {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .search-input {
+      flex: 1;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      background: #ffffff;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.15);
+    }
+    .featured-article {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      transition: transform 0.2s;
+    }
+    @media (max-width: 860px) {
+      .featured-article {
+        grid-template-columns: 1fr;
+      }
+    }
+    .featured-img-wrap {
+      position: relative;
+      min-height: 320px;
+      background: var(--primary);
+    }
+    .featured-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .featured-content {
+      padding: 2.75rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .tag-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(176, 141, 87, 0.12);
+      color: #8c6a34;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.55rem;
+      color: var(--primary);
+      line-height: 1.35;
+      margin-bottom: 0.85rem;
+    }
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 1.15rem;
+    }
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .article-snippet {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .btn-read {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+      cursor: pointer;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-family: inherit;
+    }
+    .btn-read:hover {
+      color: var(--accent);
+      border-color: var(--primary);
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 2.25rem;
+    }
+    .article-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+    }
+    .card-img-wrap {
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      background: var(--primary);
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .article-card:hover .card-img {
+      transform: scale(1.04);
+    }
+    .card-body {
+      padding: 1.75rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-body h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-body .article-snippet {
+      flex: 1;
+      font-size: 0.93rem;
+      margin-bottom: 1.35rem;
+    }
+    .cta-newsletter {
+      margin-top: 5rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-forest) 100%);
+      color: #ffffff;
+      padding: 3.5rem 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid var(--accent);
+      position: relative;
+    }
+    .cta-newsletter h3 {
+      color: #ffffff;
+      font-size: 1.85rem;
+      margin-bottom: 0.75rem;
+    }
+    .cta-newsletter p {
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.02rem;
+    }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-cta-gold {
+      background: var(--accent-soft);
+      color: var(--primary);
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .btn-cta-gold:hover {
+      background: #dfc794;
+    }
+    .btn-cta-outline {
+      border: 1px solid var(--accent-soft);
+      color: var(--accent-soft);
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-cta-outline:hover {
+      background: rgba(200, 175, 123, 0.15);
+      color: #ffffff;
+    }
+    footer {
+      background: var(--primary);
+      color: #e2ddd0;
+      padding: 3.5rem 2rem 2.5rem;
+      border-top: 2px solid var(--accent);
+      font-size: 0.92rem;
+    }
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .footer-brand h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    .footer-brand p {
+      color: #b2aba0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 440px;
+    }
+    .footer-col h5 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      color: var(--accent-soft);
+      margin-bottom: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-col a {
+      color: #d1cbc0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: #9c9589;
+      font-size: 0.85rem;
+    }
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 26, 18, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-dialog {
+      background: #ffffff;
+      width: 100%;
+      max-width: 780px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(0,0,0,0.06);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      font-size: 1.2rem;
+      transition: background 0.2s;
+    }
+    .modal-close-btn:hover {
+      background: rgba(0,0,0,0.12);
+    }
+    .modal-body h3 {
+      margin-bottom: 0.75rem;
+    }
+    .modal-body p {
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+      color: #3b423c;
+    }
+    .modal-body ul {
+      margin: 1rem 0 1.5rem 1.5rem;
+      color: #3b423c;
+    }
+    .modal-body li {
+      margin-bottom: 0.5rem;
+    }
+    .modal-body .quote-box {
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Header -->
+  <header role="banner">
+    <div class="header-inner">
+      <a href="/" class="brand-wrap" aria-label="Koovalam Home">
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" stroke="#C8AF7B" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" stroke-width="2.8" />
+          <line x1="50" y1="73" x2="50" y2="88" stroke="#A1844D" stroke-width="3.2" stroke-linecap="round" />
+          <path d="M 50 73 C 34 60, 32 28, 50 13 C 68 28, 66 60, 50 73 Z" stroke-width="2.4" stroke-linejoin="round" />
+          <path d="M 50 73 L 50 14" stroke-width="2" stroke-linecap="round" />
+          <path d="M 48 73 C 36 52, 16 34, 6 44 C 16 63, 36 78, 48 73 Z" stroke-width="2.4" stroke-linejoin="round" />
+          <path d="M 52 73 C 64 52, 84 34, 94 44 C 84 63, 64 78, 52 73 Z" stroke-width="2.4" stroke-linejoin="round" />
+        </svg>
+        <span class="brand-link">Koovalam</span>
+      </a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="/">Home</a>
+        <a href="/#philosophy">Philosophy</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#itinerary">Itinerary</a>
+        <a href="/#stay-travel">Stay &amp; Travel</a>
+        <a href="/#price">Investment</a>
+        <a href="/blogs.html" class="active" aria-current="page">Blogs</a>
+        <a href="/faq.html">FAQs</a>
+      </nav>
+      <a href="/#enquiry" class="btn-header-enquire">Enquire Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Header Section -->
+  <section class="hero-banner">
+    <div class="hero-banner-inner">
+      <p class="eyebrow">Koovalam Journal · Nature, Stillness &amp; Holistic Living.</p>
+      <h1>The Koovalam Journal — Stories of Nature, Spirit &amp; Slow Living</h1>
+      <h2 class="blog-main-subtitle">Reflections, Ayurvedic Wisdom, and Practical Guides for Mindful Living.</h2>
+      <p class="hero-desc">
+        Welcome to the Koovalam Journal. Read our simple guides on natural living, gentle breath, and quiet forest retreats in Wayanad. Learn how to care for your body, calm your mind, and live with peace.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" role="tablist" aria-label="Article categories">
+        <button type="button" class="filter-pill active" data-category="all" role="tab" aria-selected="true">All Stories</button>
+        <button type="button" class="filter-pill" data-category="ayurveda" role="tab" aria-selected="false">Ayurveda &amp; Food</button>
+        <button type="button" class="filter-pill" data-category="mindfulness" role="tab" aria-selected="false">Mindfulness &amp; Breath</button>
+        <button type="button" class="filter-pill" data-category="nature" role="tab" aria-selected="false">Wayanad &amp; Nature</button>
+        <button type="button" class="filter-pill" data-category="heritage" role="tab" aria-selected="false">Spiritual Heritage</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main id="main">
+    <!-- Search Bar -->
+    <div class="search-row">
+      <input type="text" id="article-search" class="search-input" placeholder="Search articles by keyword (e.g., breath, yoga, Bilva, Wayanad)..." aria-label="Search articles" />
+    </div>
+
+    <!-- Featured Lead Story -->
+    <article class="featured-article" data-category="ayurveda">
+      <div class="featured-img-wrap">
+        <img src="images/bilva-leaves.webp" alt="Sacred Bilva leaves and morning light" class="featured-img" width="800" height="500" loading="eager" />
+      </div>
+      <div class="featured-content">
+        <span class="tag-badge">Ayurveda &amp; Symbolism · Featured</span>
+        <h3>The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas &amp; Atman</h3>
+        <div class="meta-row">
+          <span class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            6 min read
+          </span>
+          <span class="meta-item">Published: November 2026</span>
+          <span class="meta-item">By Koovalam Sanctuary</span>
+        </div>
+        <p class="article-snippet">
+          The Bilva leaf has three joined parts. They stand for body, mind, and soul. When you care for all three, you feel peaceful, steady, and whole.
+        </p>
+        <button type="button" class="btn-read" data-article-id="art-bilva">
+          Read Full Story &rarr;
+        </button>
+      </div>
+    </article>
+
+    <!-- Articles Grid -->
+    <div class="articles-grid" id="articles-container">
+      <!-- Article 1: Wayanad Nature Immersion -->
+      <article class="article-card" data-category="nature">
+        <div class="card-img-wrap">
+          <img src="images/tea-plantation-walk.jpg" alt="Misty green tea gardens in Wayanad hills" class="card-img" width="500" height="320" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="tag-badge">Wayanad &amp; Nature</span>
+          <h3>Finding Silence in the Mist: Healing Digital Fatigue in Wayanad</h3>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              5 min read
+            </span>
+            <span class="meta-item">Nature Living</span>
+          </div>
+          <p class="article-snippet">
+            Daily screens and rush make us tired. A calm retreat in Wayanad helps you slow down. Walk on green trails and breathe clean forest air.
+          </p>
+          <button type="button" class="btn-read" data-article-id="art-nature">
+            Read Full Story &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 2: Pranayama & Gentle Yoga -->
+      <article class="article-card" data-category="mindfulness">
+        <div class="card-img-wrap">
+          <img src="images/practice-pranayama.webp" alt="Quiet morning breathwork overlooking lush Kerala hills" class="card-img" width="500" height="320" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="tag-badge">Mindfulness &amp; Breath</span>
+          <h3>The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart</h3>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              4 min read
+            </span>
+            <span class="meta-item">Daily Practice</span>
+          </div>
+          <p class="article-snippet">
+            You do not need hard poses to practice yoga. Slow, steady breathing calms the heart. Practice simple morning breath to feel fresh all day.
+          </p>
+          <button type="button" class="btn-read" data-article-id="art-breath">
+            Read Full Story &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 3: Ancient Heritage & Temple Walk -->
+      <article class="article-card" data-category="heritage">
+        <div class="card-img-wrap">
+          <img src="images/tirunelli-valley.jpg" alt="Ancient stone pillars and green valley surrounding Tirunelli Temple" class="card-img" width="500" height="320" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="tag-badge">Spiritual Heritage</span>
+          <h3>Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams</h3>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              6 min read
+            </span>
+            <span class="meta-item">Kerala Culture</span>
+          </div>
+          <p class="article-snippet">
+            Ancient Tirunelli Temple rests beneath green hills. Clean mountain streams flow past old stone pillars. Walking here at dawn brings quiet joy.
+          </p>
+          <button type="button" class="btn-read" data-article-id="art-heritage">
+            Read Full Story &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 4: Sattvic Food & Cooking -->
+      <article class="article-card" data-category="ayurveda">
+        <div class="card-img-wrap">
+          <img src="images/included-meals.jpg" alt="Wholesome Kerala vegetarian meals served on natural banana leaf" class="card-img" width="500" height="320" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="tag-badge">Ayurveda &amp; Food</span>
+          <h3>The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce</h3>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              5 min read
+            </span>
+            <span class="meta-item">Holistic Nutrition</span>
+          </div>
+          <p class="article-snippet">
+            Good food brings clear thoughts and easy digestion. We cook fresh vegetarian meals with local farm produce and mild spices. Every meal feels light.
+          </p>
+          <button type="button" class="btn-read" data-article-id="art-food">
+            Read Full Story &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 5: Guided Rest & Yoga Nidra -->
+      <article class="article-card" data-category="mindfulness">
+        <div class="card-img-wrap">
+          <img src="images/practice-yoga-nidra.webp" alt="Quiet relaxation deck under the Kerala forest canopy" class="card-img" width="500" height="320" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="tag-badge">Mindfulness &amp; Breath</span>
+          <h3>Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration</h3>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              4 min read
+            </span>
+            <span class="meta-item">Restorative Rest</span>
+          </div>
+          <p class="article-snippet">
+            Yoga Nidra is guided deep rest. You lie down in comfort and relax from head to toe. Thirty minutes of quiet rest renews your mind and body.
+          </p>
+          <button type="button" class="btn-read" data-article-id="art-nidra">
+            Read Full Story &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 6: Forest Bathing & Botanical Peace -->
+      <article class="article-card" data-category="nature">
+        <div class="card-img-wrap">
+          <img src="images/gurukula-botanical-sanctuary.jpg" alt="Sunlight streaming through tall trees and lush ferns" class="card-img" width="500" height="320" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="tag-badge">Wayanad &amp; Nature</span>
+          <h3>Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses</h3>
+          <div class="meta-row">
+            <span class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              5 min read
+            </span>
+            <span class="meta-item">Ecological Wellness</span>
+          </div>
+          <p class="article-snippet">
+            Walking under tall trees brings deep calm. Listen to birds and the wind in the bamboo. Spending quiet time in nature lowers stress naturally.
+          </p>
+          <button type="button" class="btn-read" data-article-id="art-forest">
+            Read Full Story &rarr;
+          </button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Call to Action Banner -->
+    <div class="cta-newsletter">
+      <h3>Ready to Experience This in Person?</h3>
+      <p>
+        Join our retreat in Wayanad. Enjoy gentle yoga, eat fresh vegetarian food, and rest in clean mountain air.
+      </p>
+      <div class="cta-actions">
+        <a href="https://wa.me/917358400296" target="_blank" rel="noopener noreferrer" class="btn-cta-gold">
+          <span>Chat on WhatsApp (+91 73584 00296)</span>
+        </a>
+        <a href="/#enquiry" class="btn-cta-outline">
+          <span>Book Your Retreat Stay</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Article Reader Modal Overlay -->
+  <div class="modal-overlay" id="article-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close article">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4>Koovalam</h4>
+        <p>
+          Koovalam offers calm spiritual retreats in Wayanad. Inspired by the sacred Bilva tree, we connect natural living and holistic healing.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Retreat Navigation</h5>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#philosophy">Philosophy</a></li>
+          <li><a href="/#experience">The Experience</a></li>
+          <li><a href="/#itinerary">Daily Itinerary</a></li>
+          <li><a href="/#stay-travel">Stay &amp; Travel</a></li>
+          <li><a href="/#price">Pricing &amp; Booking</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Wisdom &amp; Legal</h5>
+        <ul>
+          <li><a href="/blogs.html">The Koovalam Journal</a></li>
+          <li><a href="/faq.html">Frequently Asked Questions</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="https://www.instagram.com/_koovalam_/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Koovalam. Rooted in Nature. Connected to Soul.</p>
+      <p>Oxyfarm Resorts, Wayanad, Kerala, India.</p>
+    </div>
+  </footer>
+
+  <!-- Client-side Interactive Filter, Search & Reader Script -->
+  <script>
+    (function () {
+      const articlesData = {
+        'art-bilva': {
+          title: 'The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas & Atman',
+          tag: 'Ayurveda & Symbolism',
+          readTime: '6 min read',
+          date: 'November 2026',
+          content: `
+            <p>In the ancient traditions of Kerala and across South India, the Bilva tree (Aegle marmelos)—known locally as Koovalam—holds a uniquely revered place. Its trifoliate leaf, three distinct petals joined seamlessly at a single central stem, is not merely a botanical curiosity; it serves as a profound metaphor for complete human wholeness.</p>
+            <div class="quote-box">
+              "When body, mind, and spirit are cared for in equal measure, health is no longer a struggle; it becomes our natural state of being."
+            </div>
+            <p>According to classical Ayurvedic wisdom, balanced well-being requires harmonious attention across three dimensions:</p>
+            <ul>
+              <li><strong>Sharira (The Body):</strong> Natural vitality cultivated through gentle daily movement, unhurried digestion, pure spring water, and wholesome vegetarian meals cooked with fresh local produce.</li>
+              <li><strong>Manas (The Mind):</strong> Emotional stillness and mental clarity achieved by stepping away from screen glare, practicing quiet breathing exercises, and allowing thoughts to settle without judgment.</li>
+              <li><strong>Atman (The Soul):</strong> An innate connection to nature, timeless temples, forest streams, and moments of grateful reflection by the evening fire.</li>
+            </ul>
+            <p>During our retreats in Wayanad, this three-leafed philosophy guides every hour of our schedule. We never rush. We provide space for your body to stretch, your mind to quiet, and your inner self to remember its original peace.</p>
+          `
+        },
+        'art-nature': {
+          title: 'Finding Silence in the Mist: Healing Digital Fatigue in Wayanad',
+          tag: 'Wayanad & Nature',
+          readTime: '5 min read',
+          date: 'November 2026',
+          content: `
+            <p>Modern work life keeps our senses on high alert. Between constant notification pings, endless message threads, and artificial office lights, the body’s sympathetic nervous system remains permanently triggered. Over time, this results in shallow breathing, tense shoulders, and fragmented sleep.</p>
+            <p>Stepping into the high-altitude hills of Wayanad provides an immediate physiological contrast. At Oxyfarm Resorts, morning begins not with an alarm clock, but with the cool roll of mountain mist across the valley and the distant call of hornbills.</p>
+            <div class="quote-box">
+              "Silence is not the absence of sound; it is the presence of nature speaking without hurry."
+            </div>
+            <p>When you walk barefoot along gentle grass paths, take deep breaths of pure oxygen from surrounding tea plantations, and put your smartphone in a bedside drawer, your heart rate slows naturally. Four days in this peaceful environment allows your brain to reset and your natural sleep cycles to return.</p>
+          `
+        },
+        'art-breath': {
+          title: 'The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart',
+          tag: 'Mindfulness & Breath',
+          readTime: '4 min read',
+          date: 'November 2026',
+          content: `
+            <p>Many people believe that yoga requires extreme flexibility or difficult balancing poses. In truth, the heart of traditional yoga begins and ends with the breath (Prana). The breath is the direct bridge connecting the physical body to emotional states.</p>
+            <p>During our morning sessions at Koovalam, we practice gentle, non-strenuous pranayama techniques designed specifically for beginners and regular practitioners alike:</p>
+            <ul>
+              <li><strong>Dirgha Pranayama (Three-Part Breath):</strong> Expanding first the abdomen, then the lower ribs, and finally the upper chest to gently expand lung capacity.</li>
+              <li><strong>Nadi Shodhana (Alternate Nostril Breathing):</strong> A time-tested practice that balances the left and right hemispheres of the brain, creating serene equilibrium before meditation.</li>
+              <li><strong>Bhramari (Humming Bee Breath):</strong> Gentle vibrational humming that stimulates the vagus nerve and quiets racing thoughts within minutes.</li>
+            </ul>
+            <p>These practices are taught at a calm, accessible pace so you can easily take them home and incorporate them into your daily morning routine.</p>
+          `
+        },
+        'art-heritage': {
+          title: 'Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams',
+          tag: 'Spiritual Heritage',
+          readTime: '6 min read',
+          date: 'November 2026',
+          content: `
+            <p>Perched high in northern Wayanad, cradled by the majestic peaks of the Brahmagiri mountain range, stands the ancient temple of Tirunelli. Historians date its stone sanctum and granite aqueducts back many centuries, surrounded by pristine evergreen forests.</p>
+            <p>Visiting Tirunelli in the quiet early morning is a core experience of the Koovalam retreat. We arrive as the first rays of sunlight filter through mountain clouds. The cool stream of Papanasini flows gently over smoothed stones nearby, carrying clean mountain spring water from deep inside the forest.</p>
+            <div class="quote-box">
+              "Sitting in silence beside granite temple pillars carved hundreds of years ago brings a rare sense of perspective and inner grounding."
+            </div>
+            <p>There is no commercial rush here. Guests have quiet time to sit by the river, feel the cool mountain breeze, and absorb the ancient spiritual heritage that has blessed this Kerala valley for generations.</p>
+          `
+        },
+        'art-food': {
+          title: 'The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce',
+          tag: 'Ayurveda & Food',
+          readTime: '5 min read',
+          date: 'November 2026',
+          content: `
+            <p>In Ayurvedic science, food is classified into three qualities (Gunas): Sattvic (pure and calming), Rajasic (stimulating and restless), and Tamasic (heavy and lethargic). For deep restoration, the retreat menu focuses exclusively on Sattvic vegetarian dining.</p>
+            <p>Our kitchen uses locally sourced organic farm vegetables, hand-pressed coconut milk, gentle digestive spices such as turmeric, coriander, and ginger, and clean mountain spring water. Meals are prepared warm and served fresh.</p>
+            <ul>
+              <li><strong>Morning Herbal Brews:</strong> Warm infusions of tulsi, cumin, and dried ginger to kindle digestive fire gently.</li>
+              <li><strong>Traditional Kerala Lunches:</strong> Steamed red rice, garden-fresh thorans, moru curry, and roasted papadams that feel light yet thoroughly nourishing.</li>
+              <li><strong>Evening Broths & Soups:</strong> Light vegetable broths and herbal khichdi that support deep restorative digestion before bedtime.</li>
+            </ul>
+            <p>Guests frequently remark that after just two days of Sattvic meals, digestive sluggishness vanishes, skin clears, and daily energy remains steady throughout the afternoon.</p>
+          `
+        },
+        'art-nidra': {
+          title: 'Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration',
+          tag: 'Mindfulness & Breath',
+          readTime: '4 min read',
+          date: 'November 2026',
+          content: `
+            <p>Yoga Nidra, often translated as "psychic sleep" or "yogic sleep," is an ancient meditative practice where the practitioner lies comfortably supported on a mat while being systematically guided into deep physical relaxation.</p>
+            <p>Unlike regular sleep where the mind dreams or wanders subconsciously, Yoga Nidra maintains a thread of quiet conscious awareness while the physical body enters the delta brainwave state—the deepest stage of restorative healing.</p>
+            <p>We practice Yoga Nidra in the calm late afternoons at Oxyfarm Resorts, with the sounds of wind whispering through the tree canopy outside. Guests wake up with a feeling of profound mental clarity, unburdened by stress or physical fatigue.</p>
+          `
+        },
+        'art-forest': {
+          title: 'Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses',
+          tag: 'Wayanad & Nature',
+          readTime: '5 min read',
+          date: 'November 2026',
+          content: `
+            <p>In Japan, the practice of Shinrin-yoku—or forest bathing—is recognized as an essential component of preventative healthcare. Trees release aromatic organic compounds called phytoncides, which plants use to protect themselves from insects and fungi. When humans breathe in these phytoncides, our immune systems receive a measurable boost.</p>
+            <p>The Western Ghats of Wayanad represent one of the world's most bio-diverse rainforest ecosystems. Walking along forest trails with full sensory awareness—listening to birdsong, smelling wet forest loam, and viewing rich green foliage—significantly lowers blood pressure and calms anxiety.</p>
+            <p>At Koovalam, our guided nature walks are neither strenuous hikes nor athletic challenges. They are slow, contemplative strolls where nature itself becomes the healer.</p>
+          `
+        }
+      };
+
+      // Category filter handling
+      const filterPills = document.querySelectorAll('.filter-pill');
+      const cards = document.querySelectorAll('.article-card, .featured-article');
+      const searchInput = document.getElementById('article-search');
+
+      function filterArticles() {
+        const activeCategory = document.querySelector('.filter-pill.active')?.getAttribute('data-category') || 'all';
+        const query = searchInput.value.toLowerCase().trim();
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          const cardText = card.innerText.toLowerCase();
+
+          const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
+          const matchesQuery = !query || cardText.includes(query);
+
+          if (matchesCategory && matchesQuery) {
+            card.style.display = card.classList.contains('featured-article') ? 'grid' : 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          filterPills.forEach(p => {
+            p.classList.remove('active');
+            p.setAttribute('aria-selected', 'false');
+          });
+          pill.classList.add('active');
+          pill.setAttribute('aria-selected', 'true');
+          filterArticles();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterArticles);
+      }
+
+      // Modal article reading logic
+      const modal = document.getElementById('article-modal');
+      const modalClose = document.getElementById('modal-close');
+      const modalContent = document.getElementById('modal-content');
+
+      function openArticle(id) {
+        const art = articlesData[id];
+        if (!art) return;
+
+        modalContent.innerHTML = `
+          <span class="tag-badge">\${art.tag}</span>
+          <h3>\${art.title}</h3>
+          <div class="meta-row">
+            <span class="meta-item">\${art.readTime}</span>
+            <span class="meta-item">\${art.date}</span>
+            <span class="meta-item">Koovalam Journal</span>
+          </div>
+          <div class="article-body-content">
+            \${art.content}
+          </div>
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e4dfd3; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <span style="font-size: 0.9rem; color: #526156;">Experience this in Wayanad:</span>
+            <a href="/#enquiry" style="background: #102c24; color: #f7f4ec; padding: 0.55rem 1.25rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.88rem;">Enquire for Retreat</a>
+          </div>
+        `;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.btn-read').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const id = btn.getAttribute('data-article-id');
+          openArticle(id);
+        });
+      });
+
+      if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+      }
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

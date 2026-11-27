@@ -141,9 +141,12 @@ const server = http.createServer(async (req, res) => {
   let safePath = path.normalize(pathname).replace(/^(\.\.[/\\])+/, '')
   let filePath = path.join(DIST_DIR, safePath)
 
-  // Check if requested path points to an existing file
+  // Check if requested path points to an existing file (or .html file)
   let stat = null
   try {
+    if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
+      filePath = filePath + '.html'
+    }
     if (fs.existsSync(filePath)) {
       stat = fs.statSync(filePath)
       if (stat.isDirectory()) {

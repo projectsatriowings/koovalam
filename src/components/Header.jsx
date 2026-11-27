@@ -19,6 +19,7 @@ export default function Header({ onOpenEnquiry }) {
     { href: '#itinerary', id: 'itinerary', label: 'Itinerary' },
     { href: '#stay-travel', id: 'stay-travel', label: 'Stay & Travel' },
     { href: '#price', id: 'price', label: 'Investment' },
+    { href: '/blogs.html', id: 'blogs', label: 'Blogs' },
   ]
 
   // Track header solid state on scroll
