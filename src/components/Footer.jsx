@@ -50,6 +50,60 @@ export default function Footer() {
               </svg>
               <span>Oxyfarm Resorts, Wayanad</span>
             </a>
+
+            {/* Social Media Links */}
+            <div className="footer-social-row" aria-label="Social Media">
+              <a
+                href="https://www.instagram.com/_koovalam_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-btn"
+                title="Follow Koovalam on Instagram"
+                aria-label="Koovalam on Instagram"
+                onClick={() => track('footer_social_instagram')}
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61596928650585"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-btn"
+                title="Follow Koovalam on Facebook"
+                aria-label="Koovalam on Facebook"
+                onClick={() => track('footer_social_facebook')}
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </div>
           </div>
 
           {/* Navigation Links */}
@@ -65,6 +119,16 @@ export default function Footer() {
               <li><a href="/faq.html">Frequently Asked Questions</a></li>
               <li><a href="/privacy-policy.html">Privacy Policy</a></li>
               <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+              <li>
+                <a href="https://www.instagram.com/_koovalam_/" target="_blank" rel="noopener noreferrer">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank" rel="noopener noreferrer">
+                  Facebook
+                </a>
+              </li>
               <li>
                 <a href="#enquiry" onClick={scrollToEnquiry}>
                   Enquire &amp; Register

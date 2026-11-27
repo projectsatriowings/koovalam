@@ -43,9 +43,8 @@ export const site = {
     culturalArts: 'Kathakali, Bharatanatyam, Mohiniyattam & Flute (Not included in package · Arranged upon request)',
   },
   socials: [
-    { label: 'Instagram', href: '#' },
-    { label: 'Facebook', href: '#' },
-    { label: 'YouTube', href: '#' },
+    { label: 'Instagram', href: 'https://www.instagram.com/_koovalam_/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61596928650585' },
   ],
   testimonials: [],
   canonical: 'https://koovalam.com/',
