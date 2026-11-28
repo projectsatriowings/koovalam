@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self'; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self'; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';" />
   <title>The Koovalam Journal — Spiritual Wellness, Nature &amp; Mindful Living</title>
-  <meta name="description" content="Read articles and stories on Ayurvedic wisdom, gentle yoga, Kerala nature sanctuaries, and spiritual retreat living from Koovalam in Wayanad." />
+  <meta name="description"
+    content="Read articles and stories on Ayurvedic wisdom, gentle yoga, Kerala nature sanctuaries, and spiritual retreat living from Koovalam in Wayanad." />
   <link rel="canonical" href="https://koovalam.com/blogs.html" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png?v=3" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
       --bg: #f9f7f2;
@@ -26,15 +31,47 @@
       --border: #e4dfd3;
       --border-subtle: rgba(16, 44, 36, 0.08);
       --cream: #f7f4ec;
+      --deep-forest: #102C24;
+      --primary-forest: #16382C;
+      --warm-ivory: #F7F4EC;
+      --bg-canvas: #FAF8F3;
+      --card-bg: #FFFFFF;
+      --text-main: #202A24;
+      --text-muted: #536257;
+      --antique-brass: #BCA369;
+      --brass-dark: #8E733F;
+      --line-subtle: rgba(16, 44, 36, 0.08);
+      --line-card: rgba(16, 44, 36, 0.09);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --header-h: 80px;
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.75;
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      padding-top: var(--header-h);
     }
+
     header {
       background: var(--primary);
       color: #fff;
@@ -42,508 +79,1329 @@
       border-bottom: 2px solid var(--accent);
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    }
-    .header-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    .brand-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    .brand-logo-svg {
-      width: 38px;
-      height: 38px;
-    }
-    .brand-link {
-      font-family: 'Cinzel', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #f7f4ee;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: #e2ddd0;
-      text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--accent-soft);
-      font-weight: 600;
-    }
-    .btn-header-enquire {
-      background: var(--accent-soft);
-      color: var(--primary);
-      padding: 0.5rem 1.15rem;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      white-space: nowrap;
-    }
-    .btn-header-enquire:hover {
-      background: #dfc794;
-      transform: translateY(-1px);
-    }
-    .hero-banner {
-      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-forest) 100%);
-      color: var(--cream);
-      padding: 4.5rem 2rem 3.5rem;
-      text-align: center;
-      position: relative;
-      border-bottom: 1px solid var(--accent);
-    }
-    .hero-banner-inner {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    .eyebrow {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--accent-soft);
-      font-weight: 600;
-      margin-bottom: 0.85rem;
-    }
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(2rem, 4vw, 2.85rem);
-      color: #ffffff;
-      margin-bottom: 0.85rem;
-      line-height: 1.25;
-      font-weight: 700;
-    }
-    h2.blog-main-subtitle {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.55rem);
-      color: var(--accent-soft);
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
-      font-style: italic;
-    }
-    .hero-desc {
-      font-size: 1.05rem;
-      color: rgba(247, 244, 236, 0.88);
-      max-width: 680px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
-    .filter-bar {
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-    .filter-pill {
-      background: rgba(255, 255, 255, 0.08);
-      color: #e2ddd0;
-      border: 1px solid rgba(200, 175, 123, 0.35);
-      padding: 0.45rem 1.15rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .filter-pill:hover,
-    .filter-pill.active {
-      background: var(--accent-soft);
-      color: var(--primary);
-      border-color: var(--accent-soft);
-      font-weight: 600;
-    }
-    main {
-      max-width: 1140px;
-      margin: 3.5rem auto 5rem;
-      padding: 0 1.5rem;
-    }
-    .search-row {
-      max-width: 600px;
-      margin: 0 auto 3rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-    .search-input {
-      flex: 1;
-      padding: 0.85rem 1.25rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      outline: none;
-      background: #ffffff;
-      color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .search-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.15);
-    }
-    .featured-article {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      margin-bottom: 3.5rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-      transition: transform 0.2s;
-    }
-    @media (max-width: 860px) {
-      .featured-article {
-        grid-template-columns: 1fr;
+
+      /* ── Shared Header (Exact match with Main Website) ── */
+      .header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        height: var(--header-h);
+        transition: background var(--transition-normal), box-shadow var(--transition-normal);
       }
-    }
-    .featured-img-wrap {
-      position: relative;
-      min-height: 320px;
-      background: var(--primary);
-    }
-    .featured-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .featured-content {
-      padding: 2.75rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .tag-badge {
-      display: inline-block;
-      align-self: flex-start;
-      background: rgba(176, 141, 87, 0.12);
-      color: #8c6a34;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.85rem;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-    h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.55rem;
-      color: var(--primary);
-      line-height: 1.35;
-      margin-bottom: 0.85rem;
-    }
-    .meta-row {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      margin-bottom: 1.15rem;
-    }
-    .meta-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .article-snippet {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-    .btn-read {
-      align-self: flex-start;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 0.92rem;
-      text-decoration: none;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-      cursor: pointer;
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      font-family: inherit;
-    }
-    .btn-read:hover {
-      color: var(--accent);
-      border-color: var(--primary);
-    }
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-      gap: 2.25rem;
-    }
-    .article-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .article-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.07);
-    }
-    .card-img-wrap {
-      height: 210px;
-      position: relative;
-      overflow: hidden;
-      background: var(--primary);
-    }
-    .card-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .article-card:hover .card-img {
-      transform: scale(1.04);
-    }
-    .card-body {
-      padding: 1.75rem 1.6rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .card-body h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-    .card-body .article-snippet {
-      flex: 1;
-      font-size: 0.93rem;
-      margin-bottom: 1.35rem;
-    }
-    .cta-newsletter {
-      margin-top: 5rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-forest) 100%);
-      color: #ffffff;
-      padding: 3.5rem 2.5rem;
-      border-radius: 12px;
-      text-align: center;
-      border: 1px solid var(--accent);
-      position: relative;
-    }
-    .cta-newsletter h3 {
-      color: #ffffff;
-      font-size: 1.85rem;
-      margin-bottom: 0.75rem;
-    }
-    .cta-newsletter p {
-      max-width: 640px;
-      margin: 0 auto 2rem;
-      color: rgba(255, 255, 255, 0.88);
-      font-size: 1.02rem;
-    }
-    .cta-actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn-cta-gold {
-      background: var(--accent-soft);
-      color: var(--primary);
-      padding: 0.85rem 1.75rem;
-      border-radius: 4px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.2s;
-    }
-    .btn-cta-gold:hover {
-      background: #dfc794;
-    }
-    .btn-cta-outline {
-      border: 1px solid var(--accent-soft);
-      color: var(--accent-soft);
-      padding: 0.85rem 1.75rem;
-      border-radius: 4px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-cta-outline:hover {
-      background: rgba(200, 175, 123, 0.15);
-      color: #ffffff;
-    }
-    footer {
-      background: var(--primary);
-      color: #e2ddd0;
-      padding: 3.5rem 2rem 2.5rem;
-      border-top: 2px solid var(--accent);
-      font-size: 0.92rem;
-    }
-    .footer-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 2.5rem;
-    }
-    @media (max-width: 768px) {
-      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-    }
-    .footer-brand h4 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.3rem;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.1em;
-    }
-    .footer-brand p {
-      color: #b2aba0;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      max-width: 440px;
-    }
-    .footer-col h5 {
-      font-family: 'Cinzel', serif;
-      font-size: 0.95rem;
-      color: var(--accent-soft);
-      margin-bottom: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .footer-col ul {
-      list-style: none;
-    }
-    .footer-col li {
-      margin-bottom: 0.6rem;
-    }
-    .footer-col a {
-      color: #d1cbc0;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-col a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-    .footer-bottom {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding-top: 1.75rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      color: #9c9589;
-      font-size: 0.85rem;
-    }
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(10, 26, 18, 0.85);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-    .modal-overlay.active {
-      display: flex;
-    }
-    .modal-dialog {
-      background: #ffffff;
-      width: 100%;
-      max-width: 780px;
-      max-height: 90vh;
-      overflow-y: auto;
-      border-radius: 12px;
-      padding: 2.5rem;
-      position: relative;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-      border: 1px solid var(--border);
-    }
-    .modal-close-btn {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      background: rgba(0,0,0,0.06);
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text);
-      font-size: 1.2rem;
-      transition: background 0.2s;
-    }
-    .modal-close-btn:hover {
-      background: rgba(0,0,0,0.12);
-    }
-    .modal-body h3 {
-      margin-bottom: 0.75rem;
-    }
-    .modal-body p {
-      margin-bottom: 1.2rem;
-      line-height: 1.8;
-      color: #3b423c;
-    }
-    .modal-body ul {
-      margin: 1rem 0 1.5rem 1.5rem;
-      color: #3b423c;
-    }
-    .modal-body li {
-      margin-bottom: 0.5rem;
-    }
-    .modal-body .quote-box {
-      border-left: 3px solid var(--accent);
-      padding: 1rem 1.25rem;
-      background: var(--bg);
-      margin: 1.5rem 0;
-      font-style: italic;
-      color: var(--primary);
-    }
+
+      .header-inner {
+        max-width: 1140px;
+
+        .header-solid {
+          color: var(--deep-forest);
+          background: rgba(247, 244, 236, 0.96);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-bottom: 1px solid var(--line-subtle);
+          box-shadow: 0 4px 20px rgba(16, 44, 36, 0.06);
+        }
+
+        .wrap {
+          width: 100%;
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        .header-logo-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 1.5rem;
+          text-decoration: none;
+          transition: opacity var(--transition-fast), transform var(--transition-fast);
+        }
+
+        .brand-wrap {
+          .header-logo-link:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+          }
+
+          .header-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+          }
+
+          .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+
+          .header-nav-list {
+            display: flex;
+            align-items: center;
+            gap: clamp(18px, 2.4vw, 32px);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+
+          .nav-link {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+            color: var(--deep-forest);
+            position: relative;
+            padding: 8px 0;
+            display: inline-flex;
+            align-items: center;
+            transition: color var(--transition-fast);
+          }
+
+          .brand-logo-svg {
+            width: 38px;
+            height: 38px;
+
+            .nav-link::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background: var(--antique-brass);
+              transition: width var(--transition-normal);
+            }
+
+            .brand-link {
+              font-family: 'Cinzel', serif;
+              font-size: 1.35rem;
+
+              .nav-link:hover::after,
+              .nav-link.nav-link-active::after {
+                width: 100%;
+              }
+
+              .nav-link.nav-link-active {
+                color: var(--antique-brass);
+              }
+
+              .header-actions {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+              }
+
+              .header-cta {
+                background: var(--deep-forest);
+                color: var(--warm-ivory);
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.82rem;
+                font-weight: 700;
+                color: #f7f4ee;
+                letter-spacing: 0.12em;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                padding: 11px 22px;
+                border-radius: var(--radius-sm);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: all var(--transition-fast);
+                box-shadow: 0 4px 12px rgba(16, 44, 36, 0.15);
+              }
+
+              .nav-links {
+
+                .header-cta:hover {
+                  background: #183E33;
+                  transform: translateY(-1px);
+                  box-shadow: 0 6px 16px rgba(16, 44, 36, 0.22);
+                }
+
+                /* Mobile Hamburger */
+                .mobile-menu-btn {
+                  display: none;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 5px;
+                  width: 40px;
+                  height: 40px;
+                  background: transparent;
+                  border: 1px solid var(--line-subtle);
+                  border-radius: var(--radius-sm);
+                  cursor: pointer;
+                  padding: 0;
+                  color: var(--deep-forest);
+                }
+
+                .menu-btn-bar {
+                  width: 20px;
+                  height: 2px;
+                  background-color: currentColor;
+                  border-radius: 1px;
+                  transition: transform var(--transition-fast), opacity var(--transition-fast);
+                }
+
+                /* Mobile Drawer */
+                .mobile-drawer {
+                  position: fixed;
+                  top: 0;
+                  right: -100%;
+                  width: min(360px, 86vw);
+                  height: 100vh;
+                  height: 100dvh;
+                  background: #FFFFFF;
+                  z-index: 200;
+                  padding: 24px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  box-shadow: -8px 0 32px rgba(16, 44, 36, 0.15);
+                  transition: right var(--transition-normal);
+                  overflow-y: auto;
+                }
+
+                .mobile-drawer.open {
+                  right: 0;
+                }
+
+                .drawer-backdrop {
+                  position: fixed;
+                  inset: 0;
+                  background: rgba(16, 44, 36, 0.45);
+                  backdrop-filter: blur(4px);
+                  z-index: 150;
+                  opacity: 0;
+                  pointer-events: none;
+                  transition: opacity var(--transition-fast);
+                }
+
+                .drawer-backdrop.open {
+                  opacity: 1;
+                  pointer-events: auto;
+                }
+
+                .drawer-top {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 1.5rem;
+                  flex-wrap: wrap;
+                  border-bottom: 1px solid var(--line-subtle);
+                  padding-bottom: 16px;
+                  margin-bottom: 20px;
+                }
+
+                .nav-links a {
+                  color: #e2ddd0;
+                  text-decoration: none;
+                  font-size: 0.92rem;
+                  font-weight: 500;
+                  transition: color 0.2s;
+
+                  .drawer-tag {
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    letter-spacing: 0.14em;
+                    text-transform: uppercase;
+                    color: var(--antique-brass);
+                  }
+
+                  .nav-links a:hover,
+                  .nav-links a.active {
+                    color: var(--accent-soft);
+
+                    .drawer-close {
+                      background: rgba(16, 44, 36, 0.05);
+                      border: none;
+                      width: 34px;
+                      height: 34px;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: var(--deep-forest);
+                    }
+
+                    .drawer-links {
+                      display: flex;
+                      flex-direction: column;
+                      gap: 16px;
+                    }
+
+                    .drawer-links a {
+                      font-size: 1.05rem;
+                      font-weight: 600;
+                      color: var(--deep-forest);
+                      text-decoration: none;
+                      padding: 6px 0;
+                      border-bottom: 1px solid rgba(16, 44, 36, 0.04);
+                    }
+
+                    .btn-header-enquire {
+                      background: var(--accent-soft);
+                      color: var(--primary);
+                      padding: 0.5rem 1.15rem;
+                      border-radius: 4px;
+
+                      .drawer-links a.active {
+                        color: var(--antique-brass);
+                      }
+
+                      .drawer-footer {
+                        border-top: 1px solid var(--line-subtle);
+                        padding-top: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
+                      }
+
+                      .drawer-cta {
+                        background: var(--deep-forest);
+                        color: #FFFFFF;
+                        text-align: center;
+                        padding: 12px;
+                        border-radius: var(--radius-sm);
+                        font-weight: 700;
+                        font-size: 0.85rem;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        letter-spacing: 0.06em;
+                        text-decoration: none;
+                        transition: background 0.2s, transform 0.15s;
+                        white-space: nowrap;
+                      }
+
+                      .btn-header-enquire:hover {
+                        background: #dfc794;
+                        transform: translateY(-1px);
+                      }
+
+                      .hero-banner {
+                        background: linear-gradient(180deg, var(--primary) 0%, var(--primary-forest) 100%);
+                        color: var(--cream);
+                        padding: 4.5rem 2rem 3.5rem;
+
+                        /* ── Journal Hero Header ── */
+                        .journal-hero {
+                          position: relative;
+                          background: linear-gradient(180deg, #F5F1E6 0%, #FAF8F3 100%);
+                          padding: 4.5rem 1.5rem 2.5rem;
+                          border-bottom: 1px solid var(--line-subtle);
+                          text-align: center;
+                          position: relative;
+                          border-bottom: 1px solid var(--accent);
+                        }
+
+                        .hero-banner-inner {
+                          max-width: 820px;
+
+                          .journal-hero-inner {
+                            max-width: 860px;
+                            margin: 0 auto;
+                          }
+
+                          .eyebrow {
+                            font-size: 0.85rem;
+
+                            .journal-eyebrow {
+                              display: inline-flex;
+                              align-items: center;
+                              gap: 8px;
+                              font-family: 'DM Sans', sans-serif;
+                              font-size: 0.76rem;
+                              font-weight: 700;
+                              letter-spacing: 0.18em;
+                              text-transform: uppercase;
+                              letter-spacing: 0.2em;
+                              color: var(--accent-soft);
+                              font-weight: 600;
+                              margin-bottom: 0.85rem;
+                              color: var(--brass-dark);
+                              background: rgba(188, 163, 105, 0.12);
+                              border: 1px solid rgba(188, 163, 105, 0.28);
+                              padding: 6px 14px;
+                              border-radius: 999px;
+                              margin-bottom: 1.25rem;
+                            }
+
+                            h1 {
+
+                              h1.journal-title {
+                                font-family: 'Cinzel', serif;
+                                font-size: clamp(2rem, 4vw, 2.85rem);
+                                color: #ffffff;
+                                font-size: clamp(2rem, 3.8vw, 3rem);
+                                font-weight: 700;
+                                line-height: 1.22;
+                                color: var(--deep-forest);
+                                margin-bottom: 0.85rem;
+                                line-height: 1.25;
+                                font-weight: 700;
+                                letter-spacing: 0.02em;
+                              }
+
+                              h2.blog-main-subtitle {
+
+                                h2.journal-subtitle {
+                                  font-family: 'Cormorant Garamond', Georgia, serif;
+                                  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+                                  color: var(--accent-soft);
+                                  font-size: clamp(1.22rem, 2.2vw, 1.6rem);
+                                  font-weight: 400;
+                                  margin-bottom: 1.5rem;
+                                  font-style: italic;
+                                  line-height: 1.4;
+                                  font-style: italic;
+                                  color: var(--brass-dark);
+                                  margin-bottom: 1.2rem;
+                                }
+
+                                .hero-desc {
+                                  font-size: 1.05rem;
+                                  color: rgba(247, 244, 236, 0.88);
+
+                                  .journal-lead {
+                                    font-size: 1rem;
+                                    line-height: 1.75;
+                                    color: var(--text-muted);
+                                    max-width: 680px;
+                                    margin: 0 auto 2rem;
+                                    line-height: 1.7;
+                                  }
+
+                                  .filter-bar {
+
+                                    /* ── Category Filter & Search Bar ── */
+                                    .journal-controls {
+                                      max-width: 1140px;
+                                      margin: -1.5rem auto 3rem;
+                                      padding: 0 1.5rem;
+                                      display: flex;
+                                      flex-direction: column;
+                                      gap: 1.25rem;
+                                      align-items: center;
+                                    }
+
+                                    .filter-pills-bar {
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      gap: 0.75rem;
+                                      gap: 8px;
+                                      flex-wrap: wrap;
+                                      margin-top: 1.5rem;
+                                      background: #FFFFFF;
+                                      padding: 6px;
+                                      border-radius: 999px;
+                                      border: 1px solid var(--line-card);
+                                      box-shadow: 0 4px 16px rgba(16, 44, 36, 0.04);
+                                    }
+
+                                    .filter-pill {
+                                      background: rgba(255, 255, 255, 0.08);
+                                      color: #e2ddd0;
+                                      border: 1px solid rgba(200, 175, 123, 0.35);
+                                      padding: 0.45rem 1.15rem;
+                                      background: transparent;
+                                      color: var(--text-muted);
+                                      border: none;
+                                      padding: 8px 18px;
+                                      border-radius: 999px;
+                                      font-size: 0.88rem;
+                                      font-family: 'DM Sans', sans-serif;
+                                      font-size: 0.85rem;
+                                      font-weight: 600;
+                                      cursor: pointer;
+                                      transition: all 0.2s;
+                                      transition: all var(--transition-fast);
+                                      white-space: nowrap;
+                                    }
+
+                                    .filter-pill:hover,
+
+                                    .filter-pill:hover {
+                                      color: var(--deep-forest);
+                                      background: rgba(16, 44, 36, 0.05);
+                                    }
+
+                                    .filter-pill.active {
+                                      background: var(--accent-soft);
+                                      color: var(--primary);
+                                      border-color: var(--accent-soft);
+                                      font-weight: 600;
+                                      background: var(--deep-forest);
+                                      color: var(--warm-ivory);
+                                      box-shadow: 0 2px 8px rgba(16, 44, 36, 0.18);
+                                    }
+
+                                    main {
+                                      max-width: 1140px;
+                                      margin: 3.5rem auto 5rem;
+                                      padding: 0 1.5rem;
+
+                                      .search-box-wrap {
+                                        width: 100%;
+                                        max-width: 520px;
+                                        position: relative;
+                                      }
+
+                                      .search-row {
+                                        max-width: 600px;
+                                        margin: 0 auto 3rem;
+                                        display: flex;
+                                        gap: 0.5rem;
+
+                                        .search-icon-svg {
+                                          position: absolute;
+                                          left: 16px;
+                                          top: 50%;
+                                          transform: translateY(-50%);
+                                          color: #8C9990;
+                                          pointer-events: none;
+                                        }
+
+                                        .search-input {
+                                          flex: 1;
+                                          padding: 0.85rem 1.25rem;
+                                          border: 1px solid var(--border);
+                                          border-radius: 6px;
+                                          font-size: 0.95rem;
+                                          font-family: inherit;
+                                          width: 100%;
+                                          padding: 12px 18px 12px 44px;
+                                          background: #FFFFFF;
+                                          border: 1px solid var(--line-card);
+                                          border-radius: 999px;
+                                          font-family: 'DM Sans', sans-serif;
+                                          font-size: 0.92rem;
+                                          color: var(--text-main);
+                                          outline: none;
+                                          background: #ffffff;
+                                          color: var(--text);
+                                          transition: border-color 0.2s, box-shadow 0.2s;
+                                          box-shadow: 0 2px 10px rgba(16, 44, 36, 0.03);
+                                          transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+                                        }
+
+                                        .search-input:focus {
+                                          border-color: var(--accent);
+                                          box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.15);
+                                          border-color: var(--antique-brass);
+                                          box-shadow: 0 0 0 3px rgba(188, 163, 105, 0.18);
+                                        }
+
+                                        .featured-article {
+                                          background: #ffffff;
+                                          border-radius: 12px;
+
+                                          /* ── Main Layout Container ── */
+                                          main.journal-main {
+                                            max-width: 1140px;
+                                            margin: 0 auto 5rem;
+                                            padding: 0 1.5rem;
+                                          }
+
+                                          /* ── Lead Featured Article Card ── */
+                                          .featured-card {
+                                            background: #FFFFFF;
+                                            border-radius: var(--radius-md);
+                                            border: 1px solid var(--line-card);
+                                            overflow: hidden;
+                                            border: 1px solid var(--border);
+                                            display: grid;
+                                            grid-template-columns: 1.1fr 1fr;
+                                            grid-template-columns: 1.15fr 1fr;
+                                            margin-bottom: 3.5rem;
+                                            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+                                            transition: transform 0.2s;
+                                            box-shadow: 0 10px 30px rgba(16, 44, 36, 0.04);
+                                            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+                                          }
+
+                                          @media (max-width: 860px) {
+                                            .featured-article {
+                                              grid-template-columns: 1fr;
+                                            }
+
+                                            .featured-card:hover {
+                                              transform: translateY(-3px);
+                                              box-shadow: 0 16px 40px rgba(16, 44, 36, 0.08);
+                                            }
+
+                                            .featured-img-wrap {
+
+                                              .featured-media {
+                                                position: relative;
+                                                min-height: 320px;
+                                                background: var(--primary);
+                                                min-height: 340px;
+                                                overflow: hidden;
+                                                background: var(--deep-forest);
+                                              }
+
+                                              .featured-img {
+
+                                                .featured-media img {
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  object-fit: cover;
+                                                  display: block;
+                                                  transition: transform 0.6s ease;
+                                                }
+
+                                                .featured-content {
+                                                  padding: 2.75rem 2.5rem;
+
+                                                  .featured-card:hover .featured-media img {
+                                                    transform: scale(1.04);
+                                                  }
+
+                                                  .featured-info {
+                                                    padding: 2.75rem 2.25rem;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                  }
+
+                                                  .tag-badge {
+
+                                                    .badge-tag {
+                                                      align-self: flex-start;
+                                                      display: inline-block;
+                                                      align-self: flex-start;
+                                                      background: rgba(176, 141, 87, 0.12);
+                                                      color: #8c6a34;
+                                                      font-size: 0.78rem;
+                                                      font-family: 'DM Sans', sans-serif;
+                                                      font-size: 0.74rem;
+                                                      font-weight: 700;
+                                                      letter-spacing: 0.08em;
+                                                      letter-spacing: 0.1em;
+                                                      text-transform: uppercase;
+                                                      padding: 0.35rem 0.85rem;
+                                                      color: var(--brass-dark);
+                                                      background: rgba(188, 163, 105, 0.14);
+                                                      padding: 4px 10px;
+                                                      border-radius: 4px;
+                                                      margin-bottom: 1rem;
+                                                    }
+
+                                                    h3 {
+
+                                                      .featured-info h3 {
+                                                        font-family: 'Cinzel', serif;
+                                                        font-size: 1.55rem;
+                                                        color: var(--primary);
+                                                        line-height: 1.35;
+                                                        color: var(--deep-forest);
+                                                        line-height: 1.32;
+                                                        margin-bottom: 0.85rem;
+                                                      }
+
+                                                      .meta-row {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        gap: 1.25rem;
+                                                        font-size: 0.84rem;
+                                                        gap: 16px;
+                                                        font-size: 0.82rem;
+                                                        color: var(--text-muted);
+                                                        margin-bottom: 1.15rem;
+                                                        margin-bottom: 1.1rem;
+                                                      }
+
+                                                      .meta-item {
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        gap: 5px;
+                                                      }
+
+                                                      .article-snippet {
+                                                        font-size: 0.95rem;
+                                                        line-height: 1.7;
+                                                        color: var(--text-muted);
+                                                        font-size: 0.98rem;
+                                                        line-height: 1.7;
+                                                        margin-bottom: 1.5rem;
+                                                      }
+
+                                                      .btn-read {
+
+                                                        .btn-read-story {
+                                                          align-self: flex-start;
+                                                          display: inline-flex;
+                                                          align-items: center;
+                                                          gap: 6px;
+                                                          color: var(--primary);
+                                                          background: transparent;
+                                                          border: none;
+                                                          color: var(--deep-forest);
+                                                          font-family: 'DM Sans', sans-serif;
+                                                          font-weight: 700;
+                                                          font-size: 0.92rem;
+                                                          text-decoration: none;
+                                                          border-bottom: 2px solid var(--accent);
+                                                          padding-bottom: 2px;
+                                                          transition: color 0.2s, border-color 0.2s;
+                                                          font-size: 0.88rem;
+                                                          letter-spacing: 0.02em;
+                                                          border-bottom: 2px solid var(--antique-brass);
+                                                          padding-bottom: 3px;
+                                                          cursor: pointer;
+                                                          background: none;
+                                                          border-top: none;
+                                                          border-left: none;
+                                                          border-right: none;
+                                                          font-family: inherit;
+                                                          transition: color var(--transition-fast), border-color var(--transition-fast);
+                                                        }
+
+                                                        .btn-read:hover {
+                                                          color: var(--accent);
+                                                          border-color: var(--primary);
+
+                                                          .btn-read-story:hover {
+                                                            color: var(--brass-dark);
+                                                            border-color: var(--deep-forest);
+                                                          }
+
+                                                          /* ── Articles Grid ── */
+                                                          .articles-grid {
+                                                            display: grid;
+                                                            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+                                                            gap: 2.25rem;
+                                                            gap: 2rem;
+                                                            margin-bottom: 4rem;
+                                                          }
+
+                                                          .article-card {
+                                                            background: var(--card-bg);
+                                                            border: 1px solid var(--border);
+                                                            border-radius: 10px;
+                                                            background: #FFFFFF;
+                                                            border: 1px solid var(--line-card);
+                                                            border-radius: var(--radius-md);
+                                                            overflow: hidden;
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+                                                            transition: transform 0.25s, box-shadow 0.25s;
+                                                            box-shadow: 0 4px 16px rgba(16, 44, 36, 0.03);
+                                                            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+                                                          }
+
+                                                          .article-card:hover {
+                                                            transform: translateY(-4px);
+                                                            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+                                                            box-shadow: 0 12px 28px rgba(16, 44, 36, 0.08);
+                                                          }
+
+                                                          .card-img-wrap {
+                                                            height: 210px;
+
+                                                            .card-media {
+                                                              height: 215px;
+                                                              position: relative;
+                                                              overflow: hidden;
+                                                              background: var(--primary);
+                                                              background: var(--deep-forest);
+                                                            }
+
+                                                            .card-img {
+
+                                                              .card-media img {
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                object-fit: cover;
+                                                                transition: transform 0.4s ease;
+                                                                display: block;
+                                                                transition: transform 0.5s ease;
+                                                              }
+
+                                                              .article-card:hover .card-img {
+                                                                transform: scale(1.04);
+
+                                                                .article-card:hover .card-media img {
+                                                                  transform: scale(1.05);
+                                                                }
+
+                                                                .card-body {
+
+                                                                  .card-content {
+                                                                    padding: 1.75rem 1.6rem;
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    flex: 1;
+                                                                  }
+
+                                                                  .card-body h3 {
+                                                                    font-size: 1.25rem;
+
+                                                                    .card-content h3 {
+                                                                      font-family: 'Cinzel', serif;
+                                                                      font-size: 1.24rem;
+                                                                      color: var(--deep-forest);
+                                                                      line-height: 1.35;
+                                                                      margin-bottom: 0.75rem;
+                                                                    }
+
+                                                                    .card-body .article-snippet {
+
+                                                                      .card-content .article-snippet {
+                                                                        flex: 1;
+                                                                        font-size: 0.93rem;
+                                                                        font-size: 0.92rem;
+                                                                        margin-bottom: 1.35rem;
+                                                                      }
+
+                                                                      .cta-newsletter {
+                                                                        margin-top: 5rem;
+                                                                        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-forest) 100%);
+                                                                        color: #ffffff;
+                                                                        padding: 3.5rem 2.5rem;
+                                                                        border-radius: 12px;
+
+                                                                        /* ── Wayanad Retreat Invitation Banner ── */
+                                                                        .retreat-cta-card {
+                                                                          background: linear-gradient(135deg, #102C24 0%, #173D32 100%);
+                                                                          color: #FFFFFF;
+                                                                          border-radius: var(--radius-md);
+                                                                          padding: 3.5rem 2rem;
+                                                                          text-align: center;
+                                                                          border: 1px solid var(--accent);
+                                                                          border: 1px solid var(--antique-brass);
+                                                                          box-shadow: 0 16px 40px rgba(16, 44, 36, 0.12);
+                                                                          position: relative;
+                                                                          overflow: hidden;
+                                                                        }
+
+                                                                        .cta-newsletter h3 {
+                                                                          color: #ffffff;
+                                                                          font-size: 1.85rem;
+
+                                                                          .retreat-cta-card::before {
+                                                                            content: "";
+                                                                            position: absolute;
+                                                                            top: -50%;
+                                                                            right: -20%;
+                                                                            width: 400px;
+                                                                            height: 400px;
+                                                                            background: radial-gradient(circle, rgba(188, 163, 105, 0.12) 0%, transparent 70%);
+                                                                            pointer-events: none;
+                                                                          }
+
+                                                                          .cta-eyebrow {
+                                                                            font-size: 0.78rem;
+                                                                            font-weight: 700;
+                                                                            letter-spacing: 0.2em;
+                                                                            text-transform: uppercase;
+                                                                            color: var(--antique-brass);
+                                                                            margin-bottom: 0.75rem;
+                                                                          }
+
+                                                                          .cta-newsletter p {
+
+                                                                            .retreat-cta-card h3 {
+                                                                              font-family: 'Cinzel', serif;
+                                                                              font-size: clamp(1.6rem, 3vw, 2.1rem);
+                                                                              color: #FFFFFF;
+                                                                              margin-bottom: 0.85rem;
+                                                                              line-height: 1.28;
+                                                                            }
+
+                                                                            .retreat-cta-card p {
+                                                                              max-width: 640px;
+                                                                              margin: 0 auto 2rem;
+                                                                              color: rgba(255, 255, 255, 0.88);
+                                                                              font-size: 1.02rem;
+                                                                              color: rgba(247, 244, 236, 0.88);
+                                                                              font-size: 0.98rem;
+                                                                              line-height: 1.7;
+                                                                            }
+
+                                                                            .cta-actions {
+
+                                                                              .cta-btn-group {
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                                gap: 1rem;
+                                                                                flex-wrap: wrap;
+                                                                              }
+
+                                                                              .btn-cta-gold {
+                                                                                background: var(--accent-soft);
+                                                                                color: var(--primary);
+                                                                                padding: 0.85rem 1.75rem;
+                                                                                border-radius: 4px;
+                                                                                background: var(--antique-brass);
+                                                                                color: var(--deep-forest);
+                                                                                font-family: 'DM Sans', sans-serif;
+                                                                                font-size: 0.88rem;
+                                                                                font-weight: 700;
+                                                                                letter-spacing: 0.04em;
+                                                                                padding: 13px 26px;
+                                                                                border-radius: var(--radius-sm);
+                                                                                text-decoration: none;
+                                                                                display: inline-flex;
+                                                                                align-items: center;
+                                                                                gap: 8px;
+                                                                                transition: background 0.2s;
+                                                                                transition: all var(--transition-fast);
+                                                                                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+                                                                              }
+
+                                                                              .btn-cta-gold:hover {
+                                                                                background: #dfc794;
+                                                                                background: #D1B87D;
+                                                                                transform: translateY(-1px);
+                                                                              }
+
+                                                                              .btn-cta-outline {
+                                                                                border: 1px solid var(--accent-soft);
+                                                                                color: var(--accent-soft);
+                                                                                padding: 0.85rem 1.75rem;
+                                                                                border-radius: 4px;
+
+                                                                                .btn-cta-ghost {
+                                                                                  background: rgba(247, 244, 236, 0.08);
+                                                                                  color: var(--warm-ivory);
+                                                                                  border: 1px solid rgba(247, 244, 236, 0.35);
+                                                                                  font-family: 'DM Sans', sans-serif;
+                                                                                  font-size: 0.88rem;
+                                                                                  font-weight: 600;
+                                                                                  padding: 13px 26px;
+                                                                                  border-radius: var(--radius-sm);
+                                                                                  text-decoration: none;
+                                                                                  transition: background 0.2s, color 0.2s;
+                                                                                  display: inline-flex;
+                                                                                  align-items: center;
+                                                                                  gap: 8px;
+                                                                                  transition: all var(--transition-fast);
+                                                                                }
+
+                                                                                .btn-cta-outline:hover {
+                                                                                  background: rgba(200, 175, 123, 0.15);
+                                                                                  color: #ffffff;
+
+                                                                                  .btn-cta-ghost:hover {
+                                                                                    background: rgba(247, 244, 236, 0.16);
+                                                                                    border-color: var(--warm-ivory);
+                                                                                    transform: translateY(-1px);
+                                                                                  }
+
+                                                                                  footer {
+                                                                                    background: var(--primary);
+                                                                                    color: #e2ddd0;
+                                                                                    padding: 3.5rem 2rem 2.5rem;
+                                                                                    border-top: 2px solid var(--accent);
+                                                                                    font-size: 0.92rem;
+                                                                                  }
+
+                                                                                  .footer-inner {
+                                                                                    max-width: 1140px;
+                                                                                    margin: 0 auto;
+                                                                                    display: grid;
+                                                                                    grid-template-columns: 2fr 1fr 1fr;
+                                                                                    gap: 3rem;
+                                                                                    margin-bottom: 2.5rem;
+                                                                                  }
+
+                                                                                  @media (max-width: 768px) {
+                                                                                    .footer-inner {
+                                                                                      grid-template-columns: 1fr;
+                                                                                      gap: 2rem;
+                                                                                    }
+                                                                                  }
+
+                                                                                  .footer-brand h4 {
+                                                                                    font-family: 'Cinzel', serif;
+                                                                                    font-size: 1.3rem;
+                                                                                    color: #ffffff;
+                                                                                    margin-bottom: 0.5rem;
+                                                                                    letter-spacing: 0.1em;
+                                                                                  }
+
+                                                                                  .footer-brand p {
+                                                                                    color: #b2aba0;
+                                                                                    font-size: 0.9rem;
+                                                                                    line-height: 1.6;
+                                                                                    max-width: 440px;
+                                                                                  }
+
+                                                                                  .footer-col h5 {
+                                                                                    font-family: 'Cinzel', serif;
+                                                                                    font-size: 0.95rem;
+                                                                                    color: var(--accent-soft);
+                                                                                    margin-bottom: 1rem;
+                                                                                    letter-spacing: 0.08em;
+                                                                                    text-transform: uppercase;
+                                                                                  }
+
+                                                                                  .footer-col ul {
+                                                                                    list-style: none;
+                                                                                  }
+
+                                                                                  .footer-col li {
+                                                                                    margin-bottom: 0.6rem;
+                                                                                  }
+
+                                                                                  .footer-col a {
+                                                                                    color: #d1cbc0;
+                                                                                    text-decoration: none;
+                                                                                    transition: color 0.2s;
+                                                                                  }
+
+                                                                                  .footer-col a:hover {
+                                                                                    color: #ffffff;
+                                                                                    text-decoration: underline;
+                                                                                  }
+
+                                                                                  .footer-bottom {
+                                                                                    max-width: 1140px;
+                                                                                    margin: 0 auto;
+                                                                                    padding-top: 1.75rem;
+                                                                                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                                                                                    display: flex;
+                                                                                    justify-content: space-between;
+                                                                                    align-items: center;
+                                                                                    flex-wrap: wrap;
+                                                                                    gap: 1rem;
+                                                                                    color: #9c9589;
+                                                                                    font-size: 0.85rem;
+                                                                                  }
+
+                                                                                  /* ── Modal Story Reader ── */
+                                                                                  .modal-overlay {
+                                                                                    position: fixed;
+                                                                                    inset: 0;
+                                                                                    background: rgba(10, 26, 18, 0.85);
+                                                                                    backdrop-filter: blur(4px);
+                                                                                    background: rgba(10, 26, 18, 0.82);
+                                                                                    backdrop-filter: blur(6px);
+                                                                                    -webkit-backdrop-filter: blur(6px);
+                                                                                    z-index: 1000;
+                                                                                    display: none;
+                                                                                    align-items: center;
+                                                                                    justify-content: center;
+                                                                                    padding: 1.5rem;
+                                                                                  }
+
+                                                                                  .modal-overlay.active {
+                                                                                    display: flex;
+                                                                                  }
+
+                                                                                  .modal-dialog {
+                                                                                    background: #ffffff;
+                                                                                    background: #FFFFFF;
+                                                                                    width: 100%;
+                                                                                    max-width: 780px;
+                                                                                    max-height: 90vh;
+                                                                                    overflow-y: auto;
+                                                                                    border-radius: 12px;
+                                                                                    padding: 2.5rem;
+                                                                                    border-radius: var(--radius-md);
+                                                                                    padding: 2.75rem 2.5rem;
+                                                                                    position: relative;
+                                                                                    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+                                                                                    border: 1px solid var(--border);
+                                                                                    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+                                                                                    border: 1px solid var(--line-card);
+                                                                                  }
+
+                                                                                  .modal-close-btn {
+                                                                                    position: absolute;
+                                                                                    top: 1.25rem;
+                                                                                    right: 1.25rem;
+                                                                                    background: rgba(0, 0, 0, 0.06);
+                                                                                    background: rgba(16, 44, 36, 0.06);
+                                                                                    border: none;
+                                                                                    width: 36px;
+                                                                                    height: 36px;
+                                                                                    border-radius: 50%;
+                                                                                    cursor: pointer;
+                                                                                    display: flex;
+                                                                                    align-items: center;
+                                                                                    justify-content: center;
+                                                                                    color: var(--text);
+                                                                                    font-size: 1.2rem;
+                                                                                    transition: background 0.2s;
+                                                                                    color: var(--deep-forest);
+                                                                                    font-size: 1.25rem;
+                                                                                    transition: background var(--transition-fast);
+                                                                                  }
+
+                                                                                  .modal-close-btn:hover {
+                                                                                    background: rgba(0, 0, 0, 0.12);
+                                                                                    background: rgba(16, 44, 36, 0.12);
+                                                                                  }
+
+                                                                                  .modal-body h3 {
+
+                                                                                    .modal-dialog h3 {
+                                                                                      font-family: 'Cinzel', serif;
+                                                                                      font-size: 1.6rem;
+                                                                                      color: var(--deep-forest);
+                                                                                      line-height: 1.32;
+                                                                                      margin-bottom: 0.75rem;
+                                                                                    }
+
+                                                                                    .modal-body p {
+
+                                                                                      .modal-dialog p {
+                                                                                        margin-bottom: 1.2rem;
+                                                                                        line-height: 1.8;
+                                                                                        color: #3b423c;
+                                                                                        color: #38423B;
+                                                                                        font-size: 1rem;
+                                                                                      }
+
+                                                                                      .modal-body ul {
+
+                                                                                        .modal-dialog ul {
+                                                                                          margin: 1rem 0 1.5rem 1.5rem;
+                                                                                          color: #3b423c;
+                                                                                          color: #38423B;
+                                                                                        }
+
+                                                                                        .modal-body li {
+
+                                                                                          .modal-dialog li {
+                                                                                            margin-bottom: 0.5rem;
+                                                                                          }
+
+                                                                                          .modal-body .quote-box {
+                                                                                            border-left: 3px solid var(--accent);
+                                                                                            padding: 1rem 1.25rem;
+                                                                                            background: var(--bg);
+
+                                                                                            .quote-box {
+                                                                                              border-left: 3px solid var(--antique-brass);
+                                                                                              padding: 1rem 1.4rem;
+                                                                                              background: #F7F4EC;
+                                                                                              border-radius: 0 6px 6px 0;
+                                                                                              margin: 1.5rem 0;
+                                                                                              font-style: italic;
+                                                                                              color: var(--primary);
+                                                                                              color: var(--deep-forest);
+                                                                                              font-family: 'Cormorant Garamond', Georgia, serif;
+                                                                                              font-size: 1.15rem;
+                                                                                            }
+
+                                                                                            /* ── Shared Footer (Exact match with Main Website) ── */
+                                                                                            .site-footer {
+                                                                                              background: var(--deep-forest);
+                                                                                              color: #e2ddd0;
+                                                                                              padding: 4.5rem 1.5rem 2.5rem;
+                                                                                              border-top: 1px solid rgba(188, 163, 105, 0.3);
+                                                                                            }
+
+                                                                                            .footer-wrap {
+                                                                                              max-width: 1240px;
+                                                                                              margin: 0 auto;
+                                                                                              display: grid;
+                                                                                              grid-template-columns: 2fr 1.2fr 1.2fr 1.4fr;
+                                                                                              gap: 3rem;
+                                                                                              margin-bottom: 3rem;
+                                                                                            }
+
+                                                                                            .footer-brand-logo {
+                                                                                              height: 48px;
+                                                                                              width: auto;
+                                                                                              margin-bottom: 1rem;
+                                                                                              display: block;
+                                                                                            }
+
+                                                                                            .footer-brand-motto {
+                                                                                              font-family: 'Cormorant Garamond', Georgia, serif;
+                                                                                              font-style: italic;
+                                                                                              color: var(--antique-brass);
+                                                                                              font-size: 1.1rem;
+                                                                                              margin-bottom: 0.85rem;
+                                                                                            }
+
+                                                                                            .footer-brand-desc {
+                                                                                              color: #b2aba0;
+                                                                                              font-size: 0.88rem;
+                                                                                              line-height: 1.65;
+                                                                                              max-width: 360px;
+                                                                                              margin-bottom: 1.25rem;
+                                                                                            }
+
+                                                                                            .footer-location {
+                                                                                              font-size: 0.82rem;
+                                                                                              color: var(--warm-ivory);
+                                                                                              display: flex;
+                                                                                              align-items: center;
+                                                                                              gap: 6px;
+                                                                                              margin-bottom: 1.25rem;
+                                                                                            }
+
+                                                                                            .footer-social-row {
+                                                                                              display: flex;
+                                                                                              align-items: center;
+                                                                                              gap: 12px;
+                                                                                              flex-wrap: wrap;
+                                                                                            }
+
+                                                                                            .footer-social-btn {
+                                                                                              display: inline-flex;
+                                                                                              align-items: center;
+                                                                                              justify-content: center;
+                                                                                              width: 36px;
+                                                                                              height: 36px;
+                                                                                              border-radius: 50%;
+                                                                                              background: transparent;
+                                                                                              border: none;
+                                                                                              padding: 0;
+                                                                                              text-decoration: none;
+                                                                                              cursor: pointer;
+                                                                                              transition: transform var(--transition-fast), filter var(--transition-fast);
+                                                                                            }
+
+                                                                                            .footer-social-btn:hover {
+                                                                                              transform: translateY(-2px) scale(1.08);
+                                                                                              filter: brightness(1.1);
+                                                                                            }
+
+                                                                                            .brand-social-icon {
+                                                                                              display: inline-flex;
+                                                                                              align-items: center;
+                                                                                              justify-content: center;
+                                                                                              flex-shrink: 0;
+                                                                                              overflow: hidden;
+                                                                                              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+                                                                                            }
+
+                                                                                            .brand-social-instagram {
+                                                                                              background: #d6249f;
+                                                                                              background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+                                                                                            }
+
+                                                                                            .brand-social-facebook {
+                                                                                              background: #1877F2;
+                                                                                            }
+
+                                                                                            .footer-col-title {
+                                                                                              font-family: 'DM Sans', sans-serif;
+                                                                                              font-size: 0.76rem;
+                                                                                              font-weight: 700;
+                                                                                              letter-spacing: 0.16em;
+                                                                                              text-transform: uppercase;
+                                                                                              color: var(--antique-brass);
+                                                                                              margin-bottom: 1.25rem;
+                                                                                            }
+
+                                                                                            .footer-links-list {
+                                                                                              list-style: none;
+                                                                                              display: flex;
+                                                                                              flex-direction: column;
+                                                                                              gap: 0.65rem;
+                                                                                            }
+
+                                                                                            .footer-links-list a {
+                                                                                              color: #d1cbc0;
+                                                                                              text-decoration: none;
+                                                                                              font-size: 0.88rem;
+                                                                                              transition: color var(--transition-fast);
+                                                                                            }
+
+                                                                                            .footer-links-list a:hover {
+                                                                                              color: #FFFFFF;
+                                                                                              text-decoration: underline;
+                                                                                            }
+
+                                                                                            .footer-whatsapp-btn {
+                                                                                              display: inline-flex;
+                                                                                              align-items: center;
+                                                                                              justify-content: center;
+                                                                                              gap: 8px;
+                                                                                              background: #25D366;
+                                                                                              color: #0b2e1b;
+                                                                                              font-size: 0.82rem;
+                                                                                              font-weight: 700;
+                                                                                              letter-spacing: 0.04em;
+                                                                                              padding: 10px 16px;
+                                                                                              border-radius: 4px;
+                                                                                              text-decoration: none;
+                                                                                              margin-top: 1rem;
+                                                                                              transition: transform var(--transition-fast);
+                                                                                            }
+
+                                                                                            .footer-whatsapp-btn:hover {
+                                                                                              transform: translateY(-1px);
+                                                                                            }
+
+                                                                                            .footer-bottom-bar {
+                                                                                              max-width: 1240px;
+                                                                                              margin: 0 auto;
+                                                                                              padding-top: 2rem;
+                                                                                              border-top: 1px solid rgba(255, 255, 255, 0.08);
+                                                                                              display: flex;
+                                                                                              justify-content: space-between;
+                                                                                              align-items: center;
+                                                                                              flex-wrap: wrap;
+                                                                                              gap: 1rem;
+                                                                                              color: #9c9589;
+                                                                                              font-size: 0.82rem;
+                                                                                            }
+
+                                                                                            /* Responsive */
+                                                                                            @media (max-width: 960px) {
+                                                                                              .header-nav {
+                                                                                                display: none;
+                                                                                              }
+
+                                                                                              .mobile-menu-btn {
+                                                                                                display: flex;
+                                                                                              }
+
+                                                                                              .featured-card {
+                                                                                                grid-template-columns: 1fr;
+                                                                                              }
+
+                                                                                              .footer-wrap {
+                                                                                                grid-template-columns: 1fr 1fr;
+                                                                                                gap: 2rem;
+                                                                                              }
+                                                                                            }
+
+                                                                                            @media (max-width: 640px) {
+                                                                                              .footer-wrap {
+                                                                                                grid-template-columns: 1fr;
+                                                                                              }
+
+                                                                                              .modal-dialog {
+                                                                                                padding: 2rem 1.5rem;
+                                                                                              }
+
+                                                                                              .journal-controls {
+                                                                                                margin-top: -1rem;
+                                                                                              }
+
+                                                                                              .filter-pills-bar {
+                                                                                                border-radius: 12px;
+                                                                                              }
+                                                                                            }
   </style>
 </head>
+
 <body>
   <!-- Global Header -->
   <header role="banner">
     <div class="header-inner">
       <a href="/" class="brand-wrap" aria-label="Koovalam Home">
-        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" stroke="#C8AF7B" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" stroke="#C8AF7B"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="50" cy="50" r="45" stroke-width="2.8" />
           <line x1="50" y1="73" x2="50" y2="88" stroke="#A1844D" stroke-width="3.2" stroke-linecap="round" />
           <path d="M 50 73 C 34 60, 32 28, 50 13 C 68 28, 66 60, 50 73 Z" stroke-width="2.4" stroke-linejoin="round" />
@@ -552,20 +1410,87 @@
           <path d="M 52 73 C 64 52, 84 34, 94 44 C 84 63, 64 78, 52 73 Z" stroke-width="2.4" stroke-linejoin="round" />
         </svg>
         <span class="brand-link">Koovalam</span>
-      </a>
-      <nav class="nav-links" aria-label="Main Navigation">
-        <a href="/">Home</a>
-        <a href="/#philosophy">Philosophy</a>
-        <a href="/#experience">Experience</a>
-        <a href="/#itinerary">Itinerary</a>
-        <a href="/#stay-travel">Stay &amp; Travel</a>
-        <a href="/#price">Investment</a>
-        <a href="/blogs.html" class="active" aria-current="page">Blogs</a>
-        <a href="/faq.html">FAQs</a>
-      </nav>
-      <a href="/#enquiry" class="btn-header-enquire">Enquire Now</a>
+        <!-- Header & Desktop Navigation (Identical to Main Website) -->
+        <header class="header header-solid" role="banner">
+          <div class="wrap">
+            <a href="/#top" aria-label="Koovalam — Return to home" class="header-logo-link">
+              <img src="/images/koovalam-logo.png" alt="Koovalam" class="header-logo-img" />
+            </a>
+            <nav class="nav-links" aria-label="Main Navigation">
+              <a href="/">Home</a>
+
+              <!-- Primary Navigation -->
+              <nav class="header-nav" aria-label="Primary Navigation">
+                <div class="header-nav-list" role="list">
+                  <a href="/#philosophy" class="nav-link"><span class="nav-link-text">Philosophy</span></a>
+                  <a href="/#experience" class="nav-link"><span class="nav-link-text">Experience</span></a>
+                  <a href="/#itinerary" class="nav-link"><span class="nav-link-text">Itinerary</span></a>
+                  <a href="/#stay-travel" class="nav-link"><span class="nav-link-text">Stay &amp; Travel</span></a>
+                  <a href="/#price" class="nav-link"><span class="nav-link-text">Investment</span></a>
+                  <a href="/blogs.html" class="nav-link nav-link-active" aria-current="page"><span
+                      class="nav-link-text">Blogs</span></a>
+                </div>
+              </nav>
+
+              <!-- Actions -->
+              <div class="header-actions">
+                <a href="/#enquiry" class="header-cta">Enquire Now</a>
+                <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open navigation menu"
+                  aria-expanded="false" aria-controls="mobile-drawer">
+                  <span class="menu-btn-bar"></span>
+                  <span class="menu-btn-bar"></span>
+                  <span class="menu-btn-bar"></span>
+                </button>
+              </div>
+          </div>
+        </header>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+        <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+          <div>
+            <div class="drawer-top">
+              <span class="drawer-tag">Rooted in Nature · Connected to Soul</span>
+              <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+            </div>
+            <div class="drawer-links">
+              <a href="/#philosophy">Philosophy</a>
+              <a href="/#experience">Experience</a>
+              <a href="/#itinerary">Itinerary</a>
+              <a href="/#stay-travel">Stay &amp; Travel</a>
+              <a href="/#price">Investment</a>
+              <a href="/blogs.html" class="active" aria-current="page">Blogs</a>
+              <a href="/faq.html">FAQs</a>
+        </nav>
+        <a href="/#enquiry" class="btn-header-enquire">Enquire Now</a>
+    </div>
     </div>
   </header>
+  <div class="drawer-footer">
+    <a href="/#enquiry" class="drawer-cta">Enquire Now</a>
+    <div class="footer-social-row" style="justify-content: center;">
+      <a href="https://www.instagram.com/_koovalam_/" target="_blank" rel="noopener noreferrer"
+        class="footer-social-btn" title="Follow Koovalam on Instagram" aria-label="Koovalam on Instagram">
+        <span class="brand-social-icon brand-social-instagram" style="width: 34px; height: 34px; border-radius: 50%;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="#ffffff" stroke-width="2.1" />
+            <circle cx="12" cy="12" r="4.2" stroke="#ffffff" stroke-width="2.1" />
+            <circle cx="16.8" cy="7.2" r="1.15" fill="#ffffff" />
+          </svg>
+        </span>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank" rel="noopener noreferrer"
+        class="footer-social-btn" title="Follow Koovalam on Facebook" aria-label="Koovalam on Facebook">
+        <span class="brand-social-icon brand-social-facebook" style="width: 34px; height: 34px; border-radius: 50%;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="#ffffff">
+            <path
+              d="M15.12 12.4l.43-2.81h-2.7v-1.82c0-.77.38-1.52 1.58-1.52h1.23V3.86s-1.11-.19-2.18-.19c-2.22 0-3.68 1.35-3.68 3.79v2.13H7.3v2.81h2.48V19.2c.5.08 1.01.12 1.53.12s1.03-.04 1.53-.12v-6.8h2.28z" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+  </nav>
 
   <!-- Hero Header Section -->
   <section class="hero-banner">
@@ -574,422 +1499,790 @@
       <h1>The Koovalam Journal — Stories of Nature, Spirit &amp; Slow Living</h1>
       <h2 class="blog-main-subtitle">Reflections, Ayurvedic Wisdom, and Practical Guides for Mindful Living.</h2>
       <p class="hero-desc">
-        Welcome to the Koovalam Journal. Read our simple guides on natural living, gentle breath, and quiet forest retreats in Wayanad. Learn how to care for your body, calm your mind, and live with peace.
-      </p>
-
-      <!-- Category Filter Pills -->
-      <div class="filter-bar" role="tablist" aria-label="Article categories">
-        <button type="button" class="filter-pill active" data-category="all" role="tab" aria-selected="true">All Stories</button>
-        <button type="button" class="filter-pill" data-category="ayurveda" role="tab" aria-selected="false">Ayurveda &amp; Food</button>
-        <button type="button" class="filter-pill" data-category="mindfulness" role="tab" aria-selected="false">Mindfulness &amp; Breath</button>
-        <button type="button" class="filter-pill" data-category="nature" role="tab" aria-selected="false">Wayanad &amp; Nature</button>
-        <button type="button" class="filter-pill" data-category="heritage" role="tab" aria-selected="false">Spiritual Heritage</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content Area -->
-  <main id="main">
-    <!-- Search Bar -->
-    <div class="search-row">
-      <input type="text" id="article-search" class="search-input" placeholder="Search articles by keyword (e.g., breath, yoga, Bilva, Wayanad)..." aria-label="Search articles" />
-    </div>
-
-    <!-- Featured Lead Story -->
-    <article class="featured-article" data-category="ayurveda">
-      <div class="featured-img-wrap">
-        <img src="images/bilva-leaves.webp" alt="Sacred Bilva leaves and morning light" class="featured-img" width="800" height="500" loading="eager" />
-      </div>
-      <div class="featured-content">
-        <span class="tag-badge">Ayurveda &amp; Symbolism · Featured</span>
-        <h3>The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas &amp; Atman</h3>
-        <div class="meta-row">
-          <span class="meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            6 min read
-          </span>
-          <span class="meta-item">Published: November 2026</span>
-          <span class="meta-item">By Koovalam Sanctuary</span>
-        </div>
-        <p class="article-snippet">
-          The Bilva leaf has three joined parts. They stand for body, mind, and soul. When you care for all three, you feel peaceful, steady, and whole.
-        </p>
-        <button type="button" class="btn-read" data-article-id="art-bilva">
-          Read Full Story &rarr;
-        </button>
-      </div>
-    </article>
-
-    <!-- Articles Grid -->
-    <div class="articles-grid" id="articles-container">
-      <!-- Article 1: Wayanad Nature Immersion -->
-      <article class="article-card" data-category="nature">
-        <div class="card-img-wrap">
-          <img src="images/tea-plantation-walk.jpg" alt="Misty green tea gardens in Wayanad hills" class="card-img" width="500" height="320" loading="lazy" />
-        </div>
-        <div class="card-body">
-          <span class="tag-badge">Wayanad &amp; Nature</span>
-          <h3>Finding Silence in the Mist: Healing Digital Fatigue in Wayanad</h3>
-          <div class="meta-row">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              5 min read
-            </span>
-            <span class="meta-item">Nature Living</span>
-          </div>
-          <p class="article-snippet">
-            Daily screens and rush make us tired. A calm retreat in Wayanad helps you slow down. Walk on green trails and breathe clean forest air.
+      <section class="journal-hero">
+        <div class="journal-hero-inner">
+          <div class="journal-eyebrow">✦ KOOVALAM JOURNAL · WISDOM &amp; NATURE.</div>
+          <h1 class="journal-title">The Koovalam Journal — Stories of Nature, Spirit &amp; Slow Living.</h1>
+          <h2 class="journal-subtitle">Reflections, Ayurvedic Wisdom, and Practical Guides for Mindful Living.</h2>
+          <p class="journal-lead">
+            Welcome to the Koovalam Journal. Read our simple guides on natural living, gentle breath, and quiet forest
+            retreats in Wayanad. Learn how to care for your body, calm your mind, and live with peace.
           </p>
-          <button type="button" class="btn-read" data-article-id="art-nature">
-            Read Full Story &rarr;
-          </button>
-        </div>
-      </article>
 
-      <!-- Article 2: Pranayama & Gentle Yoga -->
-      <article class="article-card" data-category="mindfulness">
-        <div class="card-img-wrap">
-          <img src="images/practice-pranayama.webp" alt="Quiet morning breathwork overlooking lush Kerala hills" class="card-img" width="500" height="320" loading="lazy" />
-        </div>
-        <div class="card-body">
-          <span class="tag-badge">Mindfulness &amp; Breath</span>
-          <h3>The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart</h3>
-          <div class="meta-row">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              4 min read
-            </span>
-            <span class="meta-item">Daily Practice</span>
+          <!-- Category Filter Pills -->
+          <div class="filter-bar" role="tablist" aria-label="Article categories">
+            <button type="button" class="filter-pill active" data-category="all" role="tab" aria-selected="true">All
+              Stories</button>
+            <button type="button" class="filter-pill" data-category="ayurveda" role="tab" aria-selected="false">Ayurveda
+              &amp; Food</button>
+            <button type="button" class="filter-pill" data-category="mindfulness" role="tab"
+              aria-selected="false">Mindfulness &amp; Breath</button>
+            <button type="button" class="filter-pill" data-category="nature" role="tab" aria-selected="false">Wayanad
+              &amp; Nature</button>
+            <button type="button" class="filter-pill" data-category="heritage" role="tab"
+              aria-selected="false">Spiritual Heritage</button>
           </div>
-          <p class="article-snippet">
-            You do not need hard poses to practice yoga. Slow, steady breathing calms the heart. Practice simple morning breath to feel fresh all day.
-          </p>
-          <button type="button" class="btn-read" data-article-id="art-breath">
-            Read Full Story &rarr;
-          </button>
         </div>
-      </article>
+      </section>
 
-      <!-- Article 3: Ancient Heritage & Temple Walk -->
-      <article class="article-card" data-category="heritage">
-        <div class="card-img-wrap">
-          <img src="images/tirunelli-valley.jpg" alt="Ancient stone pillars and green valley surrounding Tirunelli Temple" class="card-img" width="500" height="320" loading="lazy" />
-        </div>
-        <div class="card-body">
-          <span class="tag-badge">Spiritual Heritage</span>
-          <h3>Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams</h3>
-          <div class="meta-row">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              6 min read
-            </span>
-            <span class="meta-item">Kerala Culture</span>
+      <!-- Main Content Area -->
+      <main id="main">
+        <!-- Search Bar -->
+        <div class="search-row">
+          <input type="text" id="article-search" class="search-input"
+            placeholder="Search articles by keyword (e.g., breath, yoga, Bilva, Wayanad)..."
+            aria-label="Search articles" />
+          <!-- Category Filter & Search Row -->
+          <div class="journal-controls">
+            <nav class="filter-pills-bar" role="tablist" aria-label="Story categories">
+              <button type="button" class="filter-pill active" data-category="all" role="tab" aria-selected="true">All
+                Stories</button>
+              <button type="button" class="filter-pill" data-category="ayurveda" role="tab"
+                aria-selected="false">Ayurveda &amp; Food</button>
+              <button type="button" class="filter-pill" data-category="mindfulness" role="tab"
+                aria-selected="false">Mindfulness &amp; Breath</button>
+              <button type="button" class="filter-pill" data-category="nature" role="tab" aria-selected="false">Wayanad
+                &amp; Nature</button>
+              <button type="button" class="filter-pill" data-category="heritage" role="tab"
+                aria-selected="false">Spiritual Heritage</button>
+            </nav>
+            <div class="search-box-wrap">
+              <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="article-search" class="search-input"
+                placeholder="Search by topic, e.g., breath, yoga, Bilva, Wayanad..." aria-label="Search articles" />
+            </div>
           </div>
-          <p class="article-snippet">
-            Ancient Tirunelli Temple rests beneath green hills. Clean mountain streams flow past old stone pillars. Walking here at dawn brings quiet joy.
-          </p>
-          <button type="button" class="btn-read" data-article-id="art-heritage">
-            Read Full Story &rarr;
-          </button>
-        </div>
-      </article>
 
-      <!-- Article 4: Sattvic Food & Cooking -->
-      <article class="article-card" data-category="ayurveda">
-        <div class="card-img-wrap">
-          <img src="images/included-meals.jpg" alt="Wholesome Kerala vegetarian meals served on natural banana leaf" class="card-img" width="500" height="320" loading="lazy" />
-        </div>
-        <div class="card-body">
-          <span class="tag-badge">Ayurveda &amp; Food</span>
-          <h3>The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce</h3>
-          <div class="meta-row">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              5 min read
-            </span>
-            <span class="meta-item">Holistic Nutrition</span>
-          </div>
-          <p class="article-snippet">
-            Good food brings clear thoughts and easy digestion. We cook fresh vegetarian meals with local farm produce and mild spices. Every meal feels light.
-          </p>
-          <button type="button" class="btn-read" data-article-id="art-food">
-            Read Full Story &rarr;
-          </button>
-        </div>
-      </article>
+          <!-- Featured Lead Story -->
+          <article class="featured-article" data-category="ayurveda">
+            <div class="featured-img-wrap">
+              <img src="images/bilva-leaves.webp" alt="Sacred Bilva leaves and morning light" class="featured-img"
+                width="800" height="500" loading="eager" />
+              <!-- Main Content Area -->
+              <main class="journal-main" id="main">
+                <!-- Featured Lead Magazine Story -->
+                <article class="featured-card" data-category="ayurveda">
+                  <div class="featured-media">
+                    <img src="images/bilva-leaves.webp" alt="Sacred Bilva leaves and morning light" width="800"
+                      height="500" loading="eager" />
+                  </div>
+                  <div class="featured-content">
+                    <span class="tag-badge">Ayurveda &amp; Symbolism · Featured</span>
+                    <h3>The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas &amp; Atman</h3>
+                    <div class="featured-info">
+                      <span class="badge-tag">Ayurveda &amp; Symbolism.</span>
+                      <h3>The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas &amp; Atman.</h3>
+                      <div class="meta-row">
+                        <span class="meta-item">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                          6 min read
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                          </svg>
+                          6 min read.
+                        </span>
+                        <span class="meta-item">Published: November 2026</span>
+                        <span class="meta-item">By Koovalam Sanctuary</span>
+                        <span class="meta-item">Published: November 2026.</span>
+                        <span class="meta-item">Koovalam Sanctuary.</span>
+                      </div>
+                      <p class="article-snippet">
+                        The Bilva leaf has three joined parts. They stand for body, mind, and soul. When you care for
+                        all three, you feel peaceful, steady, and whole.
+                      </p>
+                      <button type="button" class="btn-read" data-article-id="art-bilva">
+                        Read Full Story &rarr;
+                        <button type="button" class="btn-read-story" data-article-id="art-bilva">
+                          Read Full Story &rarr;.
+                        </button>
+                    </div>
+                </article>
 
-      <!-- Article 5: Guided Rest & Yoga Nidra -->
-      <article class="article-card" data-category="mindfulness">
-        <div class="card-img-wrap">
-          <img src="images/practice-yoga-nidra.webp" alt="Quiet relaxation deck under the Kerala forest canopy" class="card-img" width="500" height="320" loading="lazy" />
-        </div>
-        <div class="card-body">
-          <span class="tag-badge">Mindfulness &amp; Breath</span>
-          <h3>Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration</h3>
-          <div class="meta-row">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              4 min read
-            </span>
-            <span class="meta-item">Restorative Rest</span>
-          </div>
-          <p class="article-snippet">
-            Yoga Nidra is guided deep rest. You lie down in comfort and relax from head to toe. Thirty minutes of quiet rest renews your mind and body.
-          </p>
-          <button type="button" class="btn-read" data-article-id="art-nidra">
-            Read Full Story &rarr;
-          </button>
-        </div>
-      </article>
+                <!-- Articles Grid -->
+                <div class="articles-grid" id="articles-container">
+                  <!-- Article 1: Wayanad Nature Immersion -->
+                  <article class="article-card" data-category="nature">
+                    <div class="card-img-wrap">
+                      <img src="images/tea-plantation-walk.jpg" alt="Misty green tea gardens in Wayanad hills"
+                        class="card-img" width="500" height="320" loading="lazy" />
+                      <div class="card-media">
+                        <img src="images/tea-plantation-walk.jpg" alt="Misty green tea gardens in Wayanad hills"
+                          width="500" height="320" loading="lazy" />
+                      </div>
+                      <div class="card-body">
+                        <span class="tag-badge">Wayanad &amp; Nature</span>
+                        <h3>Finding Silence in the Mist: Healing Digital Fatigue in Wayanad</h3>
+                        <div class="card-content">
+                          <span class="badge-tag">Wayanad &amp; Nature.</span>
+                          <h3>Finding Silence in the Mist: Healing Digital Fatigue in Wayanad.</h3>
+                          <div class="meta-row">
+                            <span class="meta-item">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              5 min read
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              5 min read.
+                            </span>
+                            <span class="meta-item">Nature Living</span>
+                            <span class="meta-item">Nature Living.</span>
+                          </div>
+                          <p class="article-snippet">
+                            Daily screens and rush make us tired. A calm retreat in Wayanad helps you slow down. Walk on
+                            green trails and breathe clean forest air.
+                          </p>
+                          <button type="button" class="btn-read" data-article-id="art-nature">
+                            Read Full Story &rarr;
+                            <button type="button" class="btn-read-story" data-article-id="art-nature">
+                              Read Full Story &rarr;.
+                            </button>
+                        </div>
+                  </article>
 
-      <!-- Article 6: Forest Bathing & Botanical Peace -->
-      <article class="article-card" data-category="nature">
-        <div class="card-img-wrap">
-          <img src="images/gurukula-botanical-sanctuary.jpg" alt="Sunlight streaming through tall trees and lush ferns" class="card-img" width="500" height="320" loading="lazy" />
-        </div>
-        <div class="card-body">
-          <span class="tag-badge">Wayanad &amp; Nature</span>
-          <h3>Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses</h3>
-          <div class="meta-row">
-            <span class="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              5 min read
-            </span>
-            <span class="meta-item">Ecological Wellness</span>
-          </div>
-          <p class="article-snippet">
-            Walking under tall trees brings deep calm. Listen to birds and the wind in the bamboo. Spending quiet time in nature lowers stress naturally.
-          </p>
-          <button type="button" class="btn-read" data-article-id="art-forest">
-            Read Full Story &rarr;
-          </button>
-        </div>
-      </article>
-    </div>
+                  <!-- Article 2: Pranayama & Gentle Yoga -->
+                  <article class="article-card" data-category="mindfulness">
+                    <div class="card-img-wrap">
+                      <img src="images/practice-pranayama.webp"
+                        alt="Quiet morning breathwork overlooking lush Kerala hills" class="card-img" width="500"
+                        height="320" loading="lazy" />
+                      <div class="card-media">
+                        <img src="images/practice-pranayama.webp"
+                          alt="Quiet morning breathwork overlooking lush Kerala hills" width="500" height="320"
+                          loading="lazy" />
+                      </div>
+                      <div class="card-body">
+                        <span class="tag-badge">Mindfulness &amp; Breath</span>
+                        <h3>The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart</h3>
+                        <div class="card-content">
+                          <span class="badge-tag">Mindfulness &amp; Breath.</span>
+                          <h3>The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart.</h3>
+                          <div class="meta-row">
+                            <span class="meta-item">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              4 min read
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              4 min read.
+                            </span>
+                            <span class="meta-item">Daily Practice</span>
+                            <span class="meta-item">Daily Practice.</span>
+                          </div>
+                          <p class="article-snippet">
+                            You do not need hard poses to practice yoga. Slow, steady breathing calms the heart.
+                            Practice simple morning breath to feel fresh all day.
+                          </p>
+                          <button type="button" class="btn-read" data-article-id="art-breath">
+                            Read Full Story &rarr;
+                            <button type="button" class="btn-read-story" data-article-id="art-breath">
+                              Read Full Story &rarr;.
+                            </button>
+                        </div>
+                  </article>
 
-    <!-- Call to Action Banner -->
-    <div class="cta-newsletter">
-      <h3>Ready to Experience This in Person?</h3>
-      <p>
-        Join our retreat in Wayanad. Enjoy gentle yoga, eat fresh vegetarian food, and rest in clean mountain air.
-      </p>
-      <div class="cta-actions">
-        <a href="https://wa.me/917358400296" target="_blank" rel="noopener noreferrer" class="btn-cta-gold">
-          <span>Chat on WhatsApp (+91 73584 00296)</span>
-        </a>
-        <a href="/#enquiry" class="btn-cta-outline">
-          <span>Book Your Retreat Stay</span>
-        </a>
-      </div>
-    </div>
-  </main>
+                  <!-- Article 3: Ancient Heritage & Temple Walk -->
+                  <article class="article-card" data-category="heritage">
+                    <div class="card-img-wrap">
+                      <img src="images/tirunelli-valley.jpg"
+                        alt="Ancient stone pillars and green valley surrounding Tirunelli Temple" class="card-img"
+                        width="500" height="320" loading="lazy" />
+                      <div class="card-media">
+                        <img src="images/tirunelli-valley.jpg"
+                          alt="Ancient stone pillars and green valley surrounding Tirunelli Temple" width="500"
+                          height="320" loading="lazy" />
+                      </div>
+                      <div class="card-body">
+                        <span class="tag-badge">Spiritual Heritage</span>
+                        <h3>Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams</h3>
+                        <div class="card-content">
+                          <span class="badge-tag">Spiritual Heritage.</span>
+                          <h3>Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams.</h3>
+                          <div class="meta-row">
+                            <span class="meta-item">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              6 min read
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              6 min read.
+                            </span>
+                            <span class="meta-item">Kerala Culture</span>
+                            <span class="meta-item">Kerala Culture.</span>
+                          </div>
+                          <p class="article-snippet">
+                            Ancient Tirunelli Temple rests beneath green hills. Clean mountain streams flow past old
+                            stone pillars. Walking here at dawn brings quiet joy.
+                          </p>
+                          <button type="button" class="btn-read" data-article-id="art-heritage">
+                            Read Full Story &rarr;
+                            <button type="button" class="btn-read-story" data-article-id="art-heritage">
+                              Read Full Story &rarr;.
+                            </button>
+                        </div>
+                  </article>
 
-  <!-- Article Reader Modal Overlay -->
-  <div class="modal-overlay" id="article-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-dialog">
-      <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close article">&times;</button>
-      <div class="modal-body" id="modal-content">
-        <!-- Injected via JavaScript -->
-      </div>
-    </div>
-  </div>
+                  <!-- Article 4: Sattvic Food & Cooking -->
+                  <article class="article-card" data-category="ayurveda">
+                    <div class="card-img-wrap">
+                      <img src="images/included-meals.jpg"
+                        alt="Wholesome Kerala vegetarian meals served on natural banana leaf" class="card-img"
+                        width="500" height="320" loading="lazy" />
+                      <div class="card-media">
+                        <img src="images/included-meals.jpg"
+                          alt="Wholesome Kerala vegetarian meals served on natural banana leaf" width="500" height="320"
+                          loading="lazy" />
+                      </div>
+                      <div class="card-body">
+                        <span class="tag-badge">Ayurveda &amp; Food</span>
+                        <h3>The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce</h3>
+                        <div class="card-content">
+                          <span class="badge-tag">Ayurveda &amp; Food.</span>
+                          <h3>The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce.</h3>
+                          <div class="meta-row">
+                            <span class="meta-item">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              5 min read
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              5 min read.
+                            </span>
+                            <span class="meta-item">Holistic Nutrition</span>
+                            <span class="meta-item">Holistic Nutrition.</span>
+                          </div>
+                          <p class="article-snippet">
+                            Good food brings clear thoughts and easy digestion. We cook fresh vegetarian meals with
+                            local farm produce and mild spices. Every meal feels light.
+                          </p>
+                          <button type="button" class="btn-read" data-article-id="art-food">
+                            Read Full Story &rarr;
+                            <button type="button" class="btn-read-story" data-article-id="art-food">
+                              Read Full Story &rarr;.
+                            </button>
+                        </div>
+                  </article>
 
-  <!-- Global Footer -->
-  <footer role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h4>Koovalam</h4>
-        <p>
-          Koovalam offers calm spiritual retreats in Wayanad. Inspired by the sacred Bilva tree, we connect natural living and holistic healing.
-        </p>
-      </div>
-      <div class="footer-col">
-        <h5>Retreat Navigation</h5>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/#philosophy">Philosophy</a></li>
-          <li><a href="/#experience">The Experience</a></li>
-          <li><a href="/#itinerary">Daily Itinerary</a></li>
-          <li><a href="/#stay-travel">Stay &amp; Travel</a></li>
-          <li><a href="/#price">Pricing &amp; Booking</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Wisdom &amp; Legal</h5>
-        <ul>
-          <li><a href="/blogs.html">The Koovalam Journal</a></li>
-          <li><a href="/faq.html">Frequently Asked Questions</a></li>
-          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
-          <li><a href="https://www.instagram.com/_koovalam_/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Koovalam. Rooted in Nature. Connected to Soul.</p>
-      <p>Oxyfarm Resorts, Wayanad, Kerala, India.</p>
-    </div>
-  </footer>
+                  <!-- Article 5: Guided Rest & Yoga Nidra -->
+                  <article class="article-card" data-category="mindfulness">
+                    <div class="card-img-wrap">
+                      <img src="images/practice-yoga-nidra.webp"
+                        alt="Quiet relaxation deck under the Kerala forest canopy" class="card-img" width="500"
+                        height="320" loading="lazy" />
+                      <div class="card-media">
+                        <img src="images/practice-yoga-nidra.webp"
+                          alt="Quiet relaxation deck under the Kerala forest canopy" width="500" height="320"
+                          loading="lazy" />
+                      </div>
+                      <div class="card-body">
+                        <span class="tag-badge">Mindfulness &amp; Breath</span>
+                        <h3>Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration</h3>
+                        <div class="card-content">
+                          <span class="badge-tag">Mindfulness &amp; Breath.</span>
+                          <h3>Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration.</h3>
+                          <div class="meta-row">
+                            <span class="meta-item">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              4 min read
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              4 min read.
+                            </span>
+                            <span class="meta-item">Restorative Rest</span>
+                            <span class="meta-item">Restorative Rest.</span>
+                          </div>
+                          <p class="article-snippet">
+                            Yoga Nidra is guided deep rest. You lie down in comfort and relax from head to toe. Thirty
+                            minutes of quiet rest renews your mind and body.
+                          </p>
+                          <button type="button" class="btn-read" data-article-id="art-nidra">
+                            Read Full Story &rarr;
+                            <button type="button" class="btn-read-story" data-article-id="art-nidra">
+                              Read Full Story &rarr;.
+                            </button>
+                        </div>
+                  </article>
 
-  <!-- Client-side Interactive Filter, Search & Reader Script -->
-  <script>
-    (function () {
-      const articlesData = {
-        'art-bilva': {
-          title: 'The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas & Atman',
-          tag: 'Ayurveda & Symbolism',
-          readTime: '6 min read',
-          date: 'November 2026',
-          content: `
+                  <!-- Article 6: Forest Bathing & Botanical Peace -->
+                  <article class="article-card" data-category="nature">
+                    <div class="card-img-wrap">
+                      <img src="images/gurukula-botanical-sanctuary.jpg"
+                        alt="Sunlight streaming through tall trees and lush ferns" class="card-img" width="500"
+                        height="320" loading="lazy" />
+                      <div class="card-media">
+                        <img src="images/gurukula-botanical-sanctuary.jpg"
+                          alt="Sunlight streaming through tall trees and lush ferns" width="500" height="320"
+                          loading="lazy" />
+                      </div>
+                      <div class="card-body">
+                        <span class="tag-badge">Wayanad &amp; Nature</span>
+                        <h3>Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses</h3>
+                        <div class="card-content">
+                          <span class="badge-tag">Wayanad &amp; Nature.</span>
+                          <h3>Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses.</h3>
+                          <div class="meta-row">
+                            <span class="meta-item">
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              5 min read
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>
+                              5 min read.
+                            </span>
+                            <span class="meta-item">Ecological Wellness</span>
+                            <span class="meta-item">Ecological Wellness.</span>
+                          </div>
+                          <p class="article-snippet">
+                            Walking under tall trees brings deep calm. Listen to birds and the wind in the bamboo.
+                            Spending quiet time in nature lowers stress naturally.
+                          </p>
+                          <button type="button" class="btn-read" data-article-id="art-forest">
+                            Read Full Story &rarr;
+                            <button type="button" class="btn-read-story" data-article-id="art-forest">
+                              Read Full Story &rarr;.
+                            </button>
+                        </div>
+                  </article>
+                </div>
+
+                <!-- Call to Action Banner -->
+                <div class="cta-newsletter">
+                  <h3>Ready to Experience This in Person?</h3>
+                  <!-- Retreat Invitation Banner -->
+                  <div class="retreat-cta-card">
+                    <div class="cta-eyebrow">✦ EXPERIENCE THIS IN PERSON.</div>
+                    <h3>Join the Koovalam Retreat in Wayanad.</h3>
+                    <p>
+                      Join our retreat in Wayanad. Enjoy gentle yoga, eat fresh vegetarian food, and rest in clean
+                      mountain air.
+                      Step away from busy schedules. Reconnect with quiet nature, gentle morning yoga, and pure
+                      vegetarian meals in the mist-covered hills of Wayanad.
+                    </p>
+                    <div class="cta-actions">
+                      <a href="https://wa.me/917358400296" target="_blank" rel="noopener noreferrer"
+                        class="btn-cta-gold">
+                        <span>Chat on WhatsApp (+91 73584 00296)</span>
+                        <div class="cta-btn-group">
+                          <a href="/#enquiry" class="btn-cta-gold">
+                            <span>Enquire for Dec 25–28 Retreat.</span>
+                          </a>
+                          <a href="/#enquiry" class="btn-cta-outline">
+                            <span>Book Your Retreat Stay</span>
+                            <a href="https://wa.me/917358400296" target="_blank" rel="noopener noreferrer"
+                              class="btn-cta-ghost">
+                              <span>Chat on WhatsApp (+91 73584 00296).</span>
+                            </a>
+                        </div>
+                    </div>
+              </main>
+
+              <!-- Article Reader Modal Overlay -->
+              <div class="modal-overlay" id="article-modal" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal-dialog">
+                  <button type="button" class="modal-close-btn" id="modal-close"
+                    aria-label="Close article">&times;</button>
+                  <div class="modal-body" id="modal-content">
+                    <!-- Injected via JavaScript -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Global Footer -->
+              <footer role="contentinfo">
+                <div class="footer-inner">
+                  <div class="footer-brand">
+                    <h4>Koovalam</h4>
+                    <p>
+                      Koovalam offers calm spiritual retreats in Wayanad. Inspired by the sacred Bilva tree, we connect
+                      natural living and holistic healing.
+                      <!-- Shared Footer (Exact match with Main Website) -->
+                    <footer class="site-footer" role="contentinfo">
+                      <div class="footer-wrap">
+                        <div class="footer-brand-col">
+                          <img src="/images/koovalam-logo-light.png" alt="Koovalam" class="footer-brand-logo" />
+                          <p class="footer-brand-motto">Rooted in Nature. Connected to Soul.</p>
+                          <p class="footer-brand-desc">
+                            Inspired by the sacred Bilva tree and rooted in the traditional wisdom of Kerala, Koovalam
+                            connects natural living, spiritual wellness retreats, and holistic experiences.
+                          </p>
+                          <div class="footer-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                              <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Oxyfarm Resorts, Wayanad</span>
+                          </div>
+                          <div class="footer-social-row">
+                            <a href="https://www.instagram.com/_koovalam_/" target="_blank" rel="noopener noreferrer"
+                              class="footer-social-btn" title="Follow Koovalam on Instagram"
+                              aria-label="Koovalam on Instagram">
+                              <span class="brand-social-icon brand-social-instagram"
+                                style="width: 36px; height: 36px; border-radius: 50%;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="#ffffff" stroke-width="2.1" />
+                                  <circle cx="12" cy="12" r="4.2" stroke="#ffffff" stroke-width="2.1" />
+                                  <circle cx="16.8" cy="7.2" r="1.15" fill="#ffffff" />
+                                </svg>
+                              </span>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank"
+                              rel="noopener noreferrer" class="footer-social-btn" title="Follow Koovalam on Facebook"
+                              aria-label="Koovalam on Facebook">
+                              <span class="brand-social-icon brand-social-facebook"
+                                style="width: 36px; height: 36px; border-radius: 50%;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff">
+                                  <path
+                                    d="M15.12 12.4l.43-2.81h-2.7v-1.82c0-.77.38-1.52 1.58-1.52h1.23V3.86s-1.11-.19-2.18-.19c-2.22 0-3.68 1.35-3.68 3.79v2.13H7.3v2.81h2.48V19.2c.5.08 1.01.12 1.53.12s1.03-.04 1.53-.12v-6.8h2.28z" />
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="footer-col">
+                          <h5>Retreat Navigation</h5>
+                          <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/#philosophy">Philosophy</a></li>
+                            <li><a href="/#experience">The Experience</a></li>
+                            <li><a href="/#itinerary">Daily Itinerary</a></li>
+                            <li><a href="/#stay-travel">Stay &amp; Travel</a></li>
+                            <li><a href="/#price">Pricing &amp; Booking</a></li>
+                          </ul>
+                          <h4 class="footer-col-title">Explore Koovalam</h4>
+                          <nav class="footer-nav" aria-label="Explore Koovalam">
+                            <ul class="footer-links-list">
+                              <li><a href="/#top">Home</a></li>
+                              <li><a href="/#philosophy">Body, Mind &amp; Soul</a></li>
+                              <li><a href="/#experience">Spiritual Wellness Retreat</a></li>
+                              <li><a href="/#itinerary">Proposed Flow</a></li>
+                              <li><a href="/#stay-travel">Stay &amp; Transport</a></li>
+                              <li><a href="/#price">Retreat Investment</a></li>
+                              <li><a href="/blogs.html">The Koovalam Journal (Blogs)</a></li>
+                              <li><a href="/faq.html">Frequently Asked Questions</a></li>
+                            </ul>
+                          </nav>
+                        </div>
+
+                        <div class="footer-col">
+                          <h5>Wisdom &amp; Legal</h5>
+                          <ul>
+                            <li><a href="/blogs.html">The Koovalam Journal</a></li>
+                            <li><a href="/faq.html">Frequently Asked Questions</a></li>
+                            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+                            <li><a href="https://www.instagram.com/_koovalam_/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61596928650585" target="_blank"
+                                rel="noopener noreferrer">Facebook</a></li>
+                          </ul>
+                          <h4 class="footer-col-title">Retreat Information</h4>
+                          <nav class="footer-nav" aria-label="Retreat Information">
+                            <ul class="footer-links-list">
+                              <li><span style="color:#d1cbc0;">Venue: Oxyfarm Resorts, Wayanad</span></li>
+                              <li><span style="color:#d1cbc0;">Dates: Dec 25–28, 2026 (4 Days)</span></li>
+                              <li><span style="color:#d1cbc0;">Stay: Twin &amp; Single Rooms</span></li>
+                              <li><span style="color:#d1cbc0;">Dining: Wholesome vegetarian meals</span></li>
+                              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                              <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+                            </ul>
+                          </nav>
+                        </div>
+
+                        <div class="footer-col">
+                          <h4 class="footer-col-title">Enquiry Support</h4>
+                          <p style="font-size: 0.85rem; color: #b2aba0; line-height: 1.6; margin-bottom: 1rem;">
+                            Have questions regarding retreat suitability or room options? Speak directly with our team.
+                          </p>
+                          <a href="/#enquiry"
+                            style="display: block; background: rgba(247, 244, 236, 0.1); border: 1px solid rgba(247, 244, 236, 0.25); color: #FFFFFF; font-size: 0.82rem; font-weight: 700; text-align: center; padding: 10px 14px; border-radius: 4px; text-decoration: none; margin-bottom: 8px;">
+                            ENQUIRY INFORMATION &rarr;
+                          </a>
+                          <a href="https://wa.me/917358400296" target="_blank" rel="noopener noreferrer"
+                            class="footer-whatsapp-btn">
+                            <span>WhatsApp (+91 73584 00296)</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="footer-bottom">
+                        <p>&copy; 2026 Koovalam. Rooted in Nature. Connected to Soul.</p>
+                        <p>Oxyfarm Resorts, Wayanad, Kerala, India.</p>
+
+                        <div class="footer-bottom-bar">
+                          <p>&copy; 2026 Koovalam. All rights reserved.</p>
+                          <p>Retreat practices support personal mindfulness and holistic well-being.</p>
+                        </div>
+                    </footer>
+
+                    <!-- Client-side Interactive Filter, Search & Reader Script -->
+                    <!-- Client-side Interactive Filter, Search, Drawer & Reader Script -->
+                    <script>
+                      (function () {
+                        // Mobile Drawer Toggle
+                        const menuBtn = document.getElementById('mobile-menu-btn');
+                        const drawer = document.getElementById('mobile-drawer');
+                        const backdrop = document.getElementById('drawer-backdrop');
+                        const closeBtn = document.getElementById('drawer-close');
+
+                        function openDrawer() {
+                          drawer.classList.add('open');
+                          backdrop.classList.add('open');
+                          drawer.setAttribute('aria-hidden', 'false');
+                          menuBtn.setAttribute('aria-expanded', 'true');
+                          document.body.style.overflow = 'hidden';
+                        }
+
+                        function closeDrawer() {
+                          drawer.classList.remove('open');
+                          backdrop.classList.remove('open');
+                          drawer.setAttribute('aria-hidden', 'true');
+                          menuBtn.setAttribute('aria-expanded', 'false');
+                          document.body.style.overflow = '';
+                        }
+
+                        if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+                        if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+                        if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+                        // Article Data for Reader Modal
+                        const articlesData = {
+                          'art-bilva': {
+                            title: 'The Wisdom of the Sacred Bilva Tree: Balancing Sharira, Manas & Atman',
+                            tag: 'Ayurveda & Symbolism',
+                            readTime: '6 min read',
+                            date: 'November 2026',
+                            content: `
             <p>In the ancient traditions of Kerala and across South India, the Bilva tree (Aegle marmelos)—known locally as Koovalam—holds a uniquely revered place. Its trifoliate leaf, three distinct petals joined seamlessly at a single central stem, is not merely a botanical curiosity; it serves as a profound metaphor for complete human wholeness.</p>
+            <p>In traditional Kerala living, the Bilva tree holds a sacred place. Its three-part leaf represents body, mind, and spirit working as one.</p>
             <div class="quote-box">
               "When body, mind, and spirit are cared for in equal measure, health is no longer a struggle; it becomes our natural state of being."
             </div>
             <p>According to classical Ayurvedic wisdom, balanced well-being requires harmonious attention across three dimensions:</p>
+            <p>Ancient Ayurvedic teachers shared simple ways to care for health:</p>
             <ul>
               <li><strong>Sharira (The Body):</strong> Natural vitality cultivated through gentle daily movement, unhurried digestion, pure spring water, and wholesome vegetarian meals cooked with fresh local produce.</li>
               <li><strong>Manas (The Mind):</strong> Emotional stillness and mental clarity achieved by stepping away from screen glare, practicing quiet breathing exercises, and allowing thoughts to settle without judgment.</li>
               <li><strong>Atman (The Soul):</strong> An innate connection to nature, timeless temples, forest streams, and moments of grateful reflection by the evening fire.</li>
+              <li><strong>Sharira (The Body):</strong> Move with gentle morning stretching. Eat fresh warm vegetarian meals. Drink clean mountain spring water.</li>
+              <li><strong>Manas (The Mind):</strong> Step away from screens. Practice slow quiet breathing. Allow thoughts to settle without rush.</li>
+              <li><strong>Atman (The Soul):</strong> Walk among tall trees and quiet forest streams. Sit peacefully by the evening fire.</li>
             </ul>
             <p>During our retreats in Wayanad, this three-leafed philosophy guides every hour of our schedule. We never rush. We provide space for your body to stretch, your mind to quiet, and your inner self to remember its original peace.</p>
+            <p>During our Wayanad retreat, this three-leaf wisdom guides our daily flow. We never rush. We give you time to rest and renew.</p>
           `
-        },
-        'art-nature': {
-          title: 'Finding Silence in the Mist: Healing Digital Fatigue in Wayanad',
-          tag: 'Wayanad & Nature',
-          readTime: '5 min read',
-          date: 'November 2026',
-          content: `
+                          },
+                          'art-nature': {
+                            title: 'Finding Silence in the Mist: Healing Digital Fatigue in Wayanad',
+                            tag: 'Wayanad & Nature',
+                            readTime: '5 min read',
+                            date: 'November 2026',
+                            content: `
             <p>Modern work life keeps our senses on high alert. Between constant notification pings, endless message threads, and artificial office lights, the body’s sympathetic nervous system remains permanently triggered. Over time, this results in shallow breathing, tense shoulders, and fragmented sleep.</p>
             <p>Stepping into the high-altitude hills of Wayanad provides an immediate physiological contrast. At Oxyfarm Resorts, morning begins not with an alarm clock, but with the cool roll of mountain mist across the valley and the distant call of hornbills.</p>
+            <p>Modern work life keeps our minds very busy. Constant phone alerts, message pings, and bright screens tire our senses. Over time, this leads to restless sleep and shallow breathing.</p>
+            <p>Visiting the quiet green hills of Wayanad brings an immediate sense of relief. At Oxyfarm Resorts, morning starts with cool mist rolling across the valley and the sweet song of forest birds.</p>
             <div class="quote-box">
               "Silence is not the absence of sound; it is the presence of nature speaking without hurry."
             </div>
             <p>When you walk barefoot along gentle grass paths, take deep breaths of pure oxygen from surrounding tea plantations, and put your smartphone in a bedside drawer, your heart rate slows naturally. Four days in this peaceful environment allows your brain to reset and your natural sleep cycles to return.</p>
+            <p>When you walk barefoot on soft grass trails, breathe fresh mountain air, and put your phone away, your mind calms down. Four peaceful days in nature reset your natural sleep and bring deep renewal.</p>
           `
-        },
-        'art-breath': {
-          title: 'The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart',
-          tag: 'Mindfulness & Breath',
-          readTime: '4 min read',
-          date: 'November 2026',
-          content: `
+                          },
+                          'art-breath': {
+                            title: 'The Power of Gentle Breathing: Why Slow Pranayama Calms the Modern Heart',
+                            tag: 'Mindfulness & Breath',
+                            readTime: '4 min read',
+                            date: 'November 2026',
+                            content: `
             <p>Many people believe that yoga requires extreme flexibility or difficult balancing poses. In truth, the heart of traditional yoga begins and ends with the breath (Prana). The breath is the direct bridge connecting the physical body to emotional states.</p>
             <p>During our morning sessions at Koovalam, we practice gentle, non-strenuous pranayama techniques designed specifically for beginners and regular practitioners alike:</p>
+            <p>Many people think yoga needs hard body poses. In truth, real yoga begins with simple, gentle breathing. The breath connects our physical body to our calm inner feelings.</p>
+            <p>During morning practice at Koovalam, we practice gentle breathing exercises suitable for everyone:</p>
             <ul>
               <li><strong>Dirgha Pranayama (Three-Part Breath):</strong> Expanding first the abdomen, then the lower ribs, and finally the upper chest to gently expand lung capacity.</li>
               <li><strong>Nadi Shodhana (Alternate Nostril Breathing):</strong> A time-tested practice that balances the left and right hemispheres of the brain, creating serene equilibrium before meditation.</li>
               <li><strong>Bhramari (Humming Bee Breath):</strong> Gentle vibrational humming that stimulates the vagus nerve and quiets racing thoughts within minutes.</li>
+              <li><strong>Dirgha Pranayama (Three-Part Breath):</strong> Breathe into the belly, then the ribs, and gently fill the chest. This expands breath capacity naturally.</li>
+              <li><strong>Nadi Shodhana (Alternate Nostril Breath):</strong> A gentle practice that balances energy and brings calm focus before morning quiet time.</li>
+              <li><strong>Bhramari (Humming Bee Breath):</strong> Gentle humming sounds that relax the nervous system and calm busy thoughts within minutes.</li>
             </ul>
             <p>These practices are taught at a calm, accessible pace so you can easily take them home and incorporate them into your daily morning routine.</p>
+            <p>We teach these techniques simply so you can practice them at home every morning.</p>
           `
-        },
-        'art-heritage': {
-          title: 'Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams',
-          tag: 'Spiritual Heritage',
-          readTime: '6 min read',
-          date: 'November 2026',
-          content: `
+                          },
+                          'art-heritage': {
+                            title: 'Morning at Tirunelli: Ancient Stone Pillars and Sacred Mountain Streams',
+                            tag: 'Spiritual Heritage',
+                            readTime: '6 min read',
+                            date: 'November 2026',
+                            content: `
             <p>Perched high in northern Wayanad, cradled by the majestic peaks of the Brahmagiri mountain range, stands the ancient temple of Tirunelli. Historians date its stone sanctum and granite aqueducts back many centuries, surrounded by pristine evergreen forests.</p>
             <p>Visiting Tirunelli in the quiet early morning is a core experience of the Koovalam retreat. We arrive as the first rays of sunlight filter through mountain clouds. The cool stream of Papanasini flows gently over smoothed stones nearby, carrying clean mountain spring water from deep inside the forest.</p>
+            <p>Nestled in northern Wayanad under the green Brahmagiri hills stands the ancient temple of Tirunelli. Its old stone pillars and carved granite aqueducts have stood for centuries.</p>
+            <p>Visiting Tirunelli in the quiet morning is a memorable part of our retreat. We visit as the first warm sunbeams shine through mountain mist. The sacred Papanasini stream flows quietly over smoothed rocks, bringing fresh mountain water from the forest.</p>
             <div class="quote-box">
               "Sitting in silence beside granite temple pillars carved hundreds of years ago brings a rare sense of perspective and inner grounding."
             </div>
             <p>There is no commercial rush here. Guests have quiet time to sit by the river, feel the cool mountain breeze, and absorb the ancient spiritual heritage that has blessed this Kerala valley for generations.</p>
+            <p>There is no commercial rush. Guests have peaceful time to sit by the stream, breathe clean air, and enjoy timeless spiritual calm.</p>
           `
-        },
-        'art-food': {
-          title: 'The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce',
-          tag: 'Ayurveda & Food',
-          readTime: '5 min read',
-          date: 'November 2026',
-          content: `
+                          },
+                          'art-food': {
+                            title: 'The Sattvic Kitchen: Nourishing the Body with Fresh Local Kerala Produce',
+                            tag: 'Ayurveda & Food',
+                            readTime: '5 min read',
+                            date: 'November 2026',
+                            content: `
             <p>In Ayurvedic science, food is classified into three qualities (Gunas): Sattvic (pure and calming), Rajasic (stimulating and restless), and Tamasic (heavy and lethargic). For deep restoration, the retreat menu focuses exclusively on Sattvic vegetarian dining.</p>
             <p>Our kitchen uses locally sourced organic farm vegetables, hand-pressed coconut milk, gentle digestive spices such as turmeric, coriander, and ginger, and clean mountain spring water. Meals are prepared warm and served fresh.</p>
+            <p>Ayurvedic wisdom teaches that fresh vegetarian food brings peace and steady physical energy. Our retreat kitchen prepares nourishing meals every day.</p>
+            <p>We use farm-fresh vegetables, hand-pressed coconut milk, and mild spices like ginger and turmeric. Meals are served warm and feel very light to digest.</p>
             <ul>
               <li><strong>Morning Herbal Brews:</strong> Warm infusions of tulsi, cumin, and dried ginger to kindle digestive fire gently.</li>
               <li><strong>Traditional Kerala Lunches:</strong> Steamed red rice, garden-fresh thorans, moru curry, and roasted papadams that feel light yet thoroughly nourishing.</li>
               <li><strong>Evening Broths & Soups:</strong> Light vegetable broths and herbal khichdi that support deep restorative digestion before bedtime.</li>
+              <li><strong>Morning Herbal Brews:</strong> Warm infusions of ginger, tulsi, and cumin to kindle gentle digestion.</li>
+              <li><strong>Traditional Kerala Lunches:</strong> Steamed red rice, garden-fresh vegetables, moru curry, and roasted papadams.</li>
+              <li><strong>Evening Light Broths:</strong> Soothing vegetable soups and warm khichdi that support easy sleep.</li>
             </ul>
             <p>Guests frequently remark that after just two days of Sattvic meals, digestive sluggishness vanishes, skin clears, and daily energy remains steady throughout the afternoon.</p>
+            <p>Guests often note that after two days of sattvic food, digestion feels effortless and afternoon energy stays clear.</p>
           `
-        },
-        'art-nidra': {
-          title: 'Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration',
-          tag: 'Mindfulness & Breath',
-          readTime: '4 min read',
-          date: 'November 2026',
-          content: `
+                          },
+                          'art-nidra': {
+                            title: 'Yoga Nidra: The Art of Conscious Deep Sleep for Physical Regeneration',
+                            tag: 'Mindfulness & Breath',
+                            readTime: '4 min read',
+                            date: 'November 2026',
+                            content: `
             <p>Yoga Nidra, often translated as "psychic sleep" or "yogic sleep," is an ancient meditative practice where the practitioner lies comfortably supported on a mat while being systematically guided into deep physical relaxation.</p>
             <p>Unlike regular sleep where the mind dreams or wanders subconsciously, Yoga Nidra maintains a thread of quiet conscious awareness while the physical body enters the delta brainwave state—the deepest stage of restorative healing.</p>
             <p>We practice Yoga Nidra in the calm late afternoons at Oxyfarm Resorts, with the sounds of wind whispering through the tree canopy outside. Guests wake up with a feeling of profound mental clarity, unburdened by stress or physical fatigue.</p>
+            <p>Yoga Nidra is guided deep relaxation. You lie down comfortably supported on a soft mat. A gentle voice guides you to relax every muscle from head to toe.</p>
+            <p>Unlike regular sleep where dreams wander, Yoga Nidra keeps a light thread of calm awareness while the body rests deeply. Thirty minutes of guided rest renews energy as much as hours of ordinary nap time.</p>
+            <p>We practice in the calm late afternoon at Oxyfarm Resorts, surrounded by gentle forest breezes. Guests wake up feeling refreshed and light.</p>
           `
-        },
-        'art-forest': {
-          title: 'Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses',
-          tag: 'Wayanad & Nature',
-          readTime: '5 min read',
-          date: 'November 2026',
-          content: `
+                          },
+                          'art-forest': {
+                            title: 'Forest Bathing in the Western Ghats: Why Tree Canopies Heal Our Senses',
+                            tag: 'Wayanad & Nature',
+                            readTime: '5 min read',
+                            date: 'November 2026',
+                            content: `
             <p>In Japan, the practice of Shinrin-yoku—or forest bathing—is recognized as an essential component of preventative healthcare. Trees release aromatic organic compounds called phytoncides, which plants use to protect themselves from insects and fungi. When humans breathe in these phytoncides, our immune systems receive a measurable boost.</p>
             <p>The Western Ghats of Wayanad represent one of the world's most bio-diverse rainforest ecosystems. Walking along forest trails with full sensory awareness—listening to birdsong, smelling wet forest loam, and viewing rich green foliage—significantly lowers blood pressure and calms anxiety.</p>
             <p>At Koovalam, our guided nature walks are neither strenuous hikes nor athletic challenges. They are slow, contemplative strolls where nature itself becomes the healer.</p>
+            <p>Spending mindful time under forest trees is known to reduce stress and boost health. Trees release natural aromatic plant oils into the cool mountain air.</p>
+            <p>The green forests of Wayanad are rich with native plants and birds. Walking gently along shady forest paths brings calm to every sense. Listening to bird songs and rustling bamboo relaxes the heart naturally.</p>
+            <p>Our guided nature walks are slow and easy. Anyone can join, enjoy clean air, and experience nature as a gentle healer.</p>
           `
-        }
-      };
+                          }
+                        };
 
-      // Category filter handling
-      const filterPills = document.querySelectorAll('.filter-pill');
-      const cards = document.querySelectorAll('.article-card, .featured-article');
-      const searchInput = document.getElementById('article-search');
+                        // Category filter handling
+                        // Filter and Search Handling
+                        const filterPills = document.querySelectorAll('.filter-pill');
+                        const cards = document.querySelectorAll('.article-card, .featured-article');
+                        const cards = document.querySelectorAll('.article-card, .featured-card');
+                        const searchInput = document.getElementById('article-search');
 
-      function filterArticles() {
-        const activeCategory = document.querySelector('.filter-pill.active')?.getAttribute('data-category') || 'all';
-        const query = searchInput.value.toLowerCase().trim();
+                        function filterArticles() {
+                          const activeCategory = document.querySelector('.filter-pill.active')?.getAttribute('data-category') || 'all';
+                          const query = searchInput.value.toLowerCase().trim();
+                          const query = (searchInput?.value || '').toLowerCase().trim();
 
-        cards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          const cardText = card.innerText.toLowerCase();
+                          cards.forEach(card => {
+                            const cardCategory = card.getAttribute('data-category');
+                            const cardText = card.innerText.toLowerCase();
 
-          const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
-          const matchesQuery = !query || cardText.includes(query);
+                            const matchesCategory = activeCategory === 'all' || cardCategory === activeCategory;
+                            const matchesQuery = !query || cardText.includes(query);
 
-          if (matchesCategory && matchesQuery) {
-            card.style.display = card.classList.contains('featured-article') ? 'grid' : 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      }
+                            if (matchesCategory && matchesQuery) {
+                              card.style.display = card.classList.contains('featured-article') ? 'grid' : 'flex';
+                              card.style.display = card.classList.contains('featured-card') ? 'grid' : 'flex';
+                            } else {
+                              card.style.display = 'none';
+                            }
+                          });
+                        }
 
-      filterPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          filterPills.forEach(p => {
-            p.classList.remove('active');
-            p.setAttribute('aria-selected', 'false');
-          });
-          pill.classList.add('active');
-          pill.setAttribute('aria-selected', 'true');
-          filterArticles();
-        });
-      });
+                        filterPills.forEach(pill => {
+                          pill.addEventListener('click', () => {
+                            filterPills.forEach(p => {
+                              p.classList.remove('active');
+                              p.setAttribute('aria-selected', 'false');
+                            });
+                            pill.classList.add('active');
+                            pill.setAttribute('aria-selected', 'true');
+                            filterArticles();
+                          });
+                        });
 
-      if (searchInput) {
-        searchInput.addEventListener('input', filterArticles);
-      }
+                        if (searchInput) {
+                          searchInput.addEventListener('input', filterArticles);
+                        }
 
-      // Modal article reading logic
-      const modal = document.getElementById('article-modal');
-      const modalClose = document.getElementById('modal-close');
-      const modalContent = document.getElementById('modal-content');
+                        // Modal article reading logic
+                        // Modal Logic
+                        const modal = document.getElementById('article-modal');
+                        const modalClose = document.getElementById('modal-close');
+                        const modalContent = document.getElementById('modal-content');
 
-      function openArticle(id) {
-        const art = articlesData[id];
-        if (!art) return;
+                        function openArticle(id) {
+                          const art = articlesData[id];
+                          if (!art) return;
 
-        modalContent.innerHTML = `
+                          modalContent.innerHTML = `
           <span class="tag-badge">\${art.tag}</span>
+          <span class="badge-tag">\${art.tag}</span>
           <h3>\${art.title}</h3>
           <div class="meta-row">
             <span class="meta-item">\${art.readTime}</span>
@@ -997,50 +2290,59 @@
             <span class="meta-item">Koovalam Journal</span>
           </div>
           <div class="article-body-content">
+          <div class="modal-article-text">
             \${art.content}
           </div>
           <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e4dfd3; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
             <span style="font-size: 0.9rem; color: #526156;">Experience this in Wayanad:</span>
             <a href="/#enquiry" style="background: #102c24; color: #f7f4ec; padding: 0.55rem 1.25rem; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.88rem;">Enquire for Retreat</a>
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <span style="font-size: 0.88rem; color: var(--text-muted);">Experience this in Wayanad:</span>
+            <a href="/#enquiry" style="background: var(--deep-forest); color: var(--warm-ivory); padding: 10px 20px; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none;">Enquire for Retreat</a>
           </div>
         `;
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
+                          modal.classList.add('active');
+                          modal.setAttribute('aria-hidden', 'false');
+                          document.body.style.overflow = 'hidden';
+                        }
 
-      function closeModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
+                        function closeModal() {
+                          modal.classList.remove('active');
+                          modal.setAttribute('aria-hidden', 'true');
+                          document.body.style.overflow = '';
+                        }
 
-      document.querySelectorAll('.btn-read').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const id = btn.getAttribute('data-article-id');
-          openArticle(id);
-        });
-      });
+                        document.querySelectorAll('.btn-read').forEach(btn => {
+                          document.querySelectorAll('.btn-read-story').forEach(btn => {
+                            btn.addEventListener('click', (e) => {
+                              e.preventDefault();
+                              const id = btn.getAttribute('data-article-id');
+                              openArticle(id);
+                            });
+                          });
 
-      if (modalClose) {
-        modalClose.addEventListener('click', closeModal);
-      }
+                          if (modalClose) {
+                            modalClose.addEventListener('click', closeModal);
+                          }
 
-      if (modal) {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            closeModal();
-          }
-        });
-      }
+                          if (modalClose) modalClose.addEventListener('click', closeModal);
+                          if (modal) {
+                            modal.addEventListener('click', (e) => {
+                              if (e.target === modal) {
+                                closeModal();
+                              }
+                              if (e.target === modal) closeModal();
+                            });
+                          }
 
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-          closeModal();
-        }
-      });
-    })();
-  </script>
+                          window.addEventListener('keydown', (e) => {
+                            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                              closeModal();
+                            }
+                            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+                          });
+                        })();
+                    </script>
 </body>
+
 </html>
